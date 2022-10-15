@@ -33,3 +33,13 @@ I, Robot. Repository for my robotic and elektro projects using Raspberry Pi.
     
     DESCRIPTION
 
+- [**Chess Bot**](Chess-bot/README.md)
+    
+    IMAGE
+
+    His brain is an Android-smartphone, that sees the chessboard, analyzes position and sends this info about move to the robot via bluetooth. This manipulator works with Arduino Leonardo and with 4 servos Tower Pro SG-90. You can ask some questions in comments, i'll try to answer on some of them. I don't want do tutorial about this project, because it's very difficult to replicate it. Sorry for my english, it's not my mother-tongue.
+
+    Original project: https://www.youtube.com/watch?v=tmG-FJrXAj8
+
+
+
