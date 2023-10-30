@@ -9,6 +9,14 @@
 ### Project pages
 - [Kame: 8DOF small quadruped robot](https://www.thingiverse.com/thing:1265766)
 
+### Arduino IDE required libraries
+```
+Sketch -> Manage Libraries -> search
+```
+
+* Adafruit PWM Servo Driver
+* (PCA9685)
+
 ### Seznam materialu a soucastek k tisku
 #### STL list
 - [ ] 1x bodyamod (modified for SG90 servo)
