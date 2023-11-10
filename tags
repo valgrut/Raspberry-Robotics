@@ -8,9 +8,38 @@
 !_TAG_FIELD_DESCRIPTION	name	/tag name/
 !_TAG_FIELD_DESCRIPTION	pattern	/pattern/
 !_TAG_FIELD_DESCRIPTION	typeref	/Type and name of a variable or typedef/
+!_TAG_FIELD_DESCRIPTION!C++	name	/aliased names/
 !_TAG_FIELD_DESCRIPTION!Python	nameref	/the original name for the tag/
 !_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
 !_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_KIND_DESCRIPTION!C++	c,class	/classes/
+!_TAG_KIND_DESCRIPTION!C++	d,macro	/macro definitions/
+!_TAG_KIND_DESCRIPTION!C++	e,enumerator	/enumerators (values inside an enumeration)/
+!_TAG_KIND_DESCRIPTION!C++	f,function	/function definitions/
+!_TAG_KIND_DESCRIPTION!C++	g,enum	/enumeration names/
+!_TAG_KIND_DESCRIPTION!C++	h,header	/included header files/
+!_TAG_KIND_DESCRIPTION!C++	m,member	/class, struct, and union members/
+!_TAG_KIND_DESCRIPTION!C++	n,namespace	/namespaces/
+!_TAG_KIND_DESCRIPTION!C++	s,struct	/structure names/
+!_TAG_KIND_DESCRIPTION!C++	t,typedef	/typedefs/
+!_TAG_KIND_DESCRIPTION!C++	u,union	/union names/
+!_TAG_KIND_DESCRIPTION!C++	v,variable	/variable definitions/
+!_TAG_KIND_DESCRIPTION!CMake	D,option	/options specified with -D/
+!_TAG_KIND_DESCRIPTION!CMake	f,function	/functions/
+!_TAG_KIND_DESCRIPTION!CMake	m,macro	/macros/
+!_TAG_KIND_DESCRIPTION!CMake	p,project	/projects/
+!_TAG_KIND_DESCRIPTION!CMake	t,target	/targets/
+!_TAG_KIND_DESCRIPTION!CMake	v,variable	/variable definitions/
+!_TAG_KIND_DESCRIPTION!JSON	a,array	/arrays/
+!_TAG_KIND_DESCRIPTION!JSON	b,boolean	/booleans/
+!_TAG_KIND_DESCRIPTION!JSON	n,number	/numbers/
+!_TAG_KIND_DESCRIPTION!JSON	o,object	/objects/
+!_TAG_KIND_DESCRIPTION!JSON	s,string	/strings/
+!_TAG_KIND_DESCRIPTION!JSON	z,null	/nulls/
+!_TAG_KIND_DESCRIPTION!JavaProperties	k,key	/keys/
+!_TAG_KIND_DESCRIPTION!Make	I,makefile	/makefiles/
+!_TAG_KIND_DESCRIPTION!Make	m,macro	/macros/
+!_TAG_KIND_DESCRIPTION!Make	t,target	/targets/
 !_TAG_KIND_DESCRIPTION!Markdown	S,subsection	/level 2 sections/
 !_TAG_KIND_DESCRIPTION!Markdown	T,l4subsection	/level 4 sections/
 !_TAG_KIND_DESCRIPTION!Markdown	c,chapter	/chapters/
@@ -29,6 +58,11 @@
 !_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
 !_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
 !_TAG_OUTPUT_VERSION	0.0	/current.age/
+!_TAG_PARSER_VERSION!C++	0.0	/current.age/
+!_TAG_PARSER_VERSION!CMake	0.0	/current.age/
+!_TAG_PARSER_VERSION!JSON	0.0	/current.age/
+!_TAG_PARSER_VERSION!JavaProperties	0.0	/current.age/
+!_TAG_PARSER_VERSION!Make	0.0	/current.age/
 !_TAG_PARSER_VERSION!Markdown	0.0	/current.age/
 !_TAG_PARSER_VERSION!Python	0.0	/current.age/
 !_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
@@ -37,142 +71,979 @@
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
 !_TAG_PROGRAM_VERSION	6.0.0	//
+!_TAG_ROLE_DESCRIPTION!C++!header	local	/local header/
+!_TAG_ROLE_DESCRIPTION!C++!header	system	/system header/
+!_TAG_ROLE_DESCRIPTION!C++!macro	undef	/undefined/
+!_TAG_ROLE_DESCRIPTION!Make!makefile	included	/included/
+!_TAG_ROLE_DESCRIPTION!Make!makefile	optional	/optionally included/
 !_TAG_ROLE_DESCRIPTION!Python!module	imported	/imported modules/
 !_TAG_ROLE_DESCRIPTION!Python!module	indirectlyImported	/module imported in alternative name/
 !_TAG_ROLE_DESCRIPTION!Python!module	namespace	/namespace from where classes\/variables\/functions are imported/
 !_TAG_ROLE_DESCRIPTION!Python!unknown	imported	/imported from the other module/
 !_TAG_ROLE_DESCRIPTION!Python!unknown	indirectlyImported	/classes\/variables\/functions\/modules imported in alternative name/
+0	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "files": ["BatchingExample.ino"]$/;"	s	array:examples.1.files
+0	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "files": ["ModuleInfo.ino"]$/;"	s	array:examples.5.files
+0	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "files": ["MultiDeviceProxyExample.ino"]$/;"	s	array:examples.2.files
+0	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "files": ["ServoEvaluatorExample.ino"]$/;"	s	array:examples.3.files
+0	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "files": ["SimpleExample.ino"]$/;"	s	array:examples.0.files
+0	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "files": ["SoftwareI2CExample.ino"]$/;"	s	array:examples.4.files
+0	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^        {$/;"	o	array:authors
+0	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^        {$/;"	o	array:examples
+0	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "files": ["BatchingExample.ino"]$/;"	s	array:examples.1.files
+0	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "files": ["ModuleInfo.ino"]$/;"	s	array:examples.5.files
+0	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "files": ["MultiDeviceProxyExample.ino"]$/;"	s	array:examples.2.files
+0	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "files": ["ServoEvaluatorExample.ino"]$/;"	s	array:examples.3.files
+0	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "files": ["SimpleExample.ino"]$/;"	s	array:examples.0.files
+0	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "files": ["SoftwareI2CExample.ino"]$/;"	s	array:examples.4.files
+0	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^        {$/;"	o	array:authors
+0	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^        {$/;"	o	array:examples
+1	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^        {$/;"	o	array:authors
+1	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^        {$/;"	o	array:examples
+1	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^        {$/;"	o	array:authors
+1	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^        {$/;"	o	array:examples
+2	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^        {$/;"	o	array:authors
+2	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^        {$/;"	o	array:examples
+2	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^        {$/;"	o	array:authors
+2	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^        {$/;"	o	array:examples
+3	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^        {$/;"	o	array:examples
+3	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^        {$/;"	o	array:examples
+4	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^        {$/;"	o	array:examples
+4	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^        {$/;"	o	array:examples
+5	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^        {$/;"	o	array:examples
+5	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^        {$/;"	o	array:examples
 A	Turrets/angle-calc.py	/^A = ((pow(v,2)*(pow(v,2)-2*g*dy))\/(pow(g,2)*pow(dx,2)))$/;"	v
+AD8_HIGH_TOREAD_AD7_HIGH_TOINC	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h	/^  AD8_HIGH_TOREAD_AD7_HIGH_TOINC = 1,$/;"	e	enum:_Adafruit_BusIO_SPIRegType
+AD8_HIGH_TOREAD_AD7_HIGH_TOINC	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h	/^  AD8_HIGH_TOREAD_AD7_HIGH_TOINC = 1,$/;"	e	enum:_Adafruit_BusIO_SPIRegType
+ADDRBIT8_HIGH_TOREAD	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h	/^  ADDRBIT8_HIGH_TOREAD = 0,$/;"	e	enum:_Adafruit_BusIO_SPIRegType
+ADDRBIT8_HIGH_TOREAD	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h	/^  ADDRBIT8_HIGH_TOREAD = 0,$/;"	e	enum:_Adafruit_BusIO_SPIRegType
+ADDRBIT8_HIGH_TOWRITE	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h	/^  ADDRBIT8_HIGH_TOWRITE = 2,$/;"	e	enum:_Adafruit_BusIO_SPIRegType
+ADDRBIT8_HIGH_TOWRITE	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h	/^  ADDRBIT8_HIGH_TOWRITE = 2,$/;"	e	enum:_Adafruit_BusIO_SPIRegType
+ADDRESSED_OPCODE_BIT0_LOW_TO_WRITE	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h	/^  ADDRESSED_OPCODE_BIT0_LOW_TO_WRITE = 3,$/;"	e	enum:_Adafruit_BusIO_SPIRegType
+ADDRESSED_OPCODE_BIT0_LOW_TO_WRITE	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h	/^  ADDRESSED_OPCODE_BIT0_LOW_TO_WRITE = 3,$/;"	e	enum:_Adafruit_BusIO_SPIRegType
+Adafruit Bus IO Library [![Build Status](https://github.com/adafruit/Adafruit_BusIO/workflows/Arduino%20Library%20CI/badge.svg)](https://github.com/adafruit/Adafruit_BusIO/actions)	InMoove-Arm/libraries/Adafruit_BusIO/README.md	/^# Adafruit Bus IO Library [![Build Status](https:\/\/github.com\/adafruit\/Adafruit_BusIO\/workf/;"	c
+Adafruit Bus IO Library [![Build Status](https://github.com/adafruit/Adafruit_BusIO/workflows/Arduino%20Library%20CI/badge.svg)](https://github.com/adafruit/Adafruit_BusIO/actions)	Kame-Quadpod/libraries/Adafruit_BusIO/README.md	/^# Adafruit Bus IO Library [![Build Status](https:\/\/github.com\/adafruit\/Adafruit_BusIO\/workf/;"	c
+Adafruit PCA9685 PWM Servo Driver Library ![Build Status](https://github.com/adafruit/Adafruit-PWM-Servo-Driver-Library/workflows/Arduino%20Library%20CI/badge.svg)	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/README.md	/^# Adafruit PCA9685 PWM Servo Driver Library ![Build Status](https:\/\/github.com\/adafruit\/Adaf/;"	c
+Adafruit PCA9685 PWM Servo Driver Library ![Build Status](https://github.com/adafruit/Adafruit-PWM-Servo-Driver-Library/workflows/Arduino%20Library%20CI/badge.svg)	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/README.md	/^# Adafruit PCA9685 PWM Servo Driver Library ![Build Status](https:\/\/github.com\/adafruit\/Adaf/;"	c
+Adafruit_BusIO	InMoove-Arm/libraries/Adafruit_BusIO/CMakeLists.txt	/^project(Adafruit_BusIO)$/;"	p
+Adafruit_BusIO	Kame-Quadpod/libraries/Adafruit_BusIO/CMakeLists.txt	/^project(Adafruit_BusIO)$/;"	p
+Adafruit_BusIO_Register	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^Adafruit_BusIO_Register::Adafruit_BusIO_Register($/;"	f	class:Adafruit_BusIO_Register
+Adafruit_BusIO_Register	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^Adafruit_BusIO_Register::Adafruit_BusIO_Register(Adafruit_I2CDevice *i2cdevice,$/;"	f	class:Adafruit_BusIO_Register
+Adafruit_BusIO_Register	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^Adafruit_BusIO_Register::Adafruit_BusIO_Register(Adafruit_SPIDevice *spidevice,$/;"	f	class:Adafruit_BusIO_Register
+Adafruit_BusIO_Register	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h	/^class Adafruit_BusIO_Register {$/;"	c
+Adafruit_BusIO_Register	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^Adafruit_BusIO_Register::Adafruit_BusIO_Register($/;"	f	class:Adafruit_BusIO_Register
+Adafruit_BusIO_Register	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^Adafruit_BusIO_Register::Adafruit_BusIO_Register(Adafruit_I2CDevice *i2cdevice,$/;"	f	class:Adafruit_BusIO_Register
+Adafruit_BusIO_Register	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^Adafruit_BusIO_Register::Adafruit_BusIO_Register(Adafruit_SPIDevice *spidevice,$/;"	f	class:Adafruit_BusIO_Register
+Adafruit_BusIO_Register	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h	/^class Adafruit_BusIO_Register {$/;"	c
+Adafruit_BusIO_RegisterBits	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^Adafruit_BusIO_RegisterBits::Adafruit_BusIO_RegisterBits($/;"	f	class:Adafruit_BusIO_RegisterBits
+Adafruit_BusIO_RegisterBits	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h	/^class Adafruit_BusIO_RegisterBits {$/;"	c
+Adafruit_BusIO_RegisterBits	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^Adafruit_BusIO_RegisterBits::Adafruit_BusIO_RegisterBits($/;"	f	class:Adafruit_BusIO_RegisterBits
+Adafruit_BusIO_RegisterBits	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h	/^class Adafruit_BusIO_RegisterBits {$/;"	c
+Adafruit_BusIO_Register_h	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h	/^#define Adafruit_BusIO_Register_h$/;"	d
+Adafruit_BusIO_Register_h	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h	/^#define Adafruit_BusIO_Register_h$/;"	d
+Adafruit_BusIO_SPIRegType	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h	/^} Adafruit_BusIO_SPIRegType;$/;"	t	typeref:enum:_Adafruit_BusIO_SPIRegType
+Adafruit_BusIO_SPIRegType	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h	/^} Adafruit_BusIO_SPIRegType;$/;"	t	typeref:enum:_Adafruit_BusIO_SPIRegType
+Adafruit_I2CDevice	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_I2CDevice.cpp	/^Adafruit_I2CDevice::Adafruit_I2CDevice(uint8_t addr, TwoWire *theWire) {$/;"	f	class:Adafruit_I2CDevice
+Adafruit_I2CDevice	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_I2CDevice.h	/^class Adafruit_I2CDevice {$/;"	c
+Adafruit_I2CDevice	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_I2CDevice.cpp	/^Adafruit_I2CDevice::Adafruit_I2CDevice(uint8_t addr, TwoWire *theWire) {$/;"	f	class:Adafruit_I2CDevice
+Adafruit_I2CDevice	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_I2CDevice.h	/^class Adafruit_I2CDevice {$/;"	c
+Adafruit_I2CDevice_h	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_I2CDevice.h	/^#define Adafruit_I2CDevice_h$/;"	d
+Adafruit_I2CDevice_h	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_I2CDevice.h	/^#define Adafruit_I2CDevice_h$/;"	d
+Adafruit_I2CRegister	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_I2CRegister.h	/^typedef Adafruit_BusIO_Register Adafruit_I2CRegister;$/;"	t	typeref:typename:Adafruit_BusIO_Register
+Adafruit_I2CRegister	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_I2CRegister.h	/^typedef Adafruit_BusIO_Register Adafruit_I2CRegister;$/;"	t	typeref:typename:Adafruit_BusIO_Register
+Adafruit_I2CRegisterBits	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_I2CRegister.h	/^typedef Adafruit_BusIO_RegisterBits Adafruit_I2CRegisterBits;$/;"	t	typeref:typename:Adafruit_BusIO_RegisterBits
+Adafruit_I2CRegisterBits	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_I2CRegister.h	/^typedef Adafruit_BusIO_RegisterBits Adafruit_I2CRegisterBits;$/;"	t	typeref:typename:Adafruit_BusIO_RegisterBits
+Adafruit_PWMServoDriver	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.cpp	/^Adafruit_PWMServoDriver::Adafruit_PWMServoDriver()$/;"	f	class:Adafruit_PWMServoDriver
+Adafruit_PWMServoDriver	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.cpp	/^Adafruit_PWMServoDriver::Adafruit_PWMServoDriver(const uint8_t addr)$/;"	f	class:Adafruit_PWMServoDriver
+Adafruit_PWMServoDriver	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.cpp	/^Adafruit_PWMServoDriver::Adafruit_PWMServoDriver(const uint8_t addr,$/;"	f	class:Adafruit_PWMServoDriver
+Adafruit_PWMServoDriver	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^class Adafruit_PWMServoDriver {$/;"	c
+Adafruit_PWMServoDriver	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.cpp	/^Adafruit_PWMServoDriver::Adafruit_PWMServoDriver()$/;"	f	class:Adafruit_PWMServoDriver
+Adafruit_PWMServoDriver	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.cpp	/^Adafruit_PWMServoDriver::Adafruit_PWMServoDriver(const uint8_t addr)$/;"	f	class:Adafruit_PWMServoDriver
+Adafruit_PWMServoDriver	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.cpp	/^Adafruit_PWMServoDriver::Adafruit_PWMServoDriver(const uint8_t addr,$/;"	f	class:Adafruit_PWMServoDriver
+Adafruit_PWMServoDriver	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^class Adafruit_PWMServoDriver {$/;"	c
+Adafruit_SPIDevice	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp	/^Adafruit_SPIDevice::Adafruit_SPIDevice(int8_t cspin, int8_t sckpin,$/;"	f	class:Adafruit_SPIDevice
+Adafruit_SPIDevice	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp	/^Adafruit_SPIDevice::Adafruit_SPIDevice(int8_t cspin, uint32_t freq,$/;"	f	class:Adafruit_SPIDevice
+Adafruit_SPIDevice	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^class Adafruit_SPIDevice {$/;"	c
+Adafruit_SPIDevice	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp	/^Adafruit_SPIDevice::Adafruit_SPIDevice(int8_t cspin, int8_t sckpin,$/;"	f	class:Adafruit_SPIDevice
+Adafruit_SPIDevice	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp	/^Adafruit_SPIDevice::Adafruit_SPIDevice(int8_t cspin, uint32_t freq,$/;"	f	class:Adafruit_SPIDevice
+Adafruit_SPIDevice	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^class Adafruit_SPIDevice {$/;"	c
+Adafruit_SPIDevice_h	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^#define Adafruit_SPIDevice_h$/;"	d
+Adafruit_SPIDevice_h	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^#define Adafruit_SPIDevice_h$/;"	d
+Arduino IDE required libraries	Kame-Quadpod/README.md	/^### Arduino IDE required libraries$/;"	S	chapter:Kame
+BUSIO_HAS_HW_SPI	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^#define BUSIO_HAS_HW_SPI$/;"	d
+BUSIO_HAS_HW_SPI	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^#define BUSIO_HAS_HW_SPI$/;"	d
+BUSIO_USE_FAST_PINIO	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^#define BUSIO_USE_FAST_PINIO$/;"	d
+BUSIO_USE_FAST_PINIO	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^#define BUSIO_USE_FAST_PINIO$/;"	d
+Batching Example	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^### Batching Example$/;"	S	section:PCA9685-Arduino""Example Usage
+Batching Example	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^### Batching Example$/;"	S	section:PCA9685-Arduino""Example Usage
+BusIOBitOrder	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^typedef BitOrder BusIOBitOrder;$/;"	t	typeref:typename:BitOrder
+BusIOBitOrder	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^} BusIOBitOrder;$/;"	t	typeref:enum:_BitOrder
+BusIOBitOrder	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^typedef BitOrder BusIOBitOrder;$/;"	t	typeref:typename:BitOrder
+BusIOBitOrder	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^} BusIOBitOrder;$/;"	t	typeref:enum:_BitOrder
+BusIO_PortMask	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^typedef uint32_t BusIO_PortMask;$/;"	t	typeref:typename:uint32_t
+BusIO_PortMask	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^typedef uint8_t BusIO_PortMask;$/;"	t	typeref:typename:uint8_t
+BusIO_PortMask	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^typedef uint32_t BusIO_PortMask;$/;"	t	typeref:typename:uint32_t
+BusIO_PortMask	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^typedef uint8_t BusIO_PortMask;$/;"	t	typeref:typename:uint8_t
+BusIO_PortReg	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^typedef volatile uint32_t BusIO_PortReg;$/;"	t	typeref:typename:volatile uint32_t
+BusIO_PortReg	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^typedef volatile uint8_t BusIO_PortReg;$/;"	t	typeref:typename:volatile uint8_t
+BusIO_PortReg	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^typedef volatile uint32_t BusIO_PortReg;$/;"	t	typeref:typename:volatile uint32_t
+BusIO_PortReg	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^typedef volatile uint8_t BusIO_PortReg;$/;"	t	typeref:typename:volatile uint8_t
+COMPONENT_ADD_INCLUDEDIRS	InMoove-Arm/libraries/Adafruit_BusIO/component.mk	/^COMPONENT_ADD_INCLUDEDIRS = .$/;"	m
+COMPONENT_ADD_INCLUDEDIRS	Kame-Quadpod/libraries/Adafruit_BusIO/component.mk	/^COMPONENT_ADD_INCLUDEDIRS = .$/;"	m
+Class Instantiation	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^#### Class Instantiation$/;"	t	subsection:PCA9685-Arduino""Library Setup""Library Initialization
+Class Instantiation	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^#### Class Instantiation$/;"	t	subsection:PCA9685-Arduino""Library Setup""Library Initialization
+Device Initialization	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^#### Device Initialization$/;"	t	subsection:PCA9685-Arduino""Library Setup""Library Initialization
+Device Initialization	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^#### Device Initialization$/;"	t	subsection:PCA9685-Arduino""Library Setup""Library Initialization
+Device Reset	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^#### Device Reset$/;"	t	subsection:PCA9685-Arduino""Library Setup""Library Initialization
+Device Reset	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^#### Device Reset$/;"	t	subsection:PCA9685-Arduino""Library Setup""Library Initialization
+Example Usage	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^## Example Usage$/;"	s	chapter:PCA9685-Arduino
+Example Usage	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^## Example Usage$/;"	s	chapter:PCA9685-Arduino
 Examples	Kame-Quadpod/README.md	/^### Examples$/;"	S	chapter:Kame
 Examples	Xpider-cute-robot/README.md	/^### Examples$/;"	S	chapter:Kame
-FK_2D	Kame-Quadpod/FK_2D.py	/^def FK_2D(theta1, theta2):$/;"	f
-FK_3D	Kame-Quadpod/FK_3D.py	/^def FK_3D(theta1, theta2, theta_yaw):$/;"	f
+FK_2D	Kame-Quadpod/kinematic-calculation/FK_2D.py	/^def FK_2D(theta1, theta2):$/;"	f
+FK_3D	Kame-Quadpod/kinematic-calculation/FK_3D.py	/^def FK_3D(theta1, theta2, theta_yaw):$/;"	f
+FREQUENCY_OSCILLATOR	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define FREQUENCY_OSCILLATOR /;"	d
+FREQUENCY_OSCILLATOR	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define FREQUENCY_OSCILLATOR /;"	d
+Header Defines	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^### Header Defines$/;"	S	section:PCA9685-Arduino""Library Setup
+Header Defines	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^### Header Defines$/;"	S	section:PCA9685-Arduino""Library Setup
+Hookup Callouts	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^## Hookup Callouts$/;"	s	chapter:PCA9685-Arduino
+Hookup Callouts	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^## Hookup Callouts$/;"	s	chapter:PCA9685-Arduino
+Installation	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^### Installation$/;"	S	section:PCA9685-Arduino""Library Setup
+Installation	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^### Installation$/;"	S	section:PCA9685-Arduino""Library Setup
 Kame	Kame-Quadpod/README.md	/^# Kame$/;"	c
 Kame	Xpider-cute-robot/README.md	/^# Kame$/;"	c
-L1	Kame-Quadpod/FK_2D.py	/^L1 = 2$/;"	v
-L1	Kame-Quadpod/FK_3D.py	/^L1 = 8$/;"	v
-L1	Kame-Quadpod/FK_3D_3.py	/^L1 = 2  # Length from O1 to O2$/;"	v
-L1	Kame-Quadpod/FK_3D_3_joints.py	/^L1 = 2  # Length from R to O$/;"	v
-L1	Kame-Quadpod/IK1.py	/^L1 = 2  # Length from O1 to O2$/;"	v
-L1	Kame-Quadpod/IK2.py	/^L1 = 5  # Length from O1 to O2$/;"	v
-L1	Kame-Quadpod/chatgpt4/IK.py	/^L1, L2, L3 = 5, 10, 10  # Example segment lengths$/;"	v
-L1	Kame-Quadpod/chatgpt4/IK_leg.py	/^L1, L2, L3 = 5, 10, 10  # Example segment lengths$/;"	v
-L1	Kame-Quadpod/chatgpt4/kinematics.py	/^theta, alpha, beta, L1, L2 = 90, 45, 45, 6, 2$/;"	v
-L2	Kame-Quadpod/FK_2D.py	/^L2 = 2$/;"	v
-L2	Kame-Quadpod/FK_3D.py	/^L2 = 2$/;"	v
-L2	Kame-Quadpod/FK_3D_3.py	/^L2 = 3  # Length from O2 to c$/;"	v
-L2	Kame-Quadpod/FK_3D_3_joints.py	/^L2 = 3  # Length from O to c$/;"	v
-L2	Kame-Quadpod/IK1.py	/^L2 = 3  # Length from O2 to c$/;"	v
-L2	Kame-Quadpod/IK2.py	/^L2 = 2  # Length from O2 to c$/;"	v
-L2	Kame-Quadpod/chatgpt4/IK.py	/^L1, L2, L3 = 5, 10, 10  # Example segment lengths$/;"	v
-L2	Kame-Quadpod/chatgpt4/IK_leg.py	/^L1, L2, L3 = 5, 10, 10  # Example segment lengths$/;"	v
-L2	Kame-Quadpod/chatgpt4/kinematics.py	/^theta, alpha, beta, L1, L2 = 90, 45, 45, 6, 2$/;"	v
-L3	Kame-Quadpod/FK_3D_3_joints.py	/^L3 = 0  # Since there's zero length between c and end effector$/;"	v
-L3	Kame-Quadpod/chatgpt4/IK.py	/^L1, L2, L3 = 5, 10, 10  # Example segment lengths$/;"	v
-L3	Kame-Quadpod/chatgpt4/IK_leg.py	/^L1, L2, L3 = 5, 10, 10  # Example segment lengths$/;"	v
+L1	Kame-Quadpod/kinematic-calculation/FK_2D.py	/^L1 = 2$/;"	v
+L1	Kame-Quadpod/kinematic-calculation/FK_3D.py	/^L1 = 8$/;"	v
+L1	Kame-Quadpod/kinematic-calculation/FK_3D_3.py	/^L1 = 2  # Length from O1 to O2$/;"	v
+L1	Kame-Quadpod/kinematic-calculation/FK_3D_3_joints.py	/^L1 = 2  # Length from R to O$/;"	v
+L1	Kame-Quadpod/kinematic-calculation/IK1.py	/^L1 = 2  # Length from O1 to O2$/;"	v
+L1	Kame-Quadpod/kinematic-calculation/IK2.py	/^L1 = 5  # Length from O1 to O2$/;"	v
+L1	Kame-Quadpod/kinematic-calculation/chatgpt4/IK.py	/^L1, L2, L3 = 5, 10, 10  # Example segment lengths$/;"	v
+L1	Kame-Quadpod/kinematic-calculation/chatgpt4/IK_leg.py	/^L1, L2, L3 = 5, 10, 10  # Example segment lengths$/;"	v
+L1	Kame-Quadpod/kinematic-calculation/chatgpt4/kinematics.py	/^theta, alpha, beta, L1, L2 = 90, 45, 45, 6, 2$/;"	v
+L2	Kame-Quadpod/kinematic-calculation/FK_2D.py	/^L2 = 2$/;"	v
+L2	Kame-Quadpod/kinematic-calculation/FK_3D.py	/^L2 = 2$/;"	v
+L2	Kame-Quadpod/kinematic-calculation/FK_3D_3.py	/^L2 = 3  # Length from O2 to c$/;"	v
+L2	Kame-Quadpod/kinematic-calculation/FK_3D_3_joints.py	/^L2 = 3  # Length from O to c$/;"	v
+L2	Kame-Quadpod/kinematic-calculation/IK1.py	/^L2 = 3  # Length from O2 to c$/;"	v
+L2	Kame-Quadpod/kinematic-calculation/IK2.py	/^L2 = 2  # Length from O2 to c$/;"	v
+L2	Kame-Quadpod/kinematic-calculation/chatgpt4/IK.py	/^L1, L2, L3 = 5, 10, 10  # Example segment lengths$/;"	v
+L2	Kame-Quadpod/kinematic-calculation/chatgpt4/IK_leg.py	/^L1, L2, L3 = 5, 10, 10  # Example segment lengths$/;"	v
+L2	Kame-Quadpod/kinematic-calculation/chatgpt4/kinematics.py	/^theta, alpha, beta, L1, L2 = 90, 45, 45, 6, 2$/;"	v
+L3	Kame-Quadpod/kinematic-calculation/FK_3D_3_joints.py	/^L3 = 0  # Since there's zero length between c and end effector$/;"	v
+L3	Kame-Quadpod/kinematic-calculation/chatgpt4/IK.py	/^L1, L2, L3 = 5, 10, 10  # Example segment lengths$/;"	v
+L3	Kame-Quadpod/kinematic-calculation/chatgpt4/IK_leg.py	/^L1, L2, L3 = 5, 10, 10  # Example segment lengths$/;"	v
+Library Initialization	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^### Library Initialization$/;"	S	section:PCA9685-Arduino""Library Setup
+Library Initialization	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^### Library Initialization$/;"	S	section:PCA9685-Arduino""Library Setup
+Library Setup	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^## Library Setup$/;"	s	chapter:PCA9685-Arduino
+Library Setup	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^## Library Setup$/;"	s	chapter:PCA9685-Arduino
+MODE1_AI	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define MODE1_AI /;"	d
+MODE1_AI	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define MODE1_AI /;"	d
+MODE1_ALLCAL	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define MODE1_ALLCAL /;"	d
+MODE1_ALLCAL	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define MODE1_ALLCAL /;"	d
+MODE1_EXTCLK	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define MODE1_EXTCLK /;"	d
+MODE1_EXTCLK	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define MODE1_EXTCLK /;"	d
+MODE1_RESTART	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define MODE1_RESTART /;"	d
+MODE1_RESTART	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define MODE1_RESTART /;"	d
+MODE1_SLEEP	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define MODE1_SLEEP /;"	d
+MODE1_SLEEP	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define MODE1_SLEEP /;"	d
+MODE1_SUB1	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define MODE1_SUB1 /;"	d
+MODE1_SUB1	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define MODE1_SUB1 /;"	d
+MODE1_SUB2	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define MODE1_SUB2 /;"	d
+MODE1_SUB2	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define MODE1_SUB2 /;"	d
+MODE1_SUB3	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define MODE1_SUB3 /;"	d
+MODE1_SUB3	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define MODE1_SUB3 /;"	d
+MODE2_INVRT	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define MODE2_INVRT /;"	d
+MODE2_INVRT	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define MODE2_INVRT /;"	d
+MODE2_OCH	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define MODE2_OCH /;"	d
+MODE2_OCH	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define MODE2_OCH /;"	d
+MODE2_OUTDRV	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define MODE2_OUTDRV /;"	d
+MODE2_OUTDRV	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define MODE2_OUTDRV /;"	d
+MODE2_OUTNE_0	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define MODE2_OUTNE_0 /;"	d
+MODE2_OUTNE_0	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define MODE2_OUTNE_0 /;"	d
+MODE2_OUTNE_1	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define MODE2_OUTNE_1 /;"	d
+MODE2_OUTNE_1	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define MODE2_OUTNE_1 /;"	d
+Module Info	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^## Module Info$/;"	s	chapter:PCA9685-Arduino
+Module Info	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^## Module Info$/;"	s	chapter:PCA9685-Arduino
+Multi-Device Proxy Example	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^### Multi-Device Proxy Example$/;"	S	section:PCA9685-Arduino""Example Usage
+Multi-Device Proxy Example	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^### Multi-Device Proxy Example$/;"	S	section:PCA9685-Arduino""Example Usage
+PCA9685	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^PCA9685::PCA9685(TwoWire& i2cWire, uint32_t i2cSpeed, byte i2cAddress)$/;"	f	class:PCA9685
+PCA9685	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^PCA9685::PCA9685(byte i2cAddress)$/;"	f	class:PCA9685
+PCA9685	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^PCA9685::PCA9685(byte i2cAddress, TwoWire& i2cWire, uint32_t i2cSpeed)$/;"	f	class:PCA9685
+PCA9685	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^class PCA9685 {$/;"	c
+PCA9685	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^PCA9685::PCA9685(TwoWire& i2cWire, uint32_t i2cSpeed, byte i2cAddress)$/;"	f	class:PCA9685
+PCA9685	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^PCA9685::PCA9685(byte i2cAddress)$/;"	f	class:PCA9685
+PCA9685	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^PCA9685::PCA9685(byte i2cAddress, TwoWire& i2cWire, uint32_t i2cSpeed)$/;"	f	class:PCA9685
+PCA9685	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^class PCA9685 {$/;"	c
+PCA9685-Arduino	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^# PCA9685-Arduino$/;"	c
+PCA9685-Arduino	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^# PCA9685-Arduino$/;"	c
+PCA9685_ALLCALLADR	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define PCA9685_ALLCALLADR /;"	d
+PCA9685_ALLCALLADR	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define PCA9685_ALLCALLADR /;"	d
+PCA9685_ALLCALL_REG	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_ALLCALL_REG /;"	d	file:
+PCA9685_ALLCALL_REG	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_ALLCALL_REG /;"	d	file:
+PCA9685_ALLLED_CHANNEL	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_ALLLED_CHANNEL /;"	d	file:
+PCA9685_ALLLED_CHANNEL	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_ALLLED_CHANNEL /;"	d	file:
+PCA9685_ALLLED_OFF_H	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define PCA9685_ALLLED_OFF_H /;"	d
+PCA9685_ALLLED_OFF_H	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define PCA9685_ALLLED_OFF_H /;"	d
+PCA9685_ALLLED_OFF_L	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define PCA9685_ALLLED_OFF_L /;"	d
+PCA9685_ALLLED_OFF_L	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define PCA9685_ALLLED_OFF_L /;"	d
+PCA9685_ALLLED_ON_H	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define PCA9685_ALLLED_ON_H /;"	d
+PCA9685_ALLLED_ON_H	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define PCA9685_ALLLED_ON_H /;"	d
+PCA9685_ALLLED_ON_L	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define PCA9685_ALLLED_ON_L /;"	d
+PCA9685_ALLLED_ON_L	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define PCA9685_ALLLED_ON_L /;"	d
+PCA9685_ALLLED_REG	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_ALLLED_REG /;"	d	file:
+PCA9685_ALLLED_REG	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_ALLLED_REG /;"	d	file:
+PCA9685_CHANNEL_COUNT	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_CHANNEL_COUNT /;"	d	file:
+PCA9685_CHANNEL_COUNT	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_CHANNEL_COUNT /;"	d	file:
+PCA9685_ChannelUpdateMode	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^enum PCA9685_ChannelUpdateMode {$/;"	g
+PCA9685_ChannelUpdateMode	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^enum PCA9685_ChannelUpdateMode {$/;"	g
+PCA9685_ChannelUpdateMode_AfterAck	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_ChannelUpdateMode_AfterAck,         \/\/ Channel updates commit after individual cha/;"	e	enum:PCA9685_ChannelUpdateMode
+PCA9685_ChannelUpdateMode_AfterAck	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_ChannelUpdateMode_AfterAck,         \/\/ Channel updates commit after individual cha/;"	e	enum:PCA9685_ChannelUpdateMode
+PCA9685_ChannelUpdateMode_AfterStop	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_ChannelUpdateMode_AfterStop,        \/\/ Channel updates commit after full-transmiss/;"	e	enum:PCA9685_ChannelUpdateMode
+PCA9685_ChannelUpdateMode_AfterStop	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_ChannelUpdateMode_AfterStop,        \/\/ Channel updates commit after full-transmiss/;"	e	enum:PCA9685_ChannelUpdateMode
+PCA9685_ChannelUpdateMode_Count	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_ChannelUpdateMode_Count,            \/\/ Internal use only$/;"	e	enum:PCA9685_ChannelUpdateMode
+PCA9685_ChannelUpdateMode_Count	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_ChannelUpdateMode_Count,            \/\/ Internal use only$/;"	e	enum:PCA9685_ChannelUpdateMode
+PCA9685_ChannelUpdateMode_Undefined	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_ChannelUpdateMode_Undefined = -1    \/\/ Internal use only$/;"	e	enum:PCA9685_ChannelUpdateMode
+PCA9685_ChannelUpdateMode_Undefined	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_ChannelUpdateMode_Undefined = -1    \/\/ Internal use only$/;"	e	enum:PCA9685_ChannelUpdateMode
+PCA9685_H	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^#define PCA9685_H$/;"	d
+PCA9685_H	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^#define PCA9685_H$/;"	d
+PCA9685_I2C_ADDRESS	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define PCA9685_I2C_ADDRESS /;"	d
+PCA9685_I2C_ADDRESS	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define PCA9685_I2C_ADDRESS /;"	d
+PCA9685_I2C_BASE_MODULE_ADDRESS	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_I2C_BASE_MODULE_ADDRESS /;"	d	file:
+PCA9685_I2C_BASE_MODULE_ADDRESS	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_I2C_BASE_MODULE_ADDRESS /;"	d	file:
+PCA9685_I2C_BASE_MODULE_ADRMASK	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_I2C_BASE_MODULE_ADRMASK /;"	d	file:
+PCA9685_I2C_BASE_MODULE_ADRMASK	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_I2C_BASE_MODULE_ADRMASK /;"	d	file:
+PCA9685_I2C_BASE_PROXY_ADDRESS	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_I2C_BASE_PROXY_ADDRESS /;"	d	file:
+PCA9685_I2C_BASE_PROXY_ADDRESS	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_I2C_BASE_PROXY_ADDRESS /;"	d	file:
+PCA9685_I2C_BASE_PROXY_ADRMASK	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_I2C_BASE_PROXY_ADRMASK /;"	d	file:
+PCA9685_I2C_BASE_PROXY_ADRMASK	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_I2C_BASE_PROXY_ADRMASK /;"	d	file:
+PCA9685_I2C_BUFFER_LENGTH	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^#define PCA9685_I2C_BUFFER_LENGTH /;"	d
+PCA9685_I2C_BUFFER_LENGTH	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^#define PCA9685_I2C_BUFFER_LENGTH /;"	d
+PCA9685_I2C_DEF_ALLCALL_PROXYADR	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^#define PCA9685_I2C_DEF_ALLCALL_PROXYADR /;"	d
+PCA9685_I2C_DEF_ALLCALL_PROXYADR	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^#define PCA9685_I2C_DEF_ALLCALL_PROXYADR /;"	d
+PCA9685_I2C_DEF_SUB1_PROXYADR	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^#define PCA9685_I2C_DEF_SUB1_PROXYADR /;"	d
+PCA9685_I2C_DEF_SUB1_PROXYADR	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^#define PCA9685_I2C_DEF_SUB1_PROXYADR /;"	d
+PCA9685_I2C_DEF_SUB2_PROXYADR	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^#define PCA9685_I2C_DEF_SUB2_PROXYADR /;"	d
+PCA9685_I2C_DEF_SUB2_PROXYADR	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^#define PCA9685_I2C_DEF_SUB2_PROXYADR /;"	d
+PCA9685_I2C_DEF_SUB3_PROXYADR	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^#define PCA9685_I2C_DEF_SUB3_PROXYADR /;"	d
+PCA9685_I2C_DEF_SUB3_PROXYADR	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^#define PCA9685_I2C_DEF_SUB3_PROXYADR /;"	d
+PCA9685_LED0_OFF_H	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define PCA9685_LED0_OFF_H /;"	d
+PCA9685_LED0_OFF_H	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define PCA9685_LED0_OFF_H /;"	d
+PCA9685_LED0_OFF_L	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define PCA9685_LED0_OFF_L /;"	d
+PCA9685_LED0_OFF_L	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define PCA9685_LED0_OFF_L /;"	d
+PCA9685_LED0_ON_H	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define PCA9685_LED0_ON_H /;"	d
+PCA9685_LED0_ON_H	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define PCA9685_LED0_ON_H /;"	d
+PCA9685_LED0_ON_L	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define PCA9685_LED0_ON_L /;"	d
+PCA9685_LED0_ON_L	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define PCA9685_LED0_ON_L /;"	d
+PCA9685_LED0_REG	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_LED0_REG /;"	d	file:
+PCA9685_LED0_REG	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_LED0_REG /;"	d	file:
+PCA9685_MAX_CHANNEL	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_MAX_CHANNEL /;"	d	file:
+PCA9685_MAX_CHANNEL	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_MAX_CHANNEL /;"	d	file:
+PCA9685_MIN_CHANNEL	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_MIN_CHANNEL /;"	d	file:
+PCA9685_MIN_CHANNEL	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_MIN_CHANNEL /;"	d	file:
+PCA9685_MODE1	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define PCA9685_MODE1 /;"	d
+PCA9685_MODE1	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define PCA9685_MODE1 /;"	d
+PCA9685_MODE1_ALLCALL	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_MODE1_ALLCALL /;"	d	file:
+PCA9685_MODE1_ALLCALL	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_MODE1_ALLCALL /;"	d	file:
+PCA9685_MODE1_AUTOINC	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_MODE1_AUTOINC /;"	d	file:
+PCA9685_MODE1_AUTOINC	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_MODE1_AUTOINC /;"	d	file:
+PCA9685_MODE1_EXTCLK	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_MODE1_EXTCLK /;"	d	file:
+PCA9685_MODE1_EXTCLK	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_MODE1_EXTCLK /;"	d	file:
+PCA9685_MODE1_REG	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_MODE1_REG /;"	d	file:
+PCA9685_MODE1_REG	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_MODE1_REG /;"	d	file:
+PCA9685_MODE1_RESTART	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_MODE1_RESTART /;"	d	file:
+PCA9685_MODE1_RESTART	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_MODE1_RESTART /;"	d	file:
+PCA9685_MODE1_SLEEP	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_MODE1_SLEEP /;"	d	file:
+PCA9685_MODE1_SLEEP	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_MODE1_SLEEP /;"	d	file:
+PCA9685_MODE1_SUBADR1	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_MODE1_SUBADR1 /;"	d	file:
+PCA9685_MODE1_SUBADR1	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_MODE1_SUBADR1 /;"	d	file:
+PCA9685_MODE1_SUBADR2	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_MODE1_SUBADR2 /;"	d	file:
+PCA9685_MODE1_SUBADR2	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_MODE1_SUBADR2 /;"	d	file:
+PCA9685_MODE1_SUBADR3	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_MODE1_SUBADR3 /;"	d	file:
+PCA9685_MODE1_SUBADR3	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_MODE1_SUBADR3 /;"	d	file:
+PCA9685_MODE2	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define PCA9685_MODE2 /;"	d
+PCA9685_MODE2	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define PCA9685_MODE2 /;"	d
+PCA9685_MODE2_INVRT	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_MODE2_INVRT /;"	d	file:
+PCA9685_MODE2_INVRT	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_MODE2_INVRT /;"	d	file:
+PCA9685_MODE2_OCH_ONACK	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_MODE2_OCH_ONACK /;"	d	file:
+PCA9685_MODE2_OCH_ONACK	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_MODE2_OCH_ONACK /;"	d	file:
+PCA9685_MODE2_OUTDRV_TPOLE	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_MODE2_OUTDRV_TPOLE /;"	d	file:
+PCA9685_MODE2_OUTDRV_TPOLE	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_MODE2_OUTDRV_TPOLE /;"	d	file:
+PCA9685_MODE2_OUTNE_HIGHZ	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_MODE2_OUTNE_HIGHZ /;"	d	file:
+PCA9685_MODE2_OUTNE_HIGHZ	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_MODE2_OUTNE_HIGHZ /;"	d	file:
+PCA9685_MODE2_OUTNE_TPHIGH	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_MODE2_OUTNE_TPHIGH /;"	d	file:
+PCA9685_MODE2_OUTNE_TPHIGH	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_MODE2_OUTNE_TPHIGH /;"	d	file:
+PCA9685_MODE2_REG	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_MODE2_REG /;"	d	file:
+PCA9685_MODE2_REG	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_MODE2_REG /;"	d	file:
+PCA9685_OutputDisabledMode	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^enum PCA9685_OutputDisabledMode {$/;"	g
+PCA9685_OutputDisabledMode	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^enum PCA9685_OutputDisabledMode {$/;"	g
+PCA9685_OutputDisabledMode_Count	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_OutputDisabledMode_Count,           \/\/ Internal use only$/;"	e	enum:PCA9685_OutputDisabledMode
+PCA9685_OutputDisabledMode_Count	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_OutputDisabledMode_Count,           \/\/ Internal use only$/;"	e	enum:PCA9685_OutputDisabledMode
+PCA9685_OutputDisabledMode_Floating	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_OutputDisabledMode_Floating,        \/\/ When OE is disabled\/HIGH, channel outputs /;"	e	enum:PCA9685_OutputDisabledMode
+PCA9685_OutputDisabledMode_Floating	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_OutputDisabledMode_Floating,        \/\/ When OE is disabled\/HIGH, channel outputs /;"	e	enum:PCA9685_OutputDisabledMode
+PCA9685_OutputDisabledMode_High	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_OutputDisabledMode_High,            \/\/ When OE is disabled\/HIGH, channels output /;"	e	enum:PCA9685_OutputDisabledMode
+PCA9685_OutputDisabledMode_High	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_OutputDisabledMode_High,            \/\/ When OE is disabled\/HIGH, channels output /;"	e	enum:PCA9685_OutputDisabledMode
+PCA9685_OutputDisabledMode_Low	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_OutputDisabledMode_Low,             \/\/ When OE is disabled\/HIGH, channels output /;"	e	enum:PCA9685_OutputDisabledMode
+PCA9685_OutputDisabledMode_Low	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_OutputDisabledMode_Low,             \/\/ When OE is disabled\/HIGH, channels output /;"	e	enum:PCA9685_OutputDisabledMode
+PCA9685_OutputDisabledMode_Undefined	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_OutputDisabledMode_Undefined = -1   \/\/ Internal use only$/;"	e	enum:PCA9685_OutputDisabledMode
+PCA9685_OutputDisabledMode_Undefined	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_OutputDisabledMode_Undefined = -1   \/\/ Internal use only$/;"	e	enum:PCA9685_OutputDisabledMode
+PCA9685_OutputDriverMode	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^enum PCA9685_OutputDriverMode {$/;"	g
+PCA9685_OutputDriverMode	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^enum PCA9685_OutputDriverMode {$/;"	g
+PCA9685_OutputDriverMode_Count	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_OutputDriverMode_Count,             \/\/ Internal use only$/;"	e	enum:PCA9685_OutputDriverMode
+PCA9685_OutputDriverMode_Count	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_OutputDriverMode_Count,             \/\/ Internal use only$/;"	e	enum:PCA9685_OutputDriverMode
+PCA9685_OutputDriverMode_OpenDrain	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_OutputDriverMode_OpenDrain,         \/\/ Module outputs in an open-drain (aka direct/;"	e	enum:PCA9685_OutputDriverMode
+PCA9685_OutputDriverMode_OpenDrain	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_OutputDriverMode_OpenDrain,         \/\/ Module outputs in an open-drain (aka direct/;"	e	enum:PCA9685_OutputDriverMode
+PCA9685_OutputDriverMode_TotemPole	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_OutputDriverMode_TotemPole,         \/\/ Module outputs in a totem-pole (aka push-pu/;"	e	enum:PCA9685_OutputDriverMode
+PCA9685_OutputDriverMode_TotemPole	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_OutputDriverMode_TotemPole,         \/\/ Module outputs in a totem-pole (aka push-pu/;"	e	enum:PCA9685_OutputDriverMode
+PCA9685_OutputDriverMode_Undefined	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_OutputDriverMode_Undefined = -1     \/\/ Internal use only$/;"	e	enum:PCA9685_OutputDriverMode
+PCA9685_OutputDriverMode_Undefined	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_OutputDriverMode_Undefined = -1     \/\/ Internal use only$/;"	e	enum:PCA9685_OutputDriverMode
+PCA9685_OutputEnabledMode	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^enum PCA9685_OutputEnabledMode {$/;"	g
+PCA9685_OutputEnabledMode	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^enum PCA9685_OutputEnabledMode {$/;"	g
+PCA9685_OutputEnabledMode_Count	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_OutputEnabledMode_Count,            \/\/ Internal use only$/;"	e	enum:PCA9685_OutputEnabledMode
+PCA9685_OutputEnabledMode_Count	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_OutputEnabledMode_Count,            \/\/ Internal use only$/;"	e	enum:PCA9685_OutputEnabledMode
+PCA9685_OutputEnabledMode_Inverted	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_OutputEnabledMode_Inverted,         \/\/ When OE is enabled\/LOW, channels output an/;"	e	enum:PCA9685_OutputEnabledMode
+PCA9685_OutputEnabledMode_Inverted	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_OutputEnabledMode_Inverted,         \/\/ When OE is enabled\/LOW, channels output an/;"	e	enum:PCA9685_OutputEnabledMode
+PCA9685_OutputEnabledMode_Normal	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_OutputEnabledMode_Normal,           \/\/ When OE is enabled\/LOW, channels output a /;"	e	enum:PCA9685_OutputEnabledMode
+PCA9685_OutputEnabledMode_Normal	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_OutputEnabledMode_Normal,           \/\/ When OE is enabled\/LOW, channels output a /;"	e	enum:PCA9685_OutputEnabledMode
+PCA9685_OutputEnabledMode_Undefined	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_OutputEnabledMode_Undefined = -1    \/\/ Internal use only$/;"	e	enum:PCA9685_OutputEnabledMode
+PCA9685_OutputEnabledMode_Undefined	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_OutputEnabledMode_Undefined = -1    \/\/ Internal use only$/;"	e	enum:PCA9685_OutputEnabledMode
+PCA9685_PRESCALE	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define PCA9685_PRESCALE /;"	d
+PCA9685_PRESCALE	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define PCA9685_PRESCALE /;"	d
+PCA9685_PRESCALE_MAX	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define PCA9685_PRESCALE_MAX /;"	d
+PCA9685_PRESCALE_MAX	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define PCA9685_PRESCALE_MAX /;"	d
+PCA9685_PRESCALE_MIN	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define PCA9685_PRESCALE_MIN /;"	d
+PCA9685_PRESCALE_MIN	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define PCA9685_PRESCALE_MIN /;"	d
+PCA9685_PRESCALE_REG	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_PRESCALE_REG /;"	d	file:
+PCA9685_PRESCALE_REG	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_PRESCALE_REG /;"	d	file:
+PCA9685_PWM_FULL	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_PWM_FULL /;"	d	file:
+PCA9685_PWM_FULL	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_PWM_FULL /;"	d	file:
+PCA9685_PWM_MASK	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_PWM_MASK /;"	d	file:
+PCA9685_PWM_MASK	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_PWM_MASK /;"	d	file:
+PCA9685_PhaseBalancer	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^enum PCA9685_PhaseBalancer {$/;"	g
+PCA9685_PhaseBalancer	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^enum PCA9685_PhaseBalancer {$/;"	g
+PCA9685_PhaseBalancer_Count	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_PhaseBalancer_Count,                \/\/ Internal use only$/;"	e	enum:PCA9685_PhaseBalancer
+PCA9685_PhaseBalancer_Count	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_PhaseBalancer_Count,                \/\/ Internal use only$/;"	e	enum:PCA9685_PhaseBalancer
+PCA9685_PhaseBalancer_Linear	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_PhaseBalancer_Linear,               \/\/ Uses linear software-based phase balancing,/;"	e	enum:PCA9685_PhaseBalancer
+PCA9685_PhaseBalancer_Linear	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_PhaseBalancer_Linear,               \/\/ Uses linear software-based phase balancing,/;"	e	enum:PCA9685_PhaseBalancer
+PCA9685_PhaseBalancer_None	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_PhaseBalancer_None,                 \/\/ Disables software-based phase balancing, re/;"	e	enum:PCA9685_PhaseBalancer
+PCA9685_PhaseBalancer_None	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_PhaseBalancer_None,                 \/\/ Disables software-based phase balancing, re/;"	e	enum:PCA9685_PhaseBalancer
+PCA9685_PhaseBalancer_Undefined	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_PhaseBalancer_Undefined = -1        \/\/ Internal use only$/;"	e	enum:PCA9685_PhaseBalancer
+PCA9685_PhaseBalancer_Undefined	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_PhaseBalancer_Undefined = -1        \/\/ Internal use only$/;"	e	enum:PCA9685_PhaseBalancer
+PCA9685_SUBADR1	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define PCA9685_SUBADR1 /;"	d
+PCA9685_SUBADR1	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define PCA9685_SUBADR1 /;"	d
+PCA9685_SUBADR1_REG	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_SUBADR1_REG /;"	d	file:
+PCA9685_SUBADR1_REG	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_SUBADR1_REG /;"	d	file:
+PCA9685_SUBADR2	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define PCA9685_SUBADR2 /;"	d
+PCA9685_SUBADR2	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define PCA9685_SUBADR2 /;"	d
+PCA9685_SUBADR2_REG	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_SUBADR2_REG /;"	d	file:
+PCA9685_SUBADR2_REG	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_SUBADR2_REG /;"	d	file:
+PCA9685_SUBADR3	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define PCA9685_SUBADR3 /;"	d
+PCA9685_SUBADR3	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define PCA9685_SUBADR3 /;"	d
+PCA9685_SUBADR3_REG	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_SUBADR3_REG /;"	d	file:
+PCA9685_SUBADR3_REG	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_SUBADR3_REG /;"	d	file:
+PCA9685_SW_RESET	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_SW_RESET /;"	d	file:
+PCA9685_SW_RESET	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^#define PCA9685_SW_RESET /;"	d	file:
+PCA9685_ServoEval	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^PCA9685_ServoEval::PCA9685_ServoEval(uint16_t minPWMAmount, uint16_t maxPWMAmount)$/;"	f	class:PCA9685_ServoEval
+PCA9685_ServoEval	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^PCA9685_ServoEval::PCA9685_ServoEval(uint16_t minPWMAmount, uint16_t midPWMAmount, uint16_t maxP/;"	f	class:PCA9685_ServoEval
+PCA9685_ServoEval	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^class PCA9685_ServoEval {$/;"	c
+PCA9685_ServoEval	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^PCA9685_ServoEval::PCA9685_ServoEval(uint16_t minPWMAmount, uint16_t maxPWMAmount)$/;"	f	class:PCA9685_ServoEval
+PCA9685_ServoEval	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^PCA9685_ServoEval::PCA9685_ServoEval(uint16_t minPWMAmount, uint16_t midPWMAmount, uint16_t maxP/;"	f	class:PCA9685_ServoEval
+PCA9685_ServoEval	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^class PCA9685_ServoEval {$/;"	c
+PCA9685_TESTMODE	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define PCA9685_TESTMODE /;"	d
+PCA9685_TESTMODE	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define PCA9685_TESTMODE /;"	d
+PCA9685_USE_SOFTWARE_I2C	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^#define PCA9685_USE_SOFTWARE_I2C$/;"	d
+PCA9685_USE_SOFTWARE_I2C	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^#define PCA9685_USE_SOFTWARE_I2C$/;"	d
 Project pages	Kame-Quadpod/README.md	/^### Project pages$/;"	S	chapter:Kame
 Project pages	Xpider-cute-robot/README.md	/^### Project pages$/;"	S	chapter:Kame
 Projects	README.md	/^### Projects$/;"	S	chapter:Raspberry-Robotics
 Raspberry-Robotics	README.md	/^# Raspberry-Robotics$/;"	c
+SPIClass	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^typedef uint8_t SPIClass;$/;"	t	typeref:typename:uint8_t
+SPIClass	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^typedef uint8_t SPIClass;$/;"	t	typeref:typename:uint8_t
+SPI_BITORDER_LSBFIRST	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  SPI_BITORDER_LSBFIRST = LSBFIRST,$/;"	e	enum:_BitOrder
+SPI_BITORDER_LSBFIRST	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  SPI_BITORDER_LSBFIRST = SPI_LSBFIRST,$/;"	e	enum:_BitOrder
+SPI_BITORDER_LSBFIRST	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^#define SPI_BITORDER_LSBFIRST /;"	d
+SPI_BITORDER_LSBFIRST	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  SPI_BITORDER_LSBFIRST = LSBFIRST,$/;"	e	enum:_BitOrder
+SPI_BITORDER_LSBFIRST	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  SPI_BITORDER_LSBFIRST = SPI_LSBFIRST,$/;"	e	enum:_BitOrder
+SPI_BITORDER_LSBFIRST	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^#define SPI_BITORDER_LSBFIRST /;"	d
+SPI_BITORDER_MSBFIRST	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  SPI_BITORDER_MSBFIRST = MSBFIRST,$/;"	e	enum:_BitOrder
+SPI_BITORDER_MSBFIRST	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  SPI_BITORDER_MSBFIRST = SPI_MSBFIRST,$/;"	e	enum:_BitOrder
+SPI_BITORDER_MSBFIRST	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^#define SPI_BITORDER_MSBFIRST /;"	d
+SPI_BITORDER_MSBFIRST	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  SPI_BITORDER_MSBFIRST = MSBFIRST,$/;"	e	enum:_BitOrder
+SPI_BITORDER_MSBFIRST	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  SPI_BITORDER_MSBFIRST = SPI_MSBFIRST,$/;"	e	enum:_BitOrder
+SPI_BITORDER_MSBFIRST	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^#define SPI_BITORDER_MSBFIRST /;"	d
+SPI_MODE0	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^enum { SPI_MODE0, SPI_MODE1, SPI_MODE2, _SPI_MODE4 };$/;"	e	enum:__anon01f3beeb0103
+SPI_MODE0	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^enum { SPI_MODE0, SPI_MODE1, SPI_MODE2, _SPI_MODE4 };$/;"	e	enum:__anon7f56235a0103
+SPI_MODE1	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^enum { SPI_MODE0, SPI_MODE1, SPI_MODE2, _SPI_MODE4 };$/;"	e	enum:__anon01f3beeb0103
+SPI_MODE1	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^enum { SPI_MODE0, SPI_MODE1, SPI_MODE2, _SPI_MODE4 };$/;"	e	enum:__anon7f56235a0103
+SPI_MODE2	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^enum { SPI_MODE0, SPI_MODE1, SPI_MODE2, _SPI_MODE4 };$/;"	e	enum:__anon01f3beeb0103
+SPI_MODE2	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^enum { SPI_MODE0, SPI_MODE1, SPI_MODE2, _SPI_MODE4 };$/;"	e	enum:__anon7f56235a0103
 STL list	Kame-Quadpod/README.md	/^#### STL list$/;"	t	subsection:Kame""Seznam materialu a soucastek k tisku
 STL list	Xpider-cute-robot/README.md	/^#### STL list$/;"	t	subsection:Kame""Seznam materialu a soucastek k tisku
 Screws, tools, ...	Kame-Quadpod/README.md	/^#### Screws, tools, ...$/;"	t	subsection:Kame""Seznam materialu a soucastek k tisku
 Screws, tools, ...	Xpider-cute-robot/README.md	/^#### Screws, tools, ...$/;"	t	subsection:Kame""Seznam materialu a soucastek k tisku
+Servo Control	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^### Servo Control$/;"	S	section:PCA9685-Arduino""Hookup Callouts
+Servo Control	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^### Servo Control$/;"	S	section:PCA9685-Arduino""Hookup Callouts
+Servo Evaluator Example	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^### Servo Evaluator Example$/;"	S	section:PCA9685-Arduino""Example Usage
+Servo Evaluator Example	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^### Servo Evaluator Example$/;"	S	section:PCA9685-Arduino""Example Usage
 Seznam materialu a soucastek k tisku	Kame-Quadpod/README.md	/^### Seznam materialu a soucastek k tisku$/;"	S	chapter:Kame
 Seznam materialu a soucastek k tisku	Xpider-cute-robot/README.md	/^### Seznam materialu a soucastek k tisku$/;"	S	chapter:Kame
-U_x	Kame-Quadpod/chatgpt4/IK_leg.py	/^U_x, U_y, U_z = forward_kinematics(theta_1, theta_2, theta_3, L1, L2, L3)$/;"	v
-U_y	Kame-Quadpod/chatgpt4/IK_leg.py	/^U_x, U_y, U_z = forward_kinematics(theta_1, theta_2, theta_3, L1, L2, L3)$/;"	v
-U_z	Kame-Quadpod/chatgpt4/IK_leg.py	/^U_x, U_y, U_z = forward_kinematics(theta_1, theta_2, theta_3, L1, L2, L3)$/;"	v
-alpha	Kame-Quadpod/chatgpt4/kinematics.py	/^theta, alpha, beta, L1, L2 = 90, 45, 45, 6, 2$/;"	v
-angles	Kame-Quadpod/chatgpt4/IK.py	/^angles = inverse_kinematics(x, y, z, L1, L2, L3)$/;"	v
-angles	Kame-Quadpod/chatgpt4/IK_leg.py	/^angles = inverse_kinematics(x, y, z, L1, L2, L3)$/;"	v
-ax	Kame-Quadpod/FK_3D.py	/^ax = fig.add_subplot(projection='3d')$/;"	v
-beta	Kame-Quadpod/chatgpt4/kinematics.py	/^theta, alpha, beta, L1, L2 = 90, 45, 45, 6, 2$/;"	v
-body_height	Kame-Quadpod/chatgpt4/IK_leg.py	/^body_height = 5  # initial joint height$/;"	v
+Simple Example	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^### Simple Example$/;"	S	section:PCA9685-Arduino""Example Usage
+Simple Example	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^### Simple Example$/;"	S	section:PCA9685-Arduino""Example Usage
+Software i2c Example	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^### Software i2c Example$/;"	S	section:PCA9685-Arduino""Example Usage
+Software i2c Example	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^### Software i2c Example$/;"	S	section:PCA9685-Arduino""Example Usage
+U_x	Kame-Quadpod/kinematic-calculation/chatgpt4/IK_leg.py	/^U_x, U_y, U_z = forward_kinematics(theta_1, theta_2, theta_3, L1, L2, L3)$/;"	v
+U_y	Kame-Quadpod/kinematic-calculation/chatgpt4/IK_leg.py	/^U_x, U_y, U_z = forward_kinematics(theta_1, theta_2, theta_3, L1, L2, L3)$/;"	v
+U_z	Kame-Quadpod/kinematic-calculation/chatgpt4/IK_leg.py	/^U_x, U_y, U_z = forward_kinematics(theta_1, theta_2, theta_3, L1, L2, L3)$/;"	v
+_ADAFRUIT_I2C_REGISTER_H_	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_I2CRegister.h	/^#define _ADAFRUIT_I2C_REGISTER_H_$/;"	d
+_ADAFRUIT_I2C_REGISTER_H_	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_I2CRegister.h	/^#define _ADAFRUIT_I2C_REGISTER_H_$/;"	d
+_ADAFRUIT_PWMServoDriver_H	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define _ADAFRUIT_PWMServoDriver_H$/;"	d
+_ADAFRUIT_PWMServoDriver_H	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define _ADAFRUIT_PWMServoDriver_H$/;"	d
+_Adafruit_BusIO_SPIRegType	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h	/^typedef enum _Adafruit_BusIO_SPIRegType {$/;"	g
+_Adafruit_BusIO_SPIRegType	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h	/^typedef enum _Adafruit_BusIO_SPIRegType {$/;"	g
+_BitOrder	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^typedef enum _BitOrder {$/;"	g
+_BitOrder	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^typedef enum _BitOrder {$/;"	g
+_SPI_MODE4	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^enum { SPI_MODE0, SPI_MODE1, SPI_MODE2, _SPI_MODE4 };$/;"	e	enum:__anon01f3beeb0103
+_SPI_MODE4	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^enum { SPI_MODE0, SPI_MODE1, SPI_MODE2, _SPI_MODE4 };$/;"	e	enum:__anon7f56235a0103
+__anon01f3beeb0103	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^enum { SPI_MODE0, SPI_MODE1, SPI_MODE2, _SPI_MODE4 };$/;"	g
+__anon7f56235a0103	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^enum { SPI_MODE0, SPI_MODE1, SPI_MODE2, _SPI_MODE4 };$/;"	g
+_addr	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_I2CDevice.h	/^  uint8_t _addr;$/;"	m	class:Adafruit_I2CDevice	typeref:typename:uint8_t
+_addr	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_I2CDevice.h	/^  uint8_t _addr;$/;"	m	class:Adafruit_I2CDevice	typeref:typename:uint8_t
+_address	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h	/^  uint16_t _address;$/;"	m	class:Adafruit_BusIO_Register	typeref:typename:uint16_t
+_address	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h	/^  uint16_t _address;$/;"	m	class:Adafruit_BusIO_Register	typeref:typename:uint16_t
+_addrwidth	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h	/^  uint8_t _width, _addrwidth, _byteorder;$/;"	m	class:Adafruit_BusIO_Register	typeref:typename:uint8_t
+_addrwidth	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h	/^  uint8_t _width, _addrwidth, _byteorder;$/;"	m	class:Adafruit_BusIO_Register	typeref:typename:uint8_t
+_begun	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_I2CDevice.h	/^  bool _begun;$/;"	m	class:Adafruit_I2CDevice	typeref:typename:bool
+_begun	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  bool _begun;$/;"	m	class:Adafruit_SPIDevice	typeref:typename:bool
+_begun	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_I2CDevice.h	/^  bool _begun;$/;"	m	class:Adafruit_I2CDevice	typeref:typename:bool
+_begun	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  bool _begun;$/;"	m	class:Adafruit_SPIDevice	typeref:typename:bool
+_bits	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h	/^  uint8_t _bits, _shift;$/;"	m	class:Adafruit_BusIO_RegisterBits	typeref:typename:uint8_t
+_bits	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h	/^  uint8_t _bits, _shift;$/;"	m	class:Adafruit_BusIO_RegisterBits	typeref:typename:uint8_t
+_buffer	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h	/^  uint8_t _buffer[4]; \/\/ we won't support anything larger than uint32 for$/;"	m	class:Adafruit_BusIO_Register	typeref:typename:uint8_t[4]
+_buffer	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h	/^  uint8_t _buffer[4]; \/\/ we won't support anything larger than uint32 for$/;"	m	class:Adafruit_BusIO_Register	typeref:typename:uint8_t[4]
+_byteorder	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h	/^  uint8_t _width, _addrwidth, _byteorder;$/;"	m	class:Adafruit_BusIO_Register	typeref:typename:uint8_t
+_byteorder	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h	/^  uint8_t _width, _addrwidth, _byteorder;$/;"	m	class:Adafruit_BusIO_Register	typeref:typename:uint8_t
+_cached	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h	/^  uint32_t _cached = 0;$/;"	m	class:Adafruit_BusIO_Register	typeref:typename:uint32_t
+_cached	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h	/^  uint32_t _cached = 0;$/;"	m	class:Adafruit_BusIO_Register	typeref:typename:uint32_t
+_coeff	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    float *_coeff;      \/\/ a,b,c,d coefficient values$/;"	m	class:PCA9685_ServoEval	typeref:typename:float *
+_coeff	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    float *_coeff;      \/\/ a,b,c,d coefficient values$/;"	m	class:PCA9685_ServoEval	typeref:typename:float *
+_cs	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  int8_t _cs, _sck, _mosi, _miso;$/;"	m	class:Adafruit_SPIDevice	typeref:typename:int8_t
+_cs	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  int8_t _cs, _sck, _mosi, _miso;$/;"	m	class:Adafruit_SPIDevice	typeref:typename:int8_t
+_dataMode	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  uint8_t _dataMode;$/;"	m	class:Adafruit_SPIDevice	typeref:typename:uint8_t
+_dataMode	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  uint8_t _dataMode;$/;"	m	class:Adafruit_SPIDevice	typeref:typename:uint8_t
+_dataOrder	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  BusIOBitOrder _dataOrder;$/;"	m	class:Adafruit_SPIDevice	typeref:typename:BusIOBitOrder
+_dataOrder	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  BusIOBitOrder _dataOrder;$/;"	m	class:Adafruit_SPIDevice	typeref:typename:BusIOBitOrder
+_disabledMode	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_OutputDisabledMode _disabledMode;               \/\/ OE disabled output mode$/;"	m	class:PCA9685	typeref:typename:PCA9685_OutputDisabledMode
+_disabledMode	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_OutputDisabledMode _disabledMode;               \/\/ OE disabled output mode$/;"	m	class:PCA9685	typeref:typename:PCA9685_OutputDisabledMode
+_driverMode	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_OutputDriverMode _driverMode;                   \/\/ Output driver mode$/;"	m	class:PCA9685	typeref:typename:PCA9685_OutputDriverMode
+_driverMode	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_OutputDriverMode _driverMode;                   \/\/ Output driver mode$/;"	m	class:PCA9685	typeref:typename:PCA9685_OutputDriverMode
+_enabledMode	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_OutputEnabledMode _enabledMode;                 \/\/ OE enabled output mode$/;"	m	class:PCA9685	typeref:typename:PCA9685_OutputEnabledMode
+_enabledMode	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_OutputEnabledMode _enabledMode;                 \/\/ OE enabled output mode$/;"	m	class:PCA9685	typeref:typename:PCA9685_OutputEnabledMode
+_freq	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  uint32_t _freq;$/;"	m	class:Adafruit_SPIDevice	typeref:typename:uint32_t
+_freq	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  uint32_t _freq;$/;"	m	class:Adafruit_SPIDevice	typeref:typename:uint32_t
+_i2c	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^  TwoWire *_i2c;$/;"	m	class:Adafruit_PWMServoDriver	typeref:typename:TwoWire *
+_i2c	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^  TwoWire *_i2c;$/;"	m	class:Adafruit_PWMServoDriver	typeref:typename:TwoWire *
+_i2cAddress	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    byte _i2cAddress;                                       \/\/ Module's i2c address (default: /;"	m	class:PCA9685	typeref:typename:byte
+_i2cAddress	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    byte _i2cAddress;                                       \/\/ Module's i2c address (default: /;"	m	class:PCA9685	typeref:typename:byte
+_i2cSpeed	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    uint32_t _i2cSpeed;                                     \/\/ Module's i2c clock speed (defau/;"	m	class:PCA9685	typeref:typename:uint32_t
+_i2cSpeed	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    uint32_t _i2cSpeed;                                     \/\/ Module's i2c clock speed (defau/;"	m	class:PCA9685	typeref:typename:uint32_t
+_i2cWire	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    TwoWire* _i2cWire;                                      \/\/ Wire class instance (unowned) (/;"	m	class:PCA9685	typeref:typename:TwoWire *
+_i2cWire	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    TwoWire* _i2cWire;                                      \/\/ Wire class instance (unowned) (/;"	m	class:PCA9685	typeref:typename:TwoWire *
+_i2caddr	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^  uint8_t _i2caddr;$/;"	m	class:Adafruit_PWMServoDriver	typeref:typename:uint8_t
+_i2caddr	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^  uint8_t _i2caddr;$/;"	m	class:Adafruit_PWMServoDriver	typeref:typename:uint8_t
+_i2cdevice	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h	/^  Adafruit_I2CDevice *_i2cdevice;$/;"	m	class:Adafruit_BusIO_Register	typeref:typename:Adafruit_I2CDevice *
+_i2cdevice	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h	/^  Adafruit_I2CDevice *_i2cdevice;$/;"	m	class:Adafruit_BusIO_Register	typeref:typename:Adafruit_I2CDevice *
+_isCSpline	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    bool _isCSpline;    \/\/ Cubic spline tracking, for _coeff length$/;"	m	class:PCA9685_ServoEval	typeref:typename:bool
+_isCSpline	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    bool _isCSpline;    \/\/ Cubic spline tracking, for _coeff length$/;"	m	class:PCA9685_ServoEval	typeref:typename:bool
+_isProxyAddresser	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    bool _isProxyAddresser;                                 \/\/ Proxy addresser flag (disables /;"	m	class:PCA9685	typeref:typename:bool
+_isProxyAddresser	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    bool _isProxyAddresser;                                 \/\/ Proxy addresser flag (disables /;"	m	class:PCA9685	typeref:typename:bool
+_lastI2CError	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    byte _lastI2CError;                                     \/\/ Last module i2c error$/;"	m	class:PCA9685	typeref:typename:byte
+_lastI2CError	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    byte _lastI2CError;                                     \/\/ Last module i2c error$/;"	m	class:PCA9685	typeref:typename:byte
+_maxBufferSize	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_I2CDevice.h	/^  size_t _maxBufferSize;$/;"	m	class:Adafruit_I2CDevice	typeref:typename:size_t
+_maxBufferSize	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_I2CDevice.h	/^  size_t _maxBufferSize;$/;"	m	class:Adafruit_I2CDevice	typeref:typename:size_t
+_miso	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  int8_t _cs, _sck, _mosi, _miso;$/;"	m	class:Adafruit_SPIDevice	typeref:typename:int8_t
+_miso	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  int8_t _cs, _sck, _mosi, _miso;$/;"	m	class:Adafruit_SPIDevice	typeref:typename:int8_t
+_mosi	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  int8_t _cs, _sck, _mosi, _miso;$/;"	m	class:Adafruit_SPIDevice	typeref:typename:int8_t
+_mosi	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  int8_t _cs, _sck, _mosi, _miso;$/;"	m	class:Adafruit_SPIDevice	typeref:typename:int8_t
+_oscillator_freq	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^  uint32_t _oscillator_freq;$/;"	m	class:Adafruit_PWMServoDriver	typeref:typename:uint32_t
+_oscillator_freq	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^  uint32_t _oscillator_freq;$/;"	m	class:Adafruit_PWMServoDriver	typeref:typename:uint32_t
+_phaseBalancer	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_PhaseBalancer _phaseBalancer;                   \/\/ Phase balancer scheme$/;"	m	class:PCA9685	typeref:typename:PCA9685_PhaseBalancer
+_phaseBalancer	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_PhaseBalancer _phaseBalancer;                   \/\/ Phase balancer scheme$/;"	m	class:PCA9685	typeref:typename:PCA9685_PhaseBalancer
+_read	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_I2CDevice.cpp	/^bool Adafruit_I2CDevice::_read(uint8_t *buffer, size_t len, bool stop) {$/;"	f	class:Adafruit_I2CDevice	typeref:typename:bool
+_read	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_I2CDevice.cpp	/^bool Adafruit_I2CDevice::_read(uint8_t *buffer, size_t len, bool stop) {$/;"	f	class:Adafruit_I2CDevice	typeref:typename:bool
+_readBytes	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    uint8_t _readBytes;$/;"	m	class:PCA9685	typeref:typename:uint8_t
+_readBytes	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    uint8_t _readBytes;$/;"	m	class:PCA9685	typeref:typename:uint8_t
+_register	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h	/^  Adafruit_BusIO_Register *_register;$/;"	m	class:Adafruit_BusIO_RegisterBits	typeref:typename:Adafruit_BusIO_Register *
+_register	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h	/^  Adafruit_BusIO_Register *_register;$/;"	m	class:Adafruit_BusIO_RegisterBits	typeref:typename:Adafruit_BusIO_Register *
+_sck	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  int8_t _cs, _sck, _mosi, _miso;$/;"	m	class:Adafruit_SPIDevice	typeref:typename:int8_t
+_sck	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  int8_t _cs, _sck, _mosi, _miso;$/;"	m	class:Adafruit_SPIDevice	typeref:typename:int8_t
+_shift	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h	/^  uint8_t _bits, _shift;$/;"	m	class:Adafruit_BusIO_RegisterBits	typeref:typename:uint8_t
+_shift	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h	/^  uint8_t _bits, _shift;$/;"	m	class:Adafruit_BusIO_RegisterBits	typeref:typename:uint8_t
+_spi	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  SPIClass *_spi = nullptr;$/;"	m	class:Adafruit_SPIDevice	typeref:typename:SPIClass *
+_spi	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  SPIClass *_spi = nullptr;$/;"	m	class:Adafruit_SPIDevice	typeref:typename:SPIClass *
+_spiSetting	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  SPISettings *_spiSetting = nullptr;$/;"	m	class:Adafruit_SPIDevice	typeref:typename:SPISettings *
+_spiSetting	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  SPISettings *_spiSetting = nullptr;$/;"	m	class:Adafruit_SPIDevice	typeref:typename:SPISettings *
+_spidevice	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h	/^  Adafruit_SPIDevice *_spidevice;$/;"	m	class:Adafruit_BusIO_Register	typeref:typename:Adafruit_SPIDevice *
+_spidevice	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h	/^  Adafruit_SPIDevice *_spidevice;$/;"	m	class:Adafruit_BusIO_Register	typeref:typename:Adafruit_SPIDevice *
+_spiregtype	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h	/^  Adafruit_BusIO_SPIRegType _spiregtype;$/;"	m	class:Adafruit_BusIO_Register	typeref:typename:Adafruit_BusIO_SPIRegType
+_spiregtype	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h	/^  Adafruit_BusIO_SPIRegType _spiregtype;$/;"	m	class:Adafruit_BusIO_Register	typeref:typename:Adafruit_BusIO_SPIRegType
+_updateMode	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_ChannelUpdateMode _updateMode;                  \/\/ Channel update mode$/;"	m	class:PCA9685	typeref:typename:PCA9685_ChannelUpdateMode
+_updateMode	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^    PCA9685_ChannelUpdateMode _updateMode;                  \/\/ Channel update mode$/;"	m	class:PCA9685	typeref:typename:PCA9685_ChannelUpdateMode
+_width	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h	/^  uint8_t _width, _addrwidth, _byteorder;$/;"	m	class:Adafruit_BusIO_Register	typeref:typename:uint8_t
+_width	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h	/^  uint8_t _width, _addrwidth, _byteorder;$/;"	m	class:Adafruit_BusIO_Register	typeref:typename:uint8_t
+_wire	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_I2CDevice.h	/^  TwoWire *_wire;$/;"	m	class:Adafruit_I2CDevice	typeref:typename:TwoWire *
+_wire	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_I2CDevice.h	/^  TwoWire *_wire;$/;"	m	class:Adafruit_I2CDevice	typeref:typename:TwoWire *
+address	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_I2CDevice.cpp	/^uint8_t Adafruit_I2CDevice::address(void) { return _addr; }$/;"	f	class:Adafruit_I2CDevice	typeref:typename:uint8_t
+address	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_I2CDevice.cpp	/^uint8_t Adafruit_I2CDevice::address(void) { return _addr; }$/;"	f	class:Adafruit_I2CDevice	typeref:typename:uint8_t
+alpha	Kame-Quadpod/kinematic-calculation/chatgpt4/kinematics.py	/^theta, alpha, beta, L1, L2 = 90, 45, 45, 6, 2$/;"	v
+angle	Kame-Quadpod/natural-movement.py	/^angle = starting_angle$/;"	v
+angles	Kame-Quadpod/kinematic-calculation/chatgpt4/IK.py	/^angles = inverse_kinematics(x, y, z, L1, L2, L3)$/;"	v
+angles	Kame-Quadpod/kinematic-calculation/chatgpt4/IK_leg.py	/^angles = inverse_kinematics(x, y, z, L1, L2, L3)$/;"	v
+architectures	InMoove-Arm/libraries/Adafruit_BusIO/library.properties	/^architectures=*$/;"	k
+architectures	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/library.properties	/^architectures=*$/;"	k
+architectures	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.properties	/^architectures=*$/;"	k
+architectures	Kame-Quadpod/libraries/Adafruit_BusIO/library.properties	/^architectures=*$/;"	k
+architectures	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/library.properties	/^architectures=*$/;"	k
+architectures	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.properties	/^architectures=*$/;"	k
+author	InMoove-Arm/libraries/Adafruit_BusIO/library.properties	/^author=Adafruit$/;"	k
+author	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/library.properties	/^author=Adafruit$/;"	k
+author	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.properties	/^author=NachtRaveVL <nachtravevl@gmail.com>, Vitska, Kasper Skårhøj <kasperskaarhoj@gmail.com>$/;"	k
+author	Kame-Quadpod/libraries/Adafruit_BusIO/library.properties	/^author=Adafruit$/;"	k
+author	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/library.properties	/^author=Adafruit$/;"	k
+author	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.properties	/^author=NachtRaveVL <nachtravevl@gmail.com>, Vitska, Kasper Skårhøj <kasperskaarhoj@gmail.com>$/;"	k
+authors	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^    "authors": [$/;"	a
+authors	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^    "authors": [$/;"	a
+ax	Kame-Quadpod/kinematic-calculation/FK_3D.py	/^ax = fig.add_subplot(projection='3d')$/;"	v
+base	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "base": "examples\/BatchingExample",$/;"	s	object:examples.1
+base	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "base": "examples\/ModuleInfo",$/;"	s	object:examples.5
+base	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "base": "examples\/MultiDeviceProxyExample",$/;"	s	object:examples.2
+base	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "base": "examples\/ServoEvaluatorExample",$/;"	s	object:examples.3
+base	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "base": "examples\/SimpleExample",$/;"	s	object:examples.0
+base	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "base": "examples\/SoftwareI2CExample",$/;"	s	object:examples.4
+base	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "base": "examples\/BatchingExample",$/;"	s	object:examples.1
+base	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "base": "examples\/ModuleInfo",$/;"	s	object:examples.5
+base	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "base": "examples\/MultiDeviceProxyExample",$/;"	s	object:examples.2
+base	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "base": "examples\/ServoEvaluatorExample",$/;"	s	object:examples.3
+base	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "base": "examples\/SimpleExample",$/;"	s	object:examples.0
+base	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "base": "examples\/SoftwareI2CExample",$/;"	s	object:examples.4
+begin	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_I2CDevice.cpp	/^bool Adafruit_I2CDevice::begin(bool addr_detect) {$/;"	f	class:Adafruit_I2CDevice	typeref:typename:bool
+begin	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp	/^bool Adafruit_SPIDevice::begin(void) {$/;"	f	class:Adafruit_SPIDevice	typeref:typename:bool
+begin	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.cpp	/^bool Adafruit_PWMServoDriver::begin(uint8_t prescale) {$/;"	f	class:Adafruit_PWMServoDriver	typeref:typename:bool
+begin	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_I2CDevice.cpp	/^bool Adafruit_I2CDevice::begin(bool addr_detect) {$/;"	f	class:Adafruit_I2CDevice	typeref:typename:bool
+begin	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp	/^bool Adafruit_SPIDevice::begin(void) {$/;"	f	class:Adafruit_SPIDevice	typeref:typename:bool
+begin	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.cpp	/^bool Adafruit_PWMServoDriver::begin(uint8_t prescale) {$/;"	f	class:Adafruit_PWMServoDriver	typeref:typename:bool
+beginTransaction	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp	/^void Adafruit_SPIDevice::beginTransaction(void) {$/;"	f	class:Adafruit_SPIDevice	typeref:typename:void
+beginTransaction	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp	/^void Adafruit_SPIDevice::beginTransaction(void) {$/;"	f	class:Adafruit_SPIDevice	typeref:typename:void
+beginTransactionWithAssertingCS	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp	/^void Adafruit_SPIDevice::beginTransactionWithAssertingCS() {$/;"	f	class:Adafruit_SPIDevice	typeref:typename:void
+beginTransactionWithAssertingCS	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp	/^void Adafruit_SPIDevice::beginTransactionWithAssertingCS() {$/;"	f	class:Adafruit_SPIDevice	typeref:typename:void
+beta	Kame-Quadpod/kinematic-calculation/chatgpt4/kinematics.py	/^theta, alpha, beta, L1, L2 = 90, 45, 45, 6, 2$/;"	v
+body_height	Kame-Quadpod/kinematic-calculation/chatgpt4/IK_leg.py	/^body_height = 5  # initial joint height$/;"	v
+category	InMoove-Arm/libraries/Adafruit_BusIO/library.properties	/^category=Signal Input\/Output$/;"	k
+category	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/library.properties	/^category=Device Control$/;"	k
+category	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.properties	/^category=Device Control$/;"	k
+category	Kame-Quadpod/libraries/Adafruit_BusIO/library.properties	/^category=Signal Input\/Output$/;"	k
+category	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/library.properties	/^category=Device Control$/;"	k
+category	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.properties	/^category=Device Control$/;"	k
+checkForErrors	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::checkForErrors() {$/;"	f	class:PCA9685	typeref:typename:void
+checkForErrors	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::checkForErrors() {$/;"	f	class:PCA9685	typeref:typename:void
+clkPinMask	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  BusIO_PortMask mosiPinMask, misoPinMask, clkPinMask, csPinMask;$/;"	m	class:Adafruit_SPIDevice	typeref:typename:BusIO_PortMask
+clkPinMask	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  BusIO_PortMask mosiPinMask, misoPinMask, clkPinMask, csPinMask;$/;"	m	class:Adafruit_SPIDevice	typeref:typename:BusIO_PortMask
+clkPort	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  BusIO_PortReg *mosiPort, *clkPort, *misoPort, *csPort;$/;"	m	class:Adafruit_SPIDevice	typeref:typename:BusIO_PortReg *
+clkPort	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  BusIO_PortReg *mosiPort, *clkPort, *misoPort, *csPort;$/;"	m	class:Adafruit_SPIDevice	typeref:typename:BusIO_PortReg *
+csPinMask	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  BusIO_PortMask mosiPinMask, misoPinMask, clkPinMask, csPinMask;$/;"	m	class:Adafruit_SPIDevice	typeref:typename:BusIO_PortMask
+csPinMask	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  BusIO_PortMask mosiPinMask, misoPinMask, clkPinMask, csPinMask;$/;"	m	class:Adafruit_SPIDevice	typeref:typename:BusIO_PortMask
+csPort	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  BusIO_PortReg *mosiPort, *clkPort, *misoPort, *csPort;$/;"	m	class:Adafruit_SPIDevice	typeref:typename:BusIO_PortReg *
+csPort	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  BusIO_PortReg *mosiPort, *clkPort, *misoPort, *csPort;$/;"	m	class:Adafruit_SPIDevice	typeref:typename:BusIO_PortReg *
+depends	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/library.properties	/^depends=Adafruit BusIO$/;"	k
+depends	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/library.properties	/^depends=Adafruit BusIO$/;"	k
+description	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^    "description": "Library to control a PCA9685 16-channel PWM driver module from an Arduino bo/;"	s
+description	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^    "description": "Library to control a PCA9685 16-channel PWM driver module from an Arduino bo/;"	s
+detected	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_I2CDevice.cpp	/^bool Adafruit_I2CDevice::detected(void) {$/;"	f	class:Adafruit_I2CDevice	typeref:typename:bool
+detected	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_I2CDevice.cpp	/^bool Adafruit_I2CDevice::detected(void) {$/;"	f	class:Adafruit_I2CDevice	typeref:typename:bool
+disableAllCallAddress	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::disableAllCallAddress() {$/;"	f	class:PCA9685	typeref:typename:void
+disableAllCallAddress	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::disableAllCallAddress() {$/;"	f	class:PCA9685	typeref:typename:void
+disableSub1Address	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::disableSub1Address() {$/;"	f	class:PCA9685	typeref:typename:void
+disableSub1Address	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::disableSub1Address() {$/;"	f	class:PCA9685	typeref:typename:void
+disableSub2Address	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::disableSub2Address() {$/;"	f	class:PCA9685	typeref:typename:void
+disableSub2Address	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::disableSub2Address() {$/;"	f	class:PCA9685	typeref:typename:void
+disableSub3Address	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::disableSub3Address() {$/;"	f	class:PCA9685	typeref:typename:void
+disableSub3Address	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::disableSub3Address() {$/;"	f	class:PCA9685	typeref:typename:void
 dx	Turrets/angle-calc.py	/^dx = 500  # m$/;"	v
 dy	Turrets/angle-calc.py	/^dy = 20  # m - height the target is on$/;"	v
-fig	Kame-Quadpod/FK_3D.py	/^fig = plt.figure()$/;"	v
-forward_kinematics	Kame-Quadpod/FK_3D_3.py	/^def forward_kinematics(theta1, theta2, theta3, L1, L2):$/;"	f
-forward_kinematics	Kame-Quadpod/FK_3D_3_joints.py	/^def forward_kinematics(theta1, theta2, theta3, L1, L2, L3):$/;"	f
-forward_kinematics	Kame-Quadpod/chatgpt4/IK_leg.py	/^def forward_kinematics(theta_1, theta_2, theta_3, L1, L2, L3):$/;"	f
-forward_kinematics	Kame-Quadpod/chatgpt4/kinematics.py	/^def forward_kinematics(theta, alpha, beta, L1, L2):$/;"	f
+email	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "email": "nachtravevl@gmail.com",$/;"	s	object:authors.0
+email	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "email": "nachtravevl@gmail.com",$/;"	s	object:authors.0
+enableAllCallAddress	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::enableAllCallAddress(byte i2cAddressAllCall) {$/;"	f	class:PCA9685	typeref:typename:void
+enableAllCallAddress	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::enableAllCallAddress(byte i2cAddressAllCall) {$/;"	f	class:PCA9685	typeref:typename:void
+enableExtClockLine	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::enableExtClockLine() {$/;"	f	class:PCA9685	typeref:typename:void
+enableExtClockLine	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::enableExtClockLine() {$/;"	f	class:PCA9685	typeref:typename:void
+enableSub1Address	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::enableSub1Address(byte i2cAddressSub1) {$/;"	f	class:PCA9685	typeref:typename:void
+enableSub1Address	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::enableSub1Address(byte i2cAddressSub1) {$/;"	f	class:PCA9685	typeref:typename:void
+enableSub2Address	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::enableSub2Address(byte i2cAddressSub2) {$/;"	f	class:PCA9685	typeref:typename:void
+enableSub2Address	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::enableSub2Address(byte i2cAddressSub2) {$/;"	f	class:PCA9685	typeref:typename:void
+enableSub3Address	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::enableSub3Address(byte i2cAddressSub3) {$/;"	f	class:PCA9685	typeref:typename:void
+enableSub3Address	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::enableSub3Address(byte i2cAddressSub3) {$/;"	f	class:PCA9685	typeref:typename:void
+end	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_I2CDevice.cpp	/^void Adafruit_I2CDevice::end(void) {$/;"	f	class:Adafruit_I2CDevice	typeref:typename:void
+end	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_I2CDevice.cpp	/^void Adafruit_I2CDevice::end(void) {$/;"	f	class:Adafruit_I2CDevice	typeref:typename:void
+endTransaction	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp	/^void Adafruit_SPIDevice::endTransaction(void) {$/;"	f	class:Adafruit_SPIDevice	typeref:typename:void
+endTransaction	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp	/^void Adafruit_SPIDevice::endTransaction(void) {$/;"	f	class:Adafruit_SPIDevice	typeref:typename:void
+endTransactionWithDeassertingCS	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp	/^void Adafruit_SPIDevice::endTransactionWithDeassertingCS() {$/;"	f	class:Adafruit_SPIDevice	typeref:typename:void
+endTransactionWithDeassertingCS	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp	/^void Adafruit_SPIDevice::endTransactionWithDeassertingCS() {$/;"	f	class:Adafruit_SPIDevice	typeref:typename:void
+ending_angle	Kame-Quadpod/natural-movement.py	/^ending_angle = 155$/;"	v
+examples	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^    "examples": [$/;"	a
+examples	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^    "examples": [$/;"	a
+fig	Kame-Quadpod/kinematic-calculation/FK_3D.py	/^fig = plt.figure()$/;"	v
+files	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "files": ["BatchingExample.ino"]$/;"	a	object:examples.1
+files	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "files": ["ModuleInfo.ino"]$/;"	a	object:examples.5
+files	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "files": ["MultiDeviceProxyExample.ino"]$/;"	a	object:examples.2
+files	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "files": ["ServoEvaluatorExample.ino"]$/;"	a	object:examples.3
+files	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "files": ["SimpleExample.ino"]$/;"	a	object:examples.0
+files	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "files": ["SoftwareI2CExample.ino"]$/;"	a	object:examples.4
+files	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "files": ["BatchingExample.ino"]$/;"	a	object:examples.1
+files	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "files": ["ModuleInfo.ino"]$/;"	a	object:examples.5
+files	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "files": ["MultiDeviceProxyExample.ino"]$/;"	a	object:examples.2
+files	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "files": ["ServoEvaluatorExample.ino"]$/;"	a	object:examples.3
+files	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "files": ["SimpleExample.ino"]$/;"	a	object:examples.0
+files	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "files": ["SoftwareI2CExample.ino"]$/;"	a	object:examples.4
+forward_kinematics	Kame-Quadpod/kinematic-calculation/FK_3D_3.py	/^def forward_kinematics(theta1, theta2, theta3, L1, L2):$/;"	f
+forward_kinematics	Kame-Quadpod/kinematic-calculation/FK_3D_3_joints.py	/^def forward_kinematics(theta1, theta2, theta3, L1, L2, L3):$/;"	f
+forward_kinematics	Kame-Quadpod/kinematic-calculation/chatgpt4/IK_leg.py	/^def forward_kinematics(theta_1, theta_2, theta_3, L1, L2, L3):$/;"	f
+forward_kinematics	Kame-Quadpod/kinematic-calculation/chatgpt4/kinematics.py	/^def forward_kinematics(theta, alpha, beta, L1, L2):$/;"	f
+frameworks	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^    "frameworks": "arduino",$/;"	s
+frameworks	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^    "frameworks": "arduino",$/;"	s
 g	Turrets/angle-calc.py	/^g = 9.81  # m\/s^2$/;"	v
-hands_i	Kame-Quadpod/FK_2D.py	/^hands_i = 20$/;"	v
-inverse_kinematics	Kame-Quadpod/IK1.py	/^def inverse_kinematics(x, y, z, L1, L2):$/;"	f
-inverse_kinematics	Kame-Quadpod/chatgpt4/IK.py	/^def inverse_kinematics(x, y, z, L1, L2, L3):$/;"	f
-inverse_kinematics	Kame-Quadpod/chatgpt4/IK_leg.py	/^def inverse_kinematics(x, y, z, L1, L2, L3):$/;"	f
-new_point	Kame-Quadpod/FK_2D.py	/^        new_point = FK_2D(th1, th2)$/;"	v
-np	Kame-Quadpod/IK2.py	/^import numpy as np$/;"	I	nameref:module:numpy
-np	Kame-Quadpod/chatgpt4/kinematics.py	/^import numpy as np$/;"	I	nameref:module:numpy
-p1	Kame-Quadpod/FK_3D.py	/^            p1, p2, p3 = FK_3D(th1, th2, th_yaw)$/;"	v
-p1	Kame-Quadpod/FK_3D.py	/^p1, p2, p3 = FK_3D(45, 0, 0)$/;"	v
-p1	Kame-Quadpod/FK_3D.py	/^p1, p2, p3 = FK_3D(45, 0, 20)$/;"	v
-p1	Kame-Quadpod/FK_3D.py	/^p1, p2, p3 = FK_3D(45, 0, 90)$/;"	v
-p2	Kame-Quadpod/FK_3D.py	/^            p1, p2, p3 = FK_3D(th1, th2, th_yaw)$/;"	v
-p2	Kame-Quadpod/FK_3D.py	/^p1, p2, p3 = FK_3D(45, 0, 0)$/;"	v
-p2	Kame-Quadpod/FK_3D.py	/^p1, p2, p3 = FK_3D(45, 0, 20)$/;"	v
-p2	Kame-Quadpod/FK_3D.py	/^p1, p2, p3 = FK_3D(45, 0, 90)$/;"	v
-p3	Kame-Quadpod/FK_3D.py	/^            p1, p2, p3 = FK_3D(th1, th2, th_yaw)$/;"	v
-p3	Kame-Quadpod/FK_3D.py	/^p1, p2, p3 = FK_3D(45, 0, 0)$/;"	v
-p3	Kame-Quadpod/FK_3D.py	/^p1, p2, p3 = FK_3D(45, 0, 20)$/;"	v
-p3	Kame-Quadpod/FK_3D.py	/^p1, p2, p3 = FK_3D(45, 0, 90)$/;"	v
-plot_arm_3d	Kame-Quadpod/chatgpt4/kinematics.py	/^def plot_arm_3d(theta, alpha, beta, L1, L2):$/;"	f
-plot_leg	Kame-Quadpod/chatgpt4/IK_leg.py	/^def plot_leg(x, y, z, L1, L2, L3):$/;"	f
-plot_robot_arm	Kame-Quadpod/IK2.py	/^def plot_robot_arm(theta_R1, theta_O1, theta_O2, L1, L2):$/;"	f
-plt	Kame-Quadpod/FK_2D.py	/^import matplotlib.pyplot as plt$/;"	I	nameref:module:matplotlib.pyplot
-plt	Kame-Quadpod/FK_3D.py	/^import matplotlib.pyplot as plt$/;"	I	nameref:module:matplotlib.pyplot
-plt	Kame-Quadpod/IK2.py	/^import matplotlib.pyplot as plt$/;"	I	nameref:module:matplotlib.pyplot
-plt	Kame-Quadpod/chatgpt4/IK.py	/^import matplotlib.pyplot as plt$/;"	I	nameref:module:matplotlib.pyplot
-plt	Kame-Quadpod/chatgpt4/IK_leg.py	/^import matplotlib.pyplot as plt$/;"	I	nameref:module:matplotlib.pyplot
-plt	Kame-Quadpod/chatgpt4/kinematics.py	/^import matplotlib.pyplot as plt$/;"	I	nameref:module:matplotlib.pyplot
+getChannelPWM	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^uint16_t PCA9685::getChannelPWM(int channel) {$/;"	f	class:PCA9685	typeref:typename:uint16_t
+getChannelPWM	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^uint16_t PCA9685::getChannelPWM(int channel) {$/;"	f	class:PCA9685	typeref:typename:uint16_t
+getChannelUpdateMode	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^PCA9685_ChannelUpdateMode PCA9685::getChannelUpdateMode() {$/;"	f	class:PCA9685	typeref:typename:PCA9685_ChannelUpdateMode
+getChannelUpdateMode	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^PCA9685_ChannelUpdateMode PCA9685::getChannelUpdateMode() {$/;"	f	class:PCA9685	typeref:typename:PCA9685_ChannelUpdateMode
+getI2CAddress	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^byte PCA9685::getI2CAddress() {$/;"	f	class:PCA9685	typeref:typename:byte
+getI2CAddress	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^byte PCA9685::getI2CAddress() {$/;"	f	class:PCA9685	typeref:typename:byte
+getI2CSpeed	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^uint32_t PCA9685::getI2CSpeed() {$/;"	f	class:PCA9685	typeref:typename:uint32_t
+getI2CSpeed	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^uint32_t PCA9685::getI2CSpeed() {$/;"	f	class:PCA9685	typeref:typename:uint32_t
+getLastI2CError	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^byte PCA9685::getLastI2CError() {$/;"	f	class:PCA9685	typeref:typename:byte
+getLastI2CError	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^byte PCA9685::getLastI2CError() {$/;"	f	class:PCA9685	typeref:typename:byte
+getMode2Value	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^byte PCA9685::getMode2Value() {$/;"	f	class:PCA9685	typeref:typename:byte
+getMode2Value	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^byte PCA9685::getMode2Value() {$/;"	f	class:PCA9685	typeref:typename:byte
+getOscillatorFrequency	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.cpp	/^uint32_t Adafruit_PWMServoDriver::getOscillatorFrequency(void) {$/;"	f	class:Adafruit_PWMServoDriver	typeref:typename:uint32_t
+getOscillatorFrequency	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.cpp	/^uint32_t Adafruit_PWMServoDriver::getOscillatorFrequency(void) {$/;"	f	class:Adafruit_PWMServoDriver	typeref:typename:uint32_t
+getOutputDisabledMode	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^PCA9685_OutputDisabledMode PCA9685::getOutputDisabledMode() {$/;"	f	class:PCA9685	typeref:typename:PCA9685_OutputDisabledMode
+getOutputDisabledMode	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^PCA9685_OutputDisabledMode PCA9685::getOutputDisabledMode() {$/;"	f	class:PCA9685	typeref:typename:PCA9685_OutputDisabledMode
+getOutputDriverMode	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^PCA9685_OutputDriverMode PCA9685::getOutputDriverMode() {$/;"	f	class:PCA9685	typeref:typename:PCA9685_OutputDriverMode
+getOutputDriverMode	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^PCA9685_OutputDriverMode PCA9685::getOutputDriverMode() {$/;"	f	class:PCA9685	typeref:typename:PCA9685_OutputDriverMode
+getOutputEnabledMode	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^PCA9685_OutputEnabledMode PCA9685::getOutputEnabledMode() {$/;"	f	class:PCA9685	typeref:typename:PCA9685_OutputEnabledMode
+getOutputEnabledMode	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^PCA9685_OutputEnabledMode PCA9685::getOutputEnabledMode() {$/;"	f	class:PCA9685	typeref:typename:PCA9685_OutputEnabledMode
+getPWM	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.cpp	/^uint16_t Adafruit_PWMServoDriver::getPWM(uint8_t num, bool off) {$/;"	f	class:Adafruit_PWMServoDriver	typeref:typename:uint16_t
+getPWM	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.cpp	/^uint16_t Adafruit_PWMServoDriver::getPWM(uint8_t num, bool off) {$/;"	f	class:Adafruit_PWMServoDriver	typeref:typename:uint16_t
+getPhaseBalancer	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^PCA9685_PhaseBalancer PCA9685::getPhaseBalancer() {$/;"	f	class:PCA9685	typeref:typename:PCA9685_PhaseBalancer
+getPhaseBalancer	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^PCA9685_PhaseBalancer PCA9685::getPhaseBalancer() {$/;"	f	class:PCA9685	typeref:typename:PCA9685_PhaseBalancer
+getPhaseCycle	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::getPhaseCycle(int channel, uint16_t pwmAmount, uint16_t *phaseBegin, uint16_t *pha/;"	f	class:PCA9685	typeref:typename:void
+getPhaseCycle	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::getPhaseCycle(int channel, uint16_t pwmAmount, uint16_t *phaseBegin, uint16_t *pha/;"	f	class:PCA9685	typeref:typename:void
+getWireInterfaceNumber	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^int PCA9685::getWireInterfaceNumber() {$/;"	f	class:PCA9685	typeref:typename:int
+getWireInterfaceNumber	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^int PCA9685::getWireInterfaceNumber() {$/;"	f	class:PCA9685	typeref:typename:int
+get_step	Kame-Quadpod/natural-movement.py	/^def get_step(current_angle, starting_angle, ending_angle, steps_list):$/;"	f
+hands_i	Kame-Quadpod/kinematic-calculation/FK_2D.py	/^hands_i = 20$/;"	v
+homepage	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^    "homepage": "https:\/\/github.com\/NachtRaveVL\/PCA9685-Arduino\/",$/;"	s
+homepage	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^    "homepage": "https:\/\/github.com\/NachtRaveVL\/PCA9685-Arduino\/",$/;"	s
+i2cWire_begin	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::i2cWire_begin() {$/;"	f	class:PCA9685	typeref:typename:void
+i2cWire_begin	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::i2cWire_begin() {$/;"	f	class:PCA9685	typeref:typename:void
+i2cWire_beginTransmission	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::i2cWire_beginTransmission(uint8_t addr) {$/;"	f	class:PCA9685	typeref:typename:void
+i2cWire_beginTransmission	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::i2cWire_beginTransmission(uint8_t addr) {$/;"	f	class:PCA9685	typeref:typename:void
+i2cWire_endTransmission	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^uint8_t PCA9685::i2cWire_endTransmission(void) {$/;"	f	class:PCA9685	typeref:typename:uint8_t
+i2cWire_endTransmission	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^uint8_t PCA9685::i2cWire_endTransmission(void) {$/;"	f	class:PCA9685	typeref:typename:uint8_t
+i2cWire_read	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^uint8_t PCA9685::i2cWire_read(void) {$/;"	f	class:PCA9685	typeref:typename:uint8_t
+i2cWire_read	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^uint8_t PCA9685::i2cWire_read(void) {$/;"	f	class:PCA9685	typeref:typename:uint8_t
+i2cWire_requestFrom	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^uint8_t PCA9685::i2cWire_requestFrom(uint8_t addr, uint8_t len) {$/;"	f	class:PCA9685	typeref:typename:uint8_t
+i2cWire_requestFrom	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^uint8_t PCA9685::i2cWire_requestFrom(uint8_t addr, uint8_t len) {$/;"	f	class:PCA9685	typeref:typename:uint8_t
+i2cWire_write	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^size_t PCA9685::i2cWire_write(uint8_t data) {$/;"	f	class:PCA9685	typeref:typename:size_t
+i2cWire_write	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^size_t PCA9685::i2cWire_write(uint8_t data) {$/;"	f	class:PCA9685	typeref:typename:size_t
+i2c_dev	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^  Adafruit_I2CDevice *i2c_dev = NULL; \/\/\/< Pointer to I2C bus interface$/;"	m	class:Adafruit_PWMServoDriver	typeref:typename:Adafruit_I2CDevice *
+i2c_dev	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^  Adafruit_I2CDevice *i2c_dev = NULL; \/\/\/< Pointer to I2C bus interface$/;"	m	class:Adafruit_PWMServoDriver	typeref:typename:Adafruit_I2CDevice *
+init	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::init(PCA9685_OutputDriverMode driverMode,$/;"	f	class:PCA9685	typeref:typename:void
+init	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::init(PCA9685_PhaseBalancer phaseBalancer,$/;"	f	class:PCA9685	typeref:typename:void
+init	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::init(PCA9685_OutputDriverMode driverMode,$/;"	f	class:PCA9685	typeref:typename:void
+init	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::init(PCA9685_PhaseBalancer phaseBalancer,$/;"	f	class:PCA9685	typeref:typename:void
+initAsProxyAddresser	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::initAsProxyAddresser() {$/;"	f	class:PCA9685	typeref:typename:void
+initAsProxyAddresser	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::initAsProxyAddresser() {$/;"	f	class:PCA9685	typeref:typename:void
+inverse_kinematics	Kame-Quadpod/kinematic-calculation/IK1.py	/^def inverse_kinematics(x, y, z, L1, L2):$/;"	f
+inverse_kinematics	Kame-Quadpod/kinematic-calculation/chatgpt4/IK.py	/^def inverse_kinematics(x, y, z, L1, L2, L3):$/;"	f
+inverse_kinematics	Kame-Quadpod/kinematic-calculation/chatgpt4/IK_leg.py	/^def inverse_kinematics(x, y, z, L1, L2, L3):$/;"	f
+keywords	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^    "keywords": "PCA9685, pwm, i2c, controller, driver",$/;"	s
+keywords	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^    "keywords": "PCA9685, pwm, i2c, controller, driver",$/;"	s
+license	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^    "license": "GPL-3.0-or-later",$/;"	s
+license	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^    "license": "GPL-3.0-or-later",$/;"	s
+maintainer	InMoove-Arm/libraries/Adafruit_BusIO/library.properties	/^maintainer=Adafruit <info@adafruit.com>$/;"	k
+maintainer	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/library.properties	/^maintainer=Adafruit <info@adafruit.com>$/;"	k
+maintainer	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "maintainer": true$/;"	b	object:authors.0
+maintainer	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.properties	/^maintainer=NachtRaveVL <nachtravevl@gmail.com>$/;"	k
+maintainer	Kame-Quadpod/libraries/Adafruit_BusIO/library.properties	/^maintainer=Adafruit <info@adafruit.com>$/;"	k
+maintainer	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/library.properties	/^maintainer=Adafruit <info@adafruit.com>$/;"	k
+maintainer	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "maintainer": true$/;"	b	object:authors.0
+maintainer	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.properties	/^maintainer=NachtRaveVL <nachtravevl@gmail.com>$/;"	k
+maxBufferSize	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_I2CDevice.h	/^  size_t maxBufferSize() { return _maxBufferSize; }$/;"	f	class:Adafruit_I2CDevice	typeref:typename:size_t
+maxBufferSize	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_I2CDevice.h	/^  size_t maxBufferSize() { return _maxBufferSize; }$/;"	f	class:Adafruit_I2CDevice	typeref:typename:size_t
+misoPinMask	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  BusIO_PortMask mosiPinMask, misoPinMask, clkPinMask, csPinMask;$/;"	m	class:Adafruit_SPIDevice	typeref:typename:BusIO_PortMask
+misoPinMask	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  BusIO_PortMask mosiPinMask, misoPinMask, clkPinMask, csPinMask;$/;"	m	class:Adafruit_SPIDevice	typeref:typename:BusIO_PortMask
+misoPort	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  BusIO_PortReg *mosiPort, *clkPort, *misoPort, *csPort;$/;"	m	class:Adafruit_SPIDevice	typeref:typename:BusIO_PortReg *
+misoPort	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  BusIO_PortReg *mosiPort, *clkPort, *misoPort, *csPort;$/;"	m	class:Adafruit_SPIDevice	typeref:typename:BusIO_PortReg *
+mosiPinMask	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  BusIO_PortMask mosiPinMask, misoPinMask, clkPinMask, csPinMask;$/;"	m	class:Adafruit_SPIDevice	typeref:typename:BusIO_PortMask
+mosiPinMask	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  BusIO_PortMask mosiPinMask, misoPinMask, clkPinMask, csPinMask;$/;"	m	class:Adafruit_SPIDevice	typeref:typename:BusIO_PortMask
+mosiPort	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  BusIO_PortReg *mosiPort, *clkPort, *misoPort, *csPort;$/;"	m	class:Adafruit_SPIDevice	typeref:typename:BusIO_PortReg *
+mosiPort	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  BusIO_PortReg *mosiPort, *clkPort, *misoPort, *csPort;$/;"	m	class:Adafruit_SPIDevice	typeref:typename:BusIO_PortReg *
+name	InMoove-Arm/libraries/Adafruit_BusIO/library.properties	/^name=Adafruit BusIO$/;"	k
+name	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/library.properties	/^name=Adafruit PWM Servo Driver Library$/;"	k
+name	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "name": "BatchingExample",$/;"	s	object:examples.1
+name	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "name": "Kasper Skårhøj",$/;"	s	object:authors.2
+name	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "name": "ModuleInfo",$/;"	s	object:examples.5
+name	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "name": "MultiDeviceProxyExample",$/;"	s	object:examples.2
+name	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "name": "NachtRaveVL",$/;"	s	object:authors.0
+name	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "name": "ServoEvaluatorExample",$/;"	s	object:examples.3
+name	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "name": "SimpleExample",$/;"	s	object:examples.0
+name	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "name": "SoftwareI2CExample",$/;"	s	object:examples.4
+name	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "name": "Vitska",$/;"	s	object:authors.1
+name	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^    "name": "PCA9685-Arduino",$/;"	s
+name	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.properties	/^name=PCA9685 16-Channel PWM Driver Module Library$/;"	k
+name	Kame-Quadpod/libraries/Adafruit_BusIO/library.properties	/^name=Adafruit BusIO$/;"	k
+name	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/library.properties	/^name=Adafruit PWM Servo Driver Library$/;"	k
+name	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "name": "BatchingExample",$/;"	s	object:examples.1
+name	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "name": "Kasper Skårhøj",$/;"	s	object:authors.2
+name	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "name": "ModuleInfo",$/;"	s	object:examples.5
+name	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "name": "MultiDeviceProxyExample",$/;"	s	object:examples.2
+name	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "name": "NachtRaveVL",$/;"	s	object:authors.0
+name	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "name": "ServoEvaluatorExample",$/;"	s	object:examples.3
+name	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "name": "SimpleExample",$/;"	s	object:examples.0
+name	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "name": "SoftwareI2CExample",$/;"	s	object:examples.4
+name	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "name": "Vitska",$/;"	s	object:authors.1
+name	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^    "name": "PCA9685-Arduino",$/;"	s
+name	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.properties	/^name=PCA9685 16-Channel PWM Driver Module Library$/;"	k
+new_point	Kame-Quadpod/kinematic-calculation/FK_2D.py	/^        new_point = FK_2D(th1, th2)$/;"	v
+np	Kame-Quadpod/kinematic-calculation/IK2.py	/^import numpy as np$/;"	I	nameref:module:numpy
+np	Kame-Quadpod/kinematic-calculation/chatgpt4/kinematics.py	/^import numpy as np$/;"	I	nameref:module:numpy
+p1	Kame-Quadpod/kinematic-calculation/FK_3D.py	/^            p1, p2, p3 = FK_3D(th1, th2, th_yaw)$/;"	v
+p1	Kame-Quadpod/kinematic-calculation/FK_3D.py	/^p1, p2, p3 = FK_3D(45, 0, 0)$/;"	v
+p1	Kame-Quadpod/kinematic-calculation/FK_3D.py	/^p1, p2, p3 = FK_3D(45, 0, 20)$/;"	v
+p1	Kame-Quadpod/kinematic-calculation/FK_3D.py	/^p1, p2, p3 = FK_3D(45, 0, 90)$/;"	v
+p2	Kame-Quadpod/kinematic-calculation/FK_3D.py	/^            p1, p2, p3 = FK_3D(th1, th2, th_yaw)$/;"	v
+p2	Kame-Quadpod/kinematic-calculation/FK_3D.py	/^p1, p2, p3 = FK_3D(45, 0, 0)$/;"	v
+p2	Kame-Quadpod/kinematic-calculation/FK_3D.py	/^p1, p2, p3 = FK_3D(45, 0, 20)$/;"	v
+p2	Kame-Quadpod/kinematic-calculation/FK_3D.py	/^p1, p2, p3 = FK_3D(45, 0, 90)$/;"	v
+p3	Kame-Quadpod/kinematic-calculation/FK_3D.py	/^            p1, p2, p3 = FK_3D(th1, th2, th_yaw)$/;"	v
+p3	Kame-Quadpod/kinematic-calculation/FK_3D.py	/^p1, p2, p3 = FK_3D(45, 0, 0)$/;"	v
+p3	Kame-Quadpod/kinematic-calculation/FK_3D.py	/^p1, p2, p3 = FK_3D(45, 0, 20)$/;"	v
+p3	Kame-Quadpod/kinematic-calculation/FK_3D.py	/^p1, p2, p3 = FK_3D(45, 0, 90)$/;"	v
+paragraph	InMoove-Arm/libraries/Adafruit_BusIO/library.properties	/^paragraph=This is a library for abstracting away UART, I2C and SPI interfacing$/;"	k
+paragraph	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/library.properties	/^paragraph=Adafruit PWM Servo Driver Library$/;"	k
+paragraph	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.properties	/^paragraph=This library allows communication with boards running a PCA6985 16-channel PWM driver /;"	k
+paragraph	Kame-Quadpod/libraries/Adafruit_BusIO/library.properties	/^paragraph=This is a library for abstracting away UART, I2C and SPI interfacing$/;"	k
+paragraph	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/library.properties	/^paragraph=Adafruit PWM Servo Driver Library$/;"	k
+paragraph	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.properties	/^paragraph=This library allows communication with boards running a PCA6985 16-channel PWM driver /;"	k
+platforms	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^    "platforms": "*"$/;"	s
+platforms	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^    "platforms": "*"$/;"	s
+plot_arm_3d	Kame-Quadpod/kinematic-calculation/chatgpt4/kinematics.py	/^def plot_arm_3d(theta, alpha, beta, L1, L2):$/;"	f
+plot_leg	Kame-Quadpod/kinematic-calculation/chatgpt4/IK_leg.py	/^def plot_leg(x, y, z, L1, L2, L3):$/;"	f
+plot_robot_arm	Kame-Quadpod/kinematic-calculation/IK2.py	/^def plot_robot_arm(theta_R1, theta_O1, theta_O2, L1, L2):$/;"	f
+plt	Kame-Quadpod/kinematic-calculation/FK_2D.py	/^import matplotlib.pyplot as plt$/;"	I	nameref:module:matplotlib.pyplot
+plt	Kame-Quadpod/kinematic-calculation/FK_3D.py	/^import matplotlib.pyplot as plt$/;"	I	nameref:module:matplotlib.pyplot
+plt	Kame-Quadpod/kinematic-calculation/IK2.py	/^import matplotlib.pyplot as plt$/;"	I	nameref:module:matplotlib.pyplot
+plt	Kame-Quadpod/kinematic-calculation/chatgpt4/IK.py	/^import matplotlib.pyplot as plt$/;"	I	nameref:module:matplotlib.pyplot
+plt	Kame-Quadpod/kinematic-calculation/chatgpt4/IK_leg.py	/^import matplotlib.pyplot as plt$/;"	I	nameref:module:matplotlib.pyplot
+plt	Kame-Quadpod/kinematic-calculation/chatgpt4/kinematics.py	/^import matplotlib.pyplot as plt$/;"	I	nameref:module:matplotlib.pyplot
+print	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^void Adafruit_BusIO_Register::print(Stream *s) {$/;"	f	class:Adafruit_BusIO_Register	typeref:typename:void
+print	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^void Adafruit_BusIO_Register::print(Stream *s) {$/;"	f	class:Adafruit_BusIO_Register	typeref:typename:void
+printModuleInfo	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::printModuleInfo() {$/;"	f	class:PCA9685	typeref:typename:void
+printModuleInfo	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::printModuleInfo() {$/;"	f	class:PCA9685	typeref:typename:void
+println	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^void Adafruit_BusIO_Register::println(Stream *s) {$/;"	f	class:Adafruit_BusIO_Register	typeref:typename:void
+println	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^void Adafruit_BusIO_Register::println(Stream *s) {$/;"	f	class:Adafruit_BusIO_Register	typeref:typename:void
+pwmForAngle	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^uint16_t PCA9685_ServoEval::pwmForAngle(float angle) {$/;"	f	class:PCA9685_ServoEval	typeref:typename:uint16_t
+pwmForAngle	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^uint16_t PCA9685_ServoEval::pwmForAngle(float angle) {$/;"	f	class:PCA9685_ServoEval	typeref:typename:uint16_t
+pwmForSpeed	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^uint16_t PCA9685_ServoEval::pwmForSpeed(float speed) {$/;"	f	class:PCA9685_ServoEval	typeref:typename:uint16_t
+pwmForSpeed	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^uint16_t PCA9685_ServoEval::pwmForSpeed(float speed) {$/;"	f	class:PCA9685_ServoEval	typeref:typename:uint16_t
+read	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^bool Adafruit_BusIO_Register::read(uint16_t *value) {$/;"	f	class:Adafruit_BusIO_Register	typeref:typename:bool
+read	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^bool Adafruit_BusIO_Register::read(uint8_t *buffer, uint8_t len) {$/;"	f	class:Adafruit_BusIO_Register	typeref:typename:bool
+read	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^bool Adafruit_BusIO_Register::read(uint8_t *value) {$/;"	f	class:Adafruit_BusIO_Register	typeref:typename:bool
+read	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^uint32_t Adafruit_BusIO_Register::read(void) {$/;"	f	class:Adafruit_BusIO_Register	typeref:typename:uint32_t
+read	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^uint32_t Adafruit_BusIO_RegisterBits::read(void) {$/;"	f	class:Adafruit_BusIO_RegisterBits	typeref:typename:uint32_t
+read	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_I2CDevice.cpp	/^bool Adafruit_I2CDevice::read(uint8_t *buffer, size_t len, bool stop) {$/;"	f	class:Adafruit_I2CDevice	typeref:typename:bool
+read	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp	/^bool Adafruit_SPIDevice::read(uint8_t *buffer, size_t len, uint8_t sendvalue) {$/;"	f	class:Adafruit_SPIDevice	typeref:typename:bool
+read	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^bool Adafruit_BusIO_Register::read(uint16_t *value) {$/;"	f	class:Adafruit_BusIO_Register	typeref:typename:bool
+read	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^bool Adafruit_BusIO_Register::read(uint8_t *buffer, uint8_t len) {$/;"	f	class:Adafruit_BusIO_Register	typeref:typename:bool
+read	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^bool Adafruit_BusIO_Register::read(uint8_t *value) {$/;"	f	class:Adafruit_BusIO_Register	typeref:typename:bool
+read	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^uint32_t Adafruit_BusIO_Register::read(void) {$/;"	f	class:Adafruit_BusIO_Register	typeref:typename:uint32_t
+read	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^uint32_t Adafruit_BusIO_RegisterBits::read(void) {$/;"	f	class:Adafruit_BusIO_RegisterBits	typeref:typename:uint32_t
+read	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_I2CDevice.cpp	/^bool Adafruit_I2CDevice::read(uint8_t *buffer, size_t len, bool stop) {$/;"	f	class:Adafruit_I2CDevice	typeref:typename:bool
+read	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp	/^bool Adafruit_SPIDevice::read(uint8_t *buffer, size_t len, uint8_t sendvalue) {$/;"	f	class:Adafruit_SPIDevice	typeref:typename:bool
+read8	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.cpp	/^uint8_t Adafruit_PWMServoDriver::read8(uint8_t addr) {$/;"	f	class:Adafruit_PWMServoDriver	typeref:typename:uint8_t
+read8	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.cpp	/^uint8_t Adafruit_PWMServoDriver::read8(uint8_t addr) {$/;"	f	class:Adafruit_PWMServoDriver	typeref:typename:uint8_t
+readCached	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^uint32_t Adafruit_BusIO_Register::readCached(void) { return _cached; }$/;"	f	class:Adafruit_BusIO_Register	typeref:typename:uint32_t
+readCached	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^uint32_t Adafruit_BusIO_Register::readCached(void) { return _cached; }$/;"	f	class:Adafruit_BusIO_Register	typeref:typename:uint32_t
+readPrescale	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.cpp	/^uint8_t Adafruit_PWMServoDriver::readPrescale(void) {$/;"	f	class:Adafruit_PWMServoDriver	typeref:typename:uint8_t
+readPrescale	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.cpp	/^uint8_t Adafruit_PWMServoDriver::readPrescale(void) {$/;"	f	class:Adafruit_PWMServoDriver	typeref:typename:uint8_t
+readRegister	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^byte PCA9685::readRegister(byte regAddress) {$/;"	f	class:PCA9685	typeref:typename:byte
+readRegister	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^byte PCA9685::readRegister(byte regAddress) {$/;"	f	class:PCA9685	typeref:typename:byte
+repository	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^    "repository": {$/;"	o
+repository	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^    "repository": {$/;"	o
+reset	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.cpp	/^void Adafruit_PWMServoDriver::reset() {$/;"	f	class:Adafruit_PWMServoDriver	typeref:typename:void
+reset	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.cpp	/^void Adafruit_PWMServoDriver::reset() {$/;"	f	class:Adafruit_PWMServoDriver	typeref:typename:void
+resetDevices	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::resetDevices() {$/;"	f	class:PCA9685	typeref:typename:void
+resetDevices	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::resetDevices() {$/;"	f	class:PCA9685	typeref:typename:void
 result	Turrets/angle-calc.py	/^result = (pow(v, 2) \/ (g * dx)) - math.sqrt(A - 1)$/;"	v
-theta	Kame-Quadpod/chatgpt4/kinematics.py	/^theta, alpha, beta, L1, L2 = 90, 45, 45, 6, 2$/;"	v
-theta1	Kame-Quadpod/FK_2D.py	/^theta1 = 0.0*math.pi$/;"	v
-theta1	Kame-Quadpod/FK_3D.py	/^theta1 = 0.0*math.pi$/;"	v
-theta1	Kame-Quadpod/FK_3D_3.py	/^theta1 = math.radians(0)  # Convert to radians if necessary$/;"	v
-theta1	Kame-Quadpod/FK_3D_3_joints.py	/^theta1 = math.radians(0)  # Convert to radians if necessary$/;"	v
-theta1	Kame-Quadpod/IK1.py	/^theta1, theta2, theta3 = inverse_kinematics(x, y, z, L1, L2)$/;"	v
-theta1	Kame-Quadpod/IK2.py	/^theta1 = math.radians(90)  # z-axis rotator$/;"	v
-theta2	Kame-Quadpod/FK_2D.py	/^theta2 = 0.0*math.pi$/;"	v
-theta2	Kame-Quadpod/FK_3D.py	/^theta2 = 0.0*math.pi$/;"	v
-theta2	Kame-Quadpod/FK_3D_3.py	/^theta2 = math.radians(30)  # Convert to radians if necessary$/;"	v
-theta2	Kame-Quadpod/FK_3D_3_joints.py	/^theta2 = math.radians(0)  # Convert to radians if necessary$/;"	v
-theta2	Kame-Quadpod/IK1.py	/^theta1, theta2, theta3 = inverse_kinematics(x, y, z, L1, L2)$/;"	v
-theta2	Kame-Quadpod/IK2.py	/^theta2 = math.radians(45)  # spodni joint$/;"	v
-theta3	Kame-Quadpod/FK_3D.py	/^theta3 = 0.0*math.pi$/;"	v
-theta3	Kame-Quadpod/FK_3D_3.py	/^theta3 = math.radians(60)  # Convert to radians if necessary$/;"	v
-theta3	Kame-Quadpod/FK_3D_3_joints.py	/^theta3 = math.radians(0)  # Convert to radians if necessary$/;"	v
-theta3	Kame-Quadpod/IK1.py	/^theta1, theta2, theta3 = inverse_kinematics(x, y, z, L1, L2)$/;"	v
-theta3	Kame-Quadpod/IK2.py	/^theta3 = math.radians(45)   # horni joint$/;"	v
-theta_1	Kame-Quadpod/chatgpt4/IK_leg.py	/^theta_1, theta_2, theta_3 = math.radians(56.309), math.radians(-24.7594), math.radians(88.48)  #/;"	v
-theta_2	Kame-Quadpod/chatgpt4/IK_leg.py	/^theta_1, theta_2, theta_3 = math.radians(56.309), math.radians(-24.7594), math.radians(88.48)  #/;"	v
-theta_3	Kame-Quadpod/chatgpt4/IK_leg.py	/^theta_1, theta_2, theta_3 = math.radians(56.309), math.radians(-24.7594), math.radians(88.48)  #/;"	v
+sentence	InMoove-Arm/libraries/Adafruit_BusIO/library.properties	/^sentence=This is a library for abstracting away UART, I2C and SPI interfacing$/;"	k
+sentence	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/library.properties	/^sentence=Adafruit PWM Servo Driver Library$/;"	k
+sentence	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.properties	/^sentence=Library to control a PCA9685 16-channel PWM driver module from an Arduino board.$/;"	k
+sentence	Kame-Quadpod/libraries/Adafruit_BusIO/library.properties	/^sentence=This is a library for abstracting away UART, I2C and SPI interfacing$/;"	k
+sentence	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/library.properties	/^sentence=Adafruit PWM Servo Driver Library$/;"	k
+sentence	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.properties	/^sentence=Library to control a PCA9685 16-channel PWM driver module from an Arduino board.$/;"	k
+setAddress	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^void Adafruit_BusIO_Register::setAddress(uint16_t address) {$/;"	f	class:Adafruit_BusIO_Register	typeref:typename:void
+setAddress	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^void Adafruit_BusIO_Register::setAddress(uint16_t address) {$/;"	f	class:Adafruit_BusIO_Register	typeref:typename:void
+setAddressWidth	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^void Adafruit_BusIO_Register::setAddressWidth(uint16_t address_width) {$/;"	f	class:Adafruit_BusIO_Register	typeref:typename:void
+setAddressWidth	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^void Adafruit_BusIO_Register::setAddressWidth(uint16_t address_width) {$/;"	f	class:Adafruit_BusIO_Register	typeref:typename:void
+setAllChannelsPWM	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::setAllChannelsPWM(uint16_t pwmAmount) {$/;"	f	class:PCA9685	typeref:typename:void
+setAllChannelsPWM	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::setAllChannelsPWM(uint16_t pwmAmount) {$/;"	f	class:PCA9685	typeref:typename:void
+setChannelOff	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::setChannelOff(int channel) {$/;"	f	class:PCA9685	typeref:typename:void
+setChannelOff	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::setChannelOff(int channel) {$/;"	f	class:PCA9685	typeref:typename:void
+setChannelOn	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::setChannelOn(int channel) {$/;"	f	class:PCA9685	typeref:typename:void
+setChannelOn	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::setChannelOn(int channel) {$/;"	f	class:PCA9685	typeref:typename:void
+setChannelPWM	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::setChannelPWM(int channel, uint16_t pwmAmount) {$/;"	f	class:PCA9685	typeref:typename:void
+setChannelPWM	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::setChannelPWM(int channel, uint16_t pwmAmount) {$/;"	f	class:PCA9685	typeref:typename:void
+setChannelsPWM	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::setChannelsPWM(int begChannel, int numChannels, const uint16_t *pwmAmounts) {$/;"	f	class:PCA9685	typeref:typename:void
+setChannelsPWM	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::setChannelsPWM(int begChannel, int numChannels, const uint16_t *pwmAmounts) {$/;"	f	class:PCA9685	typeref:typename:void
+setChipSelect	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp	/^void Adafruit_SPIDevice::setChipSelect(int value) {$/;"	f	class:Adafruit_SPIDevice	typeref:typename:void
+setChipSelect	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp	/^void Adafruit_SPIDevice::setChipSelect(int value) {$/;"	f	class:Adafruit_SPIDevice	typeref:typename:void
+setExtClk	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.cpp	/^void Adafruit_PWMServoDriver::setExtClk(uint8_t prescale) {$/;"	f	class:Adafruit_PWMServoDriver	typeref:typename:void
+setExtClk	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.cpp	/^void Adafruit_PWMServoDriver::setExtClk(uint8_t prescale) {$/;"	f	class:Adafruit_PWMServoDriver	typeref:typename:void
+setOscillatorFrequency	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.cpp	/^void Adafruit_PWMServoDriver::setOscillatorFrequency(uint32_t freq) {$/;"	f	class:Adafruit_PWMServoDriver	typeref:typename:void
+setOscillatorFrequency	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.cpp	/^void Adafruit_PWMServoDriver::setOscillatorFrequency(uint32_t freq) {$/;"	f	class:Adafruit_PWMServoDriver	typeref:typename:void
+setOutputMode	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.cpp	/^void Adafruit_PWMServoDriver::setOutputMode(bool totempole) {$/;"	f	class:Adafruit_PWMServoDriver	typeref:typename:void
+setOutputMode	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.cpp	/^void Adafruit_PWMServoDriver::setOutputMode(bool totempole) {$/;"	f	class:Adafruit_PWMServoDriver	typeref:typename:void
+setPWM	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.cpp	/^uint8_t Adafruit_PWMServoDriver::setPWM(uint8_t num, uint16_t on,$/;"	f	class:Adafruit_PWMServoDriver	typeref:typename:uint8_t
+setPWM	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.cpp	/^uint8_t Adafruit_PWMServoDriver::setPWM(uint8_t num, uint16_t on,$/;"	f	class:Adafruit_PWMServoDriver	typeref:typename:uint8_t
+setPWMFreq	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.cpp	/^void Adafruit_PWMServoDriver::setPWMFreq(float freq) {$/;"	f	class:Adafruit_PWMServoDriver	typeref:typename:void
+setPWMFreq	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.cpp	/^void Adafruit_PWMServoDriver::setPWMFreq(float freq) {$/;"	f	class:Adafruit_PWMServoDriver	typeref:typename:void
+setPWMFreqServo	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::setPWMFreqServo() {$/;"	f	class:PCA9685	typeref:typename:void
+setPWMFreqServo	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::setPWMFreqServo() {$/;"	f	class:PCA9685	typeref:typename:void
+setPWMFrequency	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::setPWMFrequency(float pwmFrequency) {$/;"	f	class:PCA9685	typeref:typename:void
+setPWMFrequency	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::setPWMFrequency(float pwmFrequency) {$/;"	f	class:PCA9685	typeref:typename:void
+setPin	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.cpp	/^void Adafruit_PWMServoDriver::setPin(uint8_t num, uint16_t val, bool invert) {$/;"	f	class:Adafruit_PWMServoDriver	typeref:typename:void
+setPin	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.cpp	/^void Adafruit_PWMServoDriver::setPin(uint8_t num, uint16_t val, bool invert) {$/;"	f	class:Adafruit_PWMServoDriver	typeref:typename:void
+setSpeed	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_I2CDevice.cpp	/^bool Adafruit_I2CDevice::setSpeed(uint32_t desiredclk) {$/;"	f	class:Adafruit_I2CDevice	typeref:typename:bool
+setSpeed	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_I2CDevice.cpp	/^bool Adafruit_I2CDevice::setSpeed(uint32_t desiredclk) {$/;"	f	class:Adafruit_I2CDevice	typeref:typename:bool
+setWidth	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^void Adafruit_BusIO_Register::setWidth(uint8_t width) { _width = width; }$/;"	f	class:Adafruit_BusIO_Register	typeref:typename:void
+setWidth	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^void Adafruit_BusIO_Register::setWidth(uint8_t width) { _width = width; }$/;"	f	class:Adafruit_BusIO_Register	typeref:typename:void
+sleep	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.cpp	/^void Adafruit_PWMServoDriver::sleep() {$/;"	f	class:Adafruit_PWMServoDriver	typeref:typename:void
+sleep	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.cpp	/^void Adafruit_PWMServoDriver::sleep() {$/;"	f	class:Adafruit_PWMServoDriver	typeref:typename:void
+starting_angle	Kame-Quadpod/natural-movement.py	/^starting_angle = 58$/;"	v
+steps	Kame-Quadpod/natural-movement.py	/^steps = [2, 4, 8, 10, 10, 10, 10, 10, 8, 4, 2]$/;"	v
+textForI2CError	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^static const char *textForI2CError(byte errorCode) {$/;"	f	typeref:typename:const char *	file:
+textForI2CError	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^static const char *textForI2CError(byte errorCode) {$/;"	f	typeref:typename:const char *	file:
+textForWireInterfaceNumber	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^static const char *textForWireInterfaceNumber(int wireNum) {$/;"	f	typeref:typename:const char *	file:
+textForWireInterfaceNumber	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^static const char *textForWireInterfaceNumber(int wireNum) {$/;"	f	typeref:typename:const char *	file:
+theta	Kame-Quadpod/kinematic-calculation/chatgpt4/kinematics.py	/^theta, alpha, beta, L1, L2 = 90, 45, 45, 6, 2$/;"	v
+theta1	Kame-Quadpod/kinematic-calculation/FK_2D.py	/^theta1 = 0.0*math.pi$/;"	v
+theta1	Kame-Quadpod/kinematic-calculation/FK_3D.py	/^theta1 = 0.0*math.pi$/;"	v
+theta1	Kame-Quadpod/kinematic-calculation/FK_3D_3.py	/^theta1 = math.radians(0)  # Convert to radians if necessary$/;"	v
+theta1	Kame-Quadpod/kinematic-calculation/FK_3D_3_joints.py	/^theta1 = math.radians(0)  # Convert to radians if necessary$/;"	v
+theta1	Kame-Quadpod/kinematic-calculation/IK1.py	/^theta1, theta2, theta3 = inverse_kinematics(x, y, z, L1, L2)$/;"	v
+theta1	Kame-Quadpod/kinematic-calculation/IK2.py	/^theta1 = math.radians(90)  # z-axis rotator$/;"	v
+theta2	Kame-Quadpod/kinematic-calculation/FK_2D.py	/^theta2 = 0.0*math.pi$/;"	v
+theta2	Kame-Quadpod/kinematic-calculation/FK_3D.py	/^theta2 = 0.0*math.pi$/;"	v
+theta2	Kame-Quadpod/kinematic-calculation/FK_3D_3.py	/^theta2 = math.radians(30)  # Convert to radians if necessary$/;"	v
+theta2	Kame-Quadpod/kinematic-calculation/FK_3D_3_joints.py	/^theta2 = math.radians(0)  # Convert to radians if necessary$/;"	v
+theta2	Kame-Quadpod/kinematic-calculation/IK1.py	/^theta1, theta2, theta3 = inverse_kinematics(x, y, z, L1, L2)$/;"	v
+theta2	Kame-Quadpod/kinematic-calculation/IK2.py	/^theta2 = math.radians(45)  # spodni joint$/;"	v
+theta3	Kame-Quadpod/kinematic-calculation/FK_3D.py	/^theta3 = 0.0*math.pi$/;"	v
+theta3	Kame-Quadpod/kinematic-calculation/FK_3D_3.py	/^theta3 = math.radians(60)  # Convert to radians if necessary$/;"	v
+theta3	Kame-Quadpod/kinematic-calculation/FK_3D_3_joints.py	/^theta3 = math.radians(0)  # Convert to radians if necessary$/;"	v
+theta3	Kame-Quadpod/kinematic-calculation/IK1.py	/^theta1, theta2, theta3 = inverse_kinematics(x, y, z, L1, L2)$/;"	v
+theta3	Kame-Quadpod/kinematic-calculation/IK2.py	/^theta3 = math.radians(45)   # horni joint$/;"	v
+theta_1	Kame-Quadpod/kinematic-calculation/chatgpt4/IK_leg.py	/^theta_1, theta_2, theta_3 = math.radians(56.309), math.radians(-24.7594), math.radians(88.48)  #/;"	v
+theta_2	Kame-Quadpod/kinematic-calculation/chatgpt4/IK_leg.py	/^theta_1, theta_2, theta_3 = math.radians(56.309), math.radians(-24.7594), math.radians(88.48)  #/;"	v
+theta_3	Kame-Quadpod/kinematic-calculation/chatgpt4/IK_leg.py	/^theta_1, theta_2, theta_3 = math.radians(56.309), math.radians(-24.7594), math.radians(88.48)  #/;"	v
+transfer	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp	/^uint8_t Adafruit_SPIDevice::transfer(uint8_t send) {$/;"	f	class:Adafruit_SPIDevice	typeref:typename:uint8_t
+transfer	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp	/^void Adafruit_SPIDevice::transfer(uint8_t *buffer, size_t len) {$/;"	f	class:Adafruit_SPIDevice	typeref:typename:void
+transfer	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp	/^uint8_t Adafruit_SPIDevice::transfer(uint8_t send) {$/;"	f	class:Adafruit_SPIDevice	typeref:typename:uint8_t
+transfer	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp	/^void Adafruit_SPIDevice::transfer(uint8_t *buffer, size_t len) {$/;"	f	class:Adafruit_SPIDevice	typeref:typename:void
+type	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^        "type": "git",$/;"	s	object:repository
+type	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^        "type": "git",$/;"	s	object:repository
+url	InMoove-Arm/libraries/Adafruit_BusIO/library.properties	/^url=https:\/\/github.com\/adafruit\/Adafruit_BusIO$/;"	k
+url	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/library.properties	/^url=https:\/\/github.com\/adafruit\/Adafruit-PWM-Servo-Driver-Library$/;"	k
+url	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "url": "https:\/\/github.com\/NachtRaveVL",$/;"	s	object:authors.0
+url	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "url": "https:\/\/github.com\/kasperskaarhoj"$/;"	s	object:authors.2
+url	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "url": "https:\/\/github.com\/vitska"$/;"	s	object:authors.1
+url	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^        "url": "https:\/\/github.com\/NachtRaveVL\/PCA9685-Arduino.git"$/;"	s	object:repository
+url	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.properties	/^url=https:\/\/github.com\/NachtRaveVL\/PCA9685-Arduino$/;"	k
+url	Kame-Quadpod/libraries/Adafruit_BusIO/library.properties	/^url=https:\/\/github.com\/adafruit\/Adafruit_BusIO$/;"	k
+url	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/library.properties	/^url=https:\/\/github.com\/adafruit\/Adafruit-PWM-Servo-Driver-Library$/;"	k
+url	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "url": "https:\/\/github.com\/NachtRaveVL",$/;"	s	object:authors.0
+url	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "url": "https:\/\/github.com\/kasperskaarhoj"$/;"	s	object:authors.2
+url	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "url": "https:\/\/github.com\/vitska"$/;"	s	object:authors.1
+url	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^        "url": "https:\/\/github.com\/NachtRaveVL\/PCA9685-Arduino.git"$/;"	s	object:repository
+url	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.properties	/^url=https:\/\/github.com\/NachtRaveVL\/PCA9685-Arduino$/;"	k
 v	Turrets/angle-calc.py	/^v = 120  # m\/s$/;"	v
-x	Kame-Quadpod/FK_3D_3.py	/^x, y, z = forward_kinematics(theta1, theta2, theta3, L1, L2)$/;"	v
-x	Kame-Quadpod/FK_3D_3_joints.py	/^x, y, z = forward_kinematics(theta1, theta2, theta3, L1, L2, L3)$/;"	v
-x	Kame-Quadpod/IK1.py	/^x = 0$/;"	v
-x	Kame-Quadpod/chatgpt4/IK.py	/^x, y, z = 10, -10, -15  # Example target foot position$/;"	v
-x	Kame-Quadpod/chatgpt4/IK_leg.py	/^x, y, z = 10, 15, 0  # Example target foot position (z=0 since it's the floor level)$/;"	v
-x1_points	Kame-Quadpod/FK_2D.py	/^x1_points = []$/;"	v
-x1_points	Kame-Quadpod/FK_3D.py	/^x1_points = []$/;"	v
-x2_points	Kame-Quadpod/FK_3D.py	/^x2_points = []$/;"	v
-x3_points	Kame-Quadpod/FK_3D.py	/^x3_points = []$/;"	v
-x_points	Kame-Quadpod/FK_2D.py	/^x_points = []$/;"	v
-y	Kame-Quadpod/FK_3D_3.py	/^x, y, z = forward_kinematics(theta1, theta2, theta3, L1, L2)$/;"	v
-y	Kame-Quadpod/FK_3D_3_joints.py	/^x, y, z = forward_kinematics(theta1, theta2, theta3, L1, L2, L3)$/;"	v
-y	Kame-Quadpod/IK1.py	/^y = 0$/;"	v
-y	Kame-Quadpod/chatgpt4/IK.py	/^x, y, z = 10, -10, -15  # Example target foot position$/;"	v
-y	Kame-Quadpod/chatgpt4/IK_leg.py	/^x, y, z = 10, 15, 0  # Example target foot position (z=0 since it's the floor level)$/;"	v
-y1_points	Kame-Quadpod/FK_2D.py	/^y1_points = []$/;"	v
-y1_points	Kame-Quadpod/FK_3D.py	/^y1_points = []$/;"	v
-y2_points	Kame-Quadpod/FK_3D.py	/^y2_points = []$/;"	v
-y3_points	Kame-Quadpod/FK_3D.py	/^y3_points = []$/;"	v
-y_points	Kame-Quadpod/FK_2D.py	/^y_points = []$/;"	v
-z	Kame-Quadpod/FK_3D_3.py	/^x, y, z = forward_kinematics(theta1, theta2, theta3, L1, L2)$/;"	v
-z	Kame-Quadpod/FK_3D_3_joints.py	/^x, y, z = forward_kinematics(theta1, theta2, theta3, L1, L2, L3)$/;"	v
-z	Kame-Quadpod/IK1.py	/^z = 5$/;"	v
-z	Kame-Quadpod/chatgpt4/IK.py	/^x, y, z = 10, -10, -15  # Example target foot position$/;"	v
-z	Kame-Quadpod/chatgpt4/IK_leg.py	/^x, y, z = 10, 15, 0  # Example target foot position (z=0 since it's the floor level)$/;"	v
-z1_points	Kame-Quadpod/FK_3D.py	/^z1_points = []$/;"	v
-z2_points	Kame-Quadpod/FK_3D.py	/^z2_points = []$/;"	v
-z3_points	Kame-Quadpod/FK_3D.py	/^z3_points = []$/;"	v
+version	InMoove-Arm/libraries/Adafruit_BusIO/library.properties	/^version=1.14.4$/;"	k
+version	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/library.properties	/^version=3.0.1$/;"	k
+version	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^    "version": "1.2.15",$/;"	s
+version	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.properties	/^version=1.2.15$/;"	k
+version	Kame-Quadpod/libraries/Adafruit_BusIO/library.properties	/^version=1.14.4$/;"	k
+version	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/library.properties	/^version=3.0.1$/;"	k
+version	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^    "version": "1.2.15",$/;"	s
+version	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.properties	/^version=1.2.15$/;"	k
+wakeup	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.cpp	/^void Adafruit_PWMServoDriver::wakeup() {$/;"	f	class:Adafruit_PWMServoDriver	typeref:typename:void
+wakeup	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.cpp	/^void Adafruit_PWMServoDriver::wakeup() {$/;"	f	class:Adafruit_PWMServoDriver	typeref:typename:void
+width	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^uint8_t Adafruit_BusIO_Register::width(void) { return _width; }$/;"	f	class:Adafruit_BusIO_Register	typeref:typename:uint8_t
+width	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^uint8_t Adafruit_BusIO_Register::width(void) { return _width; }$/;"	f	class:Adafruit_BusIO_Register	typeref:typename:uint8_t
+write	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^bool Adafruit_BusIO_Register::write(uint32_t value, uint8_t numbytes) {$/;"	f	class:Adafruit_BusIO_Register	typeref:typename:bool
+write	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^bool Adafruit_BusIO_Register::write(uint8_t *buffer, uint8_t len) {$/;"	f	class:Adafruit_BusIO_Register	typeref:typename:bool
+write	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^bool Adafruit_BusIO_RegisterBits::write(uint32_t data) {$/;"	f	class:Adafruit_BusIO_RegisterBits	typeref:typename:bool
+write	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_I2CDevice.cpp	/^bool Adafruit_I2CDevice::write(const uint8_t *buffer, size_t len, bool stop,$/;"	f	class:Adafruit_I2CDevice	typeref:typename:bool
+write	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp	/^bool Adafruit_SPIDevice::write(const uint8_t *buffer, size_t len,$/;"	f	class:Adafruit_SPIDevice	typeref:typename:bool
+write	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^bool Adafruit_BusIO_Register::write(uint32_t value, uint8_t numbytes) {$/;"	f	class:Adafruit_BusIO_Register	typeref:typename:bool
+write	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^bool Adafruit_BusIO_Register::write(uint8_t *buffer, uint8_t len) {$/;"	f	class:Adafruit_BusIO_Register	typeref:typename:bool
+write	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^bool Adafruit_BusIO_RegisterBits::write(uint32_t data) {$/;"	f	class:Adafruit_BusIO_RegisterBits	typeref:typename:bool
+write	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_I2CDevice.cpp	/^bool Adafruit_I2CDevice::write(const uint8_t *buffer, size_t len, bool stop,$/;"	f	class:Adafruit_I2CDevice	typeref:typename:bool
+write	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp	/^bool Adafruit_SPIDevice::write(const uint8_t *buffer, size_t len,$/;"	f	class:Adafruit_SPIDevice	typeref:typename:bool
+write8	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.cpp	/^void Adafruit_PWMServoDriver::write8(uint8_t addr, uint8_t d) {$/;"	f	class:Adafruit_PWMServoDriver	typeref:typename:void
+write8	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.cpp	/^void Adafruit_PWMServoDriver::write8(uint8_t addr, uint8_t d) {$/;"	f	class:Adafruit_PWMServoDriver	typeref:typename:void
+writeChannelBegin	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::writeChannelBegin(int channel) {$/;"	f	class:PCA9685	typeref:typename:void
+writeChannelBegin	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::writeChannelBegin(int channel) {$/;"	f	class:PCA9685	typeref:typename:void
+writeChannelEnd	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::writeChannelEnd() {$/;"	f	class:PCA9685	typeref:typename:void
+writeChannelEnd	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::writeChannelEnd() {$/;"	f	class:PCA9685	typeref:typename:void
+writeChannelPWM	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::writeChannelPWM(uint16_t phaseBegin, uint16_t phaseEnd) {$/;"	f	class:PCA9685	typeref:typename:void
+writeChannelPWM	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::writeChannelPWM(uint16_t phaseBegin, uint16_t phaseEnd) {$/;"	f	class:PCA9685	typeref:typename:void
+writeMicroseconds	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.cpp	/^void Adafruit_PWMServoDriver::writeMicroseconds(uint8_t num,$/;"	f	class:Adafruit_PWMServoDriver	typeref:typename:void
+writeMicroseconds	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.cpp	/^void Adafruit_PWMServoDriver::writeMicroseconds(uint8_t num,$/;"	f	class:Adafruit_PWMServoDriver	typeref:typename:void
+writeRegister	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::writeRegister(byte regAddress, byte value) {$/;"	f	class:PCA9685	typeref:typename:void
+writeRegister	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::writeRegister(byte regAddress, byte value) {$/;"	f	class:PCA9685	typeref:typename:void
+write_and_read	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp	/^bool Adafruit_SPIDevice::write_and_read(uint8_t *buffer, size_t len) {$/;"	f	class:Adafruit_SPIDevice	typeref:typename:bool
+write_and_read	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp	/^bool Adafruit_SPIDevice::write_and_read(uint8_t *buffer, size_t len) {$/;"	f	class:Adafruit_SPIDevice	typeref:typename:bool
+write_then_read	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_I2CDevice.cpp	/^bool Adafruit_I2CDevice::write_then_read(const uint8_t *write_buffer,$/;"	f	class:Adafruit_I2CDevice	typeref:typename:bool
+write_then_read	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp	/^bool Adafruit_SPIDevice::write_then_read(const uint8_t *write_buffer,$/;"	f	class:Adafruit_SPIDevice	typeref:typename:bool
+write_then_read	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_I2CDevice.cpp	/^bool Adafruit_I2CDevice::write_then_read(const uint8_t *write_buffer,$/;"	f	class:Adafruit_I2CDevice	typeref:typename:bool
+write_then_read	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp	/^bool Adafruit_SPIDevice::write_then_read(const uint8_t *write_buffer,$/;"	f	class:Adafruit_SPIDevice	typeref:typename:bool
+x	Kame-Quadpod/kinematic-calculation/FK_3D_3.py	/^x, y, z = forward_kinematics(theta1, theta2, theta3, L1, L2)$/;"	v
+x	Kame-Quadpod/kinematic-calculation/FK_3D_3_joints.py	/^x, y, z = forward_kinematics(theta1, theta2, theta3, L1, L2, L3)$/;"	v
+x	Kame-Quadpod/kinematic-calculation/IK1.py	/^x = 0$/;"	v
+x	Kame-Quadpod/kinematic-calculation/chatgpt4/IK.py	/^x, y, z = 10, -10, -15  # Example target foot position$/;"	v
+x	Kame-Quadpod/kinematic-calculation/chatgpt4/IK_leg.py	/^x, y, z = 10, 15, 0  # Example target foot position (z=0 since it's the floor level)$/;"	v
+x1_points	Kame-Quadpod/kinematic-calculation/FK_2D.py	/^x1_points = []$/;"	v
+x1_points	Kame-Quadpod/kinematic-calculation/FK_3D.py	/^x1_points = []$/;"	v
+x2_points	Kame-Quadpod/kinematic-calculation/FK_3D.py	/^x2_points = []$/;"	v
+x3_points	Kame-Quadpod/kinematic-calculation/FK_3D.py	/^x3_points = []$/;"	v
+x_points	Kame-Quadpod/kinematic-calculation/FK_2D.py	/^x_points = []$/;"	v
+y	Kame-Quadpod/kinematic-calculation/FK_3D_3.py	/^x, y, z = forward_kinematics(theta1, theta2, theta3, L1, L2)$/;"	v
+y	Kame-Quadpod/kinematic-calculation/FK_3D_3_joints.py	/^x, y, z = forward_kinematics(theta1, theta2, theta3, L1, L2, L3)$/;"	v
+y	Kame-Quadpod/kinematic-calculation/IK1.py	/^y = 0$/;"	v
+y	Kame-Quadpod/kinematic-calculation/chatgpt4/IK.py	/^x, y, z = 10, -10, -15  # Example target foot position$/;"	v
+y	Kame-Quadpod/kinematic-calculation/chatgpt4/IK_leg.py	/^x, y, z = 10, 15, 0  # Example target foot position (z=0 since it's the floor level)$/;"	v
+y1_points	Kame-Quadpod/kinematic-calculation/FK_2D.py	/^y1_points = []$/;"	v
+y1_points	Kame-Quadpod/kinematic-calculation/FK_3D.py	/^y1_points = []$/;"	v
+y2_points	Kame-Quadpod/kinematic-calculation/FK_3D.py	/^y2_points = []$/;"	v
+y3_points	Kame-Quadpod/kinematic-calculation/FK_3D.py	/^y3_points = []$/;"	v
+y_points	Kame-Quadpod/kinematic-calculation/FK_2D.py	/^y_points = []$/;"	v
+z	Kame-Quadpod/kinematic-calculation/FK_3D_3.py	/^x, y, z = forward_kinematics(theta1, theta2, theta3, L1, L2)$/;"	v
+z	Kame-Quadpod/kinematic-calculation/FK_3D_3_joints.py	/^x, y, z = forward_kinematics(theta1, theta2, theta3, L1, L2, L3)$/;"	v
+z	Kame-Quadpod/kinematic-calculation/IK1.py	/^z = 5$/;"	v
+z	Kame-Quadpod/kinematic-calculation/chatgpt4/IK.py	/^x, y, z = 10, -10, -15  # Example target foot position$/;"	v
+z	Kame-Quadpod/kinematic-calculation/chatgpt4/IK_leg.py	/^x, y, z = 10, 15, 0  # Example target foot position (z=0 since it's the floor level)$/;"	v
+z1_points	Kame-Quadpod/kinematic-calculation/FK_3D.py	/^z1_points = []$/;"	v
+z2_points	Kame-Quadpod/kinematic-calculation/FK_3D.py	/^z2_points = []$/;"	v
+z3_points	Kame-Quadpod/kinematic-calculation/FK_3D.py	/^z3_points = []$/;"	v
+~Adafruit_SPIDevice	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp	/^Adafruit_SPIDevice::~Adafruit_SPIDevice() {$/;"	f	class:Adafruit_SPIDevice
+~Adafruit_SPIDevice	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp	/^Adafruit_SPIDevice::~Adafruit_SPIDevice() {$/;"	f	class:Adafruit_SPIDevice
+~PCA9685_ServoEval	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^PCA9685_ServoEval::~PCA9685_ServoEval() {$/;"	f	class:PCA9685_ServoEval
+~PCA9685_ServoEval	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^PCA9685_ServoEval::~PCA9685_ServoEval() {$/;"	f	class:PCA9685_ServoEval
