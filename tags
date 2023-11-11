@@ -101,14 +101,46 @@
 1	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^        {$/;"	o	array:examples
 1	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^        {$/;"	o	array:authors
 1	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^        {$/;"	o	array:examples
+1. Microcontrollers	microcontrollers.md	/^## 1. Microcontrollers$/;"	s	chapter:Microcontrollers Documentation and Notes
+1.1. NodeMCU	microcontrollers.md	/^### 1.1. NodeMCU$/;"	S	section:Microcontrollers Documentation and Notes""1. Microcontrollers
+1.1. Vyvojove prostredi, relevantni aplikace	microcontrollers.md	/^### 1.1. Vyvojove prostredi, relevantni aplikace$/;"	S	section:Microcontrollers Documentation and Notes""1. Microcontrollers
+1.1.1. ESP8266	microcontrollers.md	/^#### 1.1.1. ESP8266$/;"	t	subsection:Microcontrollers Documentation and Notes""1. Microcontrollers""1.1. NodeMCU
+1.1.2. ESP32	microcontrollers.md	/^#### 1.1.2. ESP32$/;"	t	subsection:Microcontrollers Documentation and Notes""1. Microcontrollers""1.1. NodeMCU
+1.2. Arduino	microcontrollers.md	/^### 1.2. Arduino$/;"	S	section:Microcontrollers Documentation and Notes""1. Microcontrollers
+1.2.1. Nano	microcontrollers.md	/^#### 1.2.1. Nano$/;"	t	subsection:Microcontrollers Documentation and Notes""1. Microcontrollers""1.2. Arduino
+1.3. Raspberry Pi	microcontrollers.md	/^### 1.3. Raspberry Pi$/;"	S	section:Microcontrollers Documentation and Notes""1. Microcontrollers
+1.3.1. Pico W	microcontrollers.md	/^#### 1.3.1. Pico W$/;"	t	subsection:Microcontrollers Documentation and Notes""1. Microcontrollers""1.3. Raspberry Pi
+1.3.2. Pi 4B	microcontrollers.md	/^#### 1.3.2. Pi 4B$/;"	t	subsection:Microcontrollers Documentation and Notes""1. Microcontrollers""1.3. Raspberry Pi
 2	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^        {$/;"	o	array:authors
 2	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^        {$/;"	o	array:examples
 2	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^        {$/;"	o	array:authors
 2	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^        {$/;"	o	array:examples
+2. How to:	microcontrollers.md	/^## 2. How to:$/;"	s	chapter:Microcontrollers Documentation and Notes
+2.1. Installing Libraries	microcontrollers.md	/^### 2.1. Installing Libraries$/;"	S	section:Microcontrollers Documentation and Notes""2. How to:
+2.1.1. ESP libraries	microcontrollers.md	/^#### 2.1.1. ESP libraries$/;"	t	subsection:Microcontrollers Documentation and Notes""2. How to:""2.1. Installing Libraries
+2.1.2. Install and select ESP8266 into Arduino IDE	microcontrollers.md	/^#### 2.1.2. Install and select ESP8266 into Arduino IDE$/;"	t	subsection:Microcontrollers Documentation and Notes""2. How to:""2.1. Installing Libraries
 3	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^        {$/;"	o	array:examples
 3	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^        {$/;"	o	array:examples
+3. Elektronicke soucastky, zapojeni a schemata	microcontrollers.md	/^## 3. Elektronicke soucastky, zapojeni a schemata$/;"	s	chapter:Microcontrollers Documentation and Notes
+3.1. DC Motor Drivers	microcontrollers.md	/^### 3.1. DC Motor Drivers$/;"	S	section:Microcontrollers Documentation and Notes""3. Elektronicke soucastky, zapojeni a schemata
+3.1.1. TB6612FNG Dual H-Bridge	microcontrollers.md	/^#### 3.1.1. TB6612FNG Dual H-Bridge$/;"	t	subsection:Microcontrollers Documentation and Notes""3. Elektronicke soucastky, zapojeni a schemata""3.1. DC Motor Drivers
+3.2. Servo Drivers	microcontrollers.md	/^### 3.2. Servo Drivers$/;"	S	section:Microcontrollers Documentation and Notes""3. Elektronicke soucastky, zapojeni a schemata
+3.2.1. PCA9685 (16-channel PWM)	microcontrollers.md	/^#### 3.2.1. PCA9685 (16-channel PWM)$/;"	t	subsection:Microcontrollers Documentation and Notes""3. Elektronicke soucastky, zapojeni a schemata""3.2. Servo Drivers
+3.3. Sensors	microcontrollers.md	/^### 3.3. Sensors$/;"	S	section:Microcontrollers Documentation and Notes""3. Elektronicke soucastky, zapojeni a schemata
+3.3.1. Gyroskopy	microcontrollers.md	/^#### 3.3.1. Gyroskopy$/;"	t	subsection:Microcontrollers Documentation and Notes""3. Elektronicke soucastky, zapojeni a schemata""3.3. Sensors
+3.3.2. Distance	microcontrollers.md	/^#### 3.3.2. Distance$/;"	t	subsection:Microcontrollers Documentation and Notes""3. Elektronicke soucastky, zapojeni a schemata""3.3. Sensors
+3.3.2.1. HC-SR04	microcontrollers.md	/^##### 3.3.2.1. HC-SR04$/;"	T	subsubsection:Microcontrollers Documentation and Notes""3. Elektronicke soucastky, zapojeni a schemata""3.3. Sensors""3.3.2. Distance
+3.3.3. Obstacles	microcontrollers.md	/^#### 3.3.3. Obstacles$/;"	t	subsection:Microcontrollers Documentation and Notes""3. Elektronicke soucastky, zapojeni a schemata""3.3. Sensors
+3.4. LiPo Baterie, zapojeni a nabijeni	microcontrollers.md	/^### 3.4. LiPo Baterie, zapojeni a nabijeni$/;"	S	section:Microcontrollers Documentation and Notes""3. Elektronicke soucastky, zapojeni a schemata
+3.5. Motory	microcontrollers.md	/^### 3.5. Motory$/;"	S	section:Microcontrollers Documentation and Notes""3. Elektronicke soucastky, zapojeni a schemata
+3.5.1. Servo motory	microcontrollers.md	/^#### 3.5.1. Servo motory$/;"	t	subsection:Microcontrollers Documentation and Notes""3. Elektronicke soucastky, zapojeni a schemata""3.5. Motory
+3.5.2. Analog Feedback Servo	microcontrollers.md	/^#### 3.5.2. Analog Feedback Servo$/;"	t	subsection:Microcontrollers Documentation and Notes""3. Elektronicke soucastky, zapojeni a schemata""3.5. Motory
 4	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^        {$/;"	o	array:examples
 4	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^        {$/;"	o	array:examples
+4. Troubleshooting	microcontrollers.md	/^## 4. Troubleshooting$/;"	s	chapter:Microcontrollers Documentation and Notes
+4.1. Random characters in Serial Output Monitor	microcontrollers.md	/^### 4.1. Random characters in Serial Output Monitor$/;"	S	section:Microcontrollers Documentation and Notes""4. Troubleshooting
+4.2. Cannot open /dev/ttyUSB0: Permission denied	microcontrollers.md	/^### 4.2. Cannot open \/dev\/ttyUSB0: Permission denied$/;"	S	section:Microcontrollers Documentation and Notes""4. Troubleshooting
+4.3. ESP8266 cant be found in the MC selection	microcontrollers.md	/^### 4.3. ESP8266 cant be found in the MC selection$/;"	S	section:Microcontrollers Documentation and Notes""4. Troubleshooting
 5	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^        {$/;"	o	array:examples
 5	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^        {$/;"	o	array:examples
 A	Turrets/angle-calc.py	/^A = ((pow(v,2)*(pow(v,2)-2*g*dy))\/(pow(g,2)*pow(dx,2)))$/;"	v
@@ -220,6 +252,7 @@ L1	Kame-Quadpod/kinematic-calculation/IK2.py	/^L1 = 5  # Length from O1 to O2$/;
 L1	Kame-Quadpod/kinematic-calculation/chatgpt4/IK.py	/^L1, L2, L3 = 5, 10, 10  # Example segment lengths$/;"	v
 L1	Kame-Quadpod/kinematic-calculation/chatgpt4/IK_leg.py	/^L1, L2, L3 = 5, 10, 10  # Example segment lengths$/;"	v
 L1	Kame-Quadpod/kinematic-calculation/chatgpt4/kinematics.py	/^theta, alpha, beta, L1, L2 = 90, 45, 45, 6, 2$/;"	v
+L1	ik.py	/^L1 = 5$/;"	v
 L2	Kame-Quadpod/kinematic-calculation/FK_2D.py	/^L2 = 2$/;"	v
 L2	Kame-Quadpod/kinematic-calculation/FK_3D.py	/^L2 = 2$/;"	v
 L2	Kame-Quadpod/kinematic-calculation/FK_3D_3.py	/^L2 = 3  # Length from O2 to c$/;"	v
@@ -229,6 +262,7 @@ L2	Kame-Quadpod/kinematic-calculation/IK2.py	/^L2 = 2  # Length from O2 to c$/;"
 L2	Kame-Quadpod/kinematic-calculation/chatgpt4/IK.py	/^L1, L2, L3 = 5, 10, 10  # Example segment lengths$/;"	v
 L2	Kame-Quadpod/kinematic-calculation/chatgpt4/IK_leg.py	/^L1, L2, L3 = 5, 10, 10  # Example segment lengths$/;"	v
 L2	Kame-Quadpod/kinematic-calculation/chatgpt4/kinematics.py	/^theta, alpha, beta, L1, L2 = 90, 45, 45, 6, 2$/;"	v
+L2	ik.py	/^L2 = 4$/;"	v
 L3	Kame-Quadpod/kinematic-calculation/FK_3D_3_joints.py	/^L3 = 0  # Since there's zero length between c and end effector$/;"	v
 L3	Kame-Quadpod/kinematic-calculation/chatgpt4/IK.py	/^L1, L2, L3 = 5, 10, 10  # Example segment lengths$/;"	v
 L3	Kame-Quadpod/kinematic-calculation/chatgpt4/IK_leg.py	/^L1, L2, L3 = 5, 10, 10  # Example segment lengths$/;"	v
@@ -262,6 +296,7 @@ MODE2_OUTNE_0	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_P
 MODE2_OUTNE_0	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define MODE2_OUTNE_0 /;"	d
 MODE2_OUTNE_1	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define MODE2_OUTNE_1 /;"	d
 MODE2_OUTNE_1	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define MODE2_OUTNE_1 /;"	d
+Microcontrollers Documentation and Notes	microcontrollers.md	/^Microcontrollers Documentation and Notes$/;"	c
 Module Info	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^## Module Info$/;"	s	chapter:PCA9685-Arduino
 Module Info	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^## Module Info$/;"	s	chapter:PCA9685-Arduino
 Multi-Device Proxy Example	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^### Multi-Device Proxy Example$/;"	S	section:PCA9685-Arduino""Example Usage
@@ -493,6 +528,7 @@ Software i2c Example	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module
 U_x	Kame-Quadpod/kinematic-calculation/chatgpt4/IK_leg.py	/^U_x, U_y, U_z = forward_kinematics(theta_1, theta_2, theta_3, L1, L2, L3)$/;"	v
 U_y	Kame-Quadpod/kinematic-calculation/chatgpt4/IK_leg.py	/^U_x, U_y, U_z = forward_kinematics(theta_1, theta_2, theta_3, L1, L2, L3)$/;"	v
 U_z	Kame-Quadpod/kinematic-calculation/chatgpt4/IK_leg.py	/^U_x, U_y, U_z = forward_kinematics(theta_1, theta_2, theta_3, L1, L2, L3)$/;"	v
+X. Schemata	microcontrollers.md	/^## X. Schemata$/;"	s	chapter:Microcontrollers Documentation and Notes
 _ADAFRUIT_I2C_REGISTER_H_	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_I2CRegister.h	/^#define _ADAFRUIT_I2C_REGISTER_H_$/;"	d
 _ADAFRUIT_I2C_REGISTER_H_	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_I2CRegister.h	/^#define _ADAFRUIT_I2C_REGISTER_H_$/;"	d
 _ADAFRUIT_PWMServoDriver_H	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define _ADAFRUIT_PWMServoDriver_H$/;"	d
@@ -505,6 +541,7 @@ _SPI_MODE4	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^enum { SP
 _SPI_MODE4	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^enum { SPI_MODE0, SPI_MODE1, SPI_MODE2, _SPI_MODE4 };$/;"	e	enum:__anon7f56235a0103
 __anon01f3beeb0103	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^enum { SPI_MODE0, SPI_MODE1, SPI_MODE2, _SPI_MODE4 };$/;"	g
 __anon7f56235a0103	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^enum { SPI_MODE0, SPI_MODE1, SPI_MODE2, _SPI_MODE4 };$/;"	g
+__init__	ik.py	/^    def __init__(self):$/;"	m	class:bodyJoint
 _addr	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_I2CDevice.h	/^  uint8_t _addr;$/;"	m	class:Adafruit_I2CDevice	typeref:typename:uint8_t
 _addr	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_I2CDevice.h	/^  uint8_t _addr;$/;"	m	class:Adafruit_I2CDevice	typeref:typename:uint8_t
 _address	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h	/^  uint16_t _address;$/;"	m	class:Adafruit_BusIO_Register	typeref:typename:uint16_t
@@ -635,6 +672,7 @@ beginTransaction	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp	/^
 beginTransactionWithAssertingCS	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp	/^void Adafruit_SPIDevice::beginTransactionWithAssertingCS() {$/;"	f	class:Adafruit_SPIDevice	typeref:typename:void
 beginTransactionWithAssertingCS	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp	/^void Adafruit_SPIDevice::beginTransactionWithAssertingCS() {$/;"	f	class:Adafruit_SPIDevice	typeref:typename:void
 beta	Kame-Quadpod/kinematic-calculation/chatgpt4/kinematics.py	/^theta, alpha, beta, L1, L2 = 90, 45, 45, 6, 2$/;"	v
+bodyJoint	ik.py	/^class bodyJoint:$/;"	c
 body_height	Kame-Quadpod/kinematic-calculation/chatgpt4/IK_leg.py	/^body_height = 5  # initial joint height$/;"	v
 category	InMoove-Arm/libraries/Adafruit_BusIO/library.properties	/^category=Signal Input\/Output$/;"	k
 category	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/library.properties	/^category=Device Control$/;"	k
@@ -652,6 +690,7 @@ csPinMask	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  BusIO_Po
 csPinMask	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  BusIO_PortMask mosiPinMask, misoPinMask, clkPinMask, csPinMask;$/;"	m	class:Adafruit_SPIDevice	typeref:typename:BusIO_PortMask
 csPort	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  BusIO_PortReg *mosiPort, *clkPort, *misoPort, *csPort;$/;"	m	class:Adafruit_SPIDevice	typeref:typename:BusIO_PortReg *
 csPort	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  BusIO_PortReg *mosiPort, *clkPort, *misoPort, *csPort;$/;"	m	class:Adafruit_SPIDevice	typeref:typename:BusIO_PortReg *
+data	ik.py	/^data = np.array([$/;"	v
 depends	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/library.properties	/^depends=Adafruit BusIO$/;"	k
 depends	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/library.properties	/^depends=Adafruit BusIO$/;"	k
 description	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^    "description": "Library to control a PCA9685 16-channel PWM driver module from an Arduino bo/;"	s
@@ -815,6 +854,7 @@ name	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library
 new_point	Kame-Quadpod/kinematic-calculation/FK_2D.py	/^        new_point = FK_2D(th1, th2)$/;"	v
 np	Kame-Quadpod/kinematic-calculation/IK2.py	/^import numpy as np$/;"	I	nameref:module:numpy
 np	Kame-Quadpod/kinematic-calculation/chatgpt4/kinematics.py	/^import numpy as np$/;"	I	nameref:module:numpy
+np	ik.py	/^import numpy as np$/;"	I	nameref:module:numpy
 p1	Kame-Quadpod/kinematic-calculation/FK_3D.py	/^            p1, p2, p3 = FK_3D(th1, th2, th_yaw)$/;"	v
 p1	Kame-Quadpod/kinematic-calculation/FK_3D.py	/^p1, p2, p3 = FK_3D(45, 0, 0)$/;"	v
 p1	Kame-Quadpod/kinematic-calculation/FK_3D.py	/^p1, p2, p3 = FK_3D(45, 0, 20)$/;"	v
@@ -844,6 +884,7 @@ plt	Kame-Quadpod/kinematic-calculation/IK2.py	/^import matplotlib.pyplot as plt$
 plt	Kame-Quadpod/kinematic-calculation/chatgpt4/IK.py	/^import matplotlib.pyplot as plt$/;"	I	nameref:module:matplotlib.pyplot
 plt	Kame-Quadpod/kinematic-calculation/chatgpt4/IK_leg.py	/^import matplotlib.pyplot as plt$/;"	I	nameref:module:matplotlib.pyplot
 plt	Kame-Quadpod/kinematic-calculation/chatgpt4/kinematics.py	/^import matplotlib.pyplot as plt$/;"	I	nameref:module:matplotlib.pyplot
+plt	ik.py	/^from matplotlib import pyplot as plt$/;"	Y	nameref:unknown:pyplot
 print	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^void Adafruit_BusIO_Register::print(Stream *s) {$/;"	f	class:Adafruit_BusIO_Register	typeref:typename:void
 print	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^void Adafruit_BusIO_Register::print(Stream *s) {$/;"	f	class:Adafruit_BusIO_Register	typeref:typename:void
 printModuleInfo	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::printModuleInfo() {$/;"	f	class:PCA9685	typeref:typename:void
@@ -940,12 +981,16 @@ theta1	Kame-Quadpod/kinematic-calculation/FK_3D_3.py	/^theta1 = math.radians(0) 
 theta1	Kame-Quadpod/kinematic-calculation/FK_3D_3_joints.py	/^theta1 = math.radians(0)  # Convert to radians if necessary$/;"	v
 theta1	Kame-Quadpod/kinematic-calculation/IK1.py	/^theta1, theta2, theta3 = inverse_kinematics(x, y, z, L1, L2)$/;"	v
 theta1	Kame-Quadpod/kinematic-calculation/IK2.py	/^theta1 = math.radians(90)  # z-axis rotator$/;"	v
+theta1	ik.py	/^theta1 = 5  # Degrees$/;"	v
+theta1_rad	ik.py	/^theta1_rad = theta1 * math.pi\/180$/;"	v
 theta2	Kame-Quadpod/kinematic-calculation/FK_2D.py	/^theta2 = 0.0*math.pi$/;"	v
 theta2	Kame-Quadpod/kinematic-calculation/FK_3D.py	/^theta2 = 0.0*math.pi$/;"	v
 theta2	Kame-Quadpod/kinematic-calculation/FK_3D_3.py	/^theta2 = math.radians(30)  # Convert to radians if necessary$/;"	v
 theta2	Kame-Quadpod/kinematic-calculation/FK_3D_3_joints.py	/^theta2 = math.radians(0)  # Convert to radians if necessary$/;"	v
 theta2	Kame-Quadpod/kinematic-calculation/IK1.py	/^theta1, theta2, theta3 = inverse_kinematics(x, y, z, L1, L2)$/;"	v
 theta2	Kame-Quadpod/kinematic-calculation/IK2.py	/^theta2 = math.radians(45)  # spodni joint$/;"	v
+theta2	ik.py	/^theta2 = 90  # Degrees$/;"	v
+theta2_rad	ik.py	/^theta2_rad = theta2 * math.pi\/180$/;"	v
 theta3	Kame-Quadpod/kinematic-calculation/FK_3D.py	/^theta3 = 0.0*math.pi$/;"	v
 theta3	Kame-Quadpod/kinematic-calculation/FK_3D_3.py	/^theta3 = math.radians(60)  # Convert to radians if necessary$/;"	v
 theta3	Kame-Quadpod/kinematic-calculation/FK_3D_3_joints.py	/^theta3 = math.radians(0)  # Convert to radians if necessary$/;"	v
@@ -1020,8 +1065,11 @@ x	Kame-Quadpod/kinematic-calculation/FK_3D_3_joints.py	/^x, y, z = forward_kinem
 x	Kame-Quadpod/kinematic-calculation/IK1.py	/^x = 0$/;"	v
 x	Kame-Quadpod/kinematic-calculation/chatgpt4/IK.py	/^x, y, z = 10, -10, -15  # Example target foot position$/;"	v
 x	Kame-Quadpod/kinematic-calculation/chatgpt4/IK_leg.py	/^x, y, z = 10, 15, 0  # Example target foot position (z=0 since it's the floor level)$/;"	v
+x	ik.py	/^x, y = data.T$/;"	v
+x1	ik.py	/^x1 = L1 * math.cos(theta1_rad)$/;"	v
 x1_points	Kame-Quadpod/kinematic-calculation/FK_2D.py	/^x1_points = []$/;"	v
 x1_points	Kame-Quadpod/kinematic-calculation/FK_3D.py	/^x1_points = []$/;"	v
+x2	ik.py	/^x2 = x1 + L2 * math.cos(theta1_rad + theta2_rad)$/;"	v
 x2_points	Kame-Quadpod/kinematic-calculation/FK_3D.py	/^x2_points = []$/;"	v
 x3_points	Kame-Quadpod/kinematic-calculation/FK_3D.py	/^x3_points = []$/;"	v
 x_points	Kame-Quadpod/kinematic-calculation/FK_2D.py	/^x_points = []$/;"	v
@@ -1030,8 +1078,11 @@ y	Kame-Quadpod/kinematic-calculation/FK_3D_3_joints.py	/^x, y, z = forward_kinem
 y	Kame-Quadpod/kinematic-calculation/IK1.py	/^y = 0$/;"	v
 y	Kame-Quadpod/kinematic-calculation/chatgpt4/IK.py	/^x, y, z = 10, -10, -15  # Example target foot position$/;"	v
 y	Kame-Quadpod/kinematic-calculation/chatgpt4/IK_leg.py	/^x, y, z = 10, 15, 0  # Example target foot position (z=0 since it's the floor level)$/;"	v
+y	ik.py	/^x, y = data.T$/;"	v
+y1	ik.py	/^y1 = L1 * math.sin(theta1_rad)$/;"	v
 y1_points	Kame-Quadpod/kinematic-calculation/FK_2D.py	/^y1_points = []$/;"	v
 y1_points	Kame-Quadpod/kinematic-calculation/FK_3D.py	/^y1_points = []$/;"	v
+y2	ik.py	/^y2 = y1 + L2 * math.sin(theta1_rad + theta2_rad)$/;"	v
 y2_points	Kame-Quadpod/kinematic-calculation/FK_3D.py	/^y2_points = []$/;"	v
 y3_points	Kame-Quadpod/kinematic-calculation/FK_3D.py	/^y3_points = []$/;"	v
 y_points	Kame-Quadpod/kinematic-calculation/FK_2D.py	/^y_points = []$/;"	v
