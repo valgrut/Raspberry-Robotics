@@ -1,7 +1,41 @@
 Microcontrollers Documentation and Notes
 ========================================
 
-- TODO: Rejstrik
+
+- [1. Microcontrollers](#1-microcontrollers)
+- [1.1. Vyvojove prostredi, relevantni aplikace](#11-vyvojove-prostredi-relevantni-aplikace)
+- [1.1. NodeMCU](#11-nodemcu)
+    - [1.1.1. ESP8266](#111-esp8266)
+    - [1.1.2. ESP32](#112-esp32)
+- [1.2. Arduino](#12-arduino)
+    - [1.2.1. Nano](#121-nano)
+- [1.3. Raspberry Pi](#13-raspberry-pi)
+    - [1.3.1. Pico W](#131-pico-w)
+    - [1.3.2. Pi 4B](#132-pi-4b)
+- [2. How to:](#2-how-to)
+- [2.1. Installing Libraries](#21-installing-libraries)
+    - [2.1.1. ESP libraries](#211-esp-libraries)
+    - [2.1.2. Install and select ESP8266 into Arduino IDE](#212-install-and-select-esp8266-into-arduino-ide)
+- [3. Elektronicke soucastky, zapojeni a schemata](#3-elektronicke-soucastky-zapojeni-a-schemata)
+- [3.1. DC Motor Drivers](#31-dc-motor-drivers)
+    - [3.1.1. TB6612FNG Dual H-Bridge](#311-tb6612fng-dual-h-bridge)
+- [3.2. Servo Drivers](#32-servo-drivers)
+    - [3.2.1. PCA9685 (16-channel PWM)](#321-pca9685-16-channel-pwm)
+- [3.3. Sensors](#33-sensors)
+    - [3.3.1. Gyroskopy](#331-gyroskopy)
+    - [3.3.2. Distance](#332-distance)
+    - [3.3.2.1. HC-SR04](#3321-hc-sr04)
+    - [3.3.3. Obstacles](#333-obstacles)
+- [3.4. LiPo Baterie, zapojeni a nabijeni](#34-lipo-baterie-zapojeni-a-nabijeni)
+- [3.5. Motory](#35-motory)
+    - [3.5.1. Servo motory](#351-servo-motory)
+    - [3.5.2. Analog Feedback Servo](#352-analog-feedback-servo)
+- [X. Schemata](#x-schemata)
+- [4. Troubleshooting](#4-troubleshooting)
+- [4.1. Random characters in Serial Output Monitor](#41-random-characters-in-serial-output-monitor)
+- [4.2. Cannot open /dev/ttyUSB0: Permission denied](#42-cannot-open-devttyusb0-permission-denied)
+- [4.3. ESP8266 cant be found in the MC selection](#43-esp8266-cant-be-found-in-the-mc-selection)
+
 
 <!------------------------------------------------------------------------------->
 ## 1. Microcontrollers
@@ -105,37 +139,35 @@ It can drive PWM outputs with adjustable frequency and 12-bit resolution. The mo
 
 > A separate power supply to the board must be used for the servos operating at 5V. This needs to be powerful enough to source sufficient current for the number of servos connected. Each board can support up to 16 servos. This project used 3 servos, each with a maximum current of 140mA   (140mA x 3 = 420mA) so a 1A supply was used.
 
-Do not connect the V+ pin on the ends of the servo board to the 3.3 pin on the Pi4 or you will damage your Pi4!
+> Do not connect the V+ pin on the ends of the servo board to the 3.3 pin on the Pi4 or you will damage your Pi4!
 
 **How does PWM controlling works**:
 
-The servos in this project use a PWM signal of varying pulse duration to control the position of the servo motor.
+> The servos in this project use a PWM signal of varying pulse duration to control the position of the servo motor.
 
-The code example uses the Python SMBus module which is included with the default Raspbian install. This is used to send a series of bytes using I2C protocol to the servo driver’s PCA9685 chip registers. By setting the various registers the board modulates the PWM signal to each server and sets its position.
+> The code example uses the Python SMBus module which is included with the default Raspbian install. This is used to send a series of bytes using I2C protocol to the servo driver’s PCA9685 chip registers. By setting the various registers the board modulates the PWM signal to each server and sets its position.
 
-The servo datasheet shows that the servos operate at a PWM frequency of 50Hz (20ms pulse frequency). A pulse duration of 1.5ms is required for the Standard & Continuous servos to set the centre position.
+> The servo datasheet shows that the servos operate at a PWM frequency of 50Hz (20ms pulse frequency). A pulse duration of 1.5ms is required for the Standard & Continuous servos to set the centre position.
 
-Initially the board PWM frequency pre-scale register is set to 50Hz using the equation from the PCA9685 datasheet for an Oscillator Clock of 25MHz. (25MHz / (4096 x 50Hz)) – 1 = 122 (0x7A).
+> Initially the board PWM frequency pre-scale register is set to 50Hz using the equation from the PCA9685 datasheet for an Oscillator Clock of 25MHz. (25MHz / (4096 x 50Hz)) – 1 = 122 (0x7A).
 
-Note: An oscilloscope was used to tweak this value to exactly 50Hz so a value of 0x08 is used.
+> Note: An oscilloscope was used to tweak this value to exactly 50Hz so a value of 0x08 is used.
 
 **Calculation of the speed**:
 
-Servo go as fast as they can to the set point you give them, so you don't control how fast they get there. but you can control timing by taking smaller steps as explained above.
+> Servo go as fast as they can to the set point you give them, so you don't control how fast they get there. but you can control timing by taking smaller steps as explained above.
 
-if you want to move from angle A to angle B (>A) you have B-A degrees to turn. if you want to take those steps in N seconds, then (assuming moving 1° is almost instantaneous) you can make 1° steps and pause for 1000UL* N / (B-A-1) (ms) in between steps
+> if you want to move from angle A to angle B (>A) you have B-A degrees to turn. if you want to take those steps in N seconds, then (assuming moving 1° is almost instantaneous) you can make 1° steps and pause for 1000UL* N / (B-A-1) (ms) in between steps eg. for going from 10° to 61° you have 51° to move and say you want to get there in ~10 seconds. You take 50 steps of 1° and pause for 1000*10/50 = 200ms in between steps
 
-eg for going from 10° to 61° you have 51° to move and say you want to get there in ~10 seconds.
-You take 50 steps of 1° and pause for 1000*10/50 = 200ms in between steps
+> Servo pulse timing varies so you need to find the minimum and maximum for your specific servo (at 0° and 180° — carefully adjust as hitting the physical limits of travel can damage your servo / the gears)
 
-Servo pulse timing varies so you need to find the minimum and maximum for your specific servo (at 0° and 180° — carefully adjust as hitting the physical limits of travel can damage your servo / the gears)
-
-Once you have that, then to go to a specific angle in degrees between 0 and 180, you can use
+> Once you have that, then to go to a specific angle in degrees between 0 and 180, you can use
 
 ```
 pulselength = map(angle, 0, 180, SERVOMIN, SERVOMAX);
 ```
 
+**Useful source code**:
 
 * Adafruit - Servokit
 ```
@@ -166,10 +198,12 @@ kit.servo[0].set_pulse_width_range(1000, 2000)
 servokit.servo[0].actuation_range = 160
 ```
 
-* Resources
-    - [PCA9685 Datasheet](https://cdn-shop.adafruit.com/datasheets/PCA9685.pdf)
-    - https://learn.adafruit.com/16-channel-pwm-servo-driver?view=all
-    - https://mytectutor.com/how-to-use-pca9685-16-channel-12-bit-pwm-servo-driver-with-arduino/
+**Resources**:
+
+- [PCA9685 Datasheet](https://cdn-shop.adafruit.com/datasheets/PCA9685.pdf)
+- https://learn.adafruit.com/16-channel-pwm-servo-driver?view=all
+- https://mytectutor.com/how-to-use-pca9685-16-channel-12-bit-pwm-servo-driver-with-arduino/
+
 
 ### 3.3. Sensors
 #### 3.3.1. Gyroskopy
@@ -200,7 +234,6 @@ Change boud rate in the code to '9600'.
 
     ```
     sudo su
-    //type your password
     cd /
     cd dev
     chown username ttyUSB0
