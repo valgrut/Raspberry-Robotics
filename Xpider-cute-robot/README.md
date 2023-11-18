@@ -34,7 +34,11 @@
 
 #### Screws, tools, ...
 - [ ] 30x M1,6\*12mm
-- [ ] Waveshare NodeMCU-32S ESP32 WiFi + Bluetooth
-- [ ] Baterie Lipol
+- [ ] (mini?) NodeMCU-32S ESP32 WiFi + Bluetooth
+- [ ] Baterie Lipol 600 MAh
+- [ ] TB6612FNG Dual H-Bridge motor driver
+- [ ] 2x N20 300 RPM motor (Bez encoderu!)
+- [ ] Adafruit PowerBoost 500C
+- [ ] 
 
 
