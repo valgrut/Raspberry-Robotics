@@ -92,7 +92,7 @@ Poznamky o microcontrollerech, jejich vyhody a nevyhody jednoho oproti druhemu, 
 
 #### 2.1.1. ESP libraries
 
-1. Download zip of the repos:
+1. Download zip of the repos: (github -> code -> Download ZIP)
     - ESP32:
         - https://github.com/me-no-dev/ESPAsyncWebServer
         - https://github.com/me-no-dev/AsyncTCP
@@ -106,9 +106,9 @@ Poznamky o microcontrollerech, jejich vyhody a nevyhody jednoho oproti druhemu, 
     Sketch > Include Library > Add .zip Library and select the libraries
     ```
 
-#### 2.1.2. Install and select ESP8266 into Arduino IDE
+#### 2.1.2. Install and select ESP8266 board in Arduino IDE
 
-1. Then we need to add the ESP8266 to the Boards list.
+1. Then we need to add the ESP8266 to the **Boards** list.
 
     ```
     Open the Arduino IDE Preferences panel.
@@ -119,7 +119,7 @@ Poznamky o microcontrollerech, jejich vyhody a nevyhody jednoho oproti druhemu, 
 2. Add the following URL to the "Additional Boards Manager URLs":
     - http://arduino.esp8266.com/stable/package_esp8266com_index.json
 
-3. Library Manager -> Type ESP8266 and click install
+3. Board Manager (Second from top) -> Type "ESP8266" and click install
 
 <!------------------------------------------------------------------------------->
 ## 3. Elektronicke soucastky, zapojeni a schemata

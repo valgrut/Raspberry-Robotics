@@ -60,7 +60,7 @@
 
 ### 3.1. Zapojeni a sestaveni
 
-#### 3.1.1. Arduino - zapojeni PCA9685 servo controlleru
+#### 3.1.1. Zapojeni Arduino - PCA9685
 
 - ARDUINO - DRAT - PCA9685
 - A5 - modra - SCL
@@ -69,9 +69,12 @@
 - GND - cerna - GND
 - USB napajeni - cervena+hneda - power-terminal
 
-#### 3.1.2. Finalni Zapojeni a sestaveni (ESP32)
+#### 3.1.2. Zapojeni ESP8266 - PCA9685
 
-- TODO: schema z programu
+- TODO: schema zapojeni
+
+![](ESP8266 and PCA9685.png)
+
 
 ### 3.2. Programovani
 
