@@ -3,6 +3,24 @@ I, Robot. Repository for my robotic and elektro projects using Raspberry Pi.
 
 
 ### Projects
+- [**Kame quadpod qwerty**](Kame-Quadpod/README.md)
+    
+    IMAGE
+
+    DESCRIPTION
+
+- [**Xpider Ballsy - cute little robot**](Xpider-cute-robot/README.md)
+    
+    IMAGE
+
+    DESCRIPTION
+
+- [**Hexapod - markwtech**](Hexapod-markwtech/README.md)
+    
+    IMAGE
+
+    DESCRIPTION
+
 - [**Bonsai watering**](Bonsai-watering/README.md)
     
     IMAGE
