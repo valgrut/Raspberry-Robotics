@@ -3,42 +3,38 @@
 #include <Adafruit_PWMServoDriver.h>
 #include <math.h>
 
-#ifdef ESP32
-  #include <WiFi.h>
-  #include <AsyncTCP.h>
-#else
-  #include <ESP8266WiFi.h>
-  #include <ESPAsyncTCP.h>
-#endif
+
+#include <ESP8266WiFi.h>
+#include <ESPAsyncTCP.h>
+
 #include <ESPAsyncWebServer.h>
 
 // Library Manager -> napsat Servo -> install
 #include <Servo.h>
 
-// REPLACE WITH YOUR NETWORK CREDENTIALS
+// Network Credentials
 
-
-const int output = 0;
-Servo s1;
 
 // HTML web page
 const char index_html[] PROGMEM = R"rawliteral(
 <!DOCTYPE HTML><html>
   <head>
-    <title>ESP Pushbutton Web Server</title>
+    <title>Kame quadruped cute robot</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
       body { font-family: Arial; text-align: center; margin:0px auto; padding-top: 30px;}
+      table { margin-left: auto; margin-right: auto; }
+      td { padding: 8 px; }
       .button {
-        padding: 10px 20px;
-        font-size: 24px;
-        text-align: center;
-        outline: none;
-        color: #fff;
         background-color: #2f4468;
         border: none;
-        border-radius: 5px;
-        box-shadow: 0 6px #999;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 18px;
+        margin: 6px 3px;
         cursor: pointer;
         -webkit-touch-callout: none;
         -webkit-user-select: none;
@@ -47,24 +43,60 @@ const char index_html[] PROGMEM = R"rawliteral(
         -ms-user-select: none;
         user-select: none;
         -webkit-tap-highlight-color: rgba(0,0,0,0);
-      }  
-      .button:hover {background-color: #1f2e45}
-      .button:active {
-        background-color: #1f2e45;
-        box-shadow: 0 4px #666;
-        transform: translateY(2px);
+      }
+      img {  width: auto ;
+        max-width: 100% ;
+        height: auto ; 
       }
     </style>
   </head>
   <body>
-    <h1>ESP Pushbutton Web Server</h1>
-    <button class="button" onmousedown="toggleCheckbox('on');" ontouchstart="toggleCheckbox('on');" onmouseup="toggleCheckbox('off');" ontouchend="toggleCheckbox('off');">LED PUSHBUTTON</button>
+    <h1>ESP32-CAM Robot</h1>
+    <img src="" id="photo" >
+    <table>
+      <tr>
+        <td colspan="3" align="center">
+          <button class="button" onmousedown="toggleCheckbox('forward');" ontouchstart="toggleCheckbox('forward');" onmouseup="toggleCheckbox('stop');" ontouchend="toggleCheckbox('stop');">Forward</button>
+        </td>
+      </tr>
+      <tr>
+        <td align="center">
+          <button class="button" onmousedown="toggleCheckbox('left');" ontouchstart="toggleCheckbox('left');" onmouseup="toggleCheckbox('stop');" ontouchend="toggleCheckbox('stop');">Left</button>
+        </td>
+        <td align="center">
+          <button class="button" onmousedown="toggleCheckbox('stop');" ontouchstart="toggleCheckbox('stop');">Stop</button>
+        </td>
+        <td align="center">
+          <button class="button" onmousedown="toggleCheckbox('right');" ontouchstart="toggleCheckbox('right');" onmouseup="toggleCheckbox('stop');" ontouchend="toggleCheckbox('stop');">Right</button>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3" align="center">
+          <button class="button" onmousedown="toggleCheckbox('backward');" ontouchstart="toggleCheckbox('backward');" onmouseup="toggleCheckbox('stop');" ontouchend="toggleCheckbox('stop');">Backward</button>
+        </td>
+      </tr>
+      <tr>
+        <td align="center">
+          <button class="button" onmousedown="toggleCheckbox('lay_flat');" ontouchstart="toggleCheckbox('lay_flat');" onmouseup="toggleCheckbox('stop');" ontouchend="toggleCheckbox('stop');">Lay Flat</button>
+        </td>
+        <td align="center">
+          <button class="button" onmousedown="toggleCheckbox('bow');" ontouchstart="toggleCheckbox('bow'); onmouseup="toggleCheckbox('stop');" ontouchend="toggleCheckbox('stop');">Bow</button>
+        </td>
+        <td align="center">
+          <button class="button" onmousedown="toggleCheckbox('wave');" ontouchstart="toggleCheckbox('wave');" onmouseup="toggleCheckbox('stop');" ontouchend="toggleCheckbox('stop');">Wave</button>
+        </td>
+        <td align="center">
+          <button class="button" onmousedown="toggleCheckbox('look_around');" ontouchstart="toggleCheckbox('look_around');" onmouseup="toggleCheckbox('stop');" ontouchend="toggleCheckbox('stop');">Look Around</button>
+        </td>
+      </tr>
+    </table>
    <script>
    function toggleCheckbox(x) {
      var xhr = new XMLHttpRequest();
      xhr.open("GET", "/" + x, true);
      xhr.send();
    }
+   //window.onload = document.getElementById("photo").src = window.location.href.slice(0, -1) + ":81/stream";
   </script>
   </body>
 </html>)rawliteral";
@@ -74,9 +106,10 @@ void notFound(AsyncWebServerRequest *request) {
 }
 
 AsyncWebServer server(80);
-
-// called this way, it uses the default address 0x40
-Adafruit_PWMServoDriver pwmServoDriver = Adafruit_PWMServoDriver();
+ 
+// GPIO4 (SDA) and GPIO5 (SCL) are used as I2C pins to make it easier 
+// for people using existing Arduino code, libraries, and sketches.
+Adafruit_PWMServoDriver pwmServoDriver = Adafruit_PWMServoDriver(0x40);
 // you can also call it with a different address you want
 //Adafruit_PWMServoDriver pwmServoDriver = Adafruit_PWMServoDriver(0x41);
 
@@ -85,55 +118,18 @@ Adafruit_PWMServoDriver pwmServoDriver = Adafruit_PWMServoDriver();
 // for max range. You'll have to tweak them as necessary to match the servos you
 // have!
 // Watch video V1 to understand the two lines below: http://youtu.be/y8X9X10Tn1k
+//TODO toto predelat specificky pro moje serva
 #define SERVOMIN  125 // this is the 'minimum' pulse length count (out of 4096)
 #define SERVOMAX  575 // this is the 'maximum' pulse length count (out of 4096)
+
+// TODO: transition state machine
 
 // our servo # counter
 uint8_t servonum = 0;
 
-void setup() {
-  Serial.begin(9600);
-  pwmServoDriver.begin();
-  pwmServoDriver.setPWMFreq(60);  // Analog servos run at ~60 Hz updates
-
-  s1.attach(output);
-
-  // Wifi setup
-  WiFi.mode(WIFI_STA);
-  WiFi.begin(ssid, password);
-  if (WiFi.waitForConnectResult() != WL_CONNECTED) {
-    Serial.println("WiFi Failed!");
-    return;
-  }
-
-  Serial.println();
-  Serial.print("ESP IP Address: http://");
-  Serial.println(WiFi.localIP());
+struct legServo {
+  unsigned int pcaPosition;
   
-  pinMode(output, OUTPUT);
-  digitalWrite(output, LOW);
-  
-  // Send web page to client
-  server.on("/", HTTP_GET, [](AsyncWebServerRequest *request){
-    request->send_P(200, "text/html", index_html);
-  });
-
-  // Receive an HTTP GET request
-  server.on("/on", HTTP_GET, [] (AsyncWebServerRequest *request) {
-    //digitalWrite(output, HIGH);
-    s1.write(180); 
-    request->send(200, "text/plain", "ok");
-  });
-
-  // Receive an HTTP GET request
-  server.on("/off", HTTP_GET, [] (AsyncWebServerRequest *request) {
-    //digitalWrite(output, LOW);
-    s1.write(0); 
-    request->send(200, "text/plain", "ok");
-  });
-  
-  server.onNotFound(notFound);
-  server.begin();
 }
 
 enum SERVOS {
@@ -195,6 +191,82 @@ enum LEG_RANGES {
   TOP_max = 150
 };
 
+
+// Forward Declaration
+int angleToPulse(int ang);
+int continuous_movement();
+int walk_front(int delay_value);
+int look_around();
+int walk_back();
+int turn_left();
+int lay_flat();
+int stand();
+int rotate_left();
+int bow();
+int wave();
+
+
+void setup() 
+{
+  Serial.begin(9600);
+  pwmServoDriver.begin();
+  pwmServoDriver.setPWMFreq(60);  // Analog servos run at ~60 Hz updates
+
+  // Wifi setup
+  WiFi.mode(WIFI_STA);
+  WiFi.begin(ssid, password);
+  if (WiFi.waitForConnectResult() != WL_CONNECTED) {
+    Serial.println("WiFi Failed!");
+    return;
+  }
+
+  Serial.println();
+  Serial.print("ESP IP Address: http://");
+  Serial.println(WiFi.localIP());
+
+  // Send web page to client
+  server.on("/", HTTP_GET, [](AsyncWebServerRequest *request){
+    request->send_P(200, "text/html", index_html);
+  });
+
+  // Receive an HTTP GET request
+  server.on("/forward", HTTP_GET, [] (AsyncWebServerRequest *request) {
+    walk_front(300);
+    request->send(200, "text/plain", "ok");
+  });
+
+  // Receive an HTTP GET request
+  server.on("/stop", HTTP_GET, [] (AsyncWebServerRequest *request) {
+    stand();
+    request->send(200, "text/plain", "ok");
+  });
+
+  server.on("/wave", HTTP_GET, [] (AsyncWebServerRequest *request) {
+    stand();
+    wave();
+    request->send(200, "text/plain", "ok");
+  });
+
+  server.on("/lay_flat", HTTP_GET, [] (AsyncWebServerRequest *request) {
+    lay_flat();
+    request->send(200, "text/plain", "ok");
+  });
+
+  server.on("/bow", HTTP_GET, [] (AsyncWebServerRequest *request) {
+    bow();
+    request->send(200, "text/plain", "ok");
+  });
+
+  server.on("/look_around", HTTP_GET, [] (AsyncWebServerRequest *request) {
+    look_around();
+    delay(2000);
+    request->send(200, "text/plain", "ok");
+  });
+  
+  server.onNotFound(notFound);
+  server.begin();
+}
+
 // the code inside loop() has been updated by Robojax
 void loop() {
 
@@ -240,13 +312,32 @@ void loop() {
   //delay(1000);// wait for 1 second
 }
 
+
+/***********************************************************************/
+/*********************** Function declaration **************************/
+/*
+/* angleToPulse(int ang)
+ * @brief gets angle in degree and returns the pulse width
+ * @param "ang" is integer represending angle from 0 to 180
+ * @return returns integer pulse width
+ * Usage to use 65 degree: angleToPulse(65);
+ * Written by Ahmad Shamshiri on Sep 17, 2019. 
+ * in Ajax, Ontario, Canada
+ * www.Robojax.com 
+ */ 
+int angleToPulse(int ang){
+   int pulse = map(ang,0, 180, SERVOMIN,SERVOMAX);// map angle of 0 to 180 to Servo min and Servo max 
+   Serial.print("Angle: ");Serial.print(ang);
+   Serial.print(" pulse: ");Serial.println(pulse);
+   return pulse;
+}
+
 // funkce ktera vytvori plynuly pohyb postupnym zrychlenim a zpomalenim na zacatku a konci daneho pohybu.
-int continuous_movement() {
+int continuous_movement() 
+{
   return 0;
 }
 
-
-// v0.2 - Working!!!
 /*
  * @param: int delay_value - Urcuje rychlost pohybu
 */
@@ -285,95 +376,6 @@ int walk_front(int delay_value)
   return 0;
 }
 
-// v0.1 
-int walk_front_v01()
-{
-  // 1. polovina cyklu
-  pwmServoDriver.setPWM(FRONT_RIGHT_XY, 0, angleToPulse(FRONT_RIGHT_XY_side));
-  pwmServoDriver.setPWM(BACK_LEFT_XY, 0, angleToPulse(BACK_LEFT_XY_mid - 20));
-
-  // [1] Prvni par: zvedam nohy
-  pwmServoDriver.setPWM(FRONT_RIGHT_Z, 0, angleToPulse(FRONT_RIGHT_Z_floor));
-  pwmServoDriver.setPWM(BACK_LEFT_Z, 0, angleToPulse(BACK_LEFT_Z_floor));
-
-  pwmServoDriver.setPWM(FRONT_LEFT_XY, 0, angleToPulse(FRONT_LEFT_XY_side));
-  pwmServoDriver.setPWM(BACK_RIGHT_XY, 0, angleToPulse(BACK_RIGHT_XY_mid + 20));
-  
-  pwmServoDriver.setPWM(FRONT_RIGHT_XY, 0, angleToPulse(FRONT_RIGHT_XY_mid));
-  pwmServoDriver.setPWM(BACK_LEFT_XY, 0, angleToPulse(BACK_LEFT_XY_side));
-
-  
-  pwmServoDriver.setPWM(FRONT_RIGHT_Z, 0, angleToPulse(FRONT_RIGHT_Z_mid));
-  pwmServoDriver.setPWM(BACK_LEFT_Z, 0, angleToPulse(BACK_LEFT_Z_mid));
-  //delay(100);
-
-  // 2. polovina cyklu
-  pwmServoDriver.setPWM(FRONT_LEFT_XY, 0, angleToPulse(FRONT_LEFT_XY_side));
-  pwmServoDriver.setPWM(BACK_RIGHT_XY, 0, angleToPulse(BACK_RIGHT_XY_mid - 20));
-
-  pwmServoDriver.setPWM(FRONT_LEFT_Z, 0, angleToPulse(FRONT_LEFT_Z_floor));
-  pwmServoDriver.setPWM(BACK_RIGHT_Z, 0, angleToPulse(BACK_RIGHT_Z_floor));
-
-  pwmServoDriver.setPWM(FRONT_RIGHT_XY, 0, angleToPulse(FRONT_RIGHT_XY_side));
-  pwmServoDriver.setPWM(BACK_LEFT_XY, 0, angleToPulse(BACK_LEFT_XY_mid + 20));
-
-  pwmServoDriver.setPWM(FRONT_LEFT_XY, 0, angleToPulse(FRONT_LEFT_XY_mid));
-  pwmServoDriver.setPWM(BACK_RIGHT_XY, 0, angleToPulse(BACK_RIGHT_XY_side));
-  pwmServoDriver.setPWM(FRONT_LEFT_Z, 0, angleToPulse(FRONT_LEFT_Z_mid));
-  pwmServoDriver.setPWM(BACK_RIGHT_Z, 0, angleToPulse(BACK_RIGHT_Z_mid));
-  //delay(100);
-
-  return 0;
-}
-
-
-
-// v0.0 BACKUP of walk_front
-int walk_front2()
-{
-  // [1] Prvni par: zvedam nohy
-  pwmServoDriver.setPWM(FRONT_RIGHT_Z, 0, angleToPulse(FRONT_RIGHT_Z_min));
-  pwmServoDriver.setPWM(BACK_LEFT_Z, 0, angleToPulse(BACK_LEFT_Z_min));
-  delay(150);
-
-  // [1] Prvni par: ve vzduchu krok
-  pwmServoDriver.setPWM(FRONT_RIGHT_XY, 0, angleToPulse(FRONT_RIGHT_XY_mid-20));
-  pwmServoDriver.setPWM(BACK_LEFT_XY, 0, angleToPulse(BACK_LEFT_XY_side));
-  delay(150);
-
-  // [2] Druhy par: Udelam krok
-  pwmServoDriver.setPWM(FRONT_LEFT_XY, 0, angleToPulse(FRONT_LEFT_XY_mid+20));
-  pwmServoDriver.setPWM(BACK_RIGHT_XY, 0, angleToPulse(BACK_RIGHT_XY_side+20));
-  delay(150);
-  
-  // [1] Prvni par: pokladam na zem
-  pwmServoDriver.setPWM(FRONT_RIGHT_Z, 0, angleToPulse(FRONT_RIGHT_Z_mid));
-  pwmServoDriver.setPWM(BACK_LEFT_Z, 0, angleToPulse(BACK_LEFT_Z_mid));
-  delay(300);
-
-
-  // [2] Druhy par: zvedam nohy
-  pwmServoDriver.setPWM(FRONT_LEFT_Z, 0, angleToPulse(FRONT_LEFT_Z_min));
-  pwmServoDriver.setPWM(BACK_RIGHT_Z, 0, angleToPulse(BACK_RIGHT_Z_min));
-  delay(150);
-
-  // [2] Druhy par: ve vzduchu krok
-  pwmServoDriver.setPWM(FRONT_LEFT_XY, 0, angleToPulse(FRONT_LEFT_XY_mid-20));
-  pwmServoDriver.setPWM(BACK_RIGHT_XY, 0, angleToPulse(BACK_RIGHT_XY_side));
-  delay(150);
-
-  // [1] Prvni par: Udelam krok
-  pwmServoDriver.setPWM(FRONT_RIGHT_XY, 0, angleToPulse(FRONT_RIGHT_XY_mid+20));
-  pwmServoDriver.setPWM(BACK_LEFT_XY, 0, angleToPulse(BACK_LEFT_XY_side-20));
-  delay(150);
-
-  // [2] Druhy par: pokladam na zem
-  pwmServoDriver.setPWM(FRONT_LEFT_Z, 0, angleToPulse(FRONT_LEFT_Z_mid));
-  pwmServoDriver.setPWM(BACK_RIGHT_Z, 0, angleToPulse(BACK_RIGHT_Z_mid));
-  delay(300);
-
-  return 0;
-}
 
 int look_around()
 {
@@ -522,22 +524,3 @@ int wave()
 
   return 0;
 }
-
-
-/*
-/* angleToPulse(int ang)
- * @brief gets angle in degree and returns the pulse width
- * @param "ang" is integer represending angle from 0 to 180
- * @return returns integer pulse width
- * Usage to use 65 degree: angleToPulse(65);
- * Written by Ahmad Shamshiri on Sep 17, 2019. 
- * in Ajax, Ontario, Canada
- * www.Robojax.com 
- */ 
-int angleToPulse(int ang){
-   int pulse = map(ang,0, 180, SERVOMIN,SERVOMAX);// map angle of 0 to 180 to Servo min and Servo max 
-   Serial.print("Angle: ");Serial.print(ang);
-   Serial.print(" pulse: ");Serial.println(pulse);
-   return pulse;
-}
- 
