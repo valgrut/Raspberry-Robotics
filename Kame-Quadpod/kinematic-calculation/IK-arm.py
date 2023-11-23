@@ -30,6 +30,7 @@ calc_ik(d1, d2_forearm, 5, 0, 5)
 calc_ik(d1, d2_forearm, 5, 5, 0)
 calc_ik(d1, d2_forearm, 5, 5, 5)
 
+# Draw a line
 # Path of the hand from x=1 to x=10
-for x in range(1, 10):
-    calc_ik(d1, d2_forearm, x, 0, 0)
+for x in range(-5, 5):
+    calc_ik(d1, d2_forearm, x, 5, 0)
