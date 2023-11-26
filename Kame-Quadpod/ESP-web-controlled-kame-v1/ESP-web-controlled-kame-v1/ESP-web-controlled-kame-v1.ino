@@ -9,7 +9,8 @@
 
 
 // Network Credentials
-
+const char* ssid = "***REMOVED***";
+const char* password = "***REMOVED***";
 
 // HTML web page
 const char index_html[] PROGMEM = R"rawliteral(
