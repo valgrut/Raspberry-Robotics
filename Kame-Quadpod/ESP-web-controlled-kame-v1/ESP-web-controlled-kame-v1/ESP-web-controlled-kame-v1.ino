@@ -9,7 +9,8 @@
 
 
 // Network Credentials
-
+const char* ssid = "Tellmywifiloveher";
+const char* password = "WeDr1#kY0ur8lo0d";
 
 // HTML web page
 const char index_html[] PROGMEM = R"rawliteral(
