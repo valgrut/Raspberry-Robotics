@@ -50,6 +50,17 @@ class Kinematics:
     def __init__(self):
         pass
 
+    # FUNGUJE!!! (Opravdu)
+    def calc_2D_fk(self, P0, coxa_len, femur_len, a0, a1):
+        print(P0[0], P0[1])
+        a0_rad = math.radians(a0)
+        a1_rad = math.radians(a1)
+
+        P1 = (P0[0] + coxa_len * math.cos(a0_rad), P0[1] + coxa_len * math.sin(a0_rad))
+        print(round(P1[0], 3), round(P1[1], 3))
+        P2 = (P1[0] + femur_len * math.cos(a0_rad + a1_rad), P1[1] + femur_len * math.sin(a0_rad + a1_rad))
+        print(round(P2[0], 3), round(P2[1], 3))
+
     def forward_kinematics_3D(self, leg: HexapodLeg, base_angle, shoulder_angle, knee_angle):
         # print("FK Input angles:", base_angle,"°", pelvis_angle,"°", knee_angle,"°")
         # print(P0[0], P0[1])
@@ -85,62 +96,88 @@ class Kinematics:
 
         return (round(P3.x, 3), round(P3.y, 3), round(P3.z, 3))
 
-    def inverse_kinematics(self):
+    def inverse_kinematics(self, leg: HexapodLeg, target: Coords):
         pass
 
+    def calc_2D_ik(self, femur_len, tibia_len, tx, ty):
+        pass
 
-# FUNGUJE!!! (Opravdu)
-def calc_2D_fk(P0, coxa_len, femur_len, a0, a1):
-    print(P0[0], P0[1])
-    a0_rad = math.radians(a0)
-    a1_rad = math.radians(a1)
+    def calc_3D_ik3(self, femur_len, tibia_len, coxa_len, tx, ty, tz):
+        # TODO: Brat v uvahu pocatecni bod pro vypocet (napr P0 jak u FK, kde y=10)
+        # TODO: Zakomponovat d_base
+        base = 0
+        shoulder = 0
+        elbow = 0
 
-    P1 = (P0[0] + coxa_len * math.cos(a0_rad), P0[1] + coxa_len * math.sin(a0_rad))
-    print(round(P1[0], 3), round(P1[1], 3))
-    P2 = (P1[0] + femur_len * math.cos(a0_rad + a1_rad), P1[1] + femur_len * math.sin(a0_rad + a1_rad))
-    print(round(P2[0], 3), round(P2[1], 3))
+        l0 = math.sqrt(tx**2 + tz**2)
+        # tz += 2
+
+        # top view (XZ plane)
+        base_rad = math.atan2(tz, tx)
+        base = round(math.degrees(base_rad))
+        print("base", base) #OK
+
+        # side view (XZ-Y plane)
+        # shoulder_rad = math.acos((l0**2 + femur_len**2 - tibia_len**2)/(2 * l0 * femur_len))
+        # elbow_rad = math.acos((tibia_len**2 + femur_len**2 - l0**2)/(2 * femur_len * tibia_len))
+
+        tx -= coxa_len
+        # ty += 10
+
+        # l0 = math.sqrt(tx**2 + ty**2)
+        elbow_rad = math.acos((tx**2 + ty**2 - femur_len**2 - tibia_len**2) / (2*femur_len*tibia_len))
+        elbow = math.degrees(elbow_rad)
+        shoulder_rad = math.atan2(tx, ty) - math.asin((tibia_len * math.sin(elbow)) / (math.sqrt(tx**2 + ty**2)))
+        # shoulder_rad = math.atan2(tx, ty) - math.atan2(tibia_len*math.sin(elbow), femur_len + tibia_len*math.cos(elbow))
+        # shoulder_rad = (-ty * tibia_len * math.sin(elbow) + tx * (femur_len + tibia_len * math.cos(elbow))) / (tx*tibia_len* math.sin(elbow) + ty * (femur_len + tibia_len * math.cos(elbow)))
+        shoulder = math.degrees(shoulder_rad)
+
+        print("shoulder", shoulder)
+        print("elbow", elbow)
+
+        return (base, shoulder, elbow)
+        # return (base, shoulder_rad, elbow_rad)
+        # return (base_rad, shoulder_rad, elbow_rad)
 
 
-# FUNGUJE!!! (Opravdu)
-def calc_3D_fk(P0, coxa_len, femur_len, d_base, pelvis_angle, knee_angle, base_angle):
-    print("FK Input angles:", base_angle,"°", pelvis_angle,"°", knee_angle,"°")
-    # print(P0[0], P0[1])
-    # print(P0[0] + d_base, P0[1])
-    pelvis_rad = math.radians(pelvis_angle) # shoulder
-    knee_rad = math.radians(knee_angle) # elbow
-    base_rad = math.radians(base_angle)  # natoceni cele nohy
 
-    # Pohyb kloubuu v ramci vertikalni osy xy
-    P1 = (P0[0] + d_base + coxa_len * math.cos(pelvis_rad), P0[1] + coxa_len * math.sin(pelvis_rad), P0[2])
-    # print(round(P1[0], 3), round(P1[1], 3))
-    P2 = (P1[0] + femur_len * math.cos(pelvis_rad + knee_rad), P1[1] + femur_len * math.sin(pelvis_rad + knee_rad), P1[2])
-    # print(round(P2[0], 3), round(P2[1], 3))
+    def calc_3D_ik2(self, femur_len, tibia_len, coxa_len, tx, ty, tz):
+        # top view (XZ plane)
+        base_rad = math.atan2(tz, tx)
+        base = round(math.degrees(base_rad))
+        # print("base", base) #OK
 
-    # Natoceni cele nohy v ramci horizontalnich os xz
-    x_distance = P2[0]
-    base_x = P0[0]
-    P3 = (base_x + x_distance * math.cos(base_rad), P2[1], x_distance * math.sin(base_rad))
-    print("FK Output coords:", round(P3[0], 6), round(P3[1], 6), round(P3[2], 6))
+        # Distance between the Coxa and Ground Contact
+        height_offset = math.sqrt(tx**2 + ty**2)
 
-    # plt.rcParams["figure.figsize"] = [7.50, 3.50]
-    # plt.rcParams["figure.autolayout"] = True
-    # fig = plt.figure()
-    # ax = fig.add_subplot(projection="3d")
-    # ax.set_xlabel('x')
-    # ax.set_ylabel('y')
-    # ax.set_zlabel('z')
-    # x, y, z = [P0[0]+d_base, P0[0], P1[0], P2[0], P3[0]], [P0[1],P0[1], P1[1], P2[1], P3[1]], [P0[2], P0[2], P1[2], P2[2], P3[2]]
-    # ax.scatter(x, y, z, c='red', s=100)
-    # ax.plot(x, y, z, color='black')
-    # plt.show()
+        # ikSW - Length between Femur axis and Tibia (prepona 'c' mezi femurem a tibia)
+        ikSW = math.sqrt((height_offset - coxa_len)**2 + tz**2)
 
-    return (round(P3[0], 3), round(P3[1], 3), round(P3[2], 3))
+        # ikRadiansFemurTibiaGround - Angle between Femur and Tibia line and the ground in radians
+        ikRadiansFemurTibiaGround = math.atan2(height_offset - coxa_len, tz)
+
+        # ikRadiansFemurTibia - Angle of the line Femur and Tibia with respect to the Femur in radians
+        ikRadiansFemurTibia = math.acos(((femur_len**2 - tibia_len**2) + ikSW**2) / (2 * femur_len * ikSW))
+
+        # ikCoxaAngle in degrees
+        initCoxaAngle = 0
+        coxaAngle = math.atan2(ty, tx) * 180 / math.pi +initCoxaAngle
+
+        # ikFemurAngle in degrees
+        femurAngle = - (ikRadiansFemurTibiaGround + ikRadiansFemurTibia ) * 180 / math.pi  + 90
+
+        # ikTibiaAngle in degrees
+        tibiaAngle = - (90 -(((math.acos((femur_len**2 + tibia_len**2 - ikSW**2 ) / ( 2 * femur_len * tibia_len ) ) ) * 180 ) / math.pi ) )
+
+        # return (base, shoulder, elbow)
+        return (coxaAngle, femurAngle, tibiaAngle)
+        # return (base, shoulder_rad, elbow_rad)
+        # return (base_rad, shoulder_rad, elbow_rad)
+
 
 # Test
 # calc_3D_fk((0, 10), 5, 3, d_base=2, a0=45, a1=10, a3=180)
 
-def calc_2D_ik(femur_len, tibia_len, tx, ty):
-    pass
 
 # def calc_3D_ik(femur_len, tibia_len, tx, ty, tz):
 #     # TODO: Zakomponovat d_base
@@ -160,79 +197,6 @@ def calc_2D_ik(femur_len, tibia_len, tx, ty):
 #     print("elbow", math.degrees(elbow))
 #     print("shoulder", math.degrees(shoulder))
 #     print()
-
-
-def calc_3D_ik3(femur_len, tibia_len, coxa_len, tx, ty, tz):
-    # TODO: Brat v uvahu pocatecni bod pro vypocet (napr P0 jak u FK, kde y=10)
-    # TODO: Zakomponovat d_base
-    base = 0
-    shoulder = 0
-    elbow = 0
-
-    l0 = math.sqrt(tx**2 + tz**2)
-    # tz += 2
-
-    # top view (XZ plane)
-    base_rad = math.atan2(tz, tx)
-    base = round(math.degrees(base_rad))
-    print("base", base) #OK
-
-    # side view (XZ-Y plane)
-    # shoulder_rad = math.acos((l0**2 + femur_len**2 - tibia_len**2)/(2 * l0 * femur_len))
-    # elbow_rad = math.acos((tibia_len**2 + femur_len**2 - l0**2)/(2 * femur_len * tibia_len))
-
-    tx -= coxa_len
-    # ty += 10
-
-    # l0 = math.sqrt(tx**2 + ty**2)
-    elbow_rad = math.acos((tx**2 + ty**2 - femur_len**2 - tibia_len**2) / (2*femur_len*tibia_len))
-    elbow = math.degrees(elbow_rad)
-    shoulder_rad = math.atan2(tx, ty) - math.asin((tibia_len * math.sin(elbow)) / (math.sqrt(tx**2 + ty**2)))
-    # shoulder_rad = math.atan2(tx, ty) - math.atan2(tibia_len*math.sin(elbow), femur_len + tibia_len*math.cos(elbow))
-    # shoulder_rad = (-ty * tibia_len * math.sin(elbow) + tx * (femur_len + tibia_len * math.cos(elbow))) / (tx*tibia_len* math.sin(elbow) + ty * (femur_len + tibia_len * math.cos(elbow)))
-    shoulder = math.degrees(shoulder_rad)
-
-    print("shoulder", shoulder)
-    print("elbow", elbow)
-
-    return (base, shoulder, elbow)
-    # return (base, shoulder_rad, elbow_rad)
-    # return (base_rad, shoulder_rad, elbow_rad)
-
-
-
-def calc_3D_ik2(femur_len, tibia_len, coxa_len, tx, ty, tz):
-    # top view (XZ plane)
-    base_rad = math.atan2(tz, tx)
-    base = round(math.degrees(base_rad))
-    # print("base", base) #OK
-
-    # Distance between the Coxa and Ground Contact
-    height_offset = math.sqrt(tx**2 + ty**2)
-
-    # ikSW - Length between Femur axis and Tibia (prepona 'c' mezi femurem a tibia)
-    ikSW = math.sqrt((height_offset - coxa_len)**2 + tz**2)
-
-    # ikRadiansFemurTibiaGround - Angle between Femur and Tibia line and the ground in radians
-    ikRadiansFemurTibiaGround = math.atan2(height_offset - coxa_len, tz)
-
-    # ikRadiansFemurTibia - Angle of the line Femur and Tibia with respect to the Femur in radians
-    ikRadiansFemurTibia = math.acos(((femur_len**2 - tibia_len**2) + ikSW**2) / (2 * femur_len * ikSW))
-
-    # ikCoxaAngle in degrees
-    initCoxaAngle = 0
-    coxaAngle = math.atan2(ty, tx) * 180 / math.pi +initCoxaAngle
-
-    # ikFemurAngle in degrees
-    femurAngle = - (ikRadiansFemurTibiaGround + ikRadiansFemurTibia ) * 180 / math.pi  + 90
-
-    # ikTibiaAngle in degrees
-    tibiaAngle = - (90 -(((math.acos((femur_len**2 + tibia_len**2 - ikSW**2 ) / ( 2 * femur_len * tibia_len ) ) ) * 180 ) / math.pi ) )
-
-    # return (base, shoulder, elbow)
-    return (coxaAngle, femurAngle, tibiaAngle)
-    # return (base, shoulder_rad, elbow_rad)
-    # return (base_rad, shoulder_rad, elbow_rad)
 
 
 
@@ -311,4 +275,7 @@ while cmd != "e":
     angles = calc_3D_ik2(femur_len, tibia_len, base_len, init_base, init_tibia, init_femur)
     print("coxa", angles[0], "femur", angles[1], "tibia", angles[2])
 
-
+# TODO: Udelat testy - hlavne pro xyz ze
+# (20.5, 0, 0) = (0, 0, 0) # natazena noha, vychozi pozice
+# (0, 18.5, 0) = (90, 0, 0) # Natazena noha, ale smerem nahoru
+# (0, 0, 18.5) = (0, 0, 90) # Natazena noha, ale smerem nahoru
