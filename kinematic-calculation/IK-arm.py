@@ -12,7 +12,8 @@ class Coords:
     def coords(self):
         print(self.x, self.y, self.z)
 
-class HexapodLeg():
+
+class HexapodLeg:
     def __init__(self, leg_idx, leg_placement_coords: Coords, body_coxa_distance, coxa_len, femur_len, tibia_len):
         # Leg definition
         self.leg_idx = leg_idx
@@ -30,13 +31,14 @@ class HexapodLeg():
         # Move leg along X-axis
         pass
 
-    def move_leg_Y()
+    def move_leg_Y(self, value):
         # Move leg along Y-axis
         pass
 
     def move_leg_Z(self, value):
         # Move leg along Z-axis
         pass
+
 
 class Hexapod:
     def __init__(self):
@@ -45,6 +47,7 @@ class Hexapod:
 
     def walk(self):
         pass
+
 
 class Kinematics:
     def __init__(self):
@@ -61,6 +64,7 @@ class Kinematics:
         P2 = (P1[0] + femur_len * math.cos(a0_rad + a1_rad), P1[1] + femur_len * math.sin(a0_rad + a1_rad))
         print(round(P2[0], 3), round(P2[1], 3))
 
+
     def forward_kinematics_3D(self, leg: HexapodLeg, base_angle, shoulder_angle, knee_angle):
         # print("FK Input angles:", base_angle,"°", pelvis_angle,"°", knee_angle,"°")
         # print(P0[0], P0[1])
@@ -72,7 +76,7 @@ class Kinematics:
         P0 = leg.leg_placement_coords
 
         # Pohyb kloubuu v ramci vertikalni osy xy
-        P1 = Coords((P0.x + d_base + coxa_len * math.cos(shoulder_rad), P0.y + coxa_len * math.sin(shoulder_rad), P0.z)
+        P1 = Coords(P0.x + d_base + coxa_len * math.cos(shoulder_rad), P0.y + coxa_len * math.sin(shoulder_rad), P0.z)
 
         # print(round(P1[0], 3), round(P1[1], 3))
         P2 = Coords(P1.x + femur_len * math.cos(shoulder_rad + knee_rad), P1.y + femur_len * math.sin(shoulder_rad + knee_rad), P1.z)
@@ -174,6 +178,30 @@ class Kinematics:
         # return (base, shoulder_rad, elbow_rad)
         # return (base_rad, shoulder_rad, elbow_rad)
 
+    def ik(self, leg: HexapodLeg, target: Coords):
+        tx = target.x
+        ty = target.y
+        tz = target.z
+
+        a1 = leg.coxa_len # height
+        a2 = leg.femur_len
+        a3 = leg.tibia_len
+
+        theta1 = math.atan2(ty, tx)  # [1]
+        r1 = math.sqrt(tx**2 + ty**2) - leg.body_coxa_distance # [2]
+
+        if r1 > a2 + a3:
+            print("Unreachable point")
+            return None
+
+        r2 = tz - a1  # [3]
+        phi2 = math.atan2(r2, r1)  # [4]
+        r3 = math.sqrt(r1**2 + r2**2)  # [5]
+        phi1 = math.acos((a3**2 - a2**2 - r3**2) / (-2*a2*r3))  # [6]
+        theta2 = math.degrees(phi2 - phi1)  # [7]
+        phi3 = math.acos((r3**2 - a2**2 -a3**2) / (-2*a2*a3))  # [8]
+        theta3 = math.degrees(phi3)  # [9]
+        return (theta1, theta2, theta3)
 
 # Test
 # calc_3D_fk((0, 10), 5, 3, d_base=2, a0=45, a1=10, a3=180)
@@ -240,42 +268,52 @@ print()
 ### samostatny test
 print("Samsotatne testy")
 print()
-angles = calc_3D_ik2(femur_len, tibia_len, base_len, 20.5, 0, 0)
-print("coxa", angles[0], "femur", angles[1], "tibia", angles[2])
+# angles = calc_3D_ik2(femur_len, tibia_len, base_len, 20.5, 0, 0)
+# print("coxa", angles[0], "femur", angles[1], "tibia", angles[2])
 
 # calc_3D_fk((0,0,0), femur_len, tibia_len, base_len, 0, 0, 0)
 # calc_3D_fk((0,10,0), femur_len, tibia_len, base_len, 160, 90, 0) # Klasicke postaveni nohy (160,90,0)
-calc_3D_fk((0,10,0), femur_len, tibia_len, base_len, 90, 190, 0)
+# calc_3D_fk((0,10,0), femur_len, tibia_len, base_len, 90, 190, 0)
 # angles = calc_3D_ik2(femur_len, tibia_len, base_len, -8.212244, 0.946819, 0)
 # print("coxa", angles[0], "femur", angles[1], "tibia", angles[2])
 
-
-init_base = 10
-init_tibia = 10
-init_femur = 10
-cmd = ""
-while cmd != "e":
-    cmd = input()
-    if cmd == "x":
-        init_base += 1
-    elif cmd == "z":
-        init_base -= 1
-
-    if cmd == "s":
-        init_tibia += 1
-    elif cmd == "a":
-        init_tibia -= 1
-
-    if cmd == "w":
-        init_femur += 1
-    elif cmd == "q":
-        init_femur -= 1
-
-    # calc_3D_fk((0,10,0), femur_len, tibia_len, base_len, init_femur, init_tibia, init_base)
-    angles = calc_3D_ik2(femur_len, tibia_len, base_len, init_base, init_tibia, init_femur)
-    print("coxa", angles[0], "femur", angles[1], "tibia", angles[2])
 
 # TODO: Udelat testy - hlavne pro xyz ze
 # (20.5, 0, 0) = (0, 0, 0) # natazena noha, vychozi pozice
 # (0, 18.5, 0) = (90, 0, 0) # Natazena noha, ale smerem nahoru
 # (0, 0, 18.5) = (0, 0, 90) # Natazena noha, ale smerem nahoru
+
+leg = HexapodLeg(0, None, 2, 10, 6.5, 12)
+
+kinematics = Kinematics()
+
+init_x = 20.5
+init_y = 0
+init_z = 10
+cmd = ""
+# while cmd != "e":
+#     cmd = input()
+#     if cmd == "x":
+#         init_x += 1
+#     elif cmd == "z":
+#         init_x -= 1
+
+#     if cmd == "s":
+#         init_y += 1
+#     elif cmd == "a":
+#         init_y -= 1
+
+#     if cmd == "w":
+#         init_z += 1
+#     elif cmd == "q":
+#         init_z -= 1
+
+#     print(kinematics.ik(leg, Coords(init_x, init_y, init_z)))
+#     # calc_3D_fk((0,10,0), femur_len, tibia_len, base_len, init_femur, init_tibia, init_base)
+#     # angles = calc_3D_ik2(femur_len, tibia_len, base_len, init_base, init_tibia, init_femur)
+#     # print("coxa", angles[0], "femur", angles[1], "tibia", angles[2])
+
+
+for x in range(10, 20):
+    print(kinematics.ik(leg, Coords(x, 0, 10)))
+print(kinematics.ik(leg, Coords(15, 0, 10)))
