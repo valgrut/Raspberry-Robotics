@@ -97,6 +97,8 @@ class Kinematics:
         pass
 
     def ik(self, leg: HexapodLeg, target: Coords):
+        # TODO: Pridat constraints
+        # TODO: Pridat asi ty 2cm jeste od base po coxa
         tx = target.x
         ty = target.y
         tz = target.z
@@ -125,31 +127,28 @@ class Kinematics:
 leg = HexapodLeg(0, None, 2, 10, 6.5, 12)
 kinematics = Kinematics()
 
-init_x = 20.5
-init_y = 0
-init_z = 10
-cmd = ""
+# init_x = 15
+# init_y = 0
+# init_z = 10
+# cmd = ""
 # while cmd != "e":
 #     cmd = input()
-#     if cmd == "x":
+#     if cmd == "w":
 #         init_x += 1
-#     elif cmd == "z":
+#     elif cmd == "s":
 #         init_x -= 1
 
-#     if cmd == "s":
+#     if cmd == "a":
 #         init_y += 1
-#     elif cmd == "a":
+#     elif cmd == "d":
 #         init_y -= 1
 
-#     if cmd == "w":
+#     if cmd == "r":
 #         init_z += 1
-#     elif cmd == "q":
+#     elif cmd == "f":
 #         init_z -= 1
 
 #     print(kinematics.ik(leg, Coords(init_x, init_y, init_z)))
-#     # calc_3D_fk((0,10,0), femur_len, tibia_len, base_len, init_femur, init_tibia, init_base)
-#     # angles = calc_3D_ik2(femur_len, tibia_len, base_len, init_base, init_tibia, init_femur)
-#     # print("coxa", angles[0], "femur", angles[1], "tibia", angles[2])
 
 
 for x in range(10, 20):
