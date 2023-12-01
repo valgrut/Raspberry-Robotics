@@ -23,7 +23,15 @@ class Plotter:
         self.ax.plot(x, y, z, color='black')
         plt.show()
 
-    def plot_points(self, points_list):
+    def plot_list(self, points_list):
+        x = [p[0] for p in points_list]
+        y = [p[1] for p in points_list]
+        z = [p[2] for p in points_list]
+        self.ax.scatter(x, y, z, c='red', s=100)
+        self.ax.plot(x, y, z, color='black')
+        plt.show()
+
+    def plot_points(self):
         x = [p[0] for p in self.points]
         y = [p[1] for p in self.points]
         z = [p[2] for p in self.points]
@@ -31,5 +39,5 @@ class Plotter:
         self.ax.plot(x, y, z, color='black')
         plt.show()
 
-plotter = Plotter()
-plotter.plot_point([1,3,2])
+# plotter = Plotter()
+# plotter.plot_point([1,3,2])
