@@ -2,7 +2,7 @@ import math
 import numpy as np
 from matplotlib import pyplot as plt
 from plot import *
-from adafruit_servokit import ServoKit
+# from adafruit_servokit import ServoKit
 
 # https://technology.cpm.org/general/3dgraph/
 
@@ -121,22 +121,32 @@ class Kinematics:
         theta3 = math.degrees(phi3)  # [9]
         return (theta1, theta2, theta3)
 
+    def ik_dle_clanku(self, leg: HexapodLeg, target: Coords):
+        x0 = target.x
+        y0 = target.y
+        z0 = target.z
+
+        L2 = leg.femur_len
+        L3 = leg.tibia_len
+
+        theta1 = math.atan(y0 / x0)
+        theta2 = math.acos((-L3**2 + L2**2 + x0**2 + y0**2 + z0**2) / (2*L2*math.sqrt(x0**2 + y0**2 + z0**2))) + math.atan2(z0, (math.sqrt(x0**2 + y0**2)))
+        theta3 = -math.acos((x0**2 + y0**2 + z0**2 - L2**2 - L3**2) / (2*L2*L3))
+
+        return (math.degrees(theta1), math.degrees(theta2), math.degrees(theta3))
+
 
 
 def map_range(v, a, b, c, d):
        return (v-a) / (b-a) * (d-c) + c
-
-a = map_range(4, 0, 10, 0, 1)
-print(a) # -> 0.4
+# a = map_range(4, 0, 10, 0, 1)
 
 
 
 # leg = HexapodLeg(0, None, 5, 10, 6.5, 12)
 leg = HexapodLeg(0, None, 0, 5, 6.5, 12)
 kinematics = Kinematics()
-
-kit = ServoKit(channels=8)
-# kit.servo[0].angle = 175
+# kit = ServoKit(channels=8)
 
 
 def control_position():
@@ -211,7 +221,8 @@ def control_angles():
 
         print(kinematics.forward_kinematics_3D(leg, init_x, init_y, init_z))
 
-control_angles()
+# control_angles()
+# control_position()
 
 # import time
 
@@ -225,8 +236,9 @@ control_angles()
 #     time.sleep(10)
 
 ########
-# for y in range(5, 10):
-#     print(kinematics.ik(leg, Coords(5, y, 10)))
+for y in range(5, 10):
+    print(kinematics.ik(leg, Coords(5, y, 10)))
+    print(kinematics.ik_dle_clanku(leg, Coords(5, y, 10)))
 
 ########
 # for z in range(10, 20):
