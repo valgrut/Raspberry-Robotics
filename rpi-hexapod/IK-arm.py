@@ -236,9 +236,13 @@ def control_angles():
 #     time.sleep(10)
 
 ########
-for y in range(5, 10):
-    print(kinematics.ik(leg, Coords(5, y, 10)))
-    print(kinematics.ik_dle_clanku(leg, Coords(5, y, 10)))
+for y in range(5, 15):
+    print(kinematics.ik(leg, Coords(10, y, 0)))
+    print(kinematics.ik_dle_clanku(leg, Coords(10, y, 0)))
+
+print()
+print(kinematics.ik(leg, Coords(10, 10, -5)))
+print(kinematics.ik_dle_clanku(leg, Coords(10, 10, -5)))
 
 ########
 # for z in range(10, 20):
