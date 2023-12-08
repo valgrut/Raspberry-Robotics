@@ -7,6 +7,22 @@ SUDO='sudo' # Comment/uncomment as needed.
 #   libcamera-still --list-cameras
 #   v4l2-ctl --info -d /dev/video0 --list-formats-ext
 
+# - [ ] Enable:
+#   - enable VNC
+#   - enable GPIO
+#   - enable I2C
+
+# - [ ] Enable multiple I2C busses
+#   - Add following after: 
+#       ```
+#       sudo vim /boot/config.txt
+#
+#       dtparam=i2c_arm=on #add after this line
+#       dtoverlay=i2c-gpio,bus=4,i2c_gpio_sda=8,i2c_gpio_scl=9 dtoverlay=i2c-gpio,bus=5,i2c_gpio_sda=12,i2c_gpio_scl=13 dtoverlay=i2c-gpio,bus=6,i2c_gpio_sda=22,i2c_gpio_scl=23
+#       ```
+
+
+
 install_common_packages() {
     sudo apt-get update
     sudo apt-get upgrade
@@ -55,6 +71,7 @@ install_common_packages() {
 
     $SUDO pip3 install --break-system-packages adafruit-circuitpython-pca9685
     $SUDO pip3 install --break-system-packages adafruit-circuitpython-servokit
+    $SUDO pip3 install --break-system-packages mpu6050-raspberrypi
 }
 
 install_64bit_packages() {

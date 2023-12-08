@@ -2,7 +2,8 @@ import math
 import numpy as np
 from matplotlib import pyplot as plt
 from plot import *
-# from adafruit_servokit import ServoKit
+from adafruit_servokit import ServoKit
+import time
 
 # https://technology.cpm.org/general/3dgraph/
 
@@ -128,12 +129,30 @@ class Kinematics:
 
         L2 = leg.femur_len
         L3 = leg.tibia_len
+        
+        try:
+            theta1 = math.atan2(y0, x0)
+            theta2 = math.acos((-L3**2 + L2**2 + x0**2 + y0**2 + z0**2) / (2*L2*math.sqrt(x0**2 + y0**2 + z0**2))) + math.atan2(z0, (math.sqrt(x0**2 + y0**2)))
+            theta3 = -math.acos((x0**2 + y0**2 + z0**2 - L2**2 - L3**2) / (2*L2*L3))
+        except:
+            print("Invalid angle")
 
-        theta1 = math.atan(y0 / x0)
-        theta2 = math.acos((-L3**2 + L2**2 + x0**2 + y0**2 + z0**2) / (2*L2*math.sqrt(x0**2 + y0**2 + z0**2))) + math.atan2(z0, (math.sqrt(x0**2 + y0**2)))
-        theta3 = -math.acos((x0**2 + y0**2 + z0**2 - L2**2 - L3**2) / (2*L2*L3))
+        # Angles update
+        theta1 = math.degrees(theta1)
+        theta2 = math.degrees(theta2)
+        theta3 = math.degrees(theta3)
 
-        return (math.degrees(theta1), math.degrees(theta2), math.degrees(theta3))
+        print("ik_dle_clanku: pred", theta1, theta2, theta3)
+
+        theta1 = theta1 if theta1 > 0 else 180 + theta1
+        #theta2 = theta2 if theta2 > 0 else 180 + theta2
+        #theta2 = map_range(theta2, -180, 180, 0, 180)
+        theta3 = theta3 if theta3 > 0 else 180 + theta3
+
+        print("ik_dle_clanku: po", theta1, theta2, theta3)
+
+        return (theta1, theta2, theta3)
+        # return (map_range(math.degrees(theta1), -90, 90, 0, 180), map_range(math.degrees(theta2), -90, 90, 0, 180), map_range(math.degrees(theta3), -90, 90, 0, 180))
 
 
 
@@ -146,16 +165,19 @@ def map_range(v, a, b, c, d):
 # leg = HexapodLeg(0, None, 5, 10, 6.5, 12)
 leg = HexapodLeg(0, None, 0, 5, 6.5, 12)
 kinematics = Kinematics()
-# kit = ServoKit(channels=8)
+kit = ServoKit(channels=8)
 
 
 def control_position():
     # xyz pozice na relativne normalni pozici nohou:
-    init_x = 75
-    init_y = 120
-    init_z = 100
+    init_x = 7 #75
+    init_y = 1 #120
+    init_z = 8 #100
 
-    increment = 10
+    angles = None
+    old_angles = None
+
+    increment = 1 #10
     cmd = ""
     while cmd != "e":
         cmd = input()
@@ -174,16 +196,33 @@ def control_position():
         elif cmd == "f":
             init_z -= increment
 
-        print("new x", init_x, "small_x", init_x/10)
-        print("new y", init_y, "small_y", init_y/10)
-        print("new z", init_z, "small_z", init_z/10)
+        # init_x = init_x / 10
+        # init_y = init_y / 10
+        # init_z = init_z / 10
 
-        angles = kinematics.ik(leg, Coords(init_x/10, init_y/10, init_z/10))
-        kit.servo[0].angle = abs(angles[0])
-        kit.servo[1].angle = abs(angles[1])
-        kit.servo[2].angle = abs(angles[2])
+        print("new x", init_z, "small_x", init_z)
+        print("new y", init_y, "small_y", init_y)
+        print("new z", init_x, "small_z", init_x)
 
-        print(kinematics.ik(leg, Coords(init_x/10, init_y/10, init_z/10)))
+        # angles = kinematics.ik(leg, Coords(init_x/10, init_y/10, init_z/10))
+        try:
+            old_angles = angles
+            angles = kinematics.ik_dle_clanku(leg, Coords(init_x, init_y, init_z))
+            
+            # kit.servo[0].angle = map_range(angles[2], -90, 90, 0, 180)
+            # kit.servo[1].angle = map_range(angles[1], -90, 90, 0, 180)
+            # kit.servo[2].angle = map_range(angles[0], -90, 90, 0, 180)
+
+            kit.servo[0].angle = angles[2]
+            kit.servo[1].angle = angles[1]
+            kit.servo[2].angle = angles[0]
+
+            # print(kinematics.ik(leg, Coords(init_x/10, init_y/10, init_z/10)))
+            print(kinematics.ik_dle_clanku(leg, Coords(init_x, init_y, init_z)))
+        except:
+            print("Invalid angles")
+            angles = old_angles
+
 
 
 def control_angles():
@@ -222,7 +261,7 @@ def control_angles():
         print(kinematics.forward_kinematics_3D(leg, init_x, init_y, init_z))
 
 # control_angles()
-# control_position()
+control_position()
 
 # import time
 
@@ -236,13 +275,40 @@ def control_angles():
 #     time.sleep(10)
 
 ########
-for y in range(5, 15):
-    print(kinematics.ik(leg, Coords(10, y, 0)))
-    print(kinematics.ik_dle_clanku(leg, Coords(10, y, 0)))
+# for y in range(5, 15):
+#     print(kinematics.ik(leg, Coords(10, y, 0)))
+#     print(kinematics.ik_dle_clanku(leg, Coords(10, y, 0)))
 
-print()
-print(kinematics.ik(leg, Coords(10, 10, -5)))
-print(kinematics.ik_dle_clanku(leg, Coords(10, 10, -5)))
+# print()
+# print(kinematics.ik(leg, Coords(10, 10, -5)))
+# print(kinematics.ik_dle_clanku(leg, Coords(10, 10, -5)))
+
+a0 = 100 # Base:  100 = Natazena base presne uprostred
+a1 = 50  # Rameno: 50 = natazene rameno
+a2 = 100 # Loket: 100 = presne 45stupnu dolu od stredni casti nohy
+# TODO: toto by mely byt uhly pro 0 stupnu, tzn namapovat na range (-90, 90)
+kit.servo[0].angle = a2
+kit.servo[1].angle = a1
+kit.servo[2].angle = a0
+
+print("ik", kinematics.ik_dle_clanku(leg, Coords(10, 10, 0)))
+print(kinematics.ik_dle_clanku(leg, Coords(10, 0, 5)))
+#print(kinematics.ik_dle_clanku(leg, Coords(23.5, 0, 0)))
+
+L1 = 5
+L2 = 6.5
+L3 = 12
+
+a0 = 0 # Base
+a1 = 0 # Rameno
+a2 = 0 # Loket
+p0 = Coords(0,0,0)
+p1 = Coords(p0.x + L1, 0, p0.z)
+p2 = Coords(p1.x + L2 * math.cos(a1), 0, p1.z + L2 * math.sin(a1))
+p3 = Coords(p2.x + L3 * math.cos(a1 + a2), 0, p2.z + L3 * math.sin(a1 + a2))
+E3 = Coords(p3.x * math.cos(a0), p3.x * math.sin(a0), p3.z)
+print(E3.x, E3.y, E3.z)
+
 
 ########
 # for z in range(10, 20):
