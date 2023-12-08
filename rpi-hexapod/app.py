@@ -19,7 +19,7 @@ def gen():
 
     while True:
         photo = "/home/hexapod/Code/frame.jpg"
-        time.sleep(0.1)
+        time.sleep(0.05)
         # picam2.capture_file(photo)
         data = io.BytesIO()
         picam2.capture_file(data, format="jpeg")
