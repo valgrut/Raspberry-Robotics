@@ -1,5 +1,5 @@
 run:
-	python3 app.py
+	python3 src/app.py
 
 config:
 	bash rpi-configuration.sh 32bit
