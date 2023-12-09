@@ -1,6 +1,7 @@
 import math
-import HexapodLeg
+from hexapod import HexapodLeg
 from coords import Coords
+from utils import *
 
 class Kinematics:
     def __init__(self):
@@ -16,6 +17,7 @@ class Kinematics:
         print(round(P1[0], 3), round(P1[1], 3))
         P2 = (P1[0] + femur_len * math.cos(a0_rad + a1_rad), P1[1] + femur_len * math.sin(a0_rad + a1_rad))
         print(round(P2[0], 3), round(P2[1], 3))
+
 
     def forward_kinematics_3D(self, leg: HexapodLeg, base_angle, shoulder_angle, knee_angle):
         # TODO: Fix, nefunguje. Znova prepocitat.
@@ -41,8 +43,10 @@ class Kinematics:
 
         return (round(P3.y, 3), round(P3.z, 3), round(P3.x, 3))
 
+
     def calc_2D_ik(self, femur_len, tibia_len, tx, ty):
         pass
+
 
     def ik(self, leg: HexapodLeg, target: Coords):
         # TODO: Pridat constraints
@@ -70,6 +74,7 @@ class Kinematics:
         phi3 = math.acos((r3**2 - a2**2 -a3**2) / (-2*a2*a3))  # [8]
         theta3 = math.degrees(phi3)  # [9]
         return (theta1, theta2, theta3)
+
 
     def ik_dle_clanku(self, leg: HexapodLeg, target: Coords):
         x0 = target.x
