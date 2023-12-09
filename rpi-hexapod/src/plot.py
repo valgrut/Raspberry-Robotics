@@ -41,3 +41,20 @@ class Plotter:
 
 # plotter = Plotter()
 # plotter.plot_point([1,3,2])
+
+
+# Example usage:
+# plotter = Plotter()
+# print("kruh")
+# for x in np.arange(10, 20, 0.5):
+    # plotter.add_point((10, 5*math.cos(x), 5*math.sin(x)))
+    # plotter.add_point(kinematics.ik(leg, Coords(10, 5*math.cos(x), 5*math.sin(x))))
+# plotter.plot_points()
+# plotter.empty_points()
+
+#########
+# print("cara")
+# for x in np.arange(10, 17, 0.5):
+#     print(kinematics.ik(leg, Coords(x, 0, 10)))
+#     plotter.add_point(kinematics.ik(leg, Coords(x, 0, 10)))
+# plotter.plot_points()

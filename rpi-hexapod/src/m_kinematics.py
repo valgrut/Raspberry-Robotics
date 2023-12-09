@@ -52,7 +52,7 @@ class Kinematics:
     def calc_2D_ik(self, femur_len, tibia_len, tx, ty):
         pass
 
-    
+
     def inverse_kinematics(self, leg: HexapodLeg, target: Coords):
         x = target.x
         y = target.y
@@ -84,8 +84,12 @@ class Kinematics:
             # theta3 = math.degrees(math.atan2(x, y))  # Originalni hodnoty
             # TODO: if theta3 > 0 then reverse sign (Chci, aby pavouk vzdy udrzoval ten klasicky tvar nohy)
             theta3 = 90 - math.degrees(math.atan2(x, y))  # Prizpusobeni pro FK
+            
+            return (theta3, theta2, theta1)
+        
         except:
             print("Invalid angle")
 
-        return (theta3, theta2, theta1)
+        return (0, 0, 0)
+        
     

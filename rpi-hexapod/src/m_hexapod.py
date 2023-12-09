@@ -1,4 +1,5 @@
 from coords import Coords
+from time import sleep
 from adafruit_servokit import ServoKit
 
 class Hexapod:
@@ -57,7 +58,34 @@ class HexapodLeg:
         # Move leg along Z-axis
         pass
 
-    def change_angle(self, servo_id: int, angle):
+    
+    def draw_x_line(self):
+        # Move leg back and forth along X axis
+        for x in range(10, 20):
+            print(self.kinematics.inverse_kinematics(self, Coords(x, 0, 10)))
+            angles = self.kinematics.inverse_kinematics(self, Coords(x, 0, 10))
+
+            #self.set_angle(self.BASE_SERVO_ID, angles[0])
+            #self.set_angle(self.SHOULDER_SERVO_ID, angles[1])
+            #self.set_angle(self.ELBOW_SERVO_ID, angles[2])
+
+            #sleep(2)
+
+
+    def draw_y_line(self):
+        # Move leg back and forth along Y axis
+        for y in range(5, 15):
+            print(self.kinematics.inverse_kinematics(self, Coords(10, y, 0)))
+
+
+    def draw_z_line(self):
+        # Move leg back and forth along Z axis
+        for z in range(0, 10):
+            print(self.kinematics.inverse_kinematics(self, Coords(10, 0, z)))
+
+
+
+    def set_angle(self, servo_id: int, angle):
         self.kit.servo[servo_id].angle = angle
 
     def interactive_effector_control(self, leg_id: int):
@@ -100,9 +128,9 @@ class HexapodLeg:
                 # kit.servo[1].angle = map_range(angles[1], -90, 90, 0, 180)
                 # kit.servo[2].angle = map_range(angles[0], -90, 90, 0, 180)
 
-                self.change_angle(self.BASE_SERVO_ID, angles[2])
-                self.change_angle(self.SHOULDER_SERVO_ID, angles[1])
-                self.change_angle(self.ELBOW_SERVO_ID, angles[0])
+                self.set_angle(self.BASE_SERVO_ID, angles[2])
+                self.set_angle(self.SHOULDER_SERVO_ID, angles[1])
+                self.set_angle(self.ELBOW_SERVO_ID, angles[0])
 
                 print(self.kinematics.inverse_kinematics(self, Coords(init_x, init_y, init_z)))
             except:
@@ -145,9 +173,9 @@ class HexapodLeg:
             self.kit.servo[0].angle = init_shoulder_angle
             self.kit.servo[2].angle = init_elbow_angle
 
-            # self.change_angle(self.BASE_SERVO_ID, init_elbow_angle)
-            # self.change_angle(self.SHOULDER_SERVO_ID, init_shoulder_angle)
-            # self.change_angle(self.ELBOW_SERVO_ID, init_base_angle)
+            # self.set_angle(self.BASE_SERVO_ID, init_elbow_angle)
+            # self.set_angle(self.SHOULDER_SERVO_ID, init_shoulder_angle)
+            # self.set_angle(self.ELBOW_SERVO_ID, init_base_angle)
 
             print(self.kinematics.forward_kinematics(self, init_base_angle, init_shoulder_angle, init_elbow_angle))
 
