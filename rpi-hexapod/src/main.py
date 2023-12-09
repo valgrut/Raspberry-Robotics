@@ -6,117 +6,20 @@ from adafruit_servokit import ServoKit
 import time
 from hexapod import *
 from kinematics import *
+from utils import *
 
 # https://technology.cpm.org/general/3dgraph/
 
-def map_range(v, a, b, c, d):
-       return (v-a) / (b-a) * (d-c) + c
-# a = map_range(4, 0, 10, 0, 1)
 
-
-# leg = HexapodLeg(0, None, 5, 10, 6.5, 12)
-leg = HexapodLeg(0, None, 0, 5, 6.5, 12)
 kinematics = Kinematics()
 kit = ServoKit(channels=8)
 
 
-def control_position():
-    # xyz pozice na relativne normalni pozici nohou:
-    init_x = 7 #75
-    init_y = 1 #120
-    init_z = 8 #100
-
-    angles = None
-    old_angles = None
-
-    increment = 1 #10
-    cmd = ""
-    while cmd != "e":
-        cmd = input()
-        if cmd == "w":
-            init_x -= increment
-        elif cmd == "s":
-            init_x += increment
-
-        if cmd == "a":
-            init_y += increment
-        elif cmd == "d":
-            init_y -= increment
-
-        if cmd == "r":
-            init_z += increment
-        elif cmd == "f":
-            init_z -= increment
-
-        # init_x = init_x / 10
-        # init_y = init_y / 10
-        # init_z = init_z / 10
-
-        print("new x", init_z, "small_x", init_z)
-        print("new y", init_y, "small_y", init_y)
-        print("new z", init_x, "small_z", init_x)
-
-        # angles = kinematics.ik(leg, Coords(init_x/10, init_y/10, init_z/10))
-        try:
-            old_angles = angles
-            angles = kinematics.ik_dle_clanku(leg, Coords(init_x, init_y, init_z))
-
-            # kit.servo[0].angle = map_range(angles[2], -90, 90, 0, 180)
-            # kit.servo[1].angle = map_range(angles[1], -90, 90, 0, 180)
-            # kit.servo[2].angle = map_range(angles[0], -90, 90, 0, 180)
-
-            kit.servo[0].angle = angles[2]
-            kit.servo[1].angle = angles[1]
-            kit.servo[2].angle = angles[0]
-
-            # print(kinematics.ik(leg, Coords(init_x/10, init_y/10, init_z/10)))
-            print(kinematics.ik_dle_clanku(leg, Coords(init_x, init_y, init_z)))
-        except:
-            print("Invalid angles")
-            angles = old_angles
+hexapod = Hexapod()
+leg = HexapodLeg(hexapod, 0, 0, 5, 6.5, 12)
+hexapod = Hexapod()
 
 
-
-def control_angles():
-    # Angles:
-    # TODO: Chtelo by to Forward Kinematic !!! a zjistit, na
-    # jakych pozcich xyz se effector pohybuje
-    init_x = 70
-    init_y = 120
-    init_z = 100
-    increment = 10
-    cmd = ""
-    while cmd != "e":
-        cmd = input()
-        if cmd == "w":
-            init_x = init_x + increment if init_x + increment < 180 else 180
-        elif cmd == "s":
-            init_x = init_x - increment if init_x - increment > 0 else 0
-
-        if cmd == "a":
-            init_y = init_y + increment if init_y + increment < 180 else 180
-        elif cmd == "d":
-            init_y = init_y - increment if init_y - increment > 0 else 0
-
-        if cmd == "r":
-            init_z = init_z + increment if init_z + increment < 180 else 180
-        elif cmd == "f":
-            init_z = init_z - increment if init_z - increment > 0 else 0
-
-        print("angle x", init_x)
-        print("angle y", init_y)
-        print("angle z", init_z)
-        kit.servo[0].angle = init_z
-        kit.servo[1].angle = init_x
-        kit.servo[2].angle = init_y
-
-        print(kinematics.forward_kinematics_3D(leg, init_x, init_y, init_z))
-
-
-# control_angles()
-control_position()
-
-# import time
 
 ########
 # for x in range(10, 20):
