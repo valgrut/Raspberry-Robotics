@@ -52,77 +52,8 @@ class Kinematics:
     def calc_2D_ik(self, femur_len, tibia_len, tx, ty):
         pass
 
-
-    def __ik(self, leg: HexapodLeg, target: Coords):
-        # TODO: Pridat constraints
-
-        tx = target.x
-        ty = target.y
-        tz = target.z
-
-        a1 = leg.coxa_len
-        a2 = leg.femur_len
-        a3 = leg.tibia_len
-
-        theta1 = math.degrees(math.atan2(ty, tx))  # [1]
-        r1 = math.sqrt(tx**2 + ty**2)  # - leg.body_coxa_distance # [2]
-
-        # if r1 > a2 + a3:
-            # print("Unreachable point")
-            # return None
-
-        r2 = tz - a1  # [3]
-        phi2 = math.atan2(r2, r1)  # [4]
-        
-        r3 = math.sqrt(r1**2 + r2**2)  # [5]
-        phi1 = math.acos((a3**2 - a2**2 - r3**2) / (-2*a2*r3))  # [6]
-        theta2 = math.degrees(phi2 - phi1)  # [7]
-
-        phi3 = math.acos((r3**2 - a2**2 -a3**2) / (-2*a2*a3))  # [8]
-        theta3 = math.degrees(phi3)  # [9]
-
-        return (theta1, theta2, theta3)
-
-
-    def __ik_dle_clanku(self, leg: HexapodLeg, target: Coords):
-        x0 = target.x
-        y0 = target.y
-        z0 = target.z
-
-        L2 = leg.femur_len
-        L3 = leg.tibia_len
-
-        theta1 = 0
-        theta2 = 0
-        theta3 = 0
-
-        try:
-            theta1 = math.atan2(y0, x0)
-            theta2 = math.acos((-L3**2 + L2**2 + x0**2 + y0**2 + z0**2) / (2*L2*math.sqrt(x0**2 + y0**2 + z0**2))) 
-            + math.atan2(z0, (math.sqrt(x0**2 + y0**2)))
-            theta3 = -math.acos((x0**2 + y0**2 + z0**2 - L2**2 - L3**2) / (2*L2*L3))
-        except:
-            print("Invalid angle")
-
-        # Angles update
-        theta1 = math.degrees(theta1)
-        theta2 = math.degrees(theta2)
-        theta3 = math.degrees(theta3)
-
-        #print("ik_dle_clanku: pred", theta1, theta2, theta3)
-
-        #theta1 = theta1 if theta1 > 0 else 180 + theta1
-        #theta2 = theta2 if theta2 > 0 else 180 + theta2
-        # theta1 = map_range(theta1, -90, 90, 0, 180)
-        #theta2 = map_range(theta2, -90, 90, 0, 180)
-        #heta3 = map_range(theta3, -90, 90, 0, 180)
-        # theta3 = theta3 if theta3 > 0 else 180 + theta3
-
-        #print("ik_dle_clanku: po", theta1, theta2, theta3)
-
-        return (theta1, theta2, theta3)
     
-    def __ik_dalsi_pokus(self, leg: HexapodLeg, target: Coords):
+    def inverse_kinematics(self, leg: HexapodLeg, target: Coords):
         x = target.x
         y = target.y
         z = target.z
@@ -146,17 +77,15 @@ class Kinematics:
             # Shoulder angle:
             # theta2 = 90 - (math.degrees(gamma) + math.degrees(beta))  # Originalni hodnoty
             theta2 = 90 - (math.degrees(gamma) + math.degrees(beta))  # Prizpusobeni pro FK
+            # TODO: if theta2 < 0 then reverse sign (Chci, aby pavouk vzdy udrzoval ten klasicky tvar nohy)
             theta2 = - (90 - (math.degrees(gamma) + math.degrees(beta)))  # Prizpusobeni pro FK a otocit uhly
 
             # Base angle:
             # theta3 = math.degrees(math.atan2(x, y))  # Originalni hodnoty
+            # TODO: if theta3 > 0 then reverse sign (Chci, aby pavouk vzdy udrzoval ten klasicky tvar nohy)
             theta3 = 90 - math.degrees(math.atan2(x, y))  # Prizpusobeni pro FK
         except:
             print("Invalid angle")
 
         return (theta3, theta2, theta1)
     
-
-    def inverse_kinematics(self, leg: HexapodLeg, target: Coords):
-        return self.__ik_dalsi_pokus(leg, target)
-
