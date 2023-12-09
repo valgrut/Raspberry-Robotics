@@ -5,7 +5,7 @@ config:
 	bash rpi-configuration.sh 32bit
 
 ssh:
-	ssh hexapod@192.168.88.210
+	sshpass -p hexapod ssh hexapod@192.168.88.210
 
 sync:
 	bash move-code-to-rpi.sh
