@@ -72,19 +72,30 @@ class Kinematics:
             # Elbow angle:
             # theta1 = 90 - math.degrees(alpha) # Originalni hodnoty
             # theta1 = 180 - math.degrees(alpha)  # Prizpusobeni pro FK
-            theta1 = - (180 - math.degrees(alpha))  # Prizpusobeni pro FK a otocit uhly
+            # theta1 = - (180 - math.degrees(alpha))  # Prizpusobeni pro FK a otocit uhly
+            theta1 = 280 - math.degrees(alpha)  # Prizpusobeni pro realne uhly pro servo motory
 
             # Shoulder angle:
             # theta2 = 90 - (math.degrees(gamma) + math.degrees(beta))  # Originalni hodnoty
-            theta2 = 90 - (math.degrees(gamma) + math.degrees(beta))  # Prizpusobeni pro FK
+            # theta2 = 90 - (math.degrees(gamma) + math.degrees(beta))  # Prizpusobeni pro FK
             # TODO: if theta2 < 0 then reverse sign (Chci, aby pavouk vzdy udrzoval ten klasicky tvar nohy)
-            theta2 = - (90 - (math.degrees(gamma) + math.degrees(beta)))  # Prizpusobeni pro FK a otocit uhly
+            # theta2 = - (90 - (math.degrees(gamma) + math.degrees(beta)))  # Prizpusobeni pro FK a otocit uhly
+            theta2 = - (140 - (math.degrees(gamma) + math.degrees(beta)))  # Prizpusobeni pro realne uhly pro servo motory
 
             # Base angle:
             # theta3 = math.degrees(math.atan2(x, y))  # Originalni hodnoty
             # TODO: if theta3 > 0 then reverse sign (Chci, aby pavouk vzdy udrzoval ten klasicky tvar nohy)
-            theta3 = 90 - math.degrees(math.atan2(x, y))  # Prizpusobeni pro FK
+            # theta3 = 90 - math.degrees(math.atan2(x, y))  # Prizpusobeni pro FK (Aby odpovidalo FK <=> IK)
+            theta3 = 10 + math.degrees(math.atan2(x, y)) # Prizpusobeni pro realne uhly pro servo motory
             
+            # theta1 = map_range(theta1, -360, 360, 0, 180)
+            # theta2 = map_range(theta2, -90, 90, 0, 180)
+            # theta3 = map_range(theta3, -360, 360, 0, 180)
+
+            #theta1 = abs(theta1)
+            #theta2 = abs(theta2)
+            #theta3 = abs(theta3)
+
             return (theta3, theta2, theta1)
         
         except:
