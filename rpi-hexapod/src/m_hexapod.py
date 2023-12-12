@@ -4,9 +4,9 @@ from adafruit_servokit import ServoKit
 # Other imports are at the bottom of the file
 
 
-BASE_SERVO_ID = 0
+BASE_SERVO_ID = 2
 SHOULDER_SERVO_ID = 1
-ELBOW_SERVO_ID = 2
+ELBOW_SERVO_ID = 0
 
 
 
@@ -23,16 +23,16 @@ class Hexapod:
 
         self.kinematics = Kinematics()
         self.kit = None
-        #self.kit = ServoKit(channels=8)
+        self.kit = ServoKit(channels=8)
 
     def walk(self):
         pass
 
     def interactive_effector_control(self, leg_id: int):
         # xyz pozice na relativne normalni pozici nohou:
-        init_x = 7
-        init_y = 1
-        init_z = 8
+        init_x = 20
+        init_y = 0
+        init_z = 0
 
         angles = None
         old_angles = None
@@ -42,9 +42,9 @@ class Hexapod:
         while cmd != "e":
             cmd = input()
             if cmd == "w":
-                init_x -= increment
-            elif cmd == "s":
                 init_x += increment
+            elif cmd == "s":
+                init_x -= increment
 
             if cmd == "a":
                 init_y += increment
@@ -56,9 +56,9 @@ class Hexapod:
             elif cmd == "f":
                 init_z -= increment
 
-            print("new x", init_z)
+            print("new x", init_x)
             print("new y", init_y)
-            print("new z", init_x)
+            print("new z", init_z)
 
             try:
                 old_angles = angles
@@ -70,12 +70,12 @@ class Hexapod:
                 ## kit.servo[1].angle = map_range(angles[1], -90, 90, 0, 180)
                 ## kit.servo[2].angle = map_range(angles[0], -90, 90, 0, 180)
 
-                # self.legs[leg_id].set_angle(BASE_SERVO_ID, angles[2])
-                # self.legs[leg_id].set_angle(SHOULDER_SERVO_ID, angles[1])
-                # self.legs[leg_id].set_angle(ELBOW_SERVO_ID, angles[0])
+                self.legs[leg_id].set_angle(BASE_SERVO_ID, angles.base_angle)
+                self.legs[leg_id].set_angle(SHOULDER_SERVO_ID, angles.shoulder_angle)
+                self.legs[leg_id].set_angle(ELBOW_SERVO_ID, angles.elbow_angle)
 
-            except:
-                print("Invalid angles")
+            except Exception as e:
+                print(e)
                 angles = old_angles
 
 
@@ -110,15 +110,12 @@ class Hexapod:
             print("angle shoulder", init_shoulder_angle)
             print("angle elbow", init_elbow_angle)
 
-            self.kit.servo[2].angle = init_base_angle
-            self.kit.servo[1].angle = init_shoulder_angle
-            self.kit.servo[0].angle = init_elbow_angle
+            self.legs[leg_id].set_angle(BASE_SERVO_ID, init_base_angle)
+            self.legs[leg_id].set_angle(SHOULDER_SERVO_ID, init_shoulder_angle)
+            self.legs[leg_id].set_angle(ELBOW_SERVO_ID, init_elbow_angle)
 
-            # self.set_angle(self.BASE_SERVO_ID, init_elbow_angle)
-            # self.set_angle(self.SHOULDER_SERVO_ID, init_shoulder_angle)
-            # self.set_angle(self.ELBOW_SERVO_ID, init_base_angle)
-
-            print(self.kinematics.forward_kinematics(self.legs[leg_id], init_base_angle, init_shoulder_angle, init_elbow_angle))
+            target_angles = ServoAngles(init_base_angle, init_shoulder_angle, init_elbow_angle)
+            print(self.kinematics.forward_kinematics(self.legs[leg_id], target_angles))
 
 
 
@@ -158,7 +155,7 @@ class HexapodLeg:
     
     def draw_x_line(self):
         # Move leg back and forth along X axis
-        for x in range(10, 20):
+        for x in range(18, 23):
             print(self.kinematics.inverse_kinematics(self, Coords(x, 0, 10)))
             angles = self.kinematics.inverse_kinematics(self, Coords(x, 0, 10))
 
@@ -171,13 +168,13 @@ class HexapodLeg:
     def draw_y_line(self):
         # Move leg back and forth along Y axis
         for y in range(5, 15):
-            print(self.kinematics.inverse_kinematics(self, Coords(10, y, 0)))
+            print(self.kinematics.inverse_kinematics(self, Coords(19, y, 0)))
 
 
     def draw_z_line(self):
         # Move leg back and forth along Z axis
         for z in range(0, 10):
-            print(self.kinematics.inverse_kinematics(self, Coords(10, 0, z)))
+            print(self.kinematics.inverse_kinematics(self, Coords(19, 0, z)))
 
 
     def set_angle(self, servo_id: int, angle):
@@ -188,4 +185,4 @@ class HexapodLeg:
 
 
 # Prevent Circular import error
-from m_kinematics import Kinematics
+from m_kinematics import Kinematics, ServoAngles

@@ -1,51 +1,66 @@
 from coords import Coords
+from m_hexapod import Hexapod, HexapodLeg
+from m_kinematics import Kinematics, ServoAngles
 
 class Tests:
     def __init__(self):
         pass
 
-    def run_fk_tests(self):
-        from m_hexapod import Hexapod, HexapodLeg
-        from m_kinematics import Kinematics
-        from utils import map_range
-
-
+    def run_tests(self):
         kinematics = Kinematics()
-        
         hexapod = Hexapod()
         leg = HexapodLeg(hexapod, 0, 5, 6.5, 12)
 
         # Testing:
+        print("Testing Forward Kinematics")
         print("RESULT | INPUT | EXPECTED | ACTUAL_OUT")
-        self.test((0,0,0), Coords(23.5, 0, 0), kinematics.forward_kinematics(leg, 0, 0, 0))
-        self.test((90,0,0), Coords(0, 23.5, 0), kinematics.forward_kinematics(leg, 90, 0, 0))
-        self.test((-90,0,0), Coords(0, -23.5, 0), kinematics.forward_kinematics(leg, -90, 0, 0))
-        self.test((0,90,0), Coords(5, 0, 18.5), kinematics.forward_kinematics(leg, 0, 90, 0))
-        self.test((0,-90,0), Coords(5, 0, -18.5), kinematics.forward_kinematics(leg, 0, -90, 0))
-        self.test((90,90,0), Coords(0, 5, 18.5), kinematics.forward_kinematics(leg, 90, 90, 0))
-        self.test((90,90,90), Coords(0, -7, 6.5), kinematics.forward_kinematics(leg, 90, 90, 90))
-        self.test((0,45,45), Coords(9.596, 0, 16.596), kinematics.forward_kinematics(leg, 0, 45, 45))
-        self.test((0,90,-90), Coords(17, 0, 6.5), kinematics.forward_kinematics(leg, 0, 90, -90))
+        self.run_fk_test(leg, ServoAngles(0,0,0), expected_output=Coords(23.5, 0, 0))
+        self.run_fk_test(leg, ServoAngles(90, 0, 0), expected_output=Coords(0, 23.5, 0))
+        self.run_fk_test(leg, ServoAngles(-90, 0, 0), expected_output=Coords(0, -23.5, 0))
+        self.run_fk_test(leg, ServoAngles(0, 90, 0), expected_output=Coords(5, 0, 18.5))
+        self.run_fk_test(leg, ServoAngles(0, -90, 0), expected_output=Coords(5, 0, -18.5))
+        self.run_fk_test(leg, ServoAngles(90, 90, 0), expected_output=Coords(0, 5, 18.5))
+        self.run_fk_test(leg, ServoAngles(90, 90, 90), expected_output=Coords(0, -7, 6.5))
+        self.run_fk_test(leg, ServoAngles(0, 45, 45), expected_output=Coords(9.596, 0, 16.596))
+        self.run_fk_test(leg, ServoAngles(0, 90, -90), expected_output=Coords(17, 0, 6.5))
         print()   
 
+
         # Results from IK
-        print("IK:")
-        #self.test((45, 31, -75), Coords(0, 0, 0), kinematics.forward_kinematics(leg, 45, 31, -75))
-        self.test(Coords(5, 0, 18.5), (0, 90, 0), kinematics.inverse_kinematics(leg, Coords(5, 0, 18.5)))
-        angles = kinematics.inverse_kinematics(leg, Coords(5, 0, 18.5))
-        print(kinematics.forward_kinematics(leg, angles[2], angles[1], angles[0]))
-        self.test(Coords(5, 0, -18.5), (0, -90, 0), kinematics.inverse_kinematics(leg, Coords(5, 0, -18.5)))
-        self.test(Coords(23.5, 0, 0), (0, 0, 0), kinematics.inverse_kinematics(leg, Coords(23.5, 0, 0)))
+        print("Testing Inverse Kinematics:")
+        print("Note: Rest position (natazena noha), ma uhly 90, 50, 90 !!!!!")
+        print("Note2: IK se puvodne pocitalo pro rest position uhly 0,0,0.")
+
+        print("Essential angle checks: (Lehce overitelne a predstavitelne)")
+        self.run_ik_test(leg, Coords(23.5, 0, 0), expected_output=ServoAngles(90, 50, 90))
+        self.run_ik_test(leg, Coords(0, 23.5, 0), expected_output=ServoAngles(0, 50, 90))
+        self.run_ik_test(leg, Coords(0, -23.5, 0), expected_output=ServoAngles(180, 50, 90))
+        self.run_ik_test(leg, Coords(15, 15, 0), expected_output=ServoAngles(45, 9.854999999999997, 150.584))
+        self.run_ik_test(leg, Coords(15, -15, 0), expected_output=ServoAngles(135, 9.854999999999997, 150.584))
         print()
-        self.test(Coords(17, 0, -6.5), (0, -90, 90), kinematics.inverse_kinematics(leg, Coords(17, 0, -6.5)))
-        self.test(Coords(17, 0, 6.5), (0, 90, -90), kinematics.inverse_kinematics(leg, Coords(17, 0, 6.5)))
+
+        self.run_ik_test(leg, Coords(5, 0, 18.5), expected_output=ServoAngles(90, None, 90))
+        # print(kinematics.forward_kinematics(leg, kinematics.inverse_kinematics(leg, Coords(5, 0, 18.5))))
+        self.run_ik_test(leg, Coords(5, 0, -18.5), expected_output=ServoAngles(90, None, 90))
+
         print()
-        self.test(Coords(0, 23.5, 0), (0, 0, 0), kinematics.inverse_kinematics(leg, Coords(0, 23.5, 0)))
-        self.test(Coords(0, -23.5, 0), (0, 0, 0), kinematics.inverse_kinematics(leg, Coords(0, -23.5, 0)))
+        
+        self.run_ik_test(leg, Coords(11.5, 0, 12), expected_output=ServoAngles(90, 50, 180))
+        self.run_ik_test(leg, Coords(11.5, 0, -12), expected_output=ServoAngles(90, 50, 0))
+        print()
+        
+
+    def run_ik_test(self, leg: HexapodLeg, test_data: Coords, expected_output: ServoAngles):
+        kinematics = Kinematics()
+        self.compare_results(test_data, expected_output, kinematics.inverse_kinematics(leg, test_data))
 
 
+    def run_fk_test(self, leg: HexapodLeg, test_data: ServoAngles, expected_output: Coords):
+        kinematics = Kinematics()
+        self.compare_results(test_data, expected_output, kinematics.forward_kinematics(leg, test_data))
 
-    def test(self, input, expected_coords: Coords, actual_coords: Coords):
+
+    def compare_results(self, input, expected_coords, actual_coords):
         if expected_coords == actual_coords:
             print("[PASS]", input, ":", expected_coords, "==", actual_coords)
         else:
