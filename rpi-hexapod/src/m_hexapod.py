@@ -9,6 +9,7 @@ SHOULDER_SERVO_ID = 1
 ELBOW_SERVO_ID = 2
 
 
+
 class Hexapod:
     def __init__(self):
         self.body = None
@@ -21,7 +22,8 @@ class Hexapod:
         # 5 = Back Right
 
         self.kinematics = Kinematics()
-        self.kit = ServoKit(channels=8)
+        self.kit = None
+        #self.kit = ServoKit(channels=8)
 
     def walk(self):
         pass
@@ -62,15 +64,15 @@ class Hexapod:
                 old_angles = angles
 
                 angles = self.kinematics.inverse_kinematics(self.legs[leg_id], Coords(init_x, init_y, init_z))
-                print(angles)
+                print("elbow, shoulder, base angles:", angles)
 
-                # kit.servo[0].angle = map_range(angles[2], -90, 90, 0, 180)
-                # kit.servo[1].angle = map_range(angles[1], -90, 90, 0, 180)
-                # kit.servo[2].angle = map_range(angles[0], -90, 90, 0, 180)
+                ## kit.servo[0].angle = map_range(angles[2], -90, 90, 0, 180)
+                ## kit.servo[1].angle = map_range(angles[1], -90, 90, 0, 180)
+                ## kit.servo[2].angle = map_range(angles[0], -90, 90, 0, 180)
 
-                self.legs[leg_id].set_angle(BASE_SERVO_ID, angles[2])
-                self.legs[leg_id].set_angle(SHOULDER_SERVO_ID, angles[1])
-                self.legs[leg_id].set_angle(ELBOW_SERVO_ID, angles[0])
+                # self.legs[leg_id].set_angle(BASE_SERVO_ID, angles[2])
+                # self.legs[leg_id].set_angle(SHOULDER_SERVO_ID, angles[1])
+                # self.legs[leg_id].set_angle(ELBOW_SERVO_ID, angles[0])
 
             except:
                 print("Invalid angles")

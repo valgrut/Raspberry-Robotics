@@ -10,7 +10,7 @@ from utils import *
 
 
 kinematics = Kinematics()
-kit = ServoKit(channels=8)
+#kit = ServoKit(channels=8)
 
 hexapod = Hexapod()
 leg = HexapodLeg(hexapod, 0, 5.5, 6.4, 12)
@@ -27,12 +27,12 @@ leg = HexapodLeg(hexapod, 0, 5.5, 6.4, 12)
 test = Tests()
 test.run_fk_tests()
 
-leg.draw_z_line()
-leg.draw_y_line()
-leg.draw_x_line()
+# leg.draw_z_line()
+# leg.draw_y_line()
+# leg.draw_x_line()
 
 
-angles = kinematics.inverse_kinematics(leg, Coords(23.5, 0, 0))
+#angles = kinematics.inverse_kinematics(leg, Coords(23.5, 0, 0))
 # leg.set_angle(0, angles[0])
 # leg.set_angle(1, angles[0])
 # leg.set_angle(2, angles[0])
@@ -41,4 +41,4 @@ angles = kinematics.inverse_kinematics(leg, Coords(23.5, 0, 0))
 # leg.set_angle(1, 50)  # 1 = shoulder
 # leg.set_angle(2, 100)  # 2 = base
 
-hexapod.interactive_effector_control(0)
+#hexapod.interactive_effector_control(0)
