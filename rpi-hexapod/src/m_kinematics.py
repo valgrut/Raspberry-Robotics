@@ -48,15 +48,19 @@ class Kinematics:
         print(round(P2[0], 3), round(P2[1], 3))
 
 
-    def forward_kinematics(self, leg: HexapodLeg, base_angle, shoulder_angle, knee_angle) -> Coords:
+    def forward_kinematics(self, leg: HexapodLeg, source_angles: ServoAngles) -> Coords:
         L1 = leg.coxa_len  # 5
         L2 = leg.femur_len  # 6.5
         L3 = leg.tibia_len  # 12
 
+        # Update angles to match the actual servo ranges (0-180 degrees)
+        updated_angles: ServoAngles = self.modify_angles(source_angles)
+        source_angles = updated_angles
+
         # Goniometrical fcs(sin, cos, ...) takes radians as an input, not the degrees!
-        a0 = math.radians(base_angle)  # 45
-        a1 = math.radians(shoulder_angle)  # 0
-        a2 = math.radians(knee_angle)  # 20
+        a0 = math.radians(source_angles.base_angle)  # 45
+        a1 = math.radians(source_angles.shoulder_angle)  # 0
+        a2 = math.radians(source_angles.elbow_angle)  # 20
 
         p0 = Coords(0,0,0)
         p1 = Coords(p0.x + L1, 0, p0.z)
@@ -80,9 +84,12 @@ class Kinematics:
 
 
     def inverse_kinematics(self, leg: HexapodLeg, target: Coords):
-        x = target.x
+        x = target.x + 23.5
         y = target.y
-        z = target.z
+        z = target.z + 7 #Konec nohy ma v Rest pozici z-souradnici zhruba o 7cm niz, nez je telo.
+
+        if y == 0:
+            y = 0.0000001
 
         L1 = leg.coxa_len
         L2 = leg.femur_len
@@ -91,7 +98,7 @@ class Kinematics:
         try:
             L = math.sqrt(x**2 + y**2)
             Lt = math.sqrt((L - L1)**2 + z**2)
-            gamma = math.atan2((L - L1), z)
+            gamma = math.atan((L - L1) / z)
             beta = math.acos((L3**2 - L2**2 - Lt**2) / (-2*L2*Lt))
             alpha = math.acos((Lt**2 - L2**2 - L3**2) / (-2*L2*L3))
 
@@ -102,45 +109,87 @@ class Kinematics:
             # theta1 = 280 - math.degrees(alpha)  # Prizpusobeni pro realne uhly pro servo motory
 
             # Shoulder angle:
-            theta2 = 90 - (math.degrees(gamma) + math.degrees(beta))  # Originalni hodnoty
+            theta2 = 90 - (math.degrees(gamma) + math.degrees(alpha))  # Originalni hodnoty
             # theta2 = 90 - (math.degrees(gamma) + math.degrees(beta))  # Prizpusobeni pro FK
             # TODO: if theta2 < 0 then reverse sign (Chci, aby pavouk vzdy udrzoval ten klasicky tvar nohy)
             # theta2 = - (90 - (math.degrees(gamma) + math.degrees(beta)))  # Prizpusobeni pro FK a otocit uhly
             # theta2 = - (140 - (math.degrees(gamma) + math.degrees(beta)))  # Prizpusobeni pro realne uhly pro servo motory
 
             # Base angle:
-            theta_base = math.degrees(math.atan2(x, y))  # Originalni hodnoty
+            theta_base = math.degrees(math.atan(x / y))  # Originalni hodnoty
             # TODO: if theta_base > 0 then reverse sign (Chci, aby pavouk vzdy udrzoval ten klasicky tvar nohy)
             # theta_base = 90 - math.degrees(math.atan2(x, y))  # Prizpusobeni pro FK (Aby odpovidalo FK <=> IK)
             # theta_base = 10 + math.degrees(math.atan2(x, y)) # Prizpusobeni pro realne uhly pro servo motory
             
-            theta_base, theta2, theta1 = self.modify_angles(theta1, theta2, theta_base, 0,0,-90)
+            updated_angles: ServoAngles = self.modify_angles(ServoAngles(theta_base, theta2, theta1))
 
-            return (theta_base, theta2, theta1)
+            return updated_angles
         
-        except:
-            print("Invalid angle")
+        except Exception as e:
+            print(e)
 
-        return (0, 0, 0)
+            #return ServoAngles(0, 0, 0)
     
-    def modify_angles(self, theta1, theta2, theta_base, theta1_mod, theta2_mod, theta_base_mod):
+    def modify_angles(self, source_angles: ServoAngles) -> ServoAngles:
         # modify angles to match servo ranges
-        theta1 = round(theta1, 3)
-        theta2 = round(theta2, 3)
-        theta_base = round(theta_base, 3)
+        theta_elbow = round(source_angles.elbow_angle, 3)
+        theta_shoulder = round(source_angles.shoulder_angle, 3)
+        theta_base = round(source_angles.base_angle, 3)
 
-        # theta1 = map_range(theta1, -360, 360, 0, 180)
-        # theta2 = map_range(theta2, -90, 90, 0, 180)
+        # theta_elbow = map_range(theta_elbow, -360, 360, 0, 180)
+        # theta_shoulder = map_range(theta_shoulder, -90, 90, 0, 180)
         # theta_base = map_range(theta_base, -360, 360, 0, 180)
 
-        #theta1 = abs(theta1)
-        #theta2 = abs(theta2)
+        #theta_elbow = abs(theta_elbow)
+        #theta_shoulder = abs(theta_shoulder)
         #theta_base = abs(theta_base)
 
-        theta1 = theta1_mod + theta1
-        theta2 = theta2_mod + theta2
+        theta_elbow_mod = 180
+        theta_shoulder_mod = 50
+        theta_base_mod = 0
+
+        theta_elbow = theta_elbow_mod + theta_elbow
+        theta_shoulder = theta_shoulder_mod + theta_shoulder
         theta_base = theta_base_mod + theta_base
 
-        return (theta_base, theta2, theta1)
+        # Because IK gives one of the 2 possible solutions, we have to catch the bad one.
+        if theta_shoulder < 0:
+            theta_shoulder += 123.114
+            theta_elbow = 180 - theta_elbow
+
+        if theta_shoulder < theta_elbow:
+            theta_shoulder = 180 - theta_shoulder
+            theta_elbow = 180 - theta_elbow
+
+
+        # TODO: Zjistit, jak zkontrolovat, ze cilove (xyz) je v dosahu.
+        # Kdyz neni, tak IK hazi zaporne uhly pro nedostupne xyz, a nebo uhly > 180.
+        # Oba pripady nelze hodit do serv, protoze ty berou pouze 0-180.
+        # warn = False
+        # if theta_base < 0:
+        #     theta_base = 0
+        #     warn = True
+        # elif theta_base > 180:
+        #     theta_base = 180
+        #     warn = True
+
+        # if theta_shoulder < 0:
+        #     theta_shoulder = 0
+        #     warn = True
+        # elif theta_shoulder > 180:
+        #     theta_shoulder = 180
+        #     warn = True
+
+        # if theta_elbow < 0:
+        #     theta_elbow = 0
+        #     warn = True
+        # elif theta_elbow > 180:
+        #     theta_elbow = 180
+        #     warn = True
+        
+        # if warn:
+        #     print("Warning: Nedosazitelne x/y/z. Uhly modifikovany.")
+
+        return ServoAngles(theta_base, theta_shoulder, theta_elbow)
         
     
