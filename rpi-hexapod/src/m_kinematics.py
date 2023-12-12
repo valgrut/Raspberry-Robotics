@@ -6,6 +6,32 @@ from utils import *
 # Prevent Circular import error
 from m_hexapod import HexapodLeg
 
+
+class ServoAngles:
+    def __init__(self, base_angle, shoulder_angle, elbow_angle):
+        self.base_angle = base_angle         # Coxa
+        self.shoulder_angle = shoulder_angle # Femur  
+        self.elbow_angle = elbow_angle       # Tibia
+
+    def __eq__(self, other): 
+        if not isinstance(other, ServoAngles):
+            # don't attempt to compare against unrelated types
+            return NotImplemented
+
+        return self.base_angle == other.base_angle and self.shoulder_angle == other.shoulder_angle and self.elbow_angle == other.elbow_angle
+
+    def __repr__(self):
+        return "ServoAngles()"
+    
+    def __str__(self):
+        return f"({self.base_angle}, {self.shoulder_angle}, {self.elbow_angle})"
+
+    def print(self):
+        print(self.base_angle, self.shoulder_angle, self.elbow_angle)
+        print()
+
+
+
 class Kinematics:
     def __init__(self):
         pass
@@ -70,37 +96,51 @@ class Kinematics:
             alpha = math.acos((Lt**2 - L2**2 - L3**2) / (-2*L2*L3))
 
             # Elbow angle:
-            # theta1 = 90 - math.degrees(alpha) # Originalni hodnoty
+            theta1 = 90 - math.degrees(alpha) # Originalni hodnoty
             # theta1 = 180 - math.degrees(alpha)  # Prizpusobeni pro FK
             # theta1 = - (180 - math.degrees(alpha))  # Prizpusobeni pro FK a otocit uhly
-            theta1 = 280 - math.degrees(alpha)  # Prizpusobeni pro realne uhly pro servo motory
+            # theta1 = 280 - math.degrees(alpha)  # Prizpusobeni pro realne uhly pro servo motory
 
             # Shoulder angle:
-            # theta2 = 90 - (math.degrees(gamma) + math.degrees(beta))  # Originalni hodnoty
+            theta2 = 90 - (math.degrees(gamma) + math.degrees(beta))  # Originalni hodnoty
             # theta2 = 90 - (math.degrees(gamma) + math.degrees(beta))  # Prizpusobeni pro FK
             # TODO: if theta2 < 0 then reverse sign (Chci, aby pavouk vzdy udrzoval ten klasicky tvar nohy)
             # theta2 = - (90 - (math.degrees(gamma) + math.degrees(beta)))  # Prizpusobeni pro FK a otocit uhly
-            theta2 = - (140 - (math.degrees(gamma) + math.degrees(beta)))  # Prizpusobeni pro realne uhly pro servo motory
+            # theta2 = - (140 - (math.degrees(gamma) + math.degrees(beta)))  # Prizpusobeni pro realne uhly pro servo motory
 
             # Base angle:
-            # theta3 = math.degrees(math.atan2(x, y))  # Originalni hodnoty
-            # TODO: if theta3 > 0 then reverse sign (Chci, aby pavouk vzdy udrzoval ten klasicky tvar nohy)
-            # theta3 = 90 - math.degrees(math.atan2(x, y))  # Prizpusobeni pro FK (Aby odpovidalo FK <=> IK)
-            theta3 = 10 + math.degrees(math.atan2(x, y)) # Prizpusobeni pro realne uhly pro servo motory
+            theta_base = math.degrees(math.atan2(x, y))  # Originalni hodnoty
+            # TODO: if theta_base > 0 then reverse sign (Chci, aby pavouk vzdy udrzoval ten klasicky tvar nohy)
+            # theta_base = 90 - math.degrees(math.atan2(x, y))  # Prizpusobeni pro FK (Aby odpovidalo FK <=> IK)
+            # theta_base = 10 + math.degrees(math.atan2(x, y)) # Prizpusobeni pro realne uhly pro servo motory
             
-            # theta1 = map_range(theta1, -360, 360, 0, 180)
-            # theta2 = map_range(theta2, -90, 90, 0, 180)
-            # theta3 = map_range(theta3, -360, 360, 0, 180)
+            theta_base, theta2, theta1 = self.modify_angles(theta1, theta2, theta_base, 0,0,-90)
 
-            #theta1 = abs(theta1)
-            #theta2 = abs(theta2)
-            #theta3 = abs(theta3)
-
-            return (theta3, theta2, theta1)
+            return (theta_base, theta2, theta1)
         
         except:
             print("Invalid angle")
 
         return (0, 0, 0)
+    
+    def modify_angles(self, theta1, theta2, theta_base, theta1_mod, theta2_mod, theta_base_mod):
+        # modify angles to match servo ranges
+        theta1 = round(theta1, 3)
+        theta2 = round(theta2, 3)
+        theta_base = round(theta_base, 3)
+
+        # theta1 = map_range(theta1, -360, 360, 0, 180)
+        # theta2 = map_range(theta2, -90, 90, 0, 180)
+        # theta_base = map_range(theta_base, -360, 360, 0, 180)
+
+        #theta1 = abs(theta1)
+        #theta2 = abs(theta2)
+        #theta_base = abs(theta_base)
+
+        theta1 = theta1_mod + theta1
+        theta2 = theta2_mod + theta2
+        theta_base = theta_base_mod + theta_base
+
+        return (theta_base, theta2, theta1)
         
     

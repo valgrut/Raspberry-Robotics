@@ -32,10 +32,16 @@ class Tests:
         print("IK:")
         #self.test((45, 31, -75), Coords(0, 0, 0), kinematics.forward_kinematics(leg, 45, 31, -75))
         self.test(Coords(5, 0, 18.5), (0, 90, 0), kinematics.inverse_kinematics(leg, Coords(5, 0, 18.5)))
+        angles = kinematics.inverse_kinematics(leg, Coords(5, 0, 18.5))
+        print(kinematics.forward_kinematics(leg, angles[2], angles[1], angles[0]))
+        self.test(Coords(5, 0, -18.5), (0, -90, 0), kinematics.inverse_kinematics(leg, Coords(5, 0, -18.5)))
         self.test(Coords(23.5, 0, 0), (0, 0, 0), kinematics.inverse_kinematics(leg, Coords(23.5, 0, 0)))
         print()
-        self.test(Coords(20, 0, 0), (0, 0, 0), kinematics.inverse_kinematics(leg, Coords(20, 0, 0)))
-        self.test(Coords(18, 0, 0), (0, 0, 0), kinematics.inverse_kinematics(leg, Coords(18, 0, 0)))
+        self.test(Coords(17, 0, -6.5), (0, -90, 90), kinematics.inverse_kinematics(leg, Coords(17, 0, -6.5)))
+        self.test(Coords(17, 0, 6.5), (0, 90, -90), kinematics.inverse_kinematics(leg, Coords(17, 0, 6.5)))
+        print()
+        self.test(Coords(0, 23.5, 0), (0, 0, 0), kinematics.inverse_kinematics(leg, Coords(0, 23.5, 0)))
+        self.test(Coords(0, -23.5, 0), (0, 0, 0), kinematics.inverse_kinematics(leg, Coords(0, -23.5, 0)))
 
 
 
