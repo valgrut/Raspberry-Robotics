@@ -9,7 +9,7 @@ from m_kinematics import *
 from utils import *
 
 hexapod = Hexapod()
-leg = HexapodLeg(hexapod, 0, 5.5, 6.4, 12)
+leg = HexapodLeg(hexapod, 0, 5, 6.4, 12)
 
 # Defaultni uhly, pri kterych je noha uplne natazena
 #[2] = 100 # Base:  100 = Natazena base presne uprostred
@@ -38,5 +38,5 @@ test.run_tests()
 # leg.set_angle(1, 50)  # 1 = shoulder
 # leg.set_angle(2, 100)  # 2 = base
 
-#hexapod.interactive_effector_control(0)
-#hexapod.interactive_angle_control(0)
+# hexapod.interactive_effector_control(0)
+hexapod.interactive_angle_control(0)
