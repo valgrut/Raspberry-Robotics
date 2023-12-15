@@ -54,6 +54,8 @@ for shoulder_offset in range(0, 200, angle_incr):
         
         # We are finding such offsets to add to the input angles that will cause to end-effector to end up
         # in the given coordinate range closest to the estimated one (by eye).
+        # if 23.0 <= effector_coords.x <= 24:
+        # if 23.0 <= effector_coords.x <= 24 and effector_coords.y == 0:
         if 23.0 <= effector_coords.x <= 24 and effector_coords.y == 0 and 0.1 > effector_coords.z > - 0.1:
             print("Possible correct angles offset combination:")
             print(effector_coords)

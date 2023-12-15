@@ -10,6 +10,7 @@ from utils import *
 
 hexapod = Hexapod()
 leg = HexapodLeg(hexapod, 0, 5, 6.4, 12)
+leg2 = HexapodLeg(hexapod, 1, 5, 6.4, 12)
 
 # Defaultni uhly, pri kterych je noha uplne natazena
 #[2] = 100 # Base:  100 = Natazena base presne uprostred
