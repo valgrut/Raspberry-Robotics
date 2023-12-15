@@ -128,6 +128,11 @@ class Hexapod:
                 self.legs[leg_id].set_angle(SHOULDER_SERVO_ID, final_shoulder_angle)
                 self.legs[leg_id].set_angle(ELBOW_SERVO_ID, final_elbow_angle)
 
+                # Front right leg:
+                # self.legs[leg_id + 1].set_angle(BASE_SERVO_ID, init_base_angle)
+                # self.legs[leg_id + 1].set_angle(SHOULDER_SERVO_ID, final_shoulder_angle)
+                # self.legs[leg_id + 1].set_angle(ELBOW_SERVO_ID, final_elbow_angle)
+
                 target_angles = ServoAngles(init_base_angle, final_shoulder_angle, final_elbow_angle)
                 print(self.kinematics.forward_kinematics(self.legs[leg_id], target_angles))
 
