@@ -6,10 +6,7 @@ class Tests:
     def __init__(self):
         pass
 
-    def run_tests(self):
-        hexapod = Hexapod()
-        leg = HexapodLeg(hexapod, 0, 5, 6.4, 12)
-
+    def run_tests(self, leg: HexapodLeg):
         # Testing:
         # print("Testing Forward Kinematics")
         # print("RESULT | INPUT | EXPECTED | ACTUAL_OUT")
@@ -48,6 +45,8 @@ class Tests:
 
         # INVERSE KINEMATICS TESTS
         print("Testing Inverse Kinematics:")
+        self.run_ik_test(leg, Coords(11.6, 0, 12.1), expected_output=ServoAngles(70, 60, 130))
+
         self.run_ik_test(leg, Coords(23.1, 0, 0), expected_output=ServoAngles(70, 60, 130))
 
         self.run_ik_test(leg, Coords(0, 23.5, 0), expected_output=ServoAngles(0, 50, 90))

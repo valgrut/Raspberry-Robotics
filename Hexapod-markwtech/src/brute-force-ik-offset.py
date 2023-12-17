@@ -1,6 +1,8 @@
 from coords import Coords
 import math
 
+# Note: FK brute force worked, but this one doesn't!
+
 # Description of the problem:
 #   Brute force method for finding the correct offsets for the elbow and shoulder angles.
 #   Those offsets are required because of the real limits of the cheap servos, not corresponding to the
@@ -13,7 +15,9 @@ import math
 #   For example I assign 90 degrees and expect perfect angle,
 #   but servo will turn just to 50 degree. This caused all the frustration because both forward and
 #   inverse kinematics were giving wrong results.
-
+#
+#   Note: Does NOT work correctly for some reason. Correct offset angles found for the 
+#   Coords(6.1, 16.8, -5.2), but they didn't fit to other value, i.e. (18.6, 0, -8.3)
 
 def inverse_kinematics(base_angle_offset, shoulder_angle_offset, elbow_angle_offset):
     target = Coords(6.1, 16.8, -5.2) # Expecting output angles: (0, 130, 60)
@@ -71,6 +75,7 @@ def inverse_kinematics(base_angle_offset, shoulder_angle_offset, elbow_angle_off
 base_offset = 10
 closest_results_cnt = 0
 angle_incr = 0.1  # Decrease for better precision (10, 5, 2, 1, 0.5, 0.1)
+
 while base_offset <= 30:
     shoulder_offset = -300
     while shoulder_offset <= 300:
@@ -112,9 +117,10 @@ while base_offset <= 30:
 print("Closest results:", closest_results_cnt)
 
 
-## Found offset: (20, 42, 152) for my setup.
+## Found offset: (20, 42, 152) for my setup for coords (6.1, 16.8, -5.2) on angles from FK: (0, 130, 60)
+# !!! Does NOT work for Coords(18.6, 0, -8.3) # Should give 70, 110, 100
 
-
+# Test of the found values:
 def inverse_kinematics_2(target: Coords):
     x = target.x
     y = target.y
@@ -137,13 +143,13 @@ def inverse_kinematics_2(target: Coords):
         alpha = math.acos((L2**2 + L3**2 - Lt**2) / (2*L2*L3))
 
         # Elbow angle:
-        elbow_angle = 152.5 - math.degrees(alpha)
+        elbow_angle = 152.89 - math.degrees(alpha)
 
         # Shoulder angle:
-        shoulder_angle = - (42 - (math.degrees(gamma) + math.degrees(beta)))
+        shoulder_angle = - (41.7 - (math.degrees(gamma) + math.degrees(beta)))
 
         # Base angle:
-        base_angle = 20 - math.degrees(math.atan2(x, y))  # Originalni hodnoty
+        base_angle = 20.4 - math.degrees(math.atan2(x, y))  # Originalni hodnoty
         # TODO: if theta_base > 0 then reverse sign (Chci, aby pavouk vzdy udrzoval ten klasicky tvar nohy)
         # theta_base = 90 - math.degrees(math.atan2(x, y))  # Prizpusobeni pro FK (Aby odpovidalo FK <=> IK)
         # theta_base = 10 + math.degrees(math.atan2(x, y)) # Prizpusobeni pro realne uhly pro servo motory

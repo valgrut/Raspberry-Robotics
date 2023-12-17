@@ -8,7 +8,13 @@ BASE_SERVO_ID = 2
 SHOULDER_SERVO_ID = 1
 ELBOW_SERVO_ID = 0
 
-
+class SharedLegParameters:
+    def __init__(self):
+        self.coxa_len = 0
+        self.femur_len = 0
+        self.tibia_len = 0
+        self.MAX_ANGLE = 130
+        # TODO: dokoncit toto a pouzit pri inicializaci nohou.
 
 class Hexapod:
     def __init__(self):
@@ -37,6 +43,7 @@ class Hexapod:
         angles = None
         old_angles = None
 
+        # TODO: Pygame: while w is pressed ...
         increment = 1
         cmd = ""
         while cmd != "e":
@@ -47,9 +54,9 @@ class Hexapod:
                 init_x -= increment
 
             if cmd == "a":
-                init_y += increment
-            elif cmd == "d":
                 init_y -= increment
+            elif cmd == "d":
+                init_y += increment
 
             if cmd == "r":
                 init_z += increment
@@ -117,23 +124,16 @@ class Hexapod:
                 print("angle shoulder", init_shoulder_angle)
                 print("angle elbow", init_elbow_angle)
 
-                final_base_angle = init_base_angle
-                final_shoulder_angle = init_shoulder_angle
-                final_elbow_angle = init_elbow_angle
-                # final_base_angle = map_range(init_base_angle, 0, 180, 0, 140)
-                # final_shoulder_angle = map_range(init_shoulder_angle, 0, 180, 0, 140)
-                # final_elbow_angle = map_range(init_elbow_angle, 0, 180, 0, 140)
-
                 self.legs[leg_id].set_angle(BASE_SERVO_ID, init_base_angle)
-                self.legs[leg_id].set_angle(SHOULDER_SERVO_ID, final_shoulder_angle)
-                self.legs[leg_id].set_angle(ELBOW_SERVO_ID, final_elbow_angle)
+                self.legs[leg_id].set_angle(SHOULDER_SERVO_ID, init_shoulder_angle)
+                self.legs[leg_id].set_angle(ELBOW_SERVO_ID, init_elbow_angle)
 
                 # Front right leg:
                 # self.legs[leg_id + 1].set_angle(BASE_SERVO_ID, init_base_angle)
                 # self.legs[leg_id + 1].set_angle(SHOULDER_SERVO_ID, final_shoulder_angle)
                 # self.legs[leg_id + 1].set_angle(ELBOW_SERVO_ID, final_elbow_angle)
 
-                target_angles = ServoAngles(init_base_angle, final_shoulder_angle, final_elbow_angle)
+                target_angles = ServoAngles(init_base_angle, init_shoulder_angle, init_elbow_angle)
                 print(self.kinematics.forward_kinematics(self.legs[leg_id], target_angles))
 
                 if len(commands_row) > 1:
@@ -142,13 +142,13 @@ class Hexapod:
 
 
 class HexapodLeg:
-    def __init__(self, hexapod: Hexapod, leg_idx, coxa_len, femur_len, tibia_len):
+    def __init__(self, hexapod: Hexapod, leg_idx, placement_offset, coxa_len, femur_len, tibia_len):
         # Leg definition
         self.hexapod = hexapod
         self.hexapod.legs[leg_idx] = self
         self.leg_idx = leg_idx
 
-        self.leg_placement_offset = Coords(0, 0, 3.2)
+        self.leg_placement_offset = placement_offset
         self.coxa_len = coxa_len
         self.femur_len = femur_len
         self.tibia_len = tibia_len
@@ -170,8 +170,19 @@ class HexapodLeg:
         self.kit.servo[3 * self.leg_idx + 2].actuation_range = self.MAXIMAL_SERVO_ANGLE
 
 
-    def move_to_point(self, end_point: Coords):
-        pass
+    #def move_to_point(self, start_point: Coords, target_point: Coords):
+    def move_to_point(self, target_point: Coords):
+        print("Moving to point", target_point)
+
+        angles = self.kinematics.inverse_kinematics(self, target_point)
+        print("Calculated angles: (base, shoulder, elbow): ", angles)
+
+        self.set_angle(BASE_SERVO_ID, angles.base_angle)
+        self.set_angle(SHOULDER_SERVO_ID, angles.shoulder_angle)
+        self.set_angle(ELBOW_SERVO_ID, angles.elbow_angle)
+
+        # TODO: Add approximation from the current Coord to the target_coord
+
 
     def move_leg_X(self, value):
         # Move leg along X-axis
@@ -184,36 +195,98 @@ class HexapodLeg:
     def move_leg_Z(self, value):
         # Move leg along Z-axis
         pass
-
-    
-    def draw_x_line(self):
+   
+    def move_from_point_to_point(self, start_point: Coords, target_point: Coords, increment=0.1, speed=0.05):
         # Move leg back and forth along X axis
-        for x in range(18, 23):
-            print(self.kinematics.inverse_kinematics(self, Coords(x, 0, 10)))
-            angles = self.kinematics.inverse_kinematics(self, Coords(x, 0, 10))
 
-            #self.set_angle(self.BASE_SERVO_ID, angles[0])
-            #self.set_angle(self.SHOULDER_SERVO_ID, angles[1])
-            #self.set_angle(self.ELBOW_SERVO_ID, angles[2])
-
-            #sleep(2)
-
-    def draw_y_line(self):
-        # Move leg back and forth along Y axis
-        for y in range(5, 15):
-            print(self.kinematics.inverse_kinematics(self, Coords(19, y, 0)))
+        if start_point.x != target_point.x:
+            pass
+        elif start_point.y != target_point.y:
+            pass
+        elif start_point.z != target_point.z:
+            pass
 
 
-    def draw_z_line(self):
-        # Move leg back and forth along Z axis
-        for z in range(0, 10):
-            print(self.kinematics.inverse_kinematics(self, Coords(19, 0, z)))
+        x_increment = increment
+        x_coord = start_x
+        condition = x_coord < target_x if start_x < target_x else target_x < x_coord
+        while condition: 
+            print(Coords(x_coord, 0, -2), ":", self.kinematics.inverse_kinematics(self, Coords(x_coord, 0, -2)))
+            angles = self.kinematics.inverse_kinematics(self, Coords(x_coord, 0, -2))
+
+            self.set_angle(BASE_SERVO_ID, angles.base_angle)
+            self.set_angle(SHOULDER_SERVO_ID, angles.shoulder_angle)
+            self.set_angle(ELBOW_SERVO_ID, angles.elbow_angle)
+            
+            x_coord = x_coord + x_increment if start_x < target_x else x_coord - x_increment
+            condition = x_coord < target_x if start_x < target_x else target_x < x_coord
+
+            sleep(speed)
+
+
+    def draw_x_line(self, start_x, target_x, increment=0.1, speed=0.05):
+        # Move leg back and forth along X axis
+        x_increment = increment
+        x_coord = start_x
+        condition = x_coord < target_x if start_x < target_x else target_x < x_coord
+        while condition: 
+            print(Coords(x_coord, 0, -2), ":", self.kinematics.inverse_kinematics(self, Coords(x_coord, 0, -2)))
+            angles = self.kinematics.inverse_kinematics(self, Coords(x_coord, 0, -2))
+
+            self.set_angle(BASE_SERVO_ID, angles.base_angle)
+            self.set_angle(SHOULDER_SERVO_ID, angles.shoulder_angle)
+            self.set_angle(ELBOW_SERVO_ID, angles.elbow_angle)
+            
+            x_coord = x_coord + x_increment if start_x < target_x else x_coord - x_increment
+            condition = x_coord < target_x if start_x < target_x else target_x < x_coord
+
+            sleep(speed)
+
+    def draw_y_line(self, start_x, target_x, increment=0.1, speed=0.05):
+        # Move leg back and forth along X axis
+        x_increment = increment
+        x_coord = start_x
+        condition = x_coord < target_x if start_x < target_x else target_x < x_coord
+        while condition: 
+            print(Coords(15, x_coord, -2), ":", self.kinematics.inverse_kinematics(self, Coords(15, x_coord, -2)))
+            angles = self.kinematics.inverse_kinematics(self, Coords(15, x_coord, -2))
+
+            self.set_angle(BASE_SERVO_ID, angles.base_angle)
+            self.set_angle(SHOULDER_SERVO_ID, angles.shoulder_angle)
+            self.set_angle(ELBOW_SERVO_ID, angles.elbow_angle)
+            
+            x_coord = x_coord + x_increment if start_x < target_x else x_coord - x_increment
+            condition = x_coord < target_x if start_x < target_x else target_x < x_coord
+
+            sleep(speed)
+
+
+    def draw_z_line(self, start_x, target_x, increment=0.1, speed=0.05):
+        # Move leg back and forth along X axis
+        x_increment = increment
+        x_coord = start_x
+        condition = x_coord < target_x if start_x < target_x else target_x < x_coord
+        while condition: 
+            print(Coords(15, 0, x_coord), ":", self.kinematics.inverse_kinematics(self, Coords(15, 0, x_coord)))
+            angles = self.kinematics.inverse_kinematics(self, Coords(15, 0, x_coord))
+
+            self.set_angle(BASE_SERVO_ID, angles.base_angle)
+            self.set_angle(SHOULDER_SERVO_ID, angles.shoulder_angle)
+            self.set_angle(ELBOW_SERVO_ID, angles.elbow_angle)
+            
+            x_coord = x_coord + x_increment if start_x < target_x else x_coord - x_increment
+            condition = x_coord < target_x if start_x < target_x else target_x < x_coord
+
+            sleep(speed)
 
 
     def set_angle(self, servo_id: int, angle):
         assert(servo_id < 3)
         assert(servo_id >= 0)
         #print("Angle", angle)
+        assert(angle <= self.MAXIMAL_SERVO_ANGLE)
+        #print(f"Angle {angle} OK")
+
         self.kit.servo[3 * self.leg_idx + servo_id].angle = angle
 
 
