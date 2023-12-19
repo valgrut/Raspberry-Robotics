@@ -8,9 +8,13 @@ from utils import *
 
 hexapod = Hexapod()
 
-shared_legs_config = None
-leg_FL = HexapodLeg(hexapod, 0, Coords(0, 0, 0), 5.1, 6.5, 12.1)
-leg_FR = HexapodLeg(hexapod, 1, Coords(0, 0, 0), 5.1, 6.5, 12.1)
+shared_legs_params = SharedLegParameters(5.1, 6.5, 12.1, 130)
+leg_FL = HexapodLeg(hexapod, 0, Coords(0, 0, 0), shared_legs_params)
+leg_FR = HexapodLeg(hexapod, 1, Coords(0, 0, 0), shared_legs_params)
+# leg_ML = HexapodLeg(hexapod, 2, Coords(0, 0, 0), shared_legs_params)
+# leg_MR = HexapodLeg(hexapod, 3, Coords(0, 0, 0), shared_legs_params)
+# leg_BL = HexapodLeg(hexapod, 4, Coords(0, 0, 0), shared_legs_params)
+# leg_BR = HexapodLeg(hexapod, 5, Coords(0, 0, 0), shared_legs_params)
 
 
 # Testing

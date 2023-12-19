@@ -9,11 +9,11 @@ SHOULDER_SERVO_ID = 1
 ELBOW_SERVO_ID = 0
 
 class SharedLegParameters:
-    def __init__(self):
-        self.coxa_len = 0
-        self.femur_len = 0
-        self.tibia_len = 0
-        self.MAX_ANGLE = 130
+    def __init__(self, coxa_len=0.0, femur_len=0.0, tibia_len=0.0, max_angle=180):
+        self.coxa_len = coxa_len
+        self.femur_len = femur_len
+        self.tibia_len = tibia_len
+        self.MAX_ANGLE = max_angle
         # TODO: dokoncit toto a pouzit pri inicializaci nohou.
 
 class Hexapod:
@@ -142,22 +142,22 @@ class Hexapod:
 
 
 class HexapodLeg:
-    def __init__(self, hexapod: Hexapod, leg_idx, placement_offset, coxa_len, femur_len, tibia_len):
+    def __init__(self, hexapod: Hexapod, leg_idx, placement_offset, shared_params: SharedLegParameters):
         # Leg definition
         self.hexapod = hexapod
         self.hexapod.legs[leg_idx] = self
         self.leg_idx = leg_idx
 
         self.leg_placement_offset = placement_offset
-        self.coxa_len = coxa_len
-        self.femur_len = femur_len
-        self.tibia_len = tibia_len
+        self.coxa_len = shared_params.coxa_len
+        self.femur_len = shared_params.femur_len
+        self.tibia_len = shared_params.tibia_len
         # self.current_effector_pos = Coords(0,0,0)
 
         self.kinematics = self.hexapod.kinematics
 
         self.kit = self.hexapod.kit
-        self.MAXIMAL_SERVO_ANGLE = 130  # 130 gives correct ~90 degrees
+        self.MAXIMAL_SERVO_ANGLE = shared_params.MAX_ANGLE  # 130 gives correct ~90 degrees
 
         # Servos are imperfect, so Trying to set the whole 0-180 range, instead of default 0 - cca 160:
         # self.kit.servo[3 * self.leg_idx + 0].set_pulse_width_range(1000, 2000)

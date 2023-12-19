@@ -141,7 +141,7 @@ class Kinematics:
             return None
             
         theta_shoulder = phi_shoulder + gamma_shoulder + 50    # Original is +14 + 90
-        theta_elbow = phi_elbow - 113 + 90    # Original is -113 + 90 
+        theta_elbow = phi_elbow - 113 + 90    # Original is -113 + 90
         theta_base = math.degrees(math.atan2(x, y)) - 20   # Original is +90
 
         # Prevent angles to exceed maximal real value of the servos
