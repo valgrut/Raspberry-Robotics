@@ -31,6 +31,7 @@
 ### Body parts
 
 - 1x Top body plate
+  - !! **My modified version for rpi**
 - 1x Bottom body plate
 - 18x Servo Case
 - 3x Left zahnuty joint
@@ -45,6 +46,7 @@
 - 6x Tycinka spacer
 - 6x Upevneni nohy k telu
 - 6x Placata vec na upevneni spicky konce nohy
+- 18x Lozisko placeholder
 
 ### Stojanek
 
