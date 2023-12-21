@@ -1,6 +1,6 @@
 from coords import Coords
-from m_hexapod import Hexapod, HexapodLeg
-from m_kinematics import Kinematics, ServoAngles
+from hexapod import Hexapod, HexapodLeg
+from kinematics import Kinematics, ServoAngles
 
 class Tests:
     def __init__(self):
