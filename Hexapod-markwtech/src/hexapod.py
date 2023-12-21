@@ -3,6 +3,7 @@ from time import sleep
 from adafruit_servokit import ServoKit
 # Other imports are at the bottom of the file
 from utils import map_range
+from gate_engine import GateEngine
 
 BASE_SERVO_ID = 2
 SHOULDER_SERVO_ID = 1
@@ -30,6 +31,40 @@ class Hexapod:
         self.kinematics = Kinematics()
         self.kit = None
         self.kit = ServoKit(channels=16)
+
+        self.movement_mode = None #Ripple, Wave, Side,
+
+    def command(self, command):
+        # This should contain all commands available for the hexapod.
+        # The commands are independent of the input device (Bluetooth / Flask web server).
+
+        # Something like:
+        
+        # Controller: for example: X button
+        if command == "SET_RIPPLE_MODE":
+            self.movement_mode = "RIPPLE_MODE"
+        
+        # Controller: for example: Y button
+        elif command == "SET_WAVE_MODE":
+            self.movement_mode = "RIPPLE_MODE"
+        
+        # Controller: for example: A button
+        elif command == "SET_TRIPOD_MODE":
+            self.movement_mode = "TRIPOD_MODE"
+        
+        if command == "CAPTURE_PHOTO":
+            pass
+
+        if command == "START_RECORDING":
+            if self.is_recording is False:
+                self.is_recording = True
+        
+        elif command == "STOP_RECORDING":
+            if self.is_recording is True:
+                self.is_recording = False
+        
+        
+
 
     def walk(self):
         pass
@@ -291,4 +326,4 @@ class HexapodLeg:
 
 
 # Prevent Circular import error
-from m_kinematics import Kinematics, ServoAngles
+from kinematics import Kinematics, ServoAngles

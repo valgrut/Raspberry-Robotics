@@ -4,7 +4,7 @@ from coords import Coords
 from utils import *
 
 # Prevent Circular import error
-from m_hexapod import HexapodLeg
+from hexapod import HexapodLeg
 
 
 class ServoAngles:
