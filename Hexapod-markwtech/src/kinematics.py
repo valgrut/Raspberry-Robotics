@@ -2,34 +2,16 @@ import math
 
 from coords import Coords
 from utils import *
+from dataclasses import dataclass
 
 # Prevent Circular import error
 from hexapod import HexapodLeg
 
-
+@dataclass
 class ServoAngles:
-    def __init__(self, base_angle, shoulder_angle, elbow_angle):
-        self.base_angle = base_angle         # Coxa
-        self.shoulder_angle = shoulder_angle # Femur  
-        self.elbow_angle = elbow_angle       # Tibia
-
-    def __eq__(self, other): 
-        if not isinstance(other, ServoAngles):
-            # don't attempt to compare against unrelated types
-            return NotImplemented
-
-        return self.base_angle == other.base_angle and self.shoulder_angle == other.shoulder_angle and self.elbow_angle == other.elbow_angle
-
-    def __repr__(self):
-        return "ServoAngles()"
-    
-    def __str__(self):
-        return f"({self.base_angle}, {self.shoulder_angle}, {self.elbow_angle})"
-
-    def print(self):
-        print(self.base_angle, self.shoulder_angle, self.elbow_angle)
-        print()
-
+    base_angle :float      # Coxa
+    shoulder_angle :float  # Femur
+    elbow_angle :float     # Tibia
 
 
 class Kinematics:
@@ -67,7 +49,7 @@ class Kinematics:
         updated_base_angle = base_angle_offset - source_angles.base_angle
         updated_shoulder_angle = shoulder_angle_offset - source_angles.shoulder_angle
         updated_elbow_angle = elbow_angle_offset - source_angles.elbow_angle
-        
+
         updated_angles = ServoAngles(updated_base_angle, updated_shoulder_angle, updated_elbow_angle)
 
         # Convert input angles to radians
@@ -127,19 +109,19 @@ class Kinematics:
         except Exception as e:
             print(e)
             return None
-        
+
         try:
             phi_shoulder = math.degrees(math.acos((L2**2 + L**2 - L3**2) / (2 * L2 * L)))
         except Exception as e:
             print(e)
             return None
-        
+
         try:
             gamma_shoulder = math.degrees(math.atan2(z, Lt))
         except Exception as e:
             print(e)
             return None
-            
+
         theta_shoulder = phi_shoulder + gamma_shoulder + 50    # Original is +14 + 90
         theta_elbow = phi_elbow - 113 + 90    # Original is -113 + 90
         theta_base = math.degrees(math.atan2(x, y)) - 20   # Original is +90
@@ -149,7 +131,7 @@ class Kinematics:
 
         return final_angles
 
-    
+
     def modify_angles(self, source_angles: ServoAngles) -> ServoAngles:
         # modify angles to match servo ranges
         theta_elbow = round(source_angles.elbow_angle, 3)
@@ -180,10 +162,10 @@ class Kinematics:
         elif theta_elbow > 130:
             theta_elbow = 130
             warn = True
-        
+
         if warn:
             print("Warning: Nedosazitelne x/y/z. Uhly modifikovany.")
 
         return ServoAngles(theta_base, theta_shoulder, theta_elbow)
-        
-    
+
+
