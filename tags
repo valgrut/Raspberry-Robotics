@@ -389,6 +389,8 @@ AwsMessageStatus	experiments/ESP_Async_WebServer/src/AsyncWebSocket.h	/^typedef 
 AwsResponseFiller	experiments/ESP_Async_WebServer/src/ESPAsyncWebServer.h	/^typedef std::function<size_t(uint8_t*, size_t, size_t)> AwsResponseFiller;$/;"	t
 AwsTemplateProcessor	experiments/ESP_Async_WebServer/src/ESPAsyncWebServer.h	/^typedef std::function<String(const String&)> AwsTemplateProcessor;$/;"	t
 BASE_SERVO_ID	Hexapod-markwtech/src/hexapod.py	/^BASE_SERVO_ID = 2$/;"	v
+BLACK	pygame_plot.py	/^BLACK = (0, 0, 0)$/;"	v
+BLACK	pygame_plot2.py	/^BLACK = (0, 0, 0)$/;"	v
 BOUNDARY_OR_DATA	experiments/ESP_Async_WebServer/src/WebRequest.cpp	/^  BOUNDARY_OR_DATA,$/;"	e	enum:__anon7471535f0b03	file:
 BUSIO_HAS_HW_SPI	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^#define BUSIO_HAS_HW_SPI$/;"	d
 BUSIO_HAS_HW_SPI	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^#define BUSIO_HAS_HW_SPI$/;"	d
@@ -509,6 +511,10 @@ ExcludeList	experiments/ESP_Async_WebServer/src/SPIFFSEditor.cpp	/^} ExcludeList
 ExcludeListS	experiments/ESP_Async_WebServer/src/SPIFFSEditor.cpp	/^typedef struct ExcludeListS {$/;"	s	file:
 FILE Upload handling	experiments/ESP_Async_WebServer/README.md	/^### FILE Upload handling$/;"	S	section:ESPAsyncWebServer""Request Variables
 FILE_IS_REAL	experiments/ESP_Async_WebServer/src/WebHandlers.cpp	/^#define FILE_IS_REAL(/;"	d	file:
+FOV	pygame_plot.py	/^FOV = 1000$/;"	v
+FOV	pygame_plot2.py	/^FOV = 1000$/;"	v
+FPS	pygame_plot.py	/^FPS = 60$/;"	v
+FPS	pygame_plot2.py	/^FPS = 60$/;"	v
 FREQUENCY_OSCILLATOR	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define FREQUENCY_OSCILLATOR /;"	d
 FREQUENCY_OSCILLATOR	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define FREQUENCY_OSCILLATOR /;"	d
 FS	experiments/ESP_Async_WebServer/src/ESPAsyncWebServer.h	/^  using FS = fs::FS;$/;"	t	class:AsyncWebServerRequest	typeref:typename:fs::FS
@@ -535,6 +541,8 @@ HANDLER_FOR_TIMER4	experiments/Servo/src/sam/Servo.cpp	/^void HANDLER_FOR_TIMER4
 HANDLER_FOR_TIMER4	experiments/Servo/src/sam/ServoTimers.h	/^#define HANDLER_FOR_TIMER4 /;"	d
 HANDLER_FOR_TIMER5	experiments/Servo/src/sam/Servo.cpp	/^void HANDLER_FOR_TIMER5(void) {$/;"	f	typeref:typename:void
 HANDLER_FOR_TIMER5	experiments/Servo/src/sam/ServoTimers.h	/^#define HANDLER_FOR_TIMER5 /;"	d
+HEIGHT	pygame_plot.py	/^WIDTH, HEIGHT = 800, 600$/;"	v
+HEIGHT	pygame_plot2.py	/^WIDTH, HEIGHT = 800, 600$/;"	v
 HTTP_ANY	experiments/ESP_Async_WebServer/src/ESPAsyncWebServer.h	/^  HTTP_ANY     = 0b01111111,$/;"	e	enum:__anon185fb8380103
 HTTP_DELETE	experiments/ESP_Async_WebServer/src/ESPAsyncWebServer.h	/^  HTTP_DELETE  = 0b00000100,$/;"	e	enum:__anon185fb8380103
 HTTP_GET	experiments/ESP_Async_WebServer/src/ESPAsyncWebServer.h	/^  HTTP_GET     = 0b00000001,$/;"	e	enum:__anon185fb8380103
@@ -1107,6 +1115,10 @@ Using filters	experiments/ESP_Async_WebServer/README.md	/^## Using filters$/;"	s
 WAIT_FOR_RETURN1	experiments/ESP_Async_WebServer/src/WebRequest.cpp	/^  WAIT_FOR_RETURN1,$/;"	e	enum:__anon7471535f0b03	file:
 WAIT_TC16_REGS_SYNC	experiments/Servo/src/samd/Servo.cpp	/^#define WAIT_TC16_REGS_SYNC(/;"	d	file:
 WEB_AUTHENTICATION_H_	experiments/ESP_Async_WebServer/src/WebAuthentication.h	/^#define WEB_AUTHENTICATION_H_$/;"	d
+WHITE	pygame_plot.py	/^WHITE = (255, 255, 255)$/;"	v
+WHITE	pygame_plot2.py	/^WHITE = (255, 255, 255)$/;"	v
+WIDTH	pygame_plot.py	/^WIDTH, HEIGHT = 800, 600$/;"	v
+WIDTH	pygame_plot2.py	/^WIDTH, HEIGHT = 800, 600$/;"	v
 WS_BINARY	experiments/ESP_Async_WebServer/src/AsyncWebSocket.h	/^typedef enum { WS_CONTINUATION, WS_TEXT, WS_BINARY, WS_DISCONNECT = 0x08, WS_PING, WS_PONG } Aws/;"	e	enum:__anon203386220303
 WS_CONNECTED	experiments/ESP_Async_WebServer/src/AsyncWebSocket.h	/^typedef enum { WS_DISCONNECTED, WS_CONNECTED, WS_DISCONNECTING } AwsClientStatus;$/;"	e	enum:__anon203386220203
 WS_CONTINUATION	experiments/ESP_Async_WebServer/src/AsyncWebSocket.h	/^typedef enum { WS_CONTINUATION, WS_TEXT, WS_BINARY, WS_DISCONNECT = 0x08, WS_PING, WS_PONG } Aws/;"	e	enum:__anon203386220303
@@ -1961,6 +1973,8 @@ clkPinMask	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  BusIO_P
 clkPinMask	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  BusIO_PortMask mosiPinMask, misoPinMask, clkPinMask, csPinMask;$/;"	m	class:Adafruit_SPIDevice	typeref:typename:BusIO_PortMask
 clkPort	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  BusIO_PortReg *mosiPort, *clkPort, *misoPort, *csPort;$/;"	m	class:Adafruit_SPIDevice	typeref:typename:BusIO_PortReg *
 clkPort	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  BusIO_PortReg *mosiPort, *clkPort, *misoPort, *csPort;$/;"	m	class:Adafruit_SPIDevice	typeref:typename:BusIO_PortReg *
+clock	pygame_plot.py	/^clock = pygame.time.Clock()$/;"	v
+clock	pygame_plot2.py	/^clock = pygame.time.Clock()$/;"	v
 close	experiments/ESP_AsyncTCP/src/AsyncPrinter.cpp	/^void AsyncPrinter::close(){$/;"	f	class:AsyncPrinter	typeref:typename:void
 close	experiments/ESP_AsyncTCP/src/ESPAsyncTCP.cpp	/^void AsyncClient::close(bool now){$/;"	f	class:AsyncClient	typeref:typename:void
 close	experiments/ESP_AsyncTCP/src/ESPAsyncTCPbuffer.cpp	/^void AsyncTCPbuffer::close() {$/;"	f	class:AsyncTCPbuffer	typeref:typename:void
@@ -2041,6 +2055,8 @@ disableSub3Address	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Li
 disableSub3Address	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::disableSub3Address() {$/;"	f	class:PCA9685	typeref:typename:void
 disconnected	experiments/ESP_AsyncTCP/src/ESPAsyncTCP.cpp	/^bool AsyncClient::disconnected(){$/;"	f	class:AsyncClient	typeref:typename:bool
 disconnecting	experiments/ESP_AsyncTCP/src/ESPAsyncTCP.cpp	/^bool AsyncClient::disconnecting(){$/;"	f	class:AsyncClient	typeref:typename:bool
+draw_3d_line	pygame_plot.py	/^def draw_3d_line(start, end, color):$/;"	f
+draw_3d_line	pygame_plot2.py	/^def draw_3d_line(start, end, color):$/;"	f
 draw_x_line	Hexapod-markwtech/src/hexapod.py	/^    def draw_x_line(self, start_x, target_x, increment=0.1, speed=0.05):$/;"	m	class:HexapodLeg
 draw_y_line	Hexapod-markwtech/src/hexapod.py	/^    def draw_y_line(self, start_x, target_x, increment=0.1, speed=0.05):$/;"	m	class:HexapodLeg
 draw_z_line	Hexapod-markwtech/src/hexapod.py	/^    def draw_z_line(self, start_x, target_x, increment=0.1, speed=0.05):$/;"	m	class:HexapodLeg
@@ -2316,6 +2332,8 @@ localIP	experiments/ESP_AsyncTCP/src/ESPAsyncTCP.cpp	/^IPAddress AsyncClient::lo
 localPort	experiments/ESP_AsyncTCP/src/ESPAsyncTCP.cpp	/^uint16_t AsyncClient::localPort() {$/;"	f	class:AsyncClient	typeref:typename:uint16_t
 lock	experiments/ESP_Async_WebServer/src/AsyncWebSocket.h	/^    void lock() { _lock = true; }$/;"	f	class:AsyncWebSocketMessageBuffer	typeref:typename:void
 lock	experiments/ESP_Async_WebServer/src/AsyncWebSynchronization.h	/^  bool lock() const {$/;"	f	class:AsyncWebLock	typeref:typename:bool
+main	pygame_plot.py	/^def main():$/;"	f
+main	pygame_plot2.py	/^def main():$/;"	f
 maintainer	InMoove-Arm/libraries/Adafruit_BusIO/library.properties	/^maintainer=Adafruit <info@adafruit.com>$/;"	k
 maintainer	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/library.properties	/^maintainer=Adafruit <info@adafruit.com>$/;"	k
 maintainer	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "maintainer": true$/;"	b	object:authors.0
@@ -2522,6 +2540,8 @@ printf_P	experiments/ESP_Async_WebServer/src/AsyncWebSocket.cpp	/^size_t AsyncWe
 printf_P	experiments/ESP_Async_WebServer/src/AsyncWebSocket.cpp	/^size_t AsyncWebSocketClient::printf_P(PGM_P formatP, ...) {$/;"	f	class:AsyncWebSocketClient	typeref:typename:size_t
 println	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^void Adafruit_BusIO_Register::println(Stream *s) {$/;"	f	class:Adafruit_BusIO_Register	typeref:typename:void
 println	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^void Adafruit_BusIO_Register::println(Stream *s) {$/;"	f	class:Adafruit_BusIO_Register	typeref:typename:void
+project_point	pygame_plot.py	/^def project_point(x, y, z):$/;"	f
+project_point	pygame_plot2.py	/^def project_point(x, y, z):$/;"	f
 pwmForAngle	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^uint16_t PCA9685_ServoEval::pwmForAngle(float angle) {$/;"	f	class:PCA9685_ServoEval	typeref:typename:uint16_t
 pwmForAngle	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^uint16_t PCA9685_ServoEval::pwmForAngle(float angle) {$/;"	f	class:PCA9685_ServoEval	typeref:typename:uint16_t
 pwmForSpeed	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^uint16_t PCA9685_ServoEval::pwmForSpeed(float speed) {$/;"	f	class:PCA9685_ServoEval	typeref:typename:uint16_t
@@ -2603,6 +2623,8 @@ resetTC	experiments/Servo/src/samd/Servo.cpp	/^static inline void resetTC (Tc* T
 result	Turrets/angle-calc.py	/^result = (pow(v, 2) \/ (g * dx)) - math.sqrt(A - 1)$/;"	v
 rewrite	experiments/ESP_Async_WebServer/src/WebServer.cpp	/^AsyncWebRewrite& AsyncWebServer::rewrite(const char* from, const char* to){$/;"	f	class:AsyncWebServer	typeref:typename:AsyncWebRewrite &
 ripple_mode	Hexapod-markwtech/src/gate_engine.py	/^    def ripple_mode(self):$/;"	m	class:GateEngine
+rotate_point	pygame_plot.py	/^def rotate_point(x, y, z, angle_x, angle_y, angle_z):$/;"	f
+rotate_point	pygame_plot2.py	/^def rotate_point(x, y, z, angle_x, angle_y, angle_z):$/;"	f
 rotate_x	Hexapod-markwtech/matrices.py	/^def rotate_x(point, theta):$/;"	f
 rotate_y	Hexapod-markwtech/matrices.py	/^def rotate_y(point, theta):$/;"	f
 rotate_z	Hexapod-markwtech/matrices.py	/^def rotate_z(point, theta):$/;"	f
@@ -2610,6 +2632,8 @@ run	Hexapod-markwtech/Makefile	/^run:$/;"	t
 run_fk_test	Hexapod-markwtech/src/tests.py	/^    def run_fk_test(self, leg: HexapodLeg, test_data: ServoAngles, expected_output: Coords):$/;"	m	class:Tests
 run_ik_test	Hexapod-markwtech/src/tests.py	/^    def run_ik_test(self, leg: HexapodLeg, test_data: Coords, expected_output: ServoAngles):$/;"	m	class:Tests
 run_tests	Hexapod-markwtech/src/tests.py	/^    def run_tests(self, leg: HexapodLeg):$/;"	m	class:Tests
+screen	pygame_plot.py	/^screen = pygame.display.set_mode((WIDTH, HEIGHT))$/;"	v
+screen	pygame_plot2.py	/^screen = pygame.display.set_mode((WIDTH, HEIGHT))$/;"	v
 send	experiments/ESP_AsyncTCP/src/ESPAsyncTCP.cpp	/^bool AsyncClient::send(){$/;"	f	class:AsyncClient	typeref:typename:bool
 send	experiments/ESP_Async_WebServer/src/AsyncEventSource.cpp	/^size_t AsyncEventSourceMessage::send(AsyncClient *client) {$/;"	f	class:AsyncEventSourceMessage	typeref:typename:size_t
 send	experiments/ESP_Async_WebServer/src/AsyncEventSource.cpp	/^void AsyncEventSource::send(const char *message, const char *event, uint32_t id, uint32_t reconn/;"	f	class:AsyncEventSource	typeref:typename:void
