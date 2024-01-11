@@ -4,6 +4,7 @@ from adafruit_servokit import ServoKit
 # Other imports are at the bottom of the file
 from utils import map_range
 from gate_engine import GateEngine
+import math
 
 BASE_SERVO_ID = 2
 SHOULDER_SERVO_ID = 1
@@ -119,9 +120,9 @@ class Hexapod:
 
     def interactive_angle_control(self, leg_id: int):
         # init angles of the arm
-        init_base_angle = 70
-        init_shoulder_angle = 90
-        init_elbow_angle = 90
+        init_base_angle = 90
+        init_shoulder_angle = 0
+        init_elbow_angle = 100
         increment = 10
 
         SERVO_ANGLE_LIMIT = self.legs[leg_id].MAXIMAL_SERVO_ANGLE
@@ -148,9 +149,9 @@ class Hexapod:
                     init_elbow_angle = init_elbow_angle - increment if init_elbow_angle - increment > 0 else 0
 
                 if cmd == "b":
-                    init_base_angle = 70
-                    init_shoulder_angle = 90
-                    init_elbow_angle = 90
+                    init_base_angle = 90
+                    init_shoulder_angle = 0
+                    init_elbow_angle = 100
                 
                 if cmd == "p":
                     do_process = False
@@ -163,10 +164,10 @@ class Hexapod:
                 self.legs[leg_id].set_angle(SHOULDER_SERVO_ID, init_shoulder_angle)
                 self.legs[leg_id].set_angle(ELBOW_SERVO_ID, init_elbow_angle)
 
-                # Front right leg:
+                # # Front right leg:
                 # self.legs[leg_id + 1].set_angle(BASE_SERVO_ID, init_base_angle)
-                # self.legs[leg_id + 1].set_angle(SHOULDER_SERVO_ID, final_shoulder_angle)
-                # self.legs[leg_id + 1].set_angle(ELBOW_SERVO_ID, final_elbow_angle)
+                # self.legs[leg_id + 1].set_angle(SHOULDER_SERVO_ID, init_shoulder_angle)
+                # self.legs[leg_id + 1].set_angle(ELBOW_SERVO_ID, init_elbow_angle)
 
                 target_angles = ServoAngles(init_base_angle, init_shoulder_angle, init_elbow_angle)
                 print(self.kinematics.forward_kinematics(self.legs[leg_id], target_angles))
@@ -182,6 +183,7 @@ class HexapodLeg:
         self.hexapod = hexapod
         self.hexapod.legs[leg_idx] = self
         self.leg_idx = leg_idx
+        self.inversed = False
 
         self.leg_placement_offset = placement_offset
         self.coxa_len = shared_params.coxa_len
@@ -204,6 +206,11 @@ class HexapodLeg:
         self.kit.servo[3 * self.leg_idx + 1].actuation_range = self.MAXIMAL_SERVO_ANGLE
         self.kit.servo[3 * self.leg_idx + 2].actuation_range = self.MAXIMAL_SERVO_ANGLE
 
+    def set_inversed(self):
+        self.inversed = True
+
+    def unset_inversed(self):
+        self.inversed = False
 
     #def move_to_point(self, start_point: Coords, target_point: Coords):
     def move_to_point(self, target_point: Coords):
@@ -231,7 +238,7 @@ class HexapodLeg:
         # Move leg along Z-axis
         pass
    
-    def move_from_point_to_point(self, start_point: Coords, target_point: Coords, increment=0.1, speed=0.05):
+    def OLD_move_from_point_to_point(self, start_point: Coords, target_point: Coords, increment=0.1, speed=0.05):
         # Move leg back and forth along X axis
 
         if start_point.x != target_point.x:
@@ -240,7 +247,6 @@ class HexapodLeg:
             pass
         elif start_point.z != target_point.z:
             pass
-
 
         x_increment = increment
         x_coord = start_x
@@ -257,6 +263,85 @@ class HexapodLeg:
             condition = x_coord < target_x if start_x < target_x else target_x < x_coord
 
             sleep(speed)
+
+    def __calculate_arc_between_2_points(self, start_point: Coords, target_point: Coords, number_of_points: int, max_step_height: float):
+        # Calculates arc above two points A and B with sinusoidal z height.
+        #
+        #          . 
+        #     .    |   .
+        #   .      h     .
+        #  A       |     B
+        #
+        # Does not work for different z values for the points.
+        # if A.z != B.z:
+        #     print("Error: A and B has to have the same Z value!")
+        #     return []
+        
+        import numpy as np
+        # A = np.array([0, 6, 0])
+        # B = np.array([8, 1, 0])
+        A = np.array(start_point.list())
+        B = np.array(target_point.list())
+
+        distance = B - A
+        num_of_points = number_of_points
+        max_arc_height = max_step_height
+        positive_sine_len = math.pi
+        distance = distance / num_of_points
+
+        R = []
+        for i in range(0, num_of_points):
+            R.append(Coords(A[0] + distance[0] * i, A[1] + distance[1] * i, A[2] + max_arc_height * round(math.sin((positive_sine_len / num_of_points) * i), 3)))
+        R.append(Coords(B[0], B[1], B[2]))
+        
+        return R
+
+    # just straight line between two points A(0,6) and B(8, 1) with z = 0
+    def __calculate_line_between_2_points(self, start_point: Coords, target_point: Coords, number_of_points):
+        import numpy as np
+        
+        A = np.array(start_point.list())
+        B = np.array(target_point.list())
+        
+        D = B - A
+        num_of_points = number_of_points
+        D = D / num_of_points
+
+        R = []
+        for i in range(0, num_of_points):
+            R.append(Coords(A[0] + D[0] * i, A[1] + D[1] * i, A[2] + D[2] * i))
+        R.append(Coords(B[0], B[1], B[2]))
+
+        return R
+
+    def swing_from_point_to_point(self, start_point: Coords, target_point: Coords, num_of_points=10, max_step_height=5, increment=0.1, speed=0.05):
+        # Move leg back and forth along X axis
+
+        R = self.__calculate_arc_between_2_points(start_point, target_point, num_of_points, max_step_height)
+        for point in R:
+            print(point, ":", self.kinematics.inverse_kinematics(self, point))
+            angles = self.kinematics.inverse_kinematics(self, point)
+
+            self.set_angle(BASE_SERVO_ID, angles.base_angle)
+            self.set_angle(SHOULDER_SERVO_ID, angles.shoulder_angle)
+            self.set_angle(ELBOW_SERVO_ID, angles.elbow_angle)
+
+            sleep(speed)
+
+    def stance_from_point_to_point(self, start_point: Coords, target_point: Coords, num_of_points=10, increment=0.1, speed=0.05):
+        # Move leg back and forth along X axis
+
+        R = self.__calculate_line_between_2_points(start_point, target_point, num_of_points)
+        for point in R:
+            print(point, ":", self.kinematics.inverse_kinematics(self, point))
+            angles = self.kinematics.inverse_kinematics(self, point)
+
+            self.set_angle(BASE_SERVO_ID, angles.base_angle)
+            self.set_angle(SHOULDER_SERVO_ID, angles.shoulder_angle)
+            self.set_angle(ELBOW_SERVO_ID, angles.elbow_angle)
+
+            sleep(speed)
+
 
 
     def draw_x_line(self, start_x, target_x, increment=0.1, speed=0.05):
@@ -318,11 +403,12 @@ class HexapodLeg:
     def set_angle(self, servo_id: int, angle):
         assert(servo_id < 3)
         assert(servo_id >= 0)
-        #print("Angle", angle)
         assert(angle <= self.MAXIMAL_SERVO_ANGLE)
-        #print(f"Angle {angle} OK")
 
-        self.kit.servo[3 * self.leg_idx + servo_id].angle = angle
+        if self.inversed:  # if leg is Right, servos have mirror orientation
+            self.kit.servo[3 * self.leg_idx + servo_id].angle = self.MAXIMAL_SERVO_ANGLE - angle
+        else:    
+            self.kit.servo[3 * self.leg_idx + servo_id].angle = angle
 
 
 # Prevent Circular import error
