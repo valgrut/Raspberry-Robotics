@@ -59,7 +59,7 @@
 ### Napajeni
 
 - 5V, 2.5A: Raspberry pi, PCA9685 Servo Driver chip, ...
-- 5V, 5+A: Servos (PCA9685 blue terminal)
+- 5V, 30+Amp: Servos (PCA9685 blue terminal) (18 * MG996R 2.5A)
 - 4xAA nebo 5AA. Zkusit a zjistit, ktere bude lepsi.
 
 Which batteries to use:

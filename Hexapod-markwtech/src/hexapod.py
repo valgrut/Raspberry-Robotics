@@ -237,32 +237,6 @@ class HexapodLeg:
     def move_leg_Z(self, value):
         # Move leg along Z-axis
         pass
-   
-    def OLD_move_from_point_to_point(self, start_point: Coords, target_point: Coords, increment=0.1, speed=0.05):
-        # Move leg back and forth along X axis
-
-        if start_point.x != target_point.x:
-            pass
-        elif start_point.y != target_point.y:
-            pass
-        elif start_point.z != target_point.z:
-            pass
-
-        x_increment = increment
-        x_coord = start_x
-        condition = x_coord < target_x if start_x < target_x else target_x < x_coord
-        while condition: 
-            print(Coords(x_coord, 0, -2), ":", self.kinematics.inverse_kinematics(self, Coords(x_coord, 0, -2)))
-            angles = self.kinematics.inverse_kinematics(self, Coords(x_coord, 0, -2))
-
-            self.set_angle(BASE_SERVO_ID, angles.base_angle)
-            self.set_angle(SHOULDER_SERVO_ID, angles.shoulder_angle)
-            self.set_angle(ELBOW_SERVO_ID, angles.elbow_angle)
-            
-            x_coord = x_coord + x_increment if start_x < target_x else x_coord - x_increment
-            condition = x_coord < target_x if start_x < target_x else target_x < x_coord
-
-            sleep(speed)
 
     def __calculate_arc_between_2_points(self, start_point: Coords, target_point: Coords, number_of_points: int, max_step_height: float):
         # Calculates arc above two points A and B with sinusoidal z height.
