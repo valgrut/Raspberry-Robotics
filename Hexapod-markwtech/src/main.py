@@ -12,6 +12,11 @@ shared_legs_params = SharedLegParameters(5.1, 6.5, 12.1, 130)
 leg_FL = HexapodLeg(hexapod, 0, Coords(0, 0, 0), shared_legs_params)
 leg_FL.set_inversed()
 
+# TODO: Nastavit pro FL, FR, BL, BR nohy 45 stupnu offset, abych mohl normalne pouzivat x a y souradnice
+# a nemusel slozite hledat, jake jsou xy souradnice, kdyz chci nohu dat dopredu. takhle to bude proste y.
+#
+# melo by to byt, ze IK spocita uhly, a ja tomu proste pridam/odectu 45 stupnu pro base angle.
+
 leg_FR = HexapodLeg(hexapod, 1, Coords(0, 0, 0), shared_legs_params)
 # leg_ML = HexapodLeg(hexapod, 2, Coords(0, 0, 0), shared_legs_params)
 # leg_ML.set_inversed()
