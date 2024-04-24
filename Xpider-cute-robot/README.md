@@ -10,7 +10,7 @@
 - Phone: Arduino ESP Bluetooth - Dabble app
 - 3D printer
 - ESP32 mini
-
+- Arduino IDE
 
 ### Examples
 - [Xpider design](https://www.youtube.com/watch?v=K1jtuKZg11o)
