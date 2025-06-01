@@ -1,22 +1,24 @@
-# Kame
+# Xpider Ballsy
 
 ![](attachments/ballsy.jpg)
 
 ![](assembly.jpg)
 
 
-## Requirements:
+## Requirements
 
 - Phone: Arduino ESP Bluetooth - Dabble app
 - 3D printer
-- ESP32 mini
+- ESP32-C3 mini
 - Arduino IDE
 
-### Examples
+### Videos
+
 - [Xpider design](https://www.youtube.com/watch?v=K1jtuKZg11o)
 - []()
 
 ### Project pages and resources
+
 - [Thingiverse: Xpider Ballsy](https://www.thingiverse.com/thing:1704879)
 - [Cults3D: Xpider Ballsy](https://cults3d.com/en/3d-model/game/xpider-code-name-ballsy)
 - [Facebook: Xpider](https://www.facebook.com/smallxpider/)
@@ -24,8 +26,9 @@
 - [Xpider parts, description](https://hackaday.io/project/18149-xpider-worlds-cutest-spider-robot)
 - [Xpider-E(original name QPAKO)](https://community.robotshop.com/forum/t/xpider-e-original-name-qpako-my-1st-walking-creature/31423)
 - [instructables.com: Ballsy instructions](https://www.instructables.com/Xpider-the-Smallest-Smart-Robot-Spider-in-the-Worl/)
+- [Official Youtube Channel for XPider](https://www.youtube.com/@xpiderroboeve7123)
 
-### Basic info
+### Basic info - OG version
 
 * Actuators / output devices: 2 motors, one servo
 * Control method: Bluetooth, WiFi, Phone, Web browser
@@ -37,10 +40,13 @@
 
 
 ### Seznam materialu a soucastek k tisku
+
 #### STL list
+
 - [ ] Vse ve slozce v Hobby/Robotika/Xpider-Ballsy
 
 #### Screws, tools, ...
+
 - [ ] 30x M1,6\*12mm
 - [ ] (mini?) NodeMCU-32S ESP32 WiFi + Bluetooth
 - [ ] Baterie Lipol 600 MAh
@@ -50,3 +56,24 @@
 - [ ] 
 
 
+## Sestaveni
+
+- Napajet k motorum Capacitor
+- 
+
+## Programovani
+
+### AsyncWebserver verze
+
+- ESP32-c3 supermini
+  - pozor, nepodporuje standardni bluetooth, pouze LE (low energy)
+    - Tim padem Bluepad32 library nefunguje -> nelze ovladat BT ovladacem.
+
+- **Board:**
+  - Nologo ESP32C3 Supermini 
+    - Rozpohyboval jsem webserver pro UDP listening.
+    - Zvoleny Board tedy funguje s mym controllerem.
+  - MakerGO ESP32 C3 SuperMini
+    - Funguje webserver od chatgpt s ovladanim sipkama.
+    - Funguje i lib pro ovladani 2 motorku
+  - 
