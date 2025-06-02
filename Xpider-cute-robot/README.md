@@ -5,19 +5,19 @@
 ![](assembly.jpg)
 
 
-## Requirements
+## 1. STL, videa, project pages
 
 - Phone: Arduino ESP Bluetooth - Dabble app
 - 3D printer
 - ESP32-C3 mini
 - Arduino IDE
 
-### Videos
+### 1.1. Videos
 
 - [Xpider design](https://www.youtube.com/watch?v=K1jtuKZg11o)
 - []()
 
-### Project pages and resources
+### 1.2. Project pages and resources
 
 - [Thingiverse: Xpider Ballsy](https://www.thingiverse.com/thing:1704879)
 - [Cults3D: Xpider Ballsy](https://cults3d.com/en/3d-model/game/xpider-code-name-ballsy)
@@ -28,7 +28,7 @@
 - [instructables.com: Ballsy instructions](https://www.instructables.com/Xpider-the-Smallest-Smart-Robot-Spider-in-the-Worl/)
 - [Official Youtube Channel for XPider](https://www.youtube.com/@xpiderroboeve7123)
 
-### Basic info - OG version
+### 1.3. Basic info - OG version
 
 * Actuators / output devices: 2 motors, one servo
 * Control method: Bluetooth, WiFi, Phone, Web browser
@@ -38,32 +38,35 @@
 * Sensors / input devices: IR, ultrasonic, camera
 * Target environment: indoor, outdoor, anywere not near water
 
+---------------------------------------------------------------------------------------------
 
-### Seznam materialu a soucastek k tisku
+## 2. Seznam materialu a soucastek k tisku
 
-#### STL list
+### 2.1. STL list
 
 - [ ] Vse ve slozce v Hobby/Robotika/Xpider-Ballsy
 
-#### Screws, tools, ...
+### 2.2. Screws, tools
 
 - [ ] 30x M1,6\*12mm
 - [ ] (mini?) NodeMCU-32S ESP32 WiFi + Bluetooth
 - [ ] Baterie Lipol 600 MAh
 - [ ] TB6612FNG Dual H-Bridge motor driver
 - [ ] 2x N20 300 RPM motor (Bez encoderu!)
-- [ ] Adafruit PowerBoost 500C
+- [ ] TB4056 battery charger
 - [ ] 
 
+---------------------------------------------------------------------------------------------
 
-## Sestaveni
+## 3. Sestaveni
 
-- Napajet k motorum Capacitor
-- 
+- Napajet k motorum keramicky Capacitor
 
-## Programovani
+---------------------------------------------------------------------------------------------
 
-### AsyncWebserver verze
+## 4. Programovani
+
+### 4.1. AsyncWebserver verze
 
 - ESP32-c3 supermini
   - pozor, nepodporuje standardni bluetooth, pouze LE (low energy)
@@ -73,7 +76,6 @@
   - Nologo ESP32C3 Supermini 
     - Rozpohyboval jsem webserver pro UDP listening.
     - Zvoleny Board tedy funguje s mym controllerem.
-  - MakerGO ESP32 C3 SuperMini
-    - Funguje webserver od chatgpt s ovladanim sipkama.
+  - **MakerGO ESP32 C3 SuperMini**
+    - Funguje webserver s ovladanim sipkama na klavesnici.
     - Funguje i lib pro ovladani 2 motorku
-  - 
