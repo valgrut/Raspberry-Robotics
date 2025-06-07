@@ -22,7 +22,7 @@
 - [Thingiverse: Xpider Ballsy](https://www.thingiverse.com/thing:1704879)
 - [Cults3D: Xpider Ballsy](https://cults3d.com/en/3d-model/game/xpider-code-name-ballsy)
 - [Facebook: Xpider](https://www.facebook.com/smallxpider/)
-- [Xpider cutest robot](https://www.indiegogo.com/projects/xpider-world-s-cutest-spider-robot#/)
+- [Funding campaign on indiegogo: Xpider cutest robot](https://www.indiegogo.com/projects/xpider-world-s-cutest-spider-robot#/)
 - [Xpider parts, description](https://hackaday.io/project/18149-xpider-worlds-cutest-spider-robot)
 - [Xpider-E(original name QPAKO)](https://community.robotshop.com/forum/t/xpider-e-original-name-qpako-my-1st-walking-creature/31423)
 - [instructables.com: Ballsy instructions](https://www.instructables.com/Xpider-the-Smallest-Smart-Robot-Spider-in-the-Worl/)
