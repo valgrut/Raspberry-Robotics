@@ -28,7 +28,7 @@
 - [instructables.com: Ballsy instructions](https://www.instructables.com/Xpider-the-Smallest-Smart-Robot-Spider-in-the-Worl/)
 - [Official Youtube Channel for XPider](https://www.youtube.com/@xpiderroboeve7123)
 
-### 1.3. Basic info - OG version
+### 1.3. Basic info - original version
 
 * Actuators / output devices: 2 motors, one servo
 * Control method: Bluetooth, WiFi, Phone, Web browser
@@ -45,37 +45,38 @@
 ### 2.1. STL list
 
 - [ ] Vse ve slozce v Hobby/Robotika/Xpider-Ballsy
+- [ ] + custom modifikace
 
 ### 2.2. Screws, tools
 
 - [ ] 30x M1,6\*12mm
-- [ ] (mini?) NodeMCU-32S ESP32 WiFi + Bluetooth
-- [ ] Baterie Lipol 600 MAh
+- [ ] Baterie Lipol 3.7V 600 MAh
+- [ ] ESP32-C3 super mini
 - [ ] TB6612FNG Dual H-Bridge motor driver
 - [ ] 2x N20 300 RPM motor (Bez encoderu!)
-- [ ] TB4056 battery charger
-- [ ] 
+- [ ] Gumove placky na prilepeni na nozicky
+- [ ] LED
+- [ ] 2x Keramicke kapacitory 0.1uF
+- [ ] LDU 3.7V to 5V
+- [ ] (TB4056 battery charger)
+- [ ] (Switch)
 
 ---------------------------------------------------------------------------------------------
 
 ## 3. Sestaveni
 
 - Napajet k motorum keramicky Capacitor
+- Na nozicky pridelat gumove podlozky, aby neklouzaly
 
 ---------------------------------------------------------------------------------------------
 
 ## 4. Programovani
 
-### 4.1. AsyncWebserver verze
-
-- ESP32-c3 supermini
+- **MCU**: ESP32-c3 supermini
   - pozor, nepodporuje standardni bluetooth, pouze LE (low energy)
     - Tim padem Bluepad32 library nefunguje -> nelze ovladat BT ovladacem.
 
 - **Board:**
-  - Nologo ESP32C3 Supermini 
-    - Rozpohyboval jsem webserver pro UDP listening.
-    - Zvoleny Board tedy funguje s mym controllerem.
   - **MakerGO ESP32 C3 SuperMini**
     - Funguje webserver s ovladanim sipkama na klavesnici.
     - Funguje i lib pro ovladani 2 motorku
