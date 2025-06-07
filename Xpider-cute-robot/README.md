@@ -38,6 +38,16 @@
 * Sensors / input devices: IR, ultrasonic, camera
 * Target environment: indoor, outdoor, anywere not near water
 
+### 1.4. My version - Features
+
+- UI web interface
+- LED will blink last 3 digits of IP address (192.168.0.xxx) after start
+- Click - robot turns to that direction and walks few cm distance.
+- Turn left/right
+- Walk forward/backward
+- Move eye up/down
+- Control LED
+
 ---------------------------------------------------------------------------------------------
 
 ## 2. Seznam materialu a soucastek k tisku
