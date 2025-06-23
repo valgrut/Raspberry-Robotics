@@ -35,6 +35,7 @@
 - https://javierih.com/robots/kame32/
 - https://github.com/JavierIH/kame32/blob/main/code/src/main.cpp
 
+
 ---------------------------------------------------------------------------------------------
 
 ## 2. Seznam materialu a soucastek k tisku
@@ -114,7 +115,11 @@
 
 #### 3.2.2. Board selection
 
-- **Board**: ESP32-WROOM-DA Module (esp32-bluepad32:esp32:esp32da)
+- **Board**:
+  - ESP32-WROOM-DA Module (esp32-bluepad32:esp32:esp32da)
+    - pri pouziti velkeho ESP32
+  - AI Thinker ESP32-CAM (esp32-bluepad32:esp32:esp32cam)
+    - pokud pouziju CAM esp
 - IDE -> Tools -> Board -> esp32_bluepad32 -> ^^^
 
 #### 3.2.3. Controller pairing
@@ -137,6 +142,15 @@
 
 - Proc?
 - Max current output: 3A
+
+### 3.4. Movement pattern observing
+
+- Rozdelit video na framy a vypozorovat sekvenci pohybu.
+
+```
+ffmpeg -i file.mp4 -vf fps=10 out%d.png   # 10 frames / 1 second
+ffmpeg -i file.mp4 -vf fps=1/600 out%d.png   # 1 frames / 60 second
+```
 
 ---------------------------------------------------------------------------------------------
 
