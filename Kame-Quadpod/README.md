@@ -52,6 +52,7 @@
 - [ ] 1x Untitled
 - [ ] 1x Montaj2-front-frame-1
 
+
 ### 2.2. Dily - Mechanicke
 
 - [ ] 9x Small servo 9g SG90
@@ -59,28 +60,36 @@
 - [ ] 8x Lozisko F693ZZ Flange Bearing 3x8x4 mm
 - [ ] Wires
 
+
 ### 2.3. Dily - Elektro
 
 - [ ] ESP-wroom32 (WiFi + Bluetooth)
-- [ ] Baterie Lipol 1200MAh 3.7V
-- [ ] PCA9685 Servo Controller
-- [ ] Step-up booster (3.7V -> 5V)
-- [ ] 3v3 voltage regulator (3.7V -> 3.3V)
+- [ ] Baterie: 2x 18650 3.7V 2600mAh 5C
+- [ ] PCA9685 Servo Controller (maybe drop)
 - [ ] 470uF - 1000uF Capacitor
+- [ ] Step-down 7.4V -> 5V
+
 
 ### 2.3. Rozsireni (Extensions)
 
-- [ ] Battery indicator
+- [ ] Battery indicator (2S)
 - [ ] HC-SR04 - Ultrasonic distance sensor
 - [ ] Adafruit PowerBoost 500C - Nabijeni baterie a napajeni MCU
 - [ ] (ESP camera modul)
-- [ ] LED to the front and back
+- [ ] LED to the front and back ??
 - [ ] LED into the top mount head as a flashlight
+- [ ] Laser into the top mount head
+
 
 ### 2.4. Dropped
 
 - [ ] TB4056 Li-Po battery charger
+- [ ] 3v3 voltage regulator (3.7V -> 3.3V)
+- [ ] Step-up booster (3.7V -> 5V)
+- [ ] Baterie Lipol 1200MAh 3.7V
+    - Does not provide enough current (C=1)
 
+    
 ---------------------------------------------------------------------------------------------
 
 ## 3. Zapojeni a sestaveni
@@ -90,7 +99,8 @@
 - Ovladani pres Controller nakonec skrze knihovnu Bluepad32
 - Nutno zvolit 'board' z "rodiny" bluepad32.
 
-![](kame-scheme.png)
+![Image: kame](kame-scheme.png)
+
 
 ### 3.1. Poznamky k zapojeni
 
@@ -102,9 +112,11 @@
   - --> 9 serv -> ~900uF
 - ??? Pull-up rezistory mezi 3v3 a (SCA a SDL)
 
+
 ### 3.2. Setup a Programovani
 
 #### 3.2.1. Required libraries (Arduino-IDE)
+
 
 - **How to add library**:
   - `Sketch -> Manage Libraries -> search`
@@ -113,6 +125,7 @@
   - Adafruit_PWMServoDriver.h
   - Bluepad32.h
 
+  
 #### 3.2.2. Board selection
 
 - **Board**:
@@ -121,6 +134,7 @@
   - AI Thinker ESP32-CAM (esp32-bluepad32:esp32:esp32cam)
     - pokud pouziju CAM esp
 - IDE -> Tools -> Board -> esp32_bluepad32 -> ^^^
+
 
 #### 3.2.3. Controller pairing
 
@@ -132,9 +146,11 @@
   - Nekompatibilni s XBox controllerem
   - Neslo rozchodit s tim Frog Controllerem z Aliexpressu.
 
+  
 #### 3.2.4. Writing to ESP
 
 - ! Hold right button of ESP (usb at the bottom) during "Connecting......." phase.
+
 
 ### 3.3. Updates
 

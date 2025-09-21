@@ -8,6 +8,17 @@
 #include <Servo.h>
 
 
+/*
+Verze 1
+- z roku 2024, hodne stare
+- Ovladani: Webove UI
+- Struktury pro LegServosXY nachystany, ale nepouzivany!
+
+
+
+*/
+
+
 // Network Credentials
 const char* ssid = "***REMOVED***";
 const char* password = "***REMOVED***";
