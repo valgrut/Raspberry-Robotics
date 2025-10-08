@@ -72,6 +72,7 @@
 !_TAG_KIND_DESCRIPTION!Markdown	S,subsection	/level 2 sections/
 !_TAG_KIND_DESCRIPTION!Markdown	T,l4subsection	/level 4 sections/
 !_TAG_KIND_DESCRIPTION!Markdown	c,chapter	/chapters/
+!_TAG_KIND_DESCRIPTION!Markdown	h,hashtag	/hashtags/
 !_TAG_KIND_DESCRIPTION!Markdown	n,footnote	/footnotes/
 !_TAG_KIND_DESCRIPTION!Markdown	s,section	/sections/
 !_TAG_KIND_DESCRIPTION!Markdown	t,subsubsection	/level 3 sections/
@@ -93,15 +94,15 @@
 !_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
 !_TAG_OUTPUT_VERSION	0.0	/current.age/
 !_TAG_PARSER_VERSION!Asciidoc	0.0	/current.age/
-!_TAG_PARSER_VERSION!C	0.0	/current.age/
-!_TAG_PARSER_VERSION!C++	0.0	/current.age/
+!_TAG_PARSER_VERSION!C	1.1	/current.age/
+!_TAG_PARSER_VERSION!C++	1.1	/current.age/
 !_TAG_PARSER_VERSION!CMake	0.0	/current.age/
 !_TAG_PARSER_VERSION!CSS	0.0	/current.age/
 !_TAG_PARSER_VERSION!HTML	0.0	/current.age/
 !_TAG_PARSER_VERSION!JSON	0.0	/current.age/
 !_TAG_PARSER_VERSION!JavaProperties	0.0	/current.age/
 !_TAG_PARSER_VERSION!Make	0.0	/current.age/
-!_TAG_PARSER_VERSION!Markdown	0.0	/current.age/
+!_TAG_PARSER_VERSION!Markdown	1.1	/current.age/
 !_TAG_PARSER_VERSION!Python	0.0	/current.age/
 !_TAG_PARSER_VERSION!Sh	0.0	/current.age/
 !_TAG_PARSER_VERSION!Yaml	0.0	/current.age/
@@ -110,10 +111,12 @@
 !_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
-!_TAG_PROGRAM_VERSION	6.0.0	//
+!_TAG_PROGRAM_VERSION	6.1.0	//
+!_TAG_ROLE_DESCRIPTION!C!function	foreigndecl	/declared in foreign languages/
 !_TAG_ROLE_DESCRIPTION!C!header	local	/local header/
 !_TAG_ROLE_DESCRIPTION!C!header	system	/system header/
 !_TAG_ROLE_DESCRIPTION!C!macro	undef	/undefined/
+!_TAG_ROLE_DESCRIPTION!C!struct	foreigndecl	/declared in foreign languages/
 !_TAG_ROLE_DESCRIPTION!C++!header	local	/local header/
 !_TAG_ROLE_DESCRIPTION!C++!header	system	/system header/
 !_TAG_ROLE_DESCRIPTION!C++!macro	undef	/undefined/
@@ -130,6 +133,7 @@
 !_TAG_ROLE_DESCRIPTION!Sh!heredoc	endmarker	/end marker/
 !_TAG_ROLE_DESCRIPTION!Sh!script	loaded	/loaded/
 !_TAG_ROLE_DESCRIPTION!Yaml!anchor	alias	/alias/
+**New ESP32-specific functions**	Xpider-cute-robot/libraries/ESP32Servo/README.md	/^### **New ESP32-specific functions**$/;"	S	section:Documentation by Doxygen""Library Description:
 .img-container	Hexapod-markwtech/src/static/style.css	/^.img-container{$/;"	c
 0	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "files": ["BatchingExample.ino"]$/;"	s	array:examples.1.files
 0	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "files": ["ModuleInfo.ino"]$/;"	s	array:examples.5.files
@@ -161,8 +165,10 @@
 1.1. Videos	Xpider-cute-robot/README.md	/^### 1.1. Videos$/;"	S	section:Xpider Ballsy""1. STL, videa, project pages
 1.2. Original project	Kame-Quadpod/README.md	/^### 1.2. Original project$/;"	S	section:Kame quadpod""1. STL, videa, project pages
 1.2. Project pages and resources	Xpider-cute-robot/README.md	/^### 1.2. Project pages and resources$/;"	S	section:Xpider Ballsy""1. STL, videa, project pages
-1.3. Basic info - OG version	Xpider-cute-robot/README.md	/^### 1.3. Basic info - OG version$/;"	S	section:Xpider Ballsy""1. STL, videa, project pages
+1.3. Basic info - original version	Xpider-cute-robot/README.md	/^### 1.3. Basic info - original version$/;"	S	section:Xpider Ballsy""1. STL, videa, project pages
 1.3. Kame resources and remakes	Kame-Quadpod/README.md	/^### 1.3. Kame resources and remakes$/;"	S	section:Kame quadpod""1. STL, videa, project pages
+1.4. Motivace	Kame-Quadpod/README.md	/^### 1.4. Motivace$/;"	S	section:Kame quadpod""1. STL, videa, project pages
+1.4. My version - Features	Xpider-cute-robot/README.md	/^### 1.4. My version - Features$/;"	S	section:Xpider Ballsy""1. STL, videa, project pages
 2	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^        {$/;"	o	array:authors
 2	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^        {$/;"	o	array:examples
 2	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^        {$/;"	o	array:authors
@@ -189,12 +195,12 @@
 3.2.4. Writing to ESP	Kame-Quadpod/README.md	/^#### 3.2.4. Writing to ESP$/;"	t	subsection:Kame quadpod""3. Zapojeni a sestaveni""3.2. Setup a Programovani
 3.3. Updates	Kame-Quadpod/README.md	/^### 3.3. Updates$/;"	S	section:Kame quadpod""3. Zapojeni a sestaveni
 3.3.1. Removed TP-4056 battery charger	Kame-Quadpod/README.md	/^#### 3.3.1. Removed TP-4056 battery charger$/;"	t	subsection:Kame quadpod""3. Zapojeni a sestaveni""3.3. Updates
+3.4. Movement pattern observing	Kame-Quadpod/README.md	/^### 3.4. Movement pattern observing$/;"	S	section:Kame quadpod""3. Zapojeni a sestaveni
 4	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^        {$/;"	o	array:examples
 4	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^        {$/;"	o	array:examples
 4. Programovani	Xpider-cute-robot/README.md	/^## 4. Programovani$/;"	s	chapter:Xpider Ballsy
 4. Troubleshooting	Kame-Quadpod/README.md	/^## 4. Troubleshooting$/;"	s	chapter:Kame quadpod
 4.1. A fatal error occurred: Failed to connect to ESP32: Wrong boot mode detected (0x13)! The chip needs to be in download mode	Kame-Quadpod/README.md	/^### 4.1. A fatal error occurred: Failed to connect to ESP32: Wrong boot mode detected (0x13)! Th/;"	S	section:Kame quadpod""4. Troubleshooting
-4.1. AsyncWebserver verze	Xpider-cute-robot/README.md	/^### 4.1. AsyncWebserver verze$/;"	S	section:Xpider Ballsy""4. Programovani
 5	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^        {$/;"	o	array:examples
 5	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^        {$/;"	o	array:examples
 A	Turrets/angle-calc.py	/^A = ((pow(v,2)*(pow(v,2)-2*g*dy))\/(pow(g,2)*pow(dx,2)))$/;"	v
@@ -457,6 +463,8 @@ CONST	experiments/ESP_AsyncTCP/src/SyncClient.h	/^#define CONST$/;"	d
 CYC_MSEC	experiments/Servo/src/stm32f4/Servo.cpp	/^#define CYC_MSEC /;"	d	file:
 Channel	experiments/Servo/src/avr/Servo.cpp	/^static volatile int8_t Channel[_Nbr_16timers ];             \/\/ counter for the servo being pul/;"	v	typeref:typename:volatile int8_t[]	file:
 Channel	experiments/Servo/src/sam/Servo.cpp	/^static volatile int8_t Channel[_Nbr_16timers ];             \/\/ counter for the servo being pul/;"	v	typeref:typename:volatile int8_t[]	file:
+ChannelUsed	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.cpp	/^ESP32PWM * ESP32PWM::ChannelUsed[NUM_PWM]; \/\/ used to track whether a channel is in service$/;"	m	class:ESP32PWM	typeref:typename:ESP32PWM * []
+ChannelUsed	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.h	/^	static ESP32PWM * ChannelUsed[NUM_PWM]; \/\/ used to track whether a channel is in service$/;"	m	class:ESP32PWM	typeref:typename:ESP32PWM * []
 ChunkPrint	experiments/ESP_Async_WebServer/src/AsyncJson.h	/^    ChunkPrint(uint8_t* destination, size_t from, size_t len)$/;"	f	class:ChunkPrint
 ChunkPrint	experiments/ESP_Async_WebServer/src/AsyncJson.h	/^class ChunkPrint : public Print {$/;"	c
 Chunked Response	experiments/ESP_Async_WebServer/README.md	/^### Chunked Response$/;"	S	section:ESPAsyncWebServer""Responses
@@ -467,6 +475,7 @@ Circuit	experiments/Servo/examples/Sweep/readme.md	/^## Circuit$/;"	s	chapter:Sw
 Circuit scheme	Infinite-corridor/README.md	/^### Circuit scheme$/;"	S	chapter:Infinite Corridor illusion
 Class Instantiation	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^#### Class Instantiation$/;"	t	subsection:PCA9685-Arduino""Library Setup""Library Initialization
 Class Instantiation	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^#### Class Instantiation$/;"	t	subsection:PCA9685-Arduino""Library Setup""Library Initialization
+Code	Xpider-cute-robot/libraries/SparkFun_TB6612FNG_Motor_Driver_Library/LICENSE.md	/^Code$/;"	s	chapter:SparkFun License Information
 Common Variables	experiments/ESP_Async_WebServer/README.md	/^### Common Variables$/;"	S	section:ESPAsyncWebServer""Request Variables
 ConstIterator	experiments/ESP_Async_WebServer/src/ESPAsyncWebServer.h	/^  using ConstIterator = headers_t::ConstIterator;$/;"	t	class:DefaultHeaders	typeref:typename:headers_t::ConstIterator
 ConstIterator	experiments/ESP_Async_WebServer/src/StringArray.h	/^    typedef const Iterator ConstIterator;$/;"	t	class:LinkedList	typeref:typename:const Iterator
@@ -481,9 +490,17 @@ DEBUG_GENERIC	experiments/ESP_AsyncTCP/src/DebugPrintMacros.h	/^#define DEBUG_GE
 DEBUG_GENERIC_P	experiments/ESP_AsyncTCP/src/DebugPrintMacros.h	/^  #define DEBUG_GENERIC_P(/;"	d
 DEBUG_GENERIC_P	experiments/ESP_AsyncTCP/src/DebugPrintMacros.h	/^#define DEBUG_GENERIC_P(/;"	d
 DEBUG_TIME_STAMP_FMT	experiments/ESP_AsyncTCP/src/DebugPrintMacros.h	/^#define DEBUG_TIME_STAMP_FMT /;"	d
+DEFAULTSPEED	Xpider-cute-robot/libraries/SparkFun_TB6612FNG_Motor_Driver_Library/src/SparkFun_TB6612.h	/^#define DEFAULTSPEED /;"	d
 DEFAULT_MAX_SSE_CLIENTS	experiments/ESP_Async_WebServer/src/AsyncEventSource.h	/^#define DEFAULT_MAX_SSE_CLIENTS /;"	d
 DEFAULT_MAX_WS_CLIENTS	experiments/ESP_Async_WebServer/src/AsyncWebSocket.h	/^#define DEFAULT_MAX_WS_CLIENTS /;"	d
+DEFAULT_PULSE_WIDTH	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32Servo.h	/^#define DEFAULT_PULSE_WIDTH /;"	d
 DEFAULT_PULSE_WIDTH	experiments/Servo/src/Servo.h	/^#define DEFAULT_PULSE_WIDTH /;"	d
+DEFAULT_PULSE_WIDTH_TICKS	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32Servo.h	/^#define DEFAULT_PULSE_WIDTH_TICKS /;"	d
+DEFAULT_TIMER_WIDTH	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32Servo.h	/^#define DEFAULT_TIMER_WIDTH /;"	d
+DEFAULT_TIMER_WIDTH_TICKS	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32Servo.h	/^#define DEFAULT_TIMER_WIDTH_TICKS /;"	d
+DEFAULT_uS_HIGH	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32Servo.h	/^#define DEFAULT_uS_HIGH /;"	d
+DEFAULT_uS_LOW	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32Servo.h	/^#define DEFAULT_uS_LOW /;"	d
+DISABLE_DAC	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.h	/^	static boolean DISABLE_DAC;$/;"	m	class:ESP32PWM	typeref:typename:boolean
 DNS_PORT	experiments/ESP_AsyncTCP/examples/ClientServer/Client/config.h	/^#define DNS_PORT /;"	d
 DNS_PORT	experiments/ESP_AsyncTCP/examples/ClientServer/Server/config.h	/^#define DNS_PORT /;"	d
 DYNAMIC_JSON_DOCUMENT_SIZE	experiments/ESP_Async_WebServer/src/AsyncJson.h	/^    #define DYNAMIC_JSON_DOCUMENT_SIZE /;"	d
@@ -495,7 +512,8 @@ Device Initialization	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Modul
 Device Reset	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^#### Device Reset$/;"	t	subsection:PCA9685-Arduino""Library Setup""Library Initialization
 Device Reset	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^#### Device Reset$/;"	t	subsection:PCA9685-Arduino""Library Setup""Library Initialization
 Direct access to web socket message buffer	experiments/ESP_Async_WebServer/README.md	/^### Direct access to web socket message buffer$/;"	S	section:ESPAsyncWebServer""Async WebSocket Plugin
-Drony	Drones/README.md	/^# Drony$/;"	c
+Documentation	Xpider-cute-robot/libraries/SparkFun_TB6612FNG_Motor_Driver_Library/README.md	/^Documentation$/;"	s	chapter:SparkFun SparkFun Motor Driver - Dual TB6612FNG (1A) Arduino Library
+Documentation by Doxygen	Xpider-cute-robot/libraries/ESP32Servo/README.md	/^# Documentation by Doxygen$/;"	c
 EE_ABORTED	experiments/ESP_AsyncTCP/src/ESPAsyncTCP.h	/^  EE_ABORTED,       \/\/ Callback or foreground aborted connections$/;"	e	enum:error_events
 EE_ACCEPT_CB	experiments/ESP_AsyncTCP/src/ESPAsyncTCP.h	/^  EE_ACCEPT_CB,$/;"	e	enum:error_events
 EE_CONNECTED_CB	experiments/ESP_AsyncTCP/src/ESPAsyncTCP.h	/^  EE_CONNECTED_CB,$/;"	e	enum:error_events
@@ -504,6 +522,7 @@ EE_MAX	experiments/ESP_AsyncTCP/src/ESPAsyncTCP.h	/^  EE_MAX$/;"	e	enum:error_ev
 EE_OK	experiments/ESP_AsyncTCP/src/ESPAsyncTCP.h	/^  EE_OK = 0,$/;"	e	enum:error_events
 EE_RECV_CB	experiments/ESP_AsyncTCP/src/ESPAsyncTCP.h	/^  EE_RECV_CB,$/;"	e	enum:error_events
 ELBOW_SERVO_ID	Hexapod-markwtech/src/hexapod.py	/^ELBOW_SERVO_ID = 0$/;"	v
+ENFORCE_PINS	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32Servo.h	/^#define ENFORCE_PINS$/;"	d
 EOF	experiments/ESP_AsyncTCP/ssl/gen_server_cert.sh	/^cat > ca_cert.conf << EOF  $/;"	h
 EOF	experiments/ESP_AsyncTCP/ssl/gen_server_cert.sh	/^cat > certs.conf << EOF  $/;"	h
 ERR_TCP_SSL_INVALID_CLIENTFD	experiments/ESP_AsyncTCP/src/tcp_axtls.h	/^#define ERR_TCP_SSL_INVALID_CLIENTFD /;"	d
@@ -512,6 +531,10 @@ ERR_TCP_SSL_INVALID_DATA	experiments/ESP_AsyncTCP/src/tcp_axtls.h	/^#define ERR_
 ERR_TCP_SSL_INVALID_SSL	experiments/ESP_AsyncTCP/src/tcp_axtls.h	/^#define ERR_TCP_SSL_INVALID_SSL /;"	d
 ERR_TCP_SSL_INVALID_TCP	experiments/ESP_AsyncTCP/src/tcp_axtls.h	/^#define ERR_TCP_SSL_INVALID_TCP /;"	d
 ESP Editor	experiments/ESP_Async_WebServer/src/edit.htm	/^<title>ESP Editor<\/title>$/;"	j
+ESP32PWM	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.cpp	/^ESP32PWM::ESP32PWM() {$/;"	f	class:ESP32PWM
+ESP32PWM	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.h	/^class ESP32PWM {$/;"	c
+ESP32_Servo_VERSION	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32Servo.h	/^#define ESP32_Servo_VERSION /;"	d
+ESP32_Servo_h	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32Servo.h	/^#define ESP32_Servo_h$/;"	d
 ESPASYNCTCPBUFFER_H_	experiments/ESP_AsyncTCP/src/ESPAsyncTCPbuffer.h	/^#define ESPASYNCTCPBUFFER_H_$/;"	d
 ESPAsyncTCP	experiments/ESP_AsyncTCP/README.md	/^# ESPAsyncTCP $/;"	c
 ESPAsyncWebServer	experiments/ESP_Async_WebServer/README.md	/^# ESPAsyncWebServer $/;"	c
@@ -571,6 +594,7 @@ HTTP_PATCH	experiments/ESP_Async_WebServer/src/ESPAsyncWebServer.h	/^  HTTP_PATC
 HTTP_POST	experiments/ESP_Async_WebServer/src/ESPAsyncWebServer.h	/^  HTTP_POST    = 0b00000010,$/;"	e	enum:__anon185fb8380103
 HTTP_PUT	experiments/ESP_Async_WebServer/src/ESPAsyncWebServer.h	/^  HTTP_PUT     = 0b00001000,$/;"	e	enum:__anon185fb8380103
 Handlers and how do they work	experiments/ESP_Async_WebServer/README.md	/^### Handlers and how do they work$/;"	S	section:ESPAsyncWebServer""Principles of operation
+Hardware	Xpider-cute-robot/libraries/SparkFun_TB6612FNG_Motor_Driver_Library/LICENSE.md	/^Hardware$/;"	s	chapter:SparkFun License Information
 Hardware Required	experiments/Servo/examples/Knob/readme.md	/^## Hardware Required$/;"	s	chapter:Knob
 Hardware Required	experiments/Servo/examples/Sweep/readme.md	/^## Hardware Required$/;"	s	chapter:Sweep
 Header Defines	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^### Header Defines$/;"	S	section:PCA9685-Arduino""Library Setup
@@ -603,6 +627,8 @@ IRQn_FOR_TIMER4	experiments/Servo/src/sam/ServoTimers.h	/^#define IRQn_FOR_TIMER
 IRQn_FOR_TIMER5	experiments/Servo/src/sam/ServoTimers.h	/^#define IRQn_FOR_TIMER5 /;"	d
 ISR	experiments/Servo/src/megaavr/Servo.cpp	/^ISR(TCB0_INT_vect)$/;"	f
 Important things to remember	experiments/ESP_Async_WebServer/README.md	/^## Important things to remember$/;"	s	chapter:ESPAsyncWebServer
+In1	Xpider-cute-robot/libraries/SparkFun_TB6612FNG_Motor_Driver_Library/src/SparkFun_TB6612.h	/^	int In1, In2, PWM, Offset,Standby;$/;"	m	class:Motor	typeref:typename:int
+In2	Xpider-cute-robot/libraries/SparkFun_TB6612FNG_Motor_Driver_Library/src/SparkFun_TB6612.h	/^	int In1, In2, PWM, Offset,Standby;$/;"	m	class:Motor	typeref:typename:int
 Infinite Corridor illusion	Infinite-corridor/README.md	/^# Infinite Corridor illusion$/;"	c
 Installation	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^### Installation$/;"	S	section:PCA9685-Arduino""Library Setup
 Installation	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^### Installation$/;"	S	section:PCA9685-Arduino""Library Setup
@@ -617,28 +643,37 @@ JSON_MIMETYPE	experiments/ESP_Async_WebServer/src/AsyncJson.h	/^constexpr const 
 Kame quadpod	Kame-Quadpod/README.md	/^# Kame quadpod$/;"	c
 Kinematics	Hexapod-markwtech/src/kinematics.py	/^class Kinematics:$/;"	c
 Knob	experiments/Servo/examples/Knob/readme.md	/^# Knob$/;"	c
+LIBRARIES_ESP32SERVO_SRC_ESP32PWM_H_	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.h	/^#define LIBRARIES_ESP32SERVO_SRC_ESP32PWM_H_$/;"	d
 LIBRARIES_ESPASYNCTCP_SRC_ASYNC_CONFIG_H_	experiments/ESP_AsyncTCP/src/async_config.h	/^#define LIBRARIES_ESPASYNCTCP_SRC_ASYNC_CONFIG_H_$/;"	d
 LWIPR_COMPAT_H	experiments/ESP_AsyncTCP/src/tcp_axtls.h	/^#define LWIPR_COMPAT_H$/;"	d
 Libraries and projects that use AsyncTCP	experiments/ESP_AsyncTCP/README.md	/^## Libraries and projects that use AsyncTCP$/;"	s	chapter:ESPAsyncTCP
 Libraries and projects that use AsyncWebServer	experiments/ESP_Async_WebServer/README.md	/^## Libraries and projects that use AsyncWebServer$/;"	s	chapter:ESPAsyncWebServer
+Library Description:	Xpider-cute-robot/libraries/ESP32Servo/README.md	/^## Library Description:$/;"	s	chapter:Documentation by Doxygen
 Library Initialization	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^### Library Initialization$/;"	S	section:PCA9685-Arduino""Library Setup
 Library Initialization	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^### Library Initialization$/;"	S	section:PCA9685-Arduino""Library Setup
 Library Setup	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^## Library Setup$/;"	s	chapter:PCA9685-Arduino
 Library Setup	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^## Library Setup$/;"	s	chapter:PCA9685-Arduino
+License	Xpider-cute-robot/libraries/ESP32Servo/README.md	/^## License$/;"	s	chapter:Documentation by Doxygen
+License Information	Xpider-cute-robot/libraries/SparkFun_TB6612FNG_Motor_Driver_Library/README.md	/^License Information$/;"	s	chapter:SparkFun SparkFun Motor Driver - Dual TB6612FNG (1A) Arduino Library
 Limiting the number of web socket clients	experiments/ESP_Async_WebServer/README.md	/^### Limiting the number of web socket clients$/;"	S	section:ESPAsyncWebServer""Async WebSocket Plugin
 LinkedList	experiments/ESP_Async_WebServer/src/StringArray.h	/^    LinkedList(OnRemove onRemove) : _root(nullptr), _onRemove(onRemove) {}$/;"	f	class:LinkedList
 LinkedList	experiments/ESP_Async_WebServer/src/StringArray.h	/^class LinkedList {$/;"	c
 LinkedListNode	experiments/ESP_Async_WebServer/src/StringArray.h	/^    LinkedListNode(const T val): _value(val), next(nullptr) {}$/;"	f	class:LinkedListNode
 LinkedListNode	experiments/ESP_Async_WebServer/src/StringArray.h	/^class LinkedListNode {$/;"	c
+MAXIMUM_TIMER_WIDTH	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32Servo.h	/^#define MAXIMUM_TIMER_WIDTH /;"	d
 MAX_ANGLE	experiments/Servo/src/stm32f4/ServoTimers.h	/^#define MAX_ANGLE /;"	d
 MAX_OVERFLOW	experiments/Servo/src/stm32f4/Servo.cpp	/^#define MAX_OVERFLOW /;"	d	file:
 MAX_PRINTF_LEN	experiments/ESP_Async_WebServer/src/AsyncWebSocket.cpp	/^#define MAX_PRINTF_LEN /;"	d	file:
 MAX_PULSE	experiments/Servo/src/nrf52/ServoTimers.h	/^#define MAX_PULSE /;"	d
+MAX_PULSE_WIDTH	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32Servo.h	/^#define MAX_PULSE_WIDTH /;"	d
 MAX_PULSE_WIDTH	experiments/Servo/src/Servo.h	/^#define MAX_PULSE_WIDTH /;"	d
 MAX_PULSE_WIDTH	experiments/Servo/src/stm32f4/ServoTimers.h	/^#define MAX_PULSE_WIDTH /;"	d
+MAX_SERVOS	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32Servo.h	/^#define MAX_SERVOS /;"	d
 MAX_SERVOS	experiments/Servo/src/Servo.h	/^#define MAX_SERVOS /;"	d
+MINIMUM_TIMER_WIDTH	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32Servo.h	/^#define MINIMUM_TIMER_WIDTH /;"	d
 MIN_ANGLE	experiments/Servo/src/stm32f4/ServoTimers.h	/^#define MIN_ANGLE /;"	d
 MIN_PULSE	experiments/Servo/src/nrf52/ServoTimers.h	/^#define MIN_PULSE /;"	d
+MIN_PULSE_WIDTH	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32Servo.h	/^#define MIN_PULSE_WIDTH /;"	d
 MIN_PULSE_WIDTH	experiments/Servo/src/Servo.h	/^#define MIN_PULSE_WIDTH /;"	d
 MIN_PULSE_WIDTH	experiments/Servo/src/stm32f4/ServoTimers.h	/^#define MIN_PULSE_WIDTH /;"	d
 MODE1_AI	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define MODE1_AI /;"	d
@@ -673,13 +708,17 @@ Methods for sending data to a socket client	experiments/ESP_Async_WebServer/READ
 Module Info	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^## Module Info$/;"	s	chapter:PCA9685-Arduino
 Module Info	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^## Module Info$/;"	s	chapter:PCA9685-Arduino
 Motivation videos, inspiration	Hexapod-markwtech/README.md	/^## Motivation videos, inspiration$/;"	s	chapter:Hexapod - Markwtech (PhantomX clone)
+Motor	Xpider-cute-robot/libraries/SparkFun_TB6612FNG_Motor_Driver_Library/src/SparkFun_TB6612.cpp	/^Motor::Motor(int In1pin, int In2pin, int PWMpin, int offset, int STBYpin)$/;"	f	class:Motor
+Motor	Xpider-cute-robot/libraries/SparkFun_TB6612FNG_Motor_Driver_Library/src/SparkFun_TB6612.h	/^class Motor$/;"	c
 MovementMode	Hexapod-markwtech/src/gate_engine.py	/^class MovementMode(ABC):$/;"	c
 Multi-Device Proxy Example	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^### Multi-Device Proxy Example$/;"	S	section:PCA9685-Arduino""Example Usage
 Multi-Device Proxy Example	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^### Multi-Device Proxy Example$/;"	S	section:PCA9685-Arduino""Example Usage
 NOT_ATTACHED	experiments/Servo/src/stm32f4/ServoTimers.h	/^#define NOT_ATTACHED /;"	d
+NUM_PWM	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.h	/^#define NUM_PWM /;"	d
 Napajeni	Hexapod-markwtech/README.md	/^### Napajeni$/;"	S	section:Hexapod - Markwtech (PhantomX clone)""Sestaveni
 ON_AP_FILTER	experiments/ESP_Async_WebServer/src/WebServer.cpp	/^bool ON_AP_FILTER(AsyncWebServerRequest *request) {$/;"	f	typeref:typename:bool
 ON_STA_FILTER	experiments/ESP_Async_WebServer/src/WebServer.cpp	/^bool ON_STA_FILTER(AsyncWebServerRequest *request) {$/;"	f	typeref:typename:bool
+Offset	Xpider-cute-robot/libraries/SparkFun_TB6612FNG_Motor_Driver_Library/src/SparkFun_TB6612.h	/^	int In1, In2, PWM, Offset,Standby;$/;"	m	class:Motor	typeref:typename:int
 OnRemove	experiments/ESP_Async_WebServer/src/StringArray.h	/^    typedef std::function<void(const T&)> OnRemove;$/;"	t	class:LinkedList
 PARSE_ERROR	experiments/ESP_Async_WebServer/src/WebRequest.cpp	/^  PARSE_ERROR$/;"	e	enum:__anon7471535f0b03	file:
 PARSE_HEADERS	experiments/ESP_Async_WebServer/src/WebRequest.cpp	/^  PARSE_HEADERS,$/;"	e	enum:__anon7471535f0b03	file:
@@ -878,6 +917,10 @@ PCA9685_TESTMODE	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafru
 PCA9685_USE_SOFTWARE_I2C	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^#define PCA9685_USE_SOFTWARE_I2C$/;"	d
 PCA9685_USE_SOFTWARE_I2C	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^#define PCA9685_USE_SOFTWARE_I2C$/;"	d
 PS4 Controller pairing (Actually trying to pair Data Frog controller)	Kame-Quadpod/ps4 controller pairing.md	/^## PS4 Controller pairing (Actually trying to pair Data Frog controller)$/;"	s
+PWM	Xpider-cute-robot/libraries/SparkFun_TB6612FNG_Motor_Driver_Library/src/SparkFun_TB6612.h	/^	int In1, In2, PWM, Offset,Standby;$/;"	m	class:Motor	typeref:typename:int
+PWMCount	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.cpp	/^int ESP32PWM::PWMCount = -1;              \/\/ the total number of attached servos$/;"	m	class:ESP32PWM	typeref:typename:int
+PWMCount	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.h	/^	static int PWMCount;              \/\/ the total number of attached pwm$/;"	m	class:ESP32PWM	typeref:typename:int
+PWM_BASE_INDEX	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.h	/^#define PWM_BASE_INDEX /;"	d
 Param Rewrite With Matching	experiments/ESP_Async_WebServer/README.md	/^## Param Rewrite With Matching$/;"	s	chapter:ESPAsyncWebServer
 Parameters	experiments/Servo/docs/api.md	/^#### Parameters$/;"	t	subsection:Servo library""Methods""`attach()`
 Parameters	experiments/Servo/docs/api.md	/^#### Parameters$/;"	t	subsection:Servo library""Methods""`attached()`
@@ -897,6 +940,7 @@ PrettyAsyncJsonResponse	experiments/ESP_Async_WebServer/src/AsyncJson.h	/^	Prett
 PrettyAsyncJsonResponse	experiments/ESP_Async_WebServer/src/AsyncJson.h	/^class PrettyAsyncJsonResponse: public AsyncJsonResponse {	$/;"	c
 Principles of operation	experiments/ESP_Async_WebServer/README.md	/^## Principles of operation$/;"	s	chapter:ESPAsyncWebServer
 Print to response	experiments/ESP_Async_WebServer/README.md	/^### Print to response$/;"	S	section:ESPAsyncWebServer""Responses
+Products that use this Library	Xpider-cute-robot/libraries/SparkFun_TB6612FNG_Motor_Driver_Library/README.md	/^Products that use this Library $/;"	s	chapter:SparkFun SparkFun Motor Driver - Dual TB6612FNG (1A) Arduino Library
 Projects	README.md	/^### Projects$/;"	S	chapter:Raspberry-Robotics
 RCT_DEFAULT	experiments/ESP_Async_WebServer/src/ESPAsyncWebServer.h	/^typedef enum { RCT_NOT_USED = -1, RCT_DEFAULT = 0, RCT_HTTP, RCT_WS, RCT_EVENT, RCT_MAX } Reques/;"	e	enum:__anon185fb8380203
 RCT_EVENT	experiments/ESP_Async_WebServer/src/ESPAsyncWebServer.h	/^typedef enum { RCT_NOT_USED = -1, RCT_DEFAULT = 0, RCT_HTTP, RCT_WS, RCT_EVENT, RCT_MAX } Reques/;"	e	enum:__anon185fb8380203
@@ -904,8 +948,10 @@ RCT_HTTP	experiments/ESP_Async_WebServer/src/ESPAsyncWebServer.h	/^typedef enum 
 RCT_MAX	experiments/ESP_Async_WebServer/src/ESPAsyncWebServer.h	/^typedef enum { RCT_NOT_USED = -1, RCT_DEFAULT = 0, RCT_HTTP, RCT_WS, RCT_EVENT, RCT_MAX } Reques/;"	e	enum:__anon185fb8380203
 RCT_NOT_USED	experiments/ESP_Async_WebServer/src/ESPAsyncWebServer.h	/^typedef enum { RCT_NOT_USED = -1, RCT_DEFAULT = 0, RCT_HTTP, RCT_WS, RCT_EVENT, RCT_MAX } Reques/;"	e	enum:__anon185fb8380203
 RCT_WS	experiments/ESP_Async_WebServer/src/ESPAsyncWebServer.h	/^typedef enum { RCT_NOT_USED = -1, RCT_DEFAULT = 0, RCT_HTTP, RCT_WS, RCT_EVENT, RCT_MAX } Reques/;"	e	enum:__anon185fb8380203
+REFRESH_CPS	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32Servo.h	/^	int REFRESH_CPS = 50;$/;"	m	class:Servo	typeref:typename:int
 REFRESH_INTERVAL	experiments/Servo/src/Servo.h	/^#define REFRESH_INTERVAL /;"	d
 REFRESH_INTERVAL	experiments/Servo/src/megaavr/Servo.cpp	/^#define REFRESH_INTERVAL /;"	d	file:
+REFRESH_USEC	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32Servo.h	/^#define REFRESH_USEC /;"	d
 RESPONSE_CONTENT	experiments/ESP_Async_WebServer/src/ESPAsyncWebServer.h	/^  RESPONSE_SETUP, RESPONSE_HEADERS, RESPONSE_CONTENT, RESPONSE_WAIT_ACK, RESPONSE_END, RESPONSE_/;"	e	enum:__anon185fb8380303
 RESPONSE_END	experiments/ESP_Async_WebServer/src/ESPAsyncWebServer.h	/^  RESPONSE_SETUP, RESPONSE_HEADERS, RESPONSE_CONTENT, RESPONSE_WAIT_ACK, RESPONSE_END, RESPONSE_/;"	e	enum:__anon185fb8380303
 RESPONSE_FAILED	experiments/ESP_Async_WebServer/src/ESPAsyncWebServer.h	/^  RESPONSE_SETUP, RESPONSE_HEADERS, RESPONSE_CONTENT, RESPONSE_WAIT_ACK, RESPONSE_END, RESPONSE_/;"	e	enum:__anon185fb8380303
@@ -916,6 +962,7 @@ RESPONSE_WAIT_ACK	experiments/ESP_Async_WebServer/src/ESPAsyncWebServer.h	/^  RE
 Raspberry-Robotics	README.md	/^# Raspberry-Robotics$/;"	c
 Redirect to another URL	experiments/ESP_Async_WebServer/README.md	/^### Redirect to another URL$/;"	S	section:ESPAsyncWebServer""Responses
 Remove handlers and rewrites	experiments/ESP_Async_WebServer/README.md	/^## Remove handlers and rewrites$/;"	s	chapter:ESPAsyncWebServer
+Repository Contents	Xpider-cute-robot/libraries/SparkFun_TB6612FNG_Motor_Driver_Library/README.md	/^Repository Contents$/;"	s	chapter:SparkFun SparkFun Motor Driver - Dual TB6612FNG (1A) Arduino Library
 Request Life Cycle	experiments/ESP_Async_WebServer/README.md	/^### Request Life Cycle$/;"	S	section:ESPAsyncWebServer""Principles of operation
 Request Variables	experiments/ESP_Async_WebServer/README.md	/^## Request Variables$/;"	s	chapter:ESPAsyncWebServer
 RequestedConnectionType	experiments/ESP_Async_WebServer/src/ESPAsyncWebServer.h	/^typedef enum { RCT_NOT_USED = -1, RCT_DEFAULT = 0, RCT_HTTP, RCT_WS, RCT_EVENT, RCT_MAX } Reques/;"	t	typeref:enum:__anon185fb8380203
@@ -981,6 +1028,7 @@ SIGNAL	experiments/Servo/src/avr/Servo.cpp	/^SIGNAL (TIMER1_COMPA_vect)$/;"	f
 SIGNAL	experiments/Servo/src/avr/Servo.cpp	/^SIGNAL (TIMER3_COMPA_vect)$/;"	f
 SIGNAL	experiments/Servo/src/avr/Servo.cpp	/^SIGNAL (TIMER4_COMPA_vect)$/;"	f
 SIGNAL	experiments/Servo/src/avr/Servo.cpp	/^SIGNAL (TIMER5_COMPA_vect)$/;"	f
+SPARKFUN_TB6612_h	Xpider-cute-robot/libraries/SparkFun_TB6612FNG_Motor_Driver_Library/src/SparkFun_TB6612.h	/^#define SPARKFUN_TB6612_h$/;"	d
 SPIClass	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^typedef uint8_t SPIClass;$/;"	t	typeref:typename:uint8_t
 SPIClass	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^typedef uint8_t SPIClass;$/;"	t	typeref:typename:uint8_t
 SPIFFSEditor	experiments/ESP_Async_WebServer/src/SPIFFSEditor.cpp	/^SPIFFSEditor::SPIFFSEditor(const fs::FS& fs, const String& username, const String& password)$/;"	f	class:SPIFFSEditor
@@ -1036,6 +1084,8 @@ Serving files in directory	experiments/ESP_Async_WebServer/README.md	/^### Servi
 Serving specific file by name	experiments/ESP_Async_WebServer/README.md	/^### Serving specific file by name$/;"	S	section:ESPAsyncWebServer""Serving static files
 Serving static files	experiments/ESP_Async_WebServer/README.md	/^## Serving static files$/;"	s	chapter:ESPAsyncWebServer
 Serving static files with authentication	experiments/ESP_Async_WebServer/README.md	/^### Serving static files with authentication$/;"	S	section:ESPAsyncWebServer""Serving static files
+Servo	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32Servo.cpp	/^Servo::Servo()$/;"	f	class:Servo
+Servo	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32Servo.h	/^class Servo {$/;"	c
 Servo	experiments/Servo/src/Servo.h	/^class Servo$/;"	c
 Servo	experiments/Servo/src/avr/Servo.cpp	/^Servo::Servo()$/;"	f	class:Servo
 Servo	experiments/Servo/src/mbed/Servo.cpp	/^Servo::Servo()$/;"	f	class:Servo
@@ -1050,6 +1100,7 @@ Servo Control	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library
 Servo Control	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^### Servo Control$/;"	S	section:PCA9685-Arduino""Hookup Callouts
 Servo Evaluator Example	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^### Servo Evaluator Example$/;"	S	section:PCA9685-Arduino""Example Usage
 Servo Evaluator Example	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^### Servo Evaluator Example$/;"	S	section:PCA9685-Arduino""Example Usage
+Servo Library for ESP32	Xpider-cute-robot/libraries/ESP32Servo/README.md	/^# Servo Library for ESP32$/;"	c
 Servo library	experiments/Servo/docs/api.md	/^# Servo library$/;"	c
 Servo library	experiments/Servo/docs/readme.md	/^# Servo library$/;"	c
 ServoAngles	Hexapod-markwtech/src/kinematics.py	/^class ServoAngles:$/;"	c
@@ -1078,9 +1129,12 @@ Simple Example	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Librar
 Simple Example	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^### Simple Example$/;"	S	section:PCA9685-Arduino""Example Usage
 Software i2c Example	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^### Software i2c Example$/;"	S	section:PCA9685-Arduino""Example Usage
 Software i2c Example	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/README.md	/^### Software i2c Example$/;"	S	section:PCA9685-Arduino""Example Usage
+SparkFun License Information	Xpider-cute-robot/libraries/SparkFun_TB6612FNG_Motor_Driver_Library/LICENSE.md	/^SparkFun License Information$/;"	c
+SparkFun SparkFun Motor Driver - Dual TB6612FNG (1A) Arduino Library	Xpider-cute-robot/libraries/SparkFun_TB6612FNG_Motor_Driver_Library/README.md	/^SparkFun SparkFun Motor Driver - Dual TB6612FNG (1A) Arduino Library$/;"	c
 Specifying Cache-Control header	experiments/ESP_Async_WebServer/README.md	/^### Specifying Cache-Control header$/;"	S	section:ESPAsyncWebServer""Serving static files
 Specifying Date-Modified header	experiments/ESP_Async_WebServer/README.md	/^### Specifying Date-Modified header$/;"	S	section:ESPAsyncWebServer""Serving static files
 Specifying Template Processor callback	experiments/ESP_Async_WebServer/README.md	/^### Specifying Template Processor callback$/;"	S	section:ESPAsyncWebServer""Serving static files
+Standby	Xpider-cute-robot/libraries/SparkFun_TB6612FNG_Motor_Driver_Library/src/SparkFun_TB6612.h	/^	int In1, In2, PWM, Offset,Standby;$/;"	m	class:Motor	typeref:typename:int
 Stojanek	Hexapod-markwtech/README.md	/^### Stojanek$/;"	S	section:Hexapod - Markwtech (PhantomX clone)""STL parts (Nektere nahradit upravenymi, mnou vyrobenymi a pod.)
 StringArray	experiments/ESP_Async_WebServer/src/StringArray.h	/^  StringArray() : LinkedList(nullptr) {}$/;"	f	class:StringArray
 StringArray	experiments/ESP_Async_WebServer/src/StringArray.h	/^class StringArray : public LinkedList<String> {$/;"	c
@@ -1095,6 +1149,8 @@ Syntax	experiments/Servo/docs/api.md	/^#### Syntax$/;"	t	subsection:Servo librar
 Syntax	experiments/Servo/docs/api.md	/^#### Syntax$/;"	t	subsection:Servo library""Methods""`read()`
 Syntax	experiments/Servo/docs/api.md	/^#### Syntax$/;"	t	subsection:Servo library""Methods""`write()`
 Syntax	experiments/Servo/docs/api.md	/^#### Syntax$/;"	t	subsection:Servo library""Methods""`writeMicroseconds()`
+TAG	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.cpp	/^static const char* TAG = "ESP32PWM";$/;"	v	typeref:typename:const char *	file:
+TAG	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32Servo.cpp	/^static const char* TAG = "ESP32Servo";$/;"	v	typeref:typename:const char *	file:
 TAU_CYC	experiments/Servo/src/stm32f4/Servo.cpp	/^#define TAU_CYC /;"	d	file:
 TAU_MSEC	experiments/Servo/src/stm32f4/Servo.cpp	/^#define TAU_MSEC /;"	d	file:
 TAU_USEC	experiments/Servo/src/stm32f4/Servo.cpp	/^#define TAU_USEC /;"	d	file:
@@ -1121,16 +1177,17 @@ TRIM_DURATION	experiments/Servo/src/megaavr/Servo.cpp	/^#define TRIM_DURATION /;
 TRIM_DURATION	experiments/Servo/src/sam/Servo.cpp	/^#define TRIM_DURATION /;"	d	file:
 TRIM_DURATION	experiments/Servo/src/samd/Servo.cpp	/^#define TRIM_DURATION /;"	d	file:
 Table of contents	experiments/ESP_Async_WebServer/README.md	/^## Table of contents$/;"	s	chapter:ESPAsyncWebServer
-Techs	Drones/README.md	/^## Techs$/;"	s	chapter:Drony
 Template processing	experiments/ESP_Async_WebServer/README.md	/^### Template processing$/;"	S	section:ESPAsyncWebServer""Principles of operation
 Tests	Hexapod-markwtech/src/tests.py	/^class Tests:$/;"	c
 The Async Web server	experiments/ESP_Async_WebServer/README.md	/^### The Async Web server$/;"	S	section:ESPAsyncWebServer""Principles of operation
 Timer1Service	experiments/Servo/src/avr/Servo.cpp	/^void Timer1Service()$/;"	f	typeref:typename:void
 Timer3Service	experiments/Servo/src/avr/Servo.cpp	/^void Timer3Service()$/;"	f	typeref:typename:void
 TripodMode	Hexapod-markwtech/src/gate_engine.py	/^class TripodMode(MovementMode):$/;"	c
+USABLE_ESP32_PWM	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.h	/^#define USABLE_ESP32_PWM /;"	d
 USE_TIMERB2	experiments/Servo/src/megaavr/ServoTimers.h	/^#define USE_TIMERB2 /;"	d
 US_TO_ANGLE	experiments/Servo/src/stm32f4/Servo.cpp	/^#define US_TO_ANGLE(/;"	d	file:
 US_TO_COMPARE	experiments/Servo/src/stm32f4/Servo.cpp	/^#define US_TO_COMPARE(/;"	d	file:
+Useful Defaults:	Xpider-cute-robot/libraries/ESP32Servo/README.md	/^### Useful Defaults:$/;"	S	section:Documentation by Doxygen""Library Description:
 Using PlatformIO	experiments/ESP_Async_WebServer/README.md	/^### Using PlatformIO$/;"	S	section:ESPAsyncWebServer""Installation
 Using filters	experiments/ESP_Async_WebServer/README.md	/^## Using filters$/;"	s	chapter:ESPAsyncWebServer
 WAIT_FOR_RETURN1	experiments/ESP_Async_WebServer/src/WebRequest.cpp	/^  WAIT_FOR_RETURN1,$/;"	e	enum:__anon7471535f0b03	file:
@@ -1529,6 +1586,7 @@ _lastI2CError	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Librar
 _lastId	experiments/ESP_Async_WebServer/src/AsyncEventSource.h	/^    uint32_t _lastId;$/;"	m	class:AsyncEventSourceClient	typeref:typename:uint32_t
 _lastMessageTime	experiments/ESP_Async_WebServer/src/AsyncWebSocket.h	/^    uint32_t _lastMessageTime;$/;"	m	class:AsyncWebSocketClient	typeref:typename:uint32_t
 _last_modified	experiments/ESP_Async_WebServer/src/WebHandlerImpl.h	/^    String _last_modified;$/;"	m	class:AsyncStaticWebHandler	typeref:typename:String
+_ledcSetupTimerFreq	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.cpp	/^double ESP32PWM::_ledcSetupTimerFreq(uint8_t pin, double freq,$/;"	f	class:ESP32PWM	typeref:typename:double
 _len	experiments/ESP_Async_WebServer/src/AsyncEventSource.h	/^    size_t _len;$/;"	m	class:AsyncEventSourceMessage	typeref:typename:size_t
 _len	experiments/ESP_Async_WebServer/src/AsyncWebSocket.cpp	/^    size_t _len;$/;"	m	class:AsyncWebSocketControl	typeref:typename:size_t	file:
 _len	experiments/ESP_Async_WebServer/src/AsyncWebSocket.h	/^    size_t _len;$/;"	m	class:AsyncWebSocketBasicMessage	typeref:typename:size_t
@@ -1821,6 +1879,10 @@ addRewrite	experiments/ESP_Async_WebServer/src/WebServer.cpp	/^AsyncWebRewrite& 
 add_point	Hexapod-markwtech/src/plot.py	/^    def add_point(self, point):$/;"	m	class:Plotter
 address	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_I2CDevice.cpp	/^uint8_t Adafruit_I2CDevice::address(void) { return _addr; }$/;"	f	class:Adafruit_I2CDevice	typeref:typename:uint8_t
 address	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_I2CDevice.cpp	/^uint8_t Adafruit_I2CDevice::address(void) { return _addr; }$/;"	f	class:Adafruit_I2CDevice	typeref:typename:uint8_t
+adjustFrequency	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.cpp	/^void ESP32PWM::adjustFrequency(double freq, double dutyScaled) {$/;"	f	class:ESP32PWM	typeref:typename:void
+adjustFrequencyLocal	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.cpp	/^void ESP32PWM::adjustFrequencyLocal(double freq, double dutyScaled) {$/;"	f	class:ESP32PWM	typeref:typename:void
+allocateTimer	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.cpp	/^void ESP32PWM::allocateTimer(int timerNumber){$/;"	f	class:ESP32PWM	typeref:typename:void
+allocatenext	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.cpp	/^int ESP32PWM::allocatenext(double freq) {$/;"	f	class:ESP32PWM	typeref:typename:int
 angle	Kame-Quadpod/natural-movement.py	/^angle = starting_angle$/;"	v
 angle_incr	Hexapod-markwtech/src/brute-force-fk-offset.py	/^angle_incr = 5  # or 2 for increased granularity$/;"	v
 angle_incr	Hexapod-markwtech/src/brute-force-ik-offset.py	/^angle_incr = 0.1  # Decrease for better precision (10, 5, 2, 1, 0.5, 0.1)$/;"	v
@@ -1834,6 +1896,8 @@ architectures	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library
 architectures	Kame-Quadpod/libraries/Adafruit_BusIO/library.properties	/^architectures=*$/;"	k
 architectures	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/library.properties	/^architectures=*$/;"	k
 architectures	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.properties	/^architectures=*$/;"	k
+architectures	Xpider-cute-robot/libraries/ESP32Servo/library.properties	/^architectures=esp32$/;"	k
+architectures	Xpider-cute-robot/libraries/SparkFun_TB6612FNG_Motor_Driver_Library/library.properties	/^architectures=avr$/;"	k
 architectures	experiments/ESP_AsyncTCP/library.properties	/^architectures=*$/;"	k
 architectures	experiments/ESP_Async_WebServer/library.properties	/^architectures=*$/;"	k
 architectures	experiments/Servo/library.properties	/^architectures=avr,megaavr,sam,samd,nrf52,stm32f4,mbed,mbed_nano,mbed_portenta,mbed_rp2040,renesa/;"	k
@@ -1844,6 +1908,9 @@ arg	experiments/ESP_Async_WebServer/src/WebRequest.cpp	/^const String& AsyncWebS
 argName	experiments/ESP_Async_WebServer/src/WebRequest.cpp	/^const String& AsyncWebServerRequest::argName(size_t i) const {$/;"	f	class:AsyncWebServerRequest	typeref:typename:const String &
 args	experiments/ESP_Async_WebServer/src/ESPAsyncWebServer.h	/^    size_t args() const { return params(); }     \/\/ get arguments count$/;"	f	class:AsyncWebServerRequest	typeref:typename:size_t
 atbRxMode_t	experiments/ESP_AsyncTCP/src/ESPAsyncTCPbuffer.h	/^} atbRxMode_t;$/;"	t	typeref:enum:__anona68996970103
+attach	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.cpp	/^void ESP32PWM::attach(int p) {$/;"	f	class:ESP32PWM	typeref:typename:void
+attach	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32Servo.cpp	/^int Servo::attach(int pin)$/;"	f	class:Servo	typeref:typename:int
+attach	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32Servo.cpp	/^int Servo::attach(int pin, int min, int max)$/;"	f	class:Servo	typeref:typename:int
 attach	experiments/Servo/src/avr/Servo.cpp	/^uint8_t Servo::attach(int pin)$/;"	f	class:Servo	typeref:typename:uint8_t
 attach	experiments/Servo/src/avr/Servo.cpp	/^uint8_t Servo::attach(int pin, int min, int max)$/;"	f	class:Servo	typeref:typename:uint8_t
 attach	experiments/Servo/src/mbed/Servo.cpp	/^uint8_t Servo::attach(int pin)$/;"	f	class:Servo	typeref:typename:uint8_t
@@ -1859,6 +1926,9 @@ attach	experiments/Servo/src/sam/Servo.cpp	/^uint8_t Servo::attach(int pin, int 
 attach	experiments/Servo/src/samd/Servo.cpp	/^uint8_t Servo::attach(int pin)$/;"	f	class:Servo	typeref:typename:uint8_t
 attach	experiments/Servo/src/samd/Servo.cpp	/^uint8_t Servo::attach(int pin, int min, int max)$/;"	f	class:Servo	typeref:typename:uint8_t
 attach	experiments/Servo/src/stm32f4/Servo.cpp	/^bool Servo::attach(uint8 pin, uint16 minPW, uint16 maxPW, int16 minAngle, int16 maxAngle)$/;"	f	class:Servo	typeref:typename:bool
+attachPin	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.cpp	/^void ESP32PWM::attachPin(uint8_t pin) {$/;"	f	class:ESP32PWM	typeref:typename:void
+attachPin	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.cpp	/^void ESP32PWM::attachPin(uint8_t pin, double freq, uint8_t resolution_bits) {$/;"	f	class:ESP32PWM	typeref:typename:void
+attached	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.h	/^	bool attached() {$/;"	f	class:ESP32PWM	typeref:typename:bool
 attached	experiments/Servo/src/avr/Servo.cpp	/^bool Servo::attached()$/;"	f	class:Servo	typeref:typename:bool
 attached	experiments/Servo/src/mbed/Servo.cpp	/^bool Servo::attached()$/;"	f	class:Servo	typeref:typename:bool
 attached	experiments/Servo/src/megaavr/Servo.cpp	/^bool Servo::attached()$/;"	f	class:Servo	typeref:typename:bool
@@ -1868,6 +1938,7 @@ attached	experiments/Servo/src/sam/Servo.cpp	/^bool Servo::attached()$/;"	f	clas
 attached	experiments/Servo/src/samd/Servo.cpp	/^bool Servo::attached()$/;"	f	class:Servo	typeref:typename:bool
 attached	experiments/Servo/src/stm32f4/ServoTimers.h	/^    bool attached() const { return this->pin != NOT_ATTACHED; }$/;"	f	class:Servo	typeref:typename:bool
 attachedPin	experiments/Servo/src/stm32f4/ServoTimers.h	/^    int attachedPin() const { return this->pin; }$/;"	f	class:Servo	typeref:typename:int
+attachedState	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.h	/^	bool attachedState = false;$/;"	m	class:ESP32PWM	typeref:typename:bool
 authenticate	experiments/ESP_Async_WebServer/src/WebRequest.cpp	/^bool AsyncWebServerRequest::authenticate(const char * hash){$/;"	f	class:AsyncWebServerRequest	typeref:typename:bool
 authenticate	experiments/ESP_Async_WebServer/src/WebRequest.cpp	/^bool AsyncWebServerRequest::authenticate(const char * username, const char * password, const cha/;"	f	class:AsyncWebServerRequest	typeref:typename:bool
 author	InMoove-Arm/libraries/Adafruit_BusIO/library.properties	/^author=Adafruit$/;"	k
@@ -1876,6 +1947,8 @@ author	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/librar
 author	Kame-Quadpod/libraries/Adafruit_BusIO/library.properties	/^author=Adafruit$/;"	k
 author	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/library.properties	/^author=Adafruit$/;"	k
 author	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.properties	/^author=NachtRaveVL <nachtravevl@gmail.com>, Vitska, Kasper Skårhøj <kasperskaarhoj@gmail.com>$/;"	k
+author	Xpider-cute-robot/libraries/ESP32Servo/library.properties	/^author=Kevin Harrington,John K. Bennett$/;"	k
+author	Xpider-cute-robot/libraries/SparkFun_TB6612FNG_Motor_Driver_Library/library.properties	/^author=Michelle @ SparkFun Electronics$/;"	k
 author	experiments/ESP_AsyncTCP/library.properties	/^author=Me-No-Dev$/;"	k
 author	experiments/ESP_Async_WebServer/library.properties	/^author=Me-No-Dev$/;"	k
 author	experiments/Servo/library.properties	/^author=Michael Margolis, Arduino$/;"	k
@@ -1891,6 +1964,8 @@ ax_get_file	experiments/ESP_AsyncTCP/src/tcp_axtls.c	/^int ax_get_file(const cha
 ax_port_read	experiments/ESP_AsyncTCP/src/tcp_axtls.c	/^int ax_port_read(int fd, uint8_t *data, int len) {$/;"	f	typeref:typename:int
 ax_port_write	experiments/ESP_AsyncTCP/src/tcp_axtls.c	/^int ax_port_write(int fd, uint8_t *data, uint16_t len) {$/;"	f	typeref:typename:int
 ax_wdt_feed	experiments/ESP_AsyncTCP/src/tcp_axtls.c	/^void ax_wdt_feed() {}$/;"	f	typeref:typename:void
+back	Xpider-cute-robot/libraries/SparkFun_TB6612FNG_Motor_Driver_Library/src/SparkFun_TB6612.cpp	/^void back(Motor motor1, Motor motor2)$/;"	f	typeref:typename:void
+back	Xpider-cute-robot/libraries/SparkFun_TB6612FNG_Motor_Driver_Library/src/SparkFun_TB6612.cpp	/^void back(Motor motor1, Motor motor2, int speed)$/;"	f	typeref:typename:void
 base	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "base": "examples\/BatchingExample",$/;"	s	object:examples.1
 base	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "base": "examples\/ModuleInfo",$/;"	s	object:examples.5
 base	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "base": "examples\/MultiDeviceProxyExample",$/;"	s	object:examples.2
@@ -1956,6 +2031,8 @@ binaryAll	experiments/ESP_Async_WebServer/src/AsyncWebSocket.cpp	/^void AsyncWeb
 binaryAll	experiments/ESP_Async_WebServer/src/AsyncWebSocket.cpp	/^void AsyncWebSocket::binaryAll(uint8_t * message, size_t len){$/;"	f	class:AsyncWebSocket	typeref:typename:void
 body	Hexapod-markwtech/src/static/style.css	/^body{$/;"	s
 body	experiments/ESP_Async_WebServer/examples/ESP_AsyncFSBrowser/data/index.htm	/^  <body id="body" onload="onBodyLoad()">$/;"	I
+brake	Xpider-cute-robot/libraries/SparkFun_TB6612FNG_Motor_Driver_Library/src/SparkFun_TB6612.cpp	/^void Motor::brake()$/;"	f	class:Motor	typeref:typename:void
+brake	Xpider-cute-robot/libraries/SparkFun_TB6612FNG_Motor_Driver_Library/src/SparkFun_TB6612.cpp	/^void brake(Motor motor1, Motor motor2)$/;"	f	typeref:typename:void
 build	experiments/ESP_AsyncTCP/library.json	/^  "build": {$/;"	o
 build_pio_sketch	experiments/ESP_AsyncTCP/.github/scripts/install-platformio.sh	/^function build_pio_sketch(){ # build_pio_sketch <board> <path-to-ino>$/;"	f
 build_pio_sketch	experiments/ESP_Async_WebServer/.github/scripts/install-platformio.sh	/^function build_pio_sketch(){ # build_pio_sketch <board> <path-to-ino> <build-flags>$/;"	f
@@ -1984,13 +2061,17 @@ category	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/libr
 category	Kame-Quadpod/libraries/Adafruit_BusIO/library.properties	/^category=Signal Input\/Output$/;"	k
 category	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/library.properties	/^category=Device Control$/;"	k
 category	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.properties	/^category=Device Control$/;"	k
+category	Xpider-cute-robot/libraries/ESP32Servo/library.properties	/^category=Device Control$/;"	k
+category	Xpider-cute-robot/libraries/SparkFun_TB6612FNG_Motor_Driver_Library/library.properties	/^category=Device Control$/;"	k
 category	experiments/ESP_AsyncTCP/library.properties	/^category=Other$/;"	k
 category	experiments/ESP_Async_WebServer/library.properties	/^category=Other$/;"	k
 category	experiments/Servo/library.properties	/^category=Device Control$/;"	k
+channelsRemaining	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.h	/^	static int channelsRemaining() {$/;"	f	class:ESP32PWM	typeref:typename:int
 checkBasicAuthentication	experiments/ESP_Async_WebServer/src/WebAuthentication.cpp	/^bool checkBasicAuthentication(const char * hash, const char * username, const char * password){$/;"	f	typeref:typename:bool
 checkDigestAuthentication	experiments/ESP_Async_WebServer/src/WebAuthentication.cpp	/^bool checkDigestAuthentication(const char * header, const char * method, const char * username, /;"	f	typeref:typename:bool
 checkForErrors	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::checkForErrors() {$/;"	f	class:PCA9685	typeref:typename:void
 checkForErrors	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::checkForErrors() {$/;"	f	class:PCA9685	typeref:typename:void
+checkFrequencyForSideEffects	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.cpp	/^bool ESP32PWM::checkFrequencyForSideEffects(double freq) {$/;"	f	class:ESP32PWM	typeref:typename:bool
 cleanupClients	experiments/ESP_Async_WebServer/src/AsyncWebSocket.cpp	/^void AsyncWebSocket::cleanupClients(uint16_t maxClients)$/;"	f	class:AsyncWebSocket	typeref:typename:void
 clearClient	experiments/ESP_AsyncTCP/src/ESPAsyncTCP.h	/^    void clearClient(void){ if (_client) _client = NULL;}$/;"	f	class:ACErrorTracker	typeref:typename:void
 clearTcpCallbacks	experiments/ESP_AsyncTCP/src/ESPAsyncTCP.cpp	/^inline void clearTcpCallbacks(tcp_pcb* pcb){$/;"	f	typeref:typename:void
@@ -2051,6 +2132,7 @@ csPort	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^  BusIO_Port
 currentServoIndex	experiments/Servo/src/megaavr/Servo.cpp	/^static volatile int8_t currentServoIndex[_Nbr_16timers];   \/\/ index for the servo being pulsed/;"	v	typeref:typename:volatile int8_t[]	file:
 currentServoIndex	experiments/Servo/src/samd/Servo.cpp	/^static volatile int8_t currentServoIndex[_Nbr_16timers];   \/\/ index for the servo being pulsed/;"	v	typeref:typename:volatile int8_t[]	file:
 dbg	experiments/ESP_Async_WebServer/examples/ESP_AsyncFSBrowser/data/index.htm	/^    <pre id="dbg"><\/pre>$/;"	I
+deallocate	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.cpp	/^void ESP32PWM::deallocate() {$/;"	f	class:ESP32PWM	typeref:typename:void
 debugTimeStamp	experiments/ESP_AsyncTCP/src/DebugPrintMacros.h	/^inline struct _DEBUG_TIME_STAMP debugTimeStamp(void) {$/;"	f	typeref:struct:_DEBUG_TIME_STAMP
 dec	experiments/ESP_AsyncTCP/src/DebugPrintMacros.h	/^  unsigned dec;$/;"	m	struct:_DEBUG_TIME_STAMP	typeref:typename:unsigned
 default_certificate	experiments/ESP_AsyncTCP/src/tcp_axtls.c	/^uint8_t * default_certificate = NULL;$/;"	v	typeref:typename:uint8_t *
@@ -2072,6 +2154,7 @@ detach	experiments/Servo/src/renesas/Servo.cpp	/^void Servo::detach()$/;"	f	clas
 detach	experiments/Servo/src/sam/Servo.cpp	/^void Servo::detach()$/;"	f	class:Servo	typeref:typename:void
 detach	experiments/Servo/src/samd/Servo.cpp	/^void Servo::detach()$/;"	f	class:Servo	typeref:typename:void
 detach	experiments/Servo/src/stm32f4/Servo.cpp	/^bool Servo::detach() {$/;"	f	class:Servo	typeref:typename:bool
+detachPin	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.cpp	/^void ESP32PWM::detachPin(int pin) {$/;"	f	class:ESP32PWM	typeref:typename:void
 detected	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_I2CDevice.cpp	/^bool Adafruit_I2CDevice::detected(void) {$/;"	f	class:Adafruit_I2CDevice	typeref:typename:bool
 detected	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_I2CDevice.cpp	/^bool Adafruit_I2CDevice::detected(void) {$/;"	f	class:Adafruit_I2CDevice	typeref:typename:bool
 disableAllCallAddress	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::disableAllCallAddress() {$/;"	f	class:PCA9685	typeref:typename:void
@@ -2089,6 +2172,8 @@ draw_3d_line	Hexapod-markwtech/pygame-plot/pygame_plot2.py	/^def draw_3d_line(st
 draw_x_line	Hexapod-markwtech/src/hexapod.py	/^    def draw_x_line(self, start_x, target_x, increment=0.1, speed=0.05):$/;"	m	class:HexapodLeg
 draw_y_line	Hexapod-markwtech/src/hexapod.py	/^    def draw_y_line(self, start_x, target_x, increment=0.1, speed=0.05):$/;"	m	class:HexapodLeg
 draw_z_line	Hexapod-markwtech/src/hexapod.py	/^    def draw_z_line(self, start_x, target_x, increment=0.1, speed=0.05):$/;"	m	class:HexapodLeg
+drive	Xpider-cute-robot/libraries/SparkFun_TB6612FNG_Motor_Driver_Library/src/SparkFun_TB6612.cpp	/^void Motor::drive(int speed)$/;"	f	class:Motor	typeref:typename:void
+drive	Xpider-cute-robot/libraries/SparkFun_TB6612FNG_Motor_Driver_Library/src/SparkFun_TB6612.cpp	/^void Motor::drive(int speed, int duration)$/;"	f	class:Motor	typeref:typename:void
 duration	experiments/Servo/src/mbed/Servo.cpp	/^    int32_t           duration = -1;$/;"	m	class:ServoImpl	typeref:typename:int32_t	file:
 dx	Turrets/angle-calc.py	/^dx = 500  # m$/;"	v
 dy	Turrets/angle-calc.py	/^dy = 20  # m - height the target is on$/;"	v
@@ -2132,6 +2217,8 @@ examples	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/libr
 examples	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^    "examples": [$/;"	a
 excludeListFile	experiments/ESP_Async_WebServer/src/SPIFFSEditor.cpp	/^const char *excludeListFile = "\/.exclude.files";$/;"	v	typeref:typename:const char *
 excludes	experiments/ESP_Async_WebServer/src/SPIFFSEditor.cpp	/^static ExcludeList *excludes = NULL;$/;"	v	typeref:typename:ExcludeList *	file:
+explicateAllocationMode	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.cpp	/^bool  ESP32PWM::explicateAllocationMode=false;$/;"	m	class:ESP32PWM	typeref:typename:bool
+explicateAllocationMode	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.h	/^	static bool explicateAllocationMode;$/;"	m	class:ESP32PWM	typeref:typename:bool
 fatal error: esp_bt_defs.h: No such file or directory	Kame-Quadpod/ps4 controller pairing.md	/^#### fatal error: esp_bt_defs.h: No such file or directory$/;"	t	section:PS4 Controller pairing (Actually trying to pair Data Frog controller)
 fd	experiments/ESP_AsyncTCP/src/tcp_axtls.c	/^  int fd;$/;"	m	struct:tcp_ssl_pcb	typeref:typename:int	file:
 files	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "files": ["BatchingExample.ino"]$/;"	a	object:examples.1
@@ -2160,6 +2247,8 @@ flush	experiments/ESP_AsyncTCP/src/ESPAsyncTCPbuffer.cpp	/^void AsyncTCPbuffer::
 flush	experiments/ESP_AsyncTCP/src/SyncClient.cpp	/^bool SyncClient::flush(unsigned int maxWaitMs){$/;"	f	class:SyncClient	typeref:typename:bool
 flush	experiments/ESP_AsyncTCP/src/SyncClient.h	/^    void flush() { (void)flush(0);}$/;"	f	class:SyncClient	typeref:typename:void
 footer	Hexapod-markwtech/src/static/style.css	/^footer{$/;"	s
+forward	Xpider-cute-robot/libraries/SparkFun_TB6612FNG_Motor_Driver_Library/src/SparkFun_TB6612.cpp	/^void forward(Motor motor1, Motor motor2)$/;"	f	typeref:typename:void
+forward	Xpider-cute-robot/libraries/SparkFun_TB6612FNG_Motor_Driver_Library/src/SparkFun_TB6612.cpp	/^void forward(Motor motor1, Motor motor2, int speed)$/;"	f	typeref:typename:void
 forward_kinematics	Hexapod-markwtech/src/brute-force-fk-offset.py	/^def forward_kinematics(base_offset, shoulder_offset, elbow_offset) -> Coords:$/;"	f	typeref:typename:Coords
 forward_kinematics	Hexapod-markwtech/src/kinematics.py	/^    def forward_kinematics(self, leg: HexapodLeg, source_angles: ServoAngles) -> Coords:$/;"	m	class:Kinematics	typeref:typename:Coords
 frameworks	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^    "frameworks": "arduino",$/;"	s
@@ -2171,6 +2260,7 @@ free	experiments/ESP_Async_WebServer/src/StringArray.h	/^    void free(){$/;"	f	
 freeable	experiments/ESP_AsyncTCP/src/ESPAsyncTCP.cpp	/^bool AsyncClient::freeable(){$/;"	f	class:AsyncClient	typeref:typename:bool
 from	experiments/ESP_Async_WebServer/src/ESPAsyncWebServer.h	/^    const String& from(void) const { return _from; }$/;"	f	class:AsyncWebRewrite	typeref:typename:const String &
 front	experiments/ESP_Async_WebServer/src/StringArray.h	/^    T& front() const {$/;"	f	class:LinkedList	typeref:typename:T &
+fwd	Xpider-cute-robot/libraries/SparkFun_TB6612FNG_Motor_Driver_Library/src/SparkFun_TB6612.cpp	/^void Motor::fwd(int speed)$/;"	f	class:Motor	typeref:typename:void
 g	Turrets/angle-calc.py	/^g = 9.81  # m\/s^2$/;"	v
 gamepad	Hexapod-markwtech/src/bluetooth.py	/^gamepad = InputDevice('\/dev\/input\/event2')$/;"	v
 gen	Hexapod-markwtech/app-capture-photo-working.py	/^def gen():$/;"	f
@@ -2184,6 +2274,7 @@ get	experiments/ESP_Async_WebServer/src/AsyncWebSocket.h	/^    uint8_t * get() {
 getACErrorTracker	experiments/ESP_AsyncTCP/src/ESPAsyncTCP.h	/^    std::shared_ptr<ACErrorTracker> getACErrorTracker(void) const { return _errorTracker; };$/;"	f	class:AsyncClient	typeref:typename:std::shared_ptr<ACErrorTracker>
 getAckTimeout	experiments/ESP_AsyncTCP/src/ESPAsyncTCP.cpp	/^uint32_t AsyncClient::getAckTimeout(){$/;"	f	class:AsyncClient	typeref:typename:uint32_t
 getCallbackCloseError	experiments/ESP_AsyncTCP/src/ESPAsyncTCP.cpp	/^err_t ACErrorTracker::getCallbackCloseError(void){$/;"	f	class:ACErrorTracker	typeref:typename:err_t
+getChannel	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.cpp	/^int ESP32PWM::getChannel() {$/;"	f	class:ESP32PWM	typeref:typename:int
 getChannelPWM	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^uint16_t PCA9685::getChannelPWM(int channel) {$/;"	f	class:PCA9685	typeref:typename:uint16_t
 getChannelPWM	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^uint16_t PCA9685::getChannelPWM(int channel) {$/;"	f	class:PCA9685	typeref:typename:uint16_t
 getChannelUpdateMode	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^PCA9685_ChannelUpdateMode PCA9685::getChannelUpdateMode() {$/;"	f	class:PCA9685	typeref:typename:PCA9685_ChannelUpdateMode
@@ -2193,6 +2284,7 @@ getCloseError	experiments/ESP_AsyncTCP/src/ESPAsyncTCP.h	/^    err_t getCloseErr
 getCloseError	experiments/ESP_AsyncTCP/src/ESPAsyncTCP.h	/^    err_t getCloseError(void) const { return _errorTracker->getCloseError();}$/;"	f	class:AsyncClient	typeref:typename:err_t
 getConnectionId	experiments/ESP_AsyncTCP/src/ESPAsyncTCP.h	/^    size_t getConnectionId(void) const { return _errorTracker->getConnectionId();}$/;"	f	class:AsyncClient	typeref:typename:size_t
 getConnectionId	experiments/ESP_AsyncTCP/src/ESPAsyncTCP.h	/^    size_t getConnectionId(void) { return _connectionId;}$/;"	f	class:ACErrorTracker	typeref:typename:size_t
+getDutyScaled	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.cpp	/^double ESP32PWM::getDutyScaled() {$/;"	f	class:ESP32PWM	typeref:typename:double
 getEventCount	experiments/ESP_AsyncTCP/src/ESPAsyncTCP.h	/^    int getEventCount(size_t ee) const { return _event_count[ee];}$/;"	f	class:AsyncServer	typeref:typename:int
 getHeader	experiments/ESP_Async_WebServer/src/WebRequest.cpp	/^AsyncWebHeader* AsyncWebServerRequest::getHeader(const String& name) const {$/;"	f	class:AsyncWebServerRequest	typeref:typename:AsyncWebHeader *
 getHeader	experiments/ESP_Async_WebServer/src/WebRequest.cpp	/^AsyncWebHeader* AsyncWebServerRequest::getHeader(const __FlashStringHelper * data) const {$/;"	f	class:AsyncWebServerRequest	typeref:typename:AsyncWebHeader *
@@ -2228,12 +2320,15 @@ getPhaseBalancer	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Libr
 getPhaseBalancer	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^PCA9685_PhaseBalancer PCA9685::getPhaseBalancer() {$/;"	f	class:PCA9685	typeref:typename:PCA9685_PhaseBalancer
 getPhaseCycle	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::getPhaseCycle(int channel, uint16_t pwmAmount, uint16_t *phaseBegin, uint16_t *pha/;"	f	class:PCA9685	typeref:typename:void
 getPhaseCycle	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::getPhaseCycle(int channel, uint16_t pwmAmount, uint16_t *phaseBegin, uint16_t *pha/;"	f	class:PCA9685	typeref:typename:void
+getPin	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.h	/^	int getPin() {$/;"	f	class:ESP32PWM	typeref:typename:int
+getPwm	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32Servo.cpp	/^ESP32PWM * Servo::getPwm(){$/;"	f	class:Servo	typeref:typename:ESP32PWM *
 getRemoteAddress	experiments/ESP_AsyncTCP/src/ESPAsyncTCP.cpp	/^uint32_t AsyncClient::getRemoteAddress() {$/;"	f	class:AsyncClient	typeref:typename:uint32_t
 getRemotePort	experiments/ESP_AsyncTCP/src/ESPAsyncTCP.cpp	/^uint16_t AsyncClient::getRemotePort() {$/;"	f	class:AsyncClient	typeref:typename:uint16_t
 getRoot	experiments/ESP_Async_WebServer/src/AsyncJson.h	/^    JsonVariant & getRoot() { return _root; }$/;"	f	class:AsyncJsonResponse	typeref:typename:JsonVariant &
 getRxTimeout	experiments/ESP_AsyncTCP/src/ESPAsyncTCP.cpp	/^uint32_t AsyncClient::getRxTimeout(){$/;"	f	class:AsyncClient	typeref:typename:uint32_t
 getSSL	experiments/ESP_AsyncTCP/src/ESPAsyncTCP.cpp	/^SSL * AsyncClient::getSSL(){$/;"	f	class:AsyncClient	typeref:typename:SSL *
 getSize	experiments/ESP_Async_WebServer/src/AsyncJson.h	/^   size_t getSize() { return _jsonBuffer.size(); }$/;"	f	class:AsyncJsonResponse	typeref:typename:size_t
+getTimer	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.h	/^	int getTimer() {$/;"	f	class:ESP32PWM	typeref:typename:int
 getWireInterfaceNumber	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^int PCA9685::getWireInterfaceNumber() {$/;"	f	class:PCA9685	typeref:typename:int
 getWireInterfaceNumber	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^int PCA9685::getWireInterfaceNumber() {$/;"	f	class:PCA9685	typeref:typename:int
 get_step	Kame-Quadpod/natural-movement.py	/^def get_step(current_angle, starting_angle, ending_angle, steps_list):$/;"	f
@@ -2264,6 +2359,7 @@ hasHeader	experiments/ESP_Async_WebServer/src/WebRequest.cpp	/^bool AsyncWebServ
 hasHeader	experiments/ESP_Async_WebServer/src/WebRequest.cpp	/^bool AsyncWebServerRequest::hasHeader(const __FlashStringHelper * data) const {$/;"	f	class:AsyncWebServerRequest	typeref:typename:bool
 hasParam	experiments/ESP_Async_WebServer/src/WebRequest.cpp	/^bool AsyncWebServerRequest::hasParam(const String& name, bool post, bool file) const {$/;"	f	class:AsyncWebServerRequest	typeref:typename:bool
 hasParam	experiments/ESP_Async_WebServer/src/WebRequest.cpp	/^bool AsyncWebServerRequest::hasParam(const __FlashStringHelper * data, bool post, bool file) con/;"	f	class:AsyncWebServerRequest	typeref:typename:bool
+hasPwm	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.h	/^	static bool hasPwm(int pin) {$/;"	f	class:ESP32PWM	typeref:typename:bool
 header	experiments/ESP_Async_WebServer/src/WebRequest.cpp	/^const String& AsyncWebServerRequest::header(const __FlashStringHelper * data) const {$/;"	f	class:AsyncWebServerRequest	typeref:typename:const String &
 header	experiments/ESP_Async_WebServer/src/WebRequest.cpp	/^const String& AsyncWebServerRequest::header(const char* name) const {$/;"	f	class:AsyncWebServerRequest	typeref:typename:const String &
 header	experiments/ESP_Async_WebServer/src/WebRequest.cpp	/^const String& AsyncWebServerRequest::header(size_t i) const {$/;"	f	class:AsyncWebServerRequest	typeref:typename:const String &
@@ -2292,6 +2388,7 @@ id	experiments/ESP_Async_WebServer/src/AsyncWebSocket.h	/^    uint32_t id(){ ret
 idf.pythonInstallPath	.vscode/settings.json	/^    "idf.pythonInstallPath": "C:\\\\Espressif\\\\tools\\\\idf-python\\\\3.11.2\\\\python.exe"$/;"	s
 img	Hexapod-markwtech/src/static/style.css	/^img{$/;"	s
 incEventCount	experiments/ESP_AsyncTCP/src/ESPAsyncTCP.h	/^    int incEventCount(size_t ee) { return ++_event_count[ee];}$/;"	f	class:AsyncServer	typeref:typename:int
+includes	Xpider-cute-robot/libraries/ESP32Servo/library.properties	/^includes=ESP32Servo.h,analogWrite.h,tone.h,ESP32Tone.h,ESP32PWM.h$/;"	k
 index	Hexapod-markwtech/app-capture-photo-working.py	/^def index():$/;"	f
 index	Hexapod-markwtech/app-cv2-original.py	/^def index():$/;"	f
 index	Hexapod-markwtech/app-cv2.py	/^def index(): $/;"	f
@@ -2347,6 +2444,7 @@ keywords	experiments/ESP_AsyncTCP/library.json	/^  "keywords":"async,tcp",$/;"	s
 keywords	experiments/ESP_Async_WebServer/library.json	/^  "keywords":"http,async,websocket,webserver",$/;"	s
 lastId	experiments/ESP_Async_WebServer/src/AsyncEventSource.h	/^    uint32_t lastId() const { return _lastId; }$/;"	f	class:AsyncEventSourceClient	typeref:typename:uint32_t
 last_wr	experiments/ESP_AsyncTCP/src/tcp_axtls.c	/^  int last_wr;$/;"	m	struct:tcp_ssl_pcb	typeref:typename:int	file:
+left	Xpider-cute-robot/libraries/SparkFun_TB6612FNG_Motor_Driver_Library/src/SparkFun_TB6612.cpp	/^void left(Motor left, Motor right, int speed)$/;"	f	typeref:typename:void
 leg_FL	Hexapod-markwtech/src/main.py	/^leg_FL = HexapodLeg(hexapod, 0, Coords(0, 0, 0), shared_legs_params)$/;"	v
 leg_FR	Hexapod-markwtech/src/main.py	/^leg_FR = HexapodLeg(hexapod, 1, Coords(0, 0, 0), shared_legs_params)$/;"	v
 len	experiments/ESP_Async_WebServer/src/AsyncWebSocket.cpp	/^    uint8_t len(){ return _len + 2; }$/;"	f	class:AsyncWebSocketControl	typeref:typename:uint8_t	file:
@@ -2375,6 +2473,8 @@ maintainer	Kame-Quadpod/libraries/Adafruit_BusIO/library.properties	/^maintainer
 maintainer	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/library.properties	/^maintainer=Adafruit <info@adafruit.com>$/;"	k
 maintainer	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "maintainer": true$/;"	b	object:authors.0
 maintainer	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.properties	/^maintainer=NachtRaveVL <nachtravevl@gmail.com>$/;"	k
+maintainer	Xpider-cute-robot/libraries/ESP32Servo/library.properties	/^maintainer=Kevin Harrington <mad.hephaestus@gmail.com>$/;"	k
+maintainer	Xpider-cute-robot/libraries/SparkFun_TB6612FNG_Motor_Driver_Library/library.properties	/^maintainer=SparkFun Electronics <sparkfun.com>$/;"	k
 maintainer	experiments/ESP_AsyncTCP/library.json	/^    "maintainer": true$/;"	b	object:authors
 maintainer	experiments/ESP_AsyncTCP/library.properties	/^maintainer=Me-No-Dev$/;"	k
 maintainer	experiments/ESP_Async_WebServer/library.json	/^    "maintainer": true$/;"	b	object:authors
@@ -2383,10 +2483,12 @@ maintainer	experiments/Servo/library.properties	/^maintainer=Arduino <info@ardui
 makeBuffer	experiments/ESP_Async_WebServer/src/AsyncWebSocket.cpp	/^AsyncWebSocketMessageBuffer * AsyncWebSocket::makeBuffer(size_t size)$/;"	f	class:AsyncWebSocket	typeref:typename:AsyncWebSocketMessageBuffer *
 makeBuffer	experiments/ESP_Async_WebServer/src/AsyncWebSocket.cpp	/^AsyncWebSocketMessageBuffer * AsyncWebSocket::makeBuffer(uint8_t * data, size_t size)$/;"	f	class:AsyncWebSocket	typeref:typename:AsyncWebSocketMessageBuffer *
 map_range	Hexapod-markwtech/src/utils.py	/^def map_range(v, a, b, c, d):$/;"	f
+mapf	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.h	/^	static double mapf(double x, double in_min, double in_max, double out_min,$/;"	f	class:ESP32PWM	typeref:typename:double
 mask	experiments/ESP_Async_WebServer/src/AsyncWebSocket.h	/^    uint8_t mask[4];$/;"	m	struct:__anon203386220108	typeref:typename:uint8_t[4]
 masked	experiments/ESP_Async_WebServer/src/AsyncWebSocket.h	/^    uint8_t masked;$/;"	m	struct:__anon203386220108	typeref:typename:uint8_t
 match	experiments/ESP_Async_WebServer/src/ESPAsyncWebServer.h	/^    virtual bool match(AsyncWebServerRequest *request) { return from() == request->url() && filt/;"	f	class:AsyncWebRewrite	typeref:typename:bool
 matchWild	experiments/ESP_Async_WebServer/src/SPIFFSEditor.cpp	/^static bool matchWild(const char *pattern, const char *testee) {$/;"	f	typeref:typename:bool	file:
+max	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32Servo.h	/^	int max = DEFAULT_uS_HIGH;            \/\/ maximum pulse width for this servo$/;"	m	class:Servo	typeref:typename:int
 max	experiments/Servo/src/Servo.h	/^   int8_t max;                       \/\/ maximum is this value times 4 added to MAX_PULSE_WIDTH/;"	m	class:Servo	typeref:typename:int8_t
 maxAngle	experiments/Servo/src/stm32f4/ServoTimers.h	/^    int16 maxAngle;$/;"	m	class:Servo	typeref:typename:int16
 maxBufferSize	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_I2CDevice.h	/^  size_t maxBufferSize() { return _maxBufferSize; }$/;"	f	class:Adafruit_I2CDevice	typeref:typename:size_t
@@ -2400,6 +2502,7 @@ messageAll	experiments/ESP_Async_WebServer/src/AsyncWebSocket.cpp	/^void AsyncWe
 message_opcode	experiments/ESP_Async_WebServer/src/AsyncWebSocket.h	/^    uint8_t message_opcode;$/;"	m	struct:__anon203386220108	typeref:typename:uint8_t
 method	experiments/ESP_Async_WebServer/src/ESPAsyncWebServer.h	/^    WebRequestMethodComposite method() const { return _method; }$/;"	f	class:AsyncWebServerRequest	typeref:typename:WebRequestMethodComposite
 methodToString	experiments/ESP_Async_WebServer/src/WebRequest.cpp	/^const char * AsyncWebServerRequest::methodToString() const {$/;"	f	class:AsyncWebServerRequest	typeref:typename:const char *
+min	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32Servo.h	/^	int min = DEFAULT_uS_LOW;           \/\/ minimum pulse width for this servo$/;"	m	class:Servo	typeref:typename:int
 min	experiments/Servo/src/Servo.h	/^   int8_t min;                       \/\/ minimum is this value times 4 added to MIN_PULSE_WIDTH/;"	m	class:Servo	typeref:typename:int8_t
 minAngle	experiments/Servo/src/stm32f4/ServoTimers.h	/^    int16 minAngle;$/;"	m	class:Servo	typeref:typename:int16
 minPW	experiments/Servo/src/stm32f4/ServoTimers.h	/^    uint16 minPW;$/;"	m	class:Servo	typeref:typename:uint16
@@ -2418,6 +2521,8 @@ move_leg_Z	Hexapod-markwtech/src/hexapod.py	/^    def move_leg_Z(self, value):$/
 move_to_point	Hexapod-markwtech/src/hexapod.py	/^    def move_to_point(self, target_point: Coords):$/;"	m	class:HexapodLeg
 mpu	Hexapod-markwtech/gyro.py	/^mpu = mpu6050(0x68)$/;"	v
 multipart	experiments/ESP_Async_WebServer/src/ESPAsyncWebServer.h	/^    bool multipart() const { return _isMultipart; }$/;"	f	class:AsyncWebServerRequest	typeref:typename:bool
+myDuty	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.h	/^	uint32_t myDuty = 0;$/;"	m	class:ESP32PWM	typeref:typename:uint32_t
+myFreq	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.h	/^	double myFreq;$/;"	m	class:ESP32PWM	typeref:typename:double
 n_servos	experiments/Servo/src/renesas/Servo.cpp	/^static size_t n_servos=0;$/;"	v	typeref:typename:size_t	file:
 name	InMoove-Arm/libraries/Adafruit_BusIO/library.properties	/^name=Adafruit BusIO$/;"	k
 name	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/library.properties	/^name=Adafruit PWM Servo Driver Library$/;"	k
@@ -2445,6 +2550,8 @@ name	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library
 name	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "name": "Vitska",$/;"	s	object:authors.1
 name	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^    "name": "PCA9685-Arduino",$/;"	s
 name	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.properties	/^name=PCA9685 16-Channel PWM Driver Module Library$/;"	k
+name	Xpider-cute-robot/libraries/ESP32Servo/library.properties	/^name=ESP32Servo$/;"	k
+name	Xpider-cute-robot/libraries/SparkFun_TB6612FNG_Motor_Driver_Library/library.properties	/^name=SparkFun TB6612FNG Motor Driver Library$/;"	k
 name	experiments/ESP_AsyncTCP/library.json	/^    "name": "Hristo Gochkov",$/;"	s	object:authors
 name	experiments/ESP_AsyncTCP/library.json	/^  "name":"ESPAsyncTCP",$/;"	s
 name	experiments/ESP_AsyncTCP/library.properties	/^name=ESP AsyncTCP$/;"	k
@@ -2528,6 +2635,8 @@ paragraph	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/lib
 paragraph	Kame-Quadpod/libraries/Adafruit_BusIO/library.properties	/^paragraph=This is a library for abstracting away UART, I2C and SPI interfacing$/;"	k
 paragraph	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/library.properties	/^paragraph=Adafruit PWM Servo Driver Library$/;"	k
 paragraph	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.properties	/^paragraph=This library allows communication with boards running a PCA6985 16-channel PWM driver /;"	k
+paragraph	Xpider-cute-robot/libraries/ESP32Servo/library.properties	/^paragraph=This library can control a many types of servos.<br \/>It makes use of the ESP32 PWM t/;"	k
+paragraph	Xpider-cute-robot/libraries/SparkFun_TB6612FNG_Motor_Driver_Library/library.properties	/^paragraph=Individually control motor outputs of 2 DC motors at 1.2A constant current. There are /;"	k
 paragraph	experiments/ESP_AsyncTCP/library.properties	/^paragraph=Async TCP Library for ESP8266 and ESP31B$/;"	k
 paragraph	experiments/ESP_Async_WebServer/library.properties	/^paragraph=Async Web Server for ESP8266 and ESP31B$/;"	k
 paragraph	experiments/Servo/library.properties	/^paragraph=This library can control a great number of servos.<br \/>It makes careful use of timer/;"	k
@@ -2543,8 +2652,10 @@ period_count	experiments/Servo/src/renesas/Servo.cpp	/^    uint32_t period_count
 period_max	experiments/Servo/src/renesas/Servo.cpp	/^    uint32_t period_max;$/;"	m	struct:__anon2492671d0108	typeref:typename:uint32_t	file:
 period_min	experiments/Servo/src/renesas/Servo.cpp	/^    uint32_t period_min;$/;"	m	struct:__anon2492671d0108	typeref:typename:uint32_t	file:
 period_us	experiments/Servo/src/renesas/Servo.cpp	/^    uint32_t period_us;$/;"	m	struct:__anon2492671d0108	typeref:typename:uint32_t	file:
+pin	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.h	/^	int pin;$/;"	m	class:ESP32PWM	typeref:typename:int
 pin	experiments/Servo/src/mbed/Servo.cpp	/^    mbed::DigitalOut   *pin;$/;"	m	class:ServoImpl	typeref:typename:mbed::DigitalOut *	file:
 pin	experiments/Servo/src/stm32f4/ServoTimers.h	/^    int16 pin;$/;"	m	class:Servo	typeref:typename:int16
+pinNumber	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32Servo.h	/^	int pinNumber = 0;                      \/\/ GPIO pin assigned to this channel$/;"	m	class:Servo	typeref:typename:int
 pinfo	experiments/ESP_Async_WebServer/src/AsyncWebSocket.h	/^    AwsFrameInfo const &pinfo() const { return _pinfo; }$/;"	f	class:AsyncWebSocketClient	typeref:typename:AwsFrameInfo const &
 ping	experiments/ESP_Async_WebServer/src/AsyncWebSocket.cpp	/^void AsyncWebSocket::ping(uint32_t id, uint8_t *data, size_t len){$/;"	f	class:AsyncWebSocket	typeref:typename:void
 ping	experiments/ESP_Async_WebServer/src/AsyncWebSocket.cpp	/^void AsyncWebSocketClient::ping(uint8_t *data, size_t len){$/;"	f	class:AsyncWebSocketClient	typeref:typename:void
@@ -2578,6 +2689,9 @@ println	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^void 
 println	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^void Adafruit_BusIO_Register::println(Stream *s) {$/;"	f	class:Adafruit_BusIO_Register	typeref:typename:void
 project_point	Hexapod-markwtech/pygame-plot/pygame_plot.py	/^def project_point(x, y, z):$/;"	f
 project_point	Hexapod-markwtech/pygame-plot/pygame_plot2.py	/^def project_point(x, y, z):$/;"	f
+pwm	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32Servo.h	/^	ESP32PWM pwm;$/;"	m	class:Servo	typeref:typename:ESP32PWM
+pwmChannel	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.h	/^	int pwmChannel = 0;                         \/\/ channel number for this servo$/;"	m	class:ESP32PWM	typeref:typename:int
+pwmFactory	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.cpp	/^ESP32PWM* pwmFactory(int pin) {$/;"	f	typeref:typename:ESP32PWM *
 pwmForAngle	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^uint16_t PCA9685_ServoEval::pwmForAngle(float angle) {$/;"	f	class:PCA9685_ServoEval	typeref:typename:uint16_t
 pwmForAngle	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^uint16_t PCA9685_ServoEval::pwmForAngle(float angle) {$/;"	f	class:PCA9685_ServoEval	typeref:typename:uint16_t
 pwmForSpeed	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^uint16_t PCA9685_ServoEval::pwmForSpeed(float speed) {$/;"	f	class:PCA9685_ServoEval	typeref:typename:uint16_t
@@ -2599,6 +2713,7 @@ read	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^uint32_
 read	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^uint32_t Adafruit_BusIO_RegisterBits::read(void) {$/;"	f	class:Adafruit_BusIO_RegisterBits	typeref:typename:uint32_t
 read	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_I2CDevice.cpp	/^bool Adafruit_I2CDevice::read(uint8_t *buffer, size_t len, bool stop) {$/;"	f	class:Adafruit_I2CDevice	typeref:typename:bool
 read	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp	/^bool Adafruit_SPIDevice::read(uint8_t *buffer, size_t len, uint8_t sendvalue) {$/;"	f	class:Adafruit_SPIDevice	typeref:typename:bool
+read	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.cpp	/^uint32_t ESP32PWM::read() {$/;"	f	class:ESP32PWM	typeref:typename:uint32_t
 read	experiments/ESP_AsyncTCP/src/SyncClient.cpp	/^int SyncClient::read(){$/;"	f	class:SyncClient	typeref:typename:int
 read	experiments/ESP_AsyncTCP/src/SyncClient.cpp	/^int SyncClient::read(uint8_t *data, size_t len){$/;"	f	class:SyncClient	typeref:typename:int
 read	experiments/Servo/src/avr/Servo.cpp	/^int Servo::read() \/\/ return the value as degrees$/;"	f	class:Servo	typeref:typename:int
@@ -2615,6 +2730,7 @@ readBytes	experiments/ESP_AsyncTCP/src/ESPAsyncTCPbuffer.cpp	/^void AsyncTCPbuff
 readBytes	experiments/ESP_AsyncTCP/src/ESPAsyncTCPbuffer.cpp	/^void AsyncTCPbuffer::readBytes(uint8_t *buffer, size_t length, AsyncTCPbufferDoneCb done) {$/;"	f	class:AsyncTCPbuffer	typeref:typename:void
 readCached	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^uint32_t Adafruit_BusIO_Register::readCached(void) { return _cached; }$/;"	f	class:Adafruit_BusIO_Register	typeref:typename:uint32_t
 readCached	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^uint32_t Adafruit_BusIO_Register::readCached(void) { return _cached; }$/;"	f	class:Adafruit_BusIO_Register	typeref:typename:uint32_t
+readFreq	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.cpp	/^double ESP32PWM::readFreq() {$/;"	f	class:ESP32PWM	typeref:typename:double
 readMicroseconds	experiments/Servo/src/avr/Servo.cpp	/^int Servo::readMicroseconds()$/;"	f	class:Servo	typeref:typename:int
 readMicroseconds	experiments/Servo/src/mbed/Servo.cpp	/^int Servo::readMicroseconds()$/;"	f	class:Servo	typeref:typename:int
 readMicroseconds	experiments/Servo/src/megaavr/Servo.cpp	/^int Servo::readMicroseconds()$/;"	f	class:Servo	typeref:typename:int
@@ -2656,8 +2772,11 @@ resetDevices	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/
 resetDevices	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::resetDevices() {$/;"	f	class:PCA9685	typeref:typename:void
 resetFields	experiments/Servo/src/stm32f4/Servo.cpp	/^void Servo::resetFields(void) {$/;"	f	class:Servo	typeref:typename:void
 resetTC	experiments/Servo/src/samd/Servo.cpp	/^static inline void resetTC (Tc* TCx)$/;"	f	typeref:typename:void	file:
+resolutionBits	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.h	/^	uint8_t resolutionBits;$/;"	m	class:ESP32PWM	typeref:typename:uint8_t
 result	Turrets/angle-calc.py	/^result = (pow(v, 2) \/ (g * dx)) - math.sqrt(A - 1)$/;"	v
+rev	Xpider-cute-robot/libraries/SparkFun_TB6612FNG_Motor_Driver_Library/src/SparkFun_TB6612.cpp	/^void Motor::rev(int speed)$/;"	f	class:Motor	typeref:typename:void
 rewrite	experiments/ESP_Async_WebServer/src/WebServer.cpp	/^AsyncWebRewrite& AsyncWebServer::rewrite(const char* from, const char* to){$/;"	f	class:AsyncWebServer	typeref:typename:AsyncWebRewrite &
+right	Xpider-cute-robot/libraries/SparkFun_TB6612FNG_Motor_Driver_Library/src/SparkFun_TB6612.cpp	/^void right(Motor left, Motor right, int speed)$/;"	f	typeref:typename:void
 rotate_point	Hexapod-markwtech/pygame-plot/pygame_plot.py	/^def rotate_point(x, y, z, angle_x, angle_y, angle_z):$/;"	f
 rotate_point	Hexapod-markwtech/pygame-plot/pygame_plot2.py	/^def rotate_point(x, y, z, angle_x, angle_y, angle_z):$/;"	f
 rotate_x	Hexapod-markwtech/matrices.py	/^def rotate_x(point, theta):$/;"	f
@@ -2693,6 +2812,8 @@ sentence	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/libr
 sentence	Kame-Quadpod/libraries/Adafruit_BusIO/library.properties	/^sentence=This is a library for abstracting away UART, I2C and SPI interfacing$/;"	k
 sentence	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/library.properties	/^sentence=Adafruit PWM Servo Driver Library$/;"	k
 sentence	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.properties	/^sentence=Library to control a PCA9685 16-channel PWM driver module from an Arduino board.$/;"	k
+sentence	Xpider-cute-robot/libraries/ESP32Servo/library.properties	/^sentence=Allows ESP32 boards to control servo, tone and analogWrite motors using Arduino semanti/;"	k
+sentence	Xpider-cute-robot/libraries/SparkFun_TB6612FNG_Motor_Driver_Library/library.properties	/^sentence=Allows control of 2 DC motors, using two input signals.$/;"	k
 sentence	experiments/ESP_AsyncTCP/library.properties	/^sentence=Async TCP Library for ESP8266 and ESP31B$/;"	k
 sentence	experiments/ESP_Async_WebServer/library.properties	/^sentence=Async Web Server for ESP8266 and ESP31B$/;"	k
 sentence	experiments/Servo/library.properties	/^sentence=Allows Arduino boards to control a variety of servo motors.$/;"	k
@@ -2769,6 +2890,7 @@ setPWMFreqServo	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Libra
 setPWMFreqServo	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::setPWMFreqServo() {$/;"	f	class:PCA9685	typeref:typename:void
 setPWMFrequency	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::setPWMFrequency(float pwmFrequency) {$/;"	f	class:PCA9685	typeref:typename:void
 setPWMFrequency	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::setPWMFrequency(float pwmFrequency) {$/;"	f	class:PCA9685	typeref:typename:void
+setPeriodHertz	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32Servo.h	/^	void setPeriodHertz(int hertz){$/;"	f	class:Servo	typeref:typename:void
 setPin	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.cpp	/^void Adafruit_PWMServoDriver::setPin(uint8_t num, uint16_t val, bool invert) {$/;"	f	class:Adafruit_PWMServoDriver	typeref:typename:void
 setPin	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.cpp	/^void Adafruit_PWMServoDriver::setPin(uint8_t num, uint16_t val, bool invert) {$/;"	f	class:Adafruit_PWMServoDriver	typeref:typename:void
 setRxTimeout	experiments/ESP_AsyncTCP/src/ESPAsyncTCP.cpp	/^void AsyncClient::setRxTimeout(uint32_t timeout){$/;"	f	class:AsyncClient	typeref:typename:void
@@ -2782,6 +2904,7 @@ setWidth	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^voi
 set_angle	Hexapod-markwtech/src/hexapod.py	/^    def set_angle(self, servo_id: int, angle):$/;"	m	class:HexapodLeg
 set_inversed	Hexapod-markwtech/src/hexapod.py	/^    def set_inversed(self):$/;"	m	class:HexapodLeg
 set_mode	Hexapod-markwtech/src/gate_engine.py	/^    def set_mode(self, mode):$/;"	m	class:GateEngine
+setup	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.cpp	/^double ESP32PWM::setup(double freq, uint8_t resolution_bits) {$/;"	f	class:ESP32PWM	typeref:typename:double
 shared_legs_params	Hexapod-markwtech/src/main.py	/^shared_legs_params = SharedLegParameters(5.1, 6.5, 12.1, 130)$/;"	v
 shoulder_angle	Hexapod-markwtech/src/brute-force-ik-offset.py	/^                shoulder_angle = round(shoulder_angle, 1)$/;"	v
 shoulder_angle	Hexapod-markwtech/src/brute-force-ik-offset.py	/^            base_angle, shoulder_angle, elbow_angle = inverse_kinematics(base_offset, shoulder_o/;"	v
@@ -2795,6 +2918,7 @@ ssh	Hexapod-markwtech/Makefile	/^ssh:$/;"	t
 ssl	experiments/ESP_AsyncTCP/src/tcp_axtls.c	/^  SSL *ssl;$/;"	m	struct:tcp_ssl_pcb	typeref:typename:SSL *	file:
 ssl_ctx	experiments/ESP_AsyncTCP/src/tcp_axtls.c	/^  SSL_CTX* ssl_ctx;$/;"	m	struct:tcp_ssl_pcb	typeref:typename:SSL_CTX *	file:
 stance_from_point_to_point	Hexapod-markwtech/src/hexapod.py	/^    def stance_from_point_to_point(self, start_point: Coords, target_point: Coords, num_of_point/;"	m	class:HexapodLeg
+standby	Xpider-cute-robot/libraries/SparkFun_TB6612FNG_Motor_Driver_Library/src/SparkFun_TB6612.cpp	/^void Motor::standby()$/;"	f	class:Motor	typeref:typename:void
 start	experiments/Servo/src/mbed/Servo.cpp	/^    void start(uint32_t duration_us) {$/;"	f	class:ServoImpl	typeref:typename:void	file:
 start_coord	Hexapod-markwtech/src/main.py	/^start_coord = Coords(6, 17, -5)$/;"	v
 starting_angle	Kame-Quadpod/natural-movement.py	/^starting_angle = 58$/;"	v
@@ -2870,6 +2994,7 @@ textForWireInterfaceNumber	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_M
 textForWireInterfaceNumber	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^static const char *textForWireInterfaceNumber(int wireNum) {$/;"	f	typeref:typename:const char *	file:
 theta	Hexapod-markwtech/matrices.py	/^theta = np.radians(30)$/;"	v
 ticker	experiments/Servo/src/mbed/Servo.cpp	/^    mbed::Ticker       ticker;   \/\/ calls a callback repeatedly with a timeout$/;"	m	class:ServoImpl	typeref:typename:mbed::Ticker	file:
+ticks	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32Servo.h	/^	int ticks = DEFAULT_PULSE_WIDTH_TICKS; \/\/ current pulse width on this channel$/;"	m	class:Servo	typeref:typename:int
 ticks	experiments/Servo/src/Servo.h	/^  volatile unsigned int ticks;$/;"	m	struct:__anonc3bc0c620208	typeref:typename:volatile unsigned int
 ticksToUs	experiments/Servo/src/avr/Servo.cpp	/^#define ticksToUs(/;"	d	file:
 ticksToUs	experiments/Servo/src/megaavr/Servo.cpp	/^#define ticksToUs(/;"	d	file:
@@ -2886,6 +3011,14 @@ timer16_Sequence_t	experiments/Servo/src/megaavr/ServoTimers.h	/^    _Nbr_16time
 timer16_Sequence_t	experiments/Servo/src/nrf52/ServoTimers.h	/^typedef enum { _timer1, _Nbr_16timers } timer16_Sequence_t;$/;"	t	typeref:enum:__anond775ead20103
 timer16_Sequence_t	experiments/Servo/src/sam/ServoTimers.h	/^typedef enum { _timer1, _timer2, _timer3, _timer4, _timer5, _Nbr_16timers } timer16_Sequence_t ;$/;"	t	typeref:enum:__anon182525260103
 timer16_Sequence_t	experiments/Servo/src/samd/ServoTimers.h	/^    _Nbr_16timers } timer16_Sequence_t;$/;"	t	typeref:enum:__anon50e73c4a0103
+timerAndIndexToChannel	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.cpp	/^int ESP32PWM::timerAndIndexToChannel(int timerNum, int index) {$/;"	f	class:ESP32PWM	typeref:typename:int
+timerCount	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.cpp	/^int ESP32PWM::timerCount[4] = { 0, 0, 0, 0 };$/;"	m	class:ESP32PWM	typeref:typename:int[4]
+timerCount	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.h	/^	static int timerCount[4];$/;"	m	class:ESP32PWM	typeref:typename:int[4]
+timerFreqSet	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.cpp	/^long ESP32PWM::timerFreqSet[4] = { -1, -1, -1, -1 };$/;"	m	class:ESP32PWM	typeref:typename:long[4]
+timerFreqSet	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.h	/^	static long timerFreqSet[4];$/;"	m	class:ESP32PWM	typeref:typename:long[4]
+timerNum	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.h	/^	int timerNum = -1;$/;"	m	class:ESP32PWM	typeref:typename:int
+timer_width	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32Servo.h	/^	int timer_width = DEFAULT_TIMER_WIDTH; \/\/ ESP32 allows variable width PWM timers$/;"	m	class:Servo	typeref:typename:int
+timer_width_ticks	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32Servo.h	/^	int timer_width_ticks = DEFAULT_TIMER_WIDTH_TICKS; \/\/ no. of ticks at rollover; varies with w/;"	m	class:Servo	typeref:typename:int
 toString	experiments/ESP_Async_WebServer/src/ESPAsyncWebServer.h	/^    String toString() const { return String(_name+": "+_value+"\\r\\n"); }$/;"	f	class:AsyncWebHeader	typeref:typename:String
 toUrl	experiments/ESP_Async_WebServer/src/ESPAsyncWebServer.h	/^    const String& toUrl(void) const { return _toUrl; }$/;"	f	class:AsyncWebRewrite	typeref:typename:const String &
 toggle	experiments/Servo/src/mbed/Servo.cpp	/^    void toggle() {$/;"	f	class:ServoImpl	typeref:typename:void	file:
@@ -2920,6 +3053,8 @@ url	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.
 url	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^            "url": "https:\/\/github.com\/vitska"$/;"	s	object:authors.1
 url	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^        "url": "https:\/\/github.com\/NachtRaveVL\/PCA9685-Arduino.git"$/;"	s	object:repository
 url	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.properties	/^url=https:\/\/github.com\/NachtRaveVL\/PCA9685-Arduino$/;"	k
+url	Xpider-cute-robot/libraries/ESP32Servo/library.properties	/^url=https:\/\/madhephaestus.github.io\/ESP32Servo\/annotated.html$/;"	k
+url	Xpider-cute-robot/libraries/SparkFun_TB6612FNG_Motor_Driver_Library/library.properties	/^url=https:\/\/github.com\/sparkfun\/SparkFun_TB6612FNG_Arduino_Library$/;"	k
 url	experiments/ESP_AsyncTCP/library.json	/^    "url": "https:\/\/github.com\/me-no-dev\/ESPAsyncTCP.git"$/;"	s	object:repository
 url	experiments/ESP_AsyncTCP/library.properties	/^url=https:\/\/github.com\/me-no-dev\/ESPAsyncTCP$/;"	k
 url	experiments/ESP_Async_WebServer/library.json	/^    "url": "https:\/\/github.com\/me-no-dev\/ESPAsyncWebServer.git"$/;"	s	object:repository
@@ -2947,6 +3082,8 @@ version	Kame-Quadpod/libraries/Adafruit_BusIO/library.properties	/^version=1.14.
 version	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/library.properties	/^version=3.0.1$/;"	k
 version	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^    "version": "1.2.15",$/;"	s
 version	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.properties	/^version=1.2.15$/;"	k
+version	Xpider-cute-robot/libraries/ESP32Servo/library.properties	/^version=3.0.6$/;"	k
+version	Xpider-cute-robot/libraries/SparkFun_TB6612FNG_Motor_Driver_Library/library.properties	/^version=1.0.0$/;"	k
 version	experiments/ESP_AsyncTCP/library.json	/^  "version": "1.2.2",$/;"	s
 version	experiments/ESP_AsyncTCP/library.properties	/^version=1.2.2$/;"	k
 version	experiments/ESP_Async_WebServer/library.json	/^      "version": "^1.1.1",$/;"	s	object:dependencies.1
@@ -2983,6 +3120,7 @@ write	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^bool A
 write	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^bool Adafruit_BusIO_RegisterBits::write(uint32_t data) {$/;"	f	class:Adafruit_BusIO_RegisterBits	typeref:typename:bool
 write	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_I2CDevice.cpp	/^bool Adafruit_I2CDevice::write(const uint8_t *buffer, size_t len, bool stop,$/;"	f	class:Adafruit_I2CDevice	typeref:typename:bool
 write	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp	/^bool Adafruit_SPIDevice::write(const uint8_t *buffer, size_t len,$/;"	f	class:Adafruit_SPIDevice	typeref:typename:bool
+write	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.cpp	/^void ESP32PWM::write(uint32_t duty) {$/;"	f	class:ESP32PWM	typeref:typename:void
 write	experiments/ESP_AsyncTCP/src/AsyncPrinter.cpp	/^size_t AsyncPrinter::write(const uint8_t *data, size_t len){$/;"	f	class:AsyncPrinter	typeref:typename:size_t
 write	experiments/ESP_AsyncTCP/src/AsyncPrinter.cpp	/^size_t AsyncPrinter::write(uint8_t data){$/;"	f	class:AsyncPrinter	typeref:typename:size_t
 write	experiments/ESP_AsyncTCP/src/ESPAsyncTCP.cpp	/^size_t AsyncClient::write(const char* data) {$/;"	f	class:AsyncClient	typeref:typename:size_t
@@ -3025,8 +3163,11 @@ writeMicroseconds	experiments/Servo/src/renesas/Servo.cpp	/^void Servo::writeMic
 writeMicroseconds	experiments/Servo/src/sam/Servo.cpp	/^void Servo::writeMicroseconds(int value)$/;"	f	class:Servo	typeref:typename:void
 writeMicroseconds	experiments/Servo/src/samd/Servo.cpp	/^void Servo::writeMicroseconds(int value)$/;"	f	class:Servo	typeref:typename:void
 writeMicroseconds	experiments/Servo/src/stm32f4/Servo.cpp	/^void Servo::writeMicroseconds(uint16 pulseWidth) {$/;"	f	class:Servo	typeref:typename:void
+writeNote	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.cpp	/^double ESP32PWM::writeNote(note_t note, uint8_t octave) {$/;"	f	class:ESP32PWM	typeref:typename:double
 writeRegister	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::writeRegister(byte regAddress, byte value) {$/;"	f	class:PCA9685	typeref:typename:void
 writeRegister	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::writeRegister(byte regAddress, byte value) {$/;"	f	class:PCA9685	typeref:typename:void
+writeScaled	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.cpp	/^void ESP32PWM::writeScaled(double duty) {$/;"	f	class:ESP32PWM	typeref:typename:void
+writeTone	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.cpp	/^double ESP32PWM::writeTone(double freq) {$/;"	f	class:ESP32PWM	typeref:typename:double
 write_and_read	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp	/^bool Adafruit_SPIDevice::write_and_read(uint8_t *buffer, size_t len) {$/;"	f	class:Adafruit_SPIDevice	typeref:typename:bool
 write_and_read	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp	/^bool Adafruit_SPIDevice::write_and_read(uint8_t *buffer, size_t len) {$/;"	f	class:Adafruit_SPIDevice	typeref:typename:bool
 write_then_read	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_I2CDevice.cpp	/^bool Adafruit_I2CDevice::write_then_read(const uint8_t *write_buffer,$/;"	f	class:Adafruit_I2CDevice	typeref:typename:bool
@@ -3063,6 +3204,7 @@ write_then_read	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp	/^b
 ~AsyncWebSocketMessageBuffer	experiments/ESP_Async_WebServer/src/AsyncWebSocket.cpp	/^AsyncWebSocketMessageBuffer::~AsyncWebSocketMessageBuffer()$/;"	f	class:AsyncWebSocketMessageBuffer
 ~AsyncWebSocketMultiMessage	experiments/ESP_Async_WebServer/src/AsyncWebSocket.cpp	/^AsyncWebSocketMultiMessage::~AsyncWebSocketMultiMessage() {$/;"	f	class:AsyncWebSocketMultiMessage
 ~ChunkPrint	experiments/ESP_Async_WebServer/src/AsyncJson.h	/^    virtual ~ChunkPrint(){}$/;"	f	class:ChunkPrint
+~ESP32PWM	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.cpp	/^ESP32PWM::~ESP32PWM() {$/;"	f	class:ESP32PWM
 ~LinkedList	experiments/ESP_Async_WebServer/src/StringArray.h	/^    ~LinkedList(){}$/;"	f	class:LinkedList
 ~LinkedListNode	experiments/ESP_Async_WebServer/src/StringArray.h	/^    ~LinkedListNode(){}$/;"	f	class:LinkedListNode
 ~PCA9685_ServoEval	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^PCA9685_ServoEval::~PCA9685_ServoEval() {$/;"	f	class:PCA9685_ServoEval

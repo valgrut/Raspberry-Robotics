@@ -35,6 +35,14 @@
 - https://javierih.com/robots/kame32/
 - https://github.com/JavierIH/kame32/blob/main/code/src/main.cpp
 
+### 1.4. Motivace
+
+- Walking in the room (remotely) over the phone
+- Exploring with the camera on
+- State machine transitions, autonomous movements when IDLE
+- Communication with the other robot(s) via IR?
+- R2D2 sounds
+- Close all related tabs in browser.
 
 ---------------------------------------------------------------------------------------------
 
