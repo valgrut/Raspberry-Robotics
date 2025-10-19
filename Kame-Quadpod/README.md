@@ -73,7 +73,7 @@
 
 - [ ] ESP-wroom32 (WiFi + Bluetooth)
 - [ ] Baterie: 2x 18650 3.7V 2600mAh 5C
-- [ ] PCA9685 Servo Controller (maybe drop)
+- [ ] PCA9685 Servo Controller (Could be done without it)
 - [ ] 470uF - 1000uF Capacitor
 - [ ] Step-down 7.4V -> 5V
 
@@ -83,10 +83,11 @@
 - [ ] Battery indicator (2S)
 - [ ] HC-SR04 - Ultrasonic distance sensor
 - [ ] Adafruit PowerBoost 500C - Nabijeni baterie a napajeni MCU
-- [ ] (ESP camera modul)
+- [ ] ESP camera modul
 - [ ] LED to the front and back ??
 - [ ] LED into the top mount head as a flashlight
 - [ ] Laser into the top mount head
+- [ ] Display with eyes at the front
 
 
 ### 2.4. Dropped
@@ -118,9 +119,8 @@
 - Capacitor mezi V+ a GND u PCA9685 (current balancing because of spikes from active servos)
   - cca 100uF na 1 servo -->
   - --> 9 serv -> ~900uF
-- ??? Pull-up rezistory mezi 3v3 a (SCA a SDL)
 
-
+  
 ### 3.2. Setup a Programovani
 
 #### 3.2.1. Required libraries (Arduino-IDE)
