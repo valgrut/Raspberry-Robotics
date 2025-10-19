@@ -54,6 +54,52 @@
 - 1x Bottom stand part
 - 8x Stand tycky
 
+------------------------------------------------
+
+## Build Timeline Diary
+
+Od nejnovejsiho.
+
+- ????-??-?? TODO
+    - Vytisteni podstavce
+    - Na dlouhou dobu posledni aktivita.
+
+- ????-??-?? TODO
+    - Vytisteni a pridelani 6. nohy
+
+- 2024-01-11
+    - Porad 5 nohou
+    - Stridani kroku obou prednich nohou (s pomoci IK)
+
+- 2024-01-06
+    - 5 nohou, prisroubovany k telu (Fotka na posteli na Misce)
+
+- 2023-12-18
+    - Design a tisk horni desky (Verze 1) - pro prisroubovani 2x PCA a Raspberry Pi 4
+
+- 2023-12-16
+    - Prisroubovana 2. noha
+    - IK pro jednu nohu funguje!!! (Video)
+
+- 2023-12-13
+    - Debugging Kinematiky
+    - Papirovy uhelnik
+    - Uvedomeni si, ze serva jsou mountnuta pod jinym uhlem, nez ve vypoctech (Vse je na schematu na webu `-_-`, uhhh)
+
+- 2023-12-04
+    - Vytisteno telo, 1 Noha mountnuta na telo
+    - Rpi misto ESP, prisroubovano na telo.
+
+- 2023-11-25
+    - Testovani 1 nohy s ESP, PCA
+    - Napajeno USB kabelem
+    - Uceni se Inverzni kinematiky
+
+- 2023-11-14
+    - Sestavena 1 noha
+
+------------------------------------------------
+
 ## Sestaveni
 
 ### Napajeni

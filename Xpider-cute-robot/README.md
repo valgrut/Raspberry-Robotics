@@ -78,6 +78,39 @@
 - Napajet k motorum keramicky Capacitor
 - Na nozicky pridelat gumove podlozky, aby neklouzaly
 
+
+### 3.1. Build Timeline Diary
+
+Od nejnovejsiho.
+
+- 2025-06-05
+    - FINISH!
+    - Vse narvano do tela.
+    - LED v oku (On/OFf)
+    - Web UI
+    - Videa, jak chodi na stole a na posteli. Zari cervene LED oko. ZIJE!!!
+    - Zapojeni 2 baterii do serie -> 7.4V napajeni (Placate 1C baterie! Ted bych pouzil lepsi).
+
+- 2025-06-04
+    - Testovani spravneho zapojeni (nepajive pole, esp32-mini-c3, h-bridge)
+    - Takze je zatim rozkuchan na stole (elektronika porad venku)
+    - Xpider chodi a toci se.
+    - Vyresil jsem ten chybejici dilek, ktery zpusoboval, ze se vrsek oddelaval nahoru pri chuzi.
+
+- 2025-05-23
+    - Testovani spravneho zapojeni (nepajive pole, esp32-mini-c3, h-bridge)
+    - Pripajeni ESP a Bridge na pajive pole kvuli kompaktnosti. (Nakonec nepouzito, protoze jsem to rozbil nejak)
+
+- 2023-11-13
+    - Learning with the electro-motors and Motor driver Bridge
+    - Arduino + nepajive pole + H-Bridge a motory
+
+- 2023-04-26
+    - Zkompletovani celeho tela
+
+- 2023-04-08
+    - Tisk diluu a zjistovani, jak to sestavit
+
 ---------------------------------------------------------------------------------------------
 
 ## 4. Programovani

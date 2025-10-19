@@ -67,6 +67,7 @@
 - [ ] 12x M3\*30mm + maticky
 - [ ] 8x Lozisko F693ZZ Flange Bearing 3x8x4 mm
 - [ ] Wires
+- [ ] Rubber stickers for the leg tips (helps against leg slipping)
 
 
 ### 2.3. Dily - Elektro
@@ -98,7 +99,7 @@
 - [ ] Baterie Lipol 1200MAh 3.7V
     - Does not provide enough current (C=1)
 
-    
+
 ---------------------------------------------------------------------------------------------
 
 ## 3. Zapojeni a sestaveni
@@ -120,7 +121,7 @@
   - cca 100uF na 1 servo -->
   - --> 9 serv -> ~900uF
 
-  
+
 ### 3.2. Setup a Programovani
 
 #### 3.2.1. Required libraries (Arduino-IDE)
@@ -133,7 +134,7 @@
   - Adafruit_PWMServoDriver.h
   - Bluepad32.h
 
-  
+
 #### 3.2.2. Board selection
 
 - **Board**:
@@ -154,7 +155,7 @@
   - Nekompatibilni s XBox controllerem
   - Neslo rozchodit s tim Frog Controllerem z Aliexpressu.
 
-  
+
 #### 3.2.4. Writing to ESP
 
 - ! Hold right button of ESP (usb at the bottom) during "Connecting......." phase.
@@ -167,6 +168,7 @@
 - Proc?
 - Max current output: 3A
 
+
 ### 3.4. Movement pattern observing
 
 - Rozdelit video na framy a vypozorovat sekvenci pohybu.
@@ -175,6 +177,73 @@
 ffmpeg -i file.mp4 -vf fps=10 out%d.png   # 10 frames / 1 second
 ffmpeg -i file.mp4 -vf fps=1/600 out%d.png   # 1 frames / 60 second
 ```
+
+
+### 3.5. Build diary timeline
+
+Od nejnovejsiho.
+
+- 2025-10-20
+    - Novinka: Brownout, kdyz zapojeno ESP i ESP-cam.
+    - Pripominka, ze PCA's V+ terminal ma max 6V !!! Nutny dalsi Buck, nelze tam rvat 8V z baterie!!!
+    - Cekani na dily (XT30 connector, step-down 5A, MG90s serva)
+
+- 2025-10-19
+    - Vymodeloval jsem temp dilek mezi telo a hlavu
+    - Zprovoznil jsem kameru (lepsi framerate, latence)
+    - Rozdelil jsem (konecne) zdrojak na vice souboru.
+    - Kame-src-v2: BT controller again, Gaits, Walking, Laser.
+
+- 2025-10-18
+    - Kompletne jsem vykuchal a prepajel vnitrek robota, aby to nebyl takovy mess a vse tam slo nacpat.
+    - Odstranil jsem tu hruzu se stepdown + kondenzatory na pajivem poli, ktera mela slouzit proti brownoutu.
+    - Kame sam chodi na zemi!!!
+    - Baterie: RC 70C nebo kolik, 7.4V
+
+- 2025-10-12
+    - Gaits: Konecne spravne a opraveno. Also, TurnLeft a TurnRigt done!
+
+- 2025-10-11
+    - Fusion360: Vymodeloval jsem podstavec pro robota, abych mohl testovat pohyb nad zemi.
+
+- 2025-??-??
+    - Kompletni osekani zdrojaku na absolutni minimum, a snaha o pokracovani z minima.
+    - Pochopeni delta time a Gait processingu
+    - Working.
+    - Zjisteni C parametru u baterii a zacal jsem pouzivat Lab zdroj se 7.6V + 4A.
+    - Prulom a konecne vyrazny progress.
+
+- 2025-06-21
+    - Snaha o odkoukani a zprovozneni TurnLeft a TurnRight gaitu.
+    - Dlouho jsem se snazil udelat vse naraz (gaits, BT controll, Web controll, IDLE states...)
+
+- 2025-06-09
+    - Snaha o vyreseni brownoutu:
+        - Experimenty s kondenzatorama, ruznymi LDO, step-down.
+        - Experimenty se seriovym zapojenim baterii (jsou ale 1C, takze to nepomohlo!)
+
+- 2025-05-31
+    - Snaha o eliminaci Brownoutu u ESP32 - pripajeni LDO regulatoru, a pod.
+    - Porad pouzivam puvodni placatou 1C 3.7V baterii a Voltage boost-up na 5V.
+
+- 2025-05-19
+    - Zkraceni kabelu od vsech servo motorkuu, aby se daly nacpat do tela.
+
+- 2024-01-23
+    - Fusion360: Design a prototypovani noveho tela pro Kame (misto pro PCA a pro ESP-8266)
+
+- 2023-10-21
+    - Funkcni Walking Gait (Video, jak spadl malem ze stolu)
+    - PCA9685 je jeste venku z Kame.
+    - Puvodni telo (OG projekt)
+    - Jeste skrz Arduino Uno
+    - PCA napajeno jeste z USB stripnutym dratem.
+    - Otacel vrskem
+    - Umel lehnout a stoupnout.
+
+- 2023-03-31
+    - OG Kame je sestaveny (puvodni telo, vymodelovany adapter pro uchyceni hlavy)
+
 
 ---------------------------------------------------------------------------------------------
 
