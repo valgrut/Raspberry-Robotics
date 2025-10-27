@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kame Controller – Minimal Web UI</title>
+  <!--
+    Minimal single-file UI for controlling your Kame robot and viewing ESP32-CAM stream.
+
+    ✅ Features
+      - Left/Right virtual sticks (mouse/touch + WASD / IJKL keyboard)
+      - D‑Pad + ABXY + LB/RB + LT/RT + View/Menu buttons
+      - Center live camera pane for ESP32‑CAM (different IP than robot)
+      - Sends GET requests to the robot using CORS-free "image ping" technique
+        (works even if your ESP32 doesn’t set CORS headers)
+      - Saves IPs to localStorage
+
+    🔧 Default robot endpoints (adjust to your firmware):
+      - /stick?name=LS|RS&x=-1..1&y=-1..1
+      - /dpad?dir=up|down|left|right&state=down|up
+      - /btn?name=A|B|X|Y|LB|RB|VIEW|MENU&state=down|up
+      - /trigger?name=LT|RT&value=0..1
+
+    📹 Default camera URL: http://<CAM_IP>:81/stream  (change path if needed)
+
+    Notes:
+      * If your firmware prefers other paths or param names, edit ENDPOINTS or sendRobot().
+      * The UI uses very light, inline styles only.
+  -->
+  <style>
+    :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    body { margin: 8px; }
+    h1 { font-size: 1.1rem; margin: 0 0 8px; }
+    .row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+    .row input { padding: 4px; }
+    .layout { display: grid; grid-template-columns: 1fr 1.4fr 1fr; gap: 8px; height: calc(100vh - 120px); }
+    .panel { border: 1px solid #ccc; padding: 8px; border-radius: 6px; height: 100%; box-sizing: border-box; }
+    .center { display: grid; grid-template-rows: auto 1fr; gap: 8px; }
+    .video-wrap { border: 1px solid #ccc; border-radius: 4px; background: #000; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+    #cam { width: 100%; height: 100%; object-fit: contain; }
+
+    .controller { display: grid; grid-template-rows: auto 1fr auto; gap: 8px; height: 100%; }
+    .topbar { display: flex; justify-content: space-between; gap: 8px; }
+
+    .sticks-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .stick { position: relative; width: 180px; height: 180px; margin: 0 auto; border: 1px solid #bbb; border-radius: 50%; touch-action: none; user-select: none; background: #f8f8f8; }
+    .knob { position: absolute; left: 50%; top: 50%; width: 46px; height: 46px; margin-left: -23px; margin-top: -23px; border-radius: 50%; border: 1px solid #888; background: #e0e0e0; box-sizing: border-box; }
+
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; align-items: center; justify-items: center; }
+    .btn { padding: 10px 14px; border: 1px solid #888; background: #fafafa; border-radius: 6px; cursor: pointer; user-select: none; touch-action: manipulation; }
+    .btn:active { background: #eaeaea; }
+
+    .dpad { width: 160px; margin: 0 auto; }
+    .dpad .cell { width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; }
+
+    .abxy { width: 180px; margin: 0 auto; }
+    .tiny { font-size: 0.85rem; }
+    .slim { width: 160px; margin: 0 auto; }
+    .range { width: 100%; }
+    .muted { color: #666; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <h1>Kame Controller (minimal)</h1>
+  <div class="row">
+    <label>Robot IP: <input id="robotIP" placeholder="192.168.1.50" size="14"></label>
+    <label>Camera IP: <input id="camIP" placeholder="192.168.1.60" size="14"></label>
+    <label>Cam Path: <input id="camPath" placeholder=":81/stream" size="12"></label>
+    <button id="apply" class="btn">Apply</button>
+    <span class="muted">Tip: values are saved locally.</span>
+  </div>
+
+  <div class="layout">
+    <!-- LEFT: D-Pad + Left Stick + View -->
+    <div class="panel controller">
+      <div class="topbar">
+        <button class="btn tiny" data-btn="VIEW">View</button>
+        <div class="slim">
+          <div>LT</div>
+          <input id="LT" type="range" min="0" max="100" value="0" class="range" />
+        </div>
+        <button class="btn tiny" data-btn="LB">LB</button>
+      </div>
+
+      <div>
+        <div class="dpad grid-3">
+          <div class="cell"></div>
+          <button class="btn" data-dpad="up">▲</button>
+          <div class="cell"></div>
+          <button class="btn" data-dpad="left">◀</button>
+          <div class="cell"></div>
+          <button class="btn" data-dpad="right">▶</button>
+          <div class="cell"></div>
+          <button class="btn" data-dpad="down">▼</button>
+          <div class="cell"></div>
+        </div>
+        <div id="ls" class="stick" aria-label="Left Stick"><div class="knob"></div></div>
+      </div>
+
+      <div class="muted">Keyboard: WASD = Left Stick, Arrow Keys = D-Pad</div>
+    </div>
+
+    <!-- CENTER: Camera -->
+    <div class="panel center">
+      <div class="row">
+        <button id="camStart" class="btn">Start Camera</button>
+        <button id="camStop" class="btn">Stop Camera</button>
+        <button id="snapshot" class="btn">Snapshot</button>
+        <span id="camStatus" class="muted">Idle</span>
+      </div>
+      <div class="video-wrap">
+        <img id="cam" alt="Camera stream" />
+      </div>
+    </div>
+
+    <!-- RIGHT: ABXY + Right Stick + Menu -->
+    <div class="panel controller">
+      <div class="topbar" style="justify-content: flex-end; gap: 8px;">
+        <button class="btn tiny" data-btn="RB">RB</button>
+        <div class="slim">
+          <div>RT</div>
+          <input id="RT" type="range" min="0" max="100" value="0" class="range" />
+        </div>
+        <button class="btn tiny" data-btn="MENU">Menu</button>
+      </div>
+
+      <div>
+        <div class="abxy grid-3" style="grid-template-columns: repeat(3, 60px); grid-auto-rows: 60px;">
+          <div></div>
+          <button class="btn" data-btn="Y">Y</button>
+          <div></div>
+          <button class="btn" data-btn="X">X</button>
+          <button class="btn" data-btn="A">A</button>
+          <button class="btn" data-btn="B">B</button>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div id="rs" class="stick" aria-label="Right Stick"><div class="knob"></div></div>
+      </div>
+
+      <div class="muted">Keyboard: IJKL = Right Stick, Space=A, Enter=Menu</div>
+    </div>
+  </div>
+
+<script>
+(function(){
+  // ---------- Storage helpers ----------
+  const $ = sel => document.querySelector(sel);
+  const robotIP = $('#robotIP');
+  const camIP = $('#camIP');
+  const camPath = $('#camPath');
+  const cam = $('#cam');
+  const camStatus = $('#camStatus');
+
+  const ENDPOINTS = {
+    stick: '/stick',
+    dpad: '/dpad',
+    button: '/btn',
+    trigger: '/trigger'
+  };
+
+  function saveSettings(){
+    localStorage.setItem('kame_robot_ip', robotIP.value.trim());
+    localStorage.setItem('kame_cam_ip', camIP.value.trim());
+    localStorage.setItem('kame_cam_path', camPath.value.trim());
+  }
+  function loadSettings(){
+    robotIP.value = localStorage.getItem('kame_robot_ip') || '';
+    camIP.value = localStorage.getItem('kame_cam_ip') || '';
+    camPath.value = localStorage.getItem('kame_cam_path') || ':81/stream';
+  }
+  loadSettings();
+
+  // ---------- Camera controls ----------
+  function cameraURL(){
+    const ip = camIP.value.trim();
+    let path = camPath.value.trim() || ':81/stream';
+    if (path.startsWith(':')) return `http://${ip}${path}`; // e.g. :81/stream
+    if (!path.startsWith('/')) path = '/' + path;            // e.g. /stream
+    return `http://${ip}${path}`;
+  }
+  $('#apply').addEventListener('click', () => { saveSettings(); });
+
+  $('#camStart').addEventListener('click', () => {
+    saveSettings();
+    const url = cameraURL();
+    camStatus.textContent = 'Loading…';
+    cam.onload = () => camStatus.textContent = 'Streaming';
+    cam.onerror = () => camStatus.textContent = 'Stream error';
+    cam.src = url;
+  });
+  $('#camStop').addEventListener('click', () => {
+    cam.removeAttribute('src');
+    camStatus.textContent = 'Stopped';
+  });
+  $('#snapshot').addEventListener('click', async () => {
+    // Try standard ESP32-CAM snapshot path; change if needed
+    const url = `http://${camIP.value.trim()}/capture?_=${Date.now()}`;
+    try {
+      const a = document.createElement('a');
+      a.href = url; a.download = 'snapshot.jpg';
+      document.body.appendChild(a); a.click(); a.remove();
+    } catch { /* ignore */ }
+  });
+
+  // ---------- Robot command sender (CORS-free image ping) ----------
+  function robotURL(path, params){
+    const ip = robotIP.value.trim();
+    const qs = new URLSearchParams(Object.assign({}, params, { _ : Date.now() }));
+    return `http://${ip}${path}?${qs.toString()}`;
+  }
+  function sendRobot(path, params){
+    if (!robotIP.value.trim()) return;
+    const url = robotURL(path, params);
+    const img = new Image();
+    img.src = url; // fire-and-forget GET request
+  }
+
+  // ---------- Utilities ----------
+  function throttle(fn, ms){
+    let last = 0, timer = null, pending = null;
+    return function(...args){
+      const now = Date.now();
+      if (now - last >= ms){
+        last = now; fn.apply(this, args);
+      } else {
+        pending = args;
+        clearTimeout(timer);
+        timer = setTimeout(() => { last = Date.now(); fn.apply(this, pending); pending = null; }, ms - (now - last));
+      }
+    };
+  }
+
+  // ---------- Virtual Sticks ----------
+  function initStick(el, name){
+    const knob = el.querySelector('.knob');
+    let active = false, cx=0, cy=0, maxDist=0;
+
+    function centerFromRect(){
+      const r = el.getBoundingClientRect();
+      cx = r.left + r.width/2;
+      cy = r.top + r.height/2;
+      maxDist = Math.min(r.width, r.height)/2 - 26; // radius minus knob
+    }
+    const send = throttle((nx, ny) => {
+      // Invert Y so up is positive (optional; adjust to your preference)
+      sendRobot(ENDPOINTS.stick, { name, x: nx.toFixed(2), y: (-ny).toFixed(2) });
+    }, 40);
+
+    function setKnob(dx, dy){ knob.style.transform = `translate(${dx}px, ${dy}px)`; }
+
+    el.addEventListener('pointerdown', e => {
+      centerFromRect();
+      active = true; el.setPointerCapture(e.pointerId);
+      handleMove(e);
+    });
+    el.addEventListener('pointermove', handleMove);
+    el.addEventListener('pointerup', end);
+    el.addEventListener('pointercancel', end);
+
+    function handleMove(e){
+      if (!active) return;
+      const x = e.clientX - cx, y = e.clientY - cy;
+      const d = Math.hypot(x, y);
+      const clamped = Math.min(d, maxDist);
+      const a = Math.atan2(y, x);
+      const dx = Math.cos(a) * clamped, dy = Math.sin(a) * clamped;
+      setKnob(dx, dy);
+      const nx = dx / maxDist, ny = dy / maxDist;
+      send(nx, ny);
+    }
+    function end(){ active = false; setKnob(0,0); send(0,0); }
+
+    // Keyboard support for sticks
+    const keys = name === 'LS' ? { up:'KeyS', down:'KeyW', left:'KeyA', right:'KeyD' }
+                               : { up:'KeyK', down:'KeyI', left:'KeyJ', right:'KeyL' };
+    const held = { up:false, down:false, left:false, right:false };
+    const ksend = throttle(() => {
+      const nx = (held.right?1:0) + (held.left?-1:0);
+      const ny = (held.down?1:0) + (held.up?-1:0);
+      setKnob(nx*maxDist, -ny*maxDist);
+      send(nx, ny);
+    }, 40);
+    document.addEventListener('keydown', e => {
+      if (e.code === keys.up) held.up = true;
+      else if (e.code === keys.down) held.down = true;
+      else if (e.code === keys.left) held.left = true;
+      else if (e.code === keys.right) held.right = true;
+      else return;
+      e.preventDefault(); ksend();
+    });
+    document.addEventListener('keyup', e => {
+      if (e.code === keys.up) held.up = false;
+      else if (e.code === keys.down) held.down = false;
+      else if (e.code === keys.left) held.left = false;
+      else if (e.code === keys.right) held.right = false;
+      else return;
+      e.preventDefault(); ksend();
+    });
+  }
+
+  initStick(document.getElementById('ls'), 'LS');
+  initStick(document.getElementById('rs'), 'RS');
+
+  // ---------- D-Pad & Buttons ----------
+  function bindPress(el, onDown, onUp){
+    el.addEventListener('pointerdown', e => { e.preventDefault(); onDown(); });
+    el.addEventListener('pointerup', () => onUp());
+    el.addEventListener('pointerleave', () => onUp());
+  }
+
+  document.querySelectorAll('[data-dpad]').forEach(el => {
+    const dir = el.getAttribute('data-dpad');
+    bindPress(el, () => sendRobot(ENDPOINTS.dpad, { dir, state:'down' }),
+                 () => sendRobot(ENDPOINTS.dpad, { dir, state:'up' }));
+  });
+  document.querySelectorAll('[data-btn]').forEach(el => {
+    const name = el.getAttribute('data-btn');
+    bindPress(el, () => sendRobot(ENDPOINTS.button, { name, state:'down' }),
+                 () => sendRobot(ENDPOINTS.button, { name, state:'up' }));
+  });
+
+  // Keyboard for D-Pad and main buttons
+  const keymapDown = new Map([
+    ['ArrowUp',   () => sendRobot(ENDPOINTS.dpad, {dir:'up', state:'down'})],
+    ['ArrowDown', () => sendRobot(ENDPOINTS.dpad, {dir:'down', state:'down'})],
+    ['ArrowLeft', () => sendRobot(ENDPOINTS.dpad, {dir:'left', state:'down'})],
+    ['ArrowRight',() => sendRobot(ENDPOINTS.dpad, {dir:'right', state:'down'})],
+    ['Space',     () => sendRobot(ENDPOINTS.button, {name:'A', state:'down'})],
+    ['Enter',     () => sendRobot(ENDPOINTS.button, {name:'MENU', state:'down'})]
+  ]);
+  const keymapUp = new Map([
+    ['ArrowUp',   () => sendRobot(ENDPOINTS.dpad, {dir:'up', state:'up'})],
+    ['ArrowDown', () => sendRobot(ENDPOINTS.dpad, {dir:'down', state:'up'})],
+    ['ArrowLeft', () => sendRobot(ENDPOINTS.dpad, {dir:'left', state:'up'})],
+    ['ArrowRight',() => sendRobot(ENDPOINTS.dpad, {dir:'right', state:'up'})],
+    ['Space',     () => sendRobot(ENDPOINTS.button, {name:'A', state:'up'})],
+    ['Enter',     () => sendRobot(ENDPOINTS.button, {name:'MENU', state:'up'})]
+  ]);
+  document.addEventListener('keydown', e => { const fn = keymapDown.get(e.code); if (fn){ e.preventDefault(); fn(); } });
+  document.addEventListener('keyup',   e => { const fn = keymapUp.get(e.code);   if (fn){ e.preventDefault(); fn(); } });
+
+  // Triggers (analog 0..1)
+  function bindTrigger(id, name){
+    const r = document.getElementById(id);
+    const send = throttle(v => sendRobot(ENDPOINTS.trigger, { name, value: (v/100).toFixed(2) }), 40);
+    r.addEventListener('input', () => send(r.valueAsNumber||0));
+    r.addEventListener('change', () => send(r.valueAsNumber||0));
+  }
+  bindTrigger('LT', 'LT');
+  bindTrigger('RT', 'RT');
+})();
+</script>
+</body>
+</html>

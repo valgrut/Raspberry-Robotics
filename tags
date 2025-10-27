@@ -457,8 +457,13 @@ COMPONENT_ADD_INCLUDEDIRS	experiments/ESP_Async_WebServer/component.mk	/^COMPONE
 COMPONENT_REQUIRES	experiments/ESP_Async_WebServer/CMakeLists.txt	/^set(COMPONENT_REQUIRES$/;"	v
 COMPONENT_SRCDIRS	experiments/ESP_Async_WebServer/CMakeLists.txt	/^set(COMPONENT_SRCDIRS$/;"	v
 COMPONENT_SRCDIRS	experiments/ESP_Async_WebServer/component.mk	/^COMPONENT_SRCDIRS := src$/;"	m
+CONFIG_ESP_FACE_DETECT_ENABLED	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^#define CONFIG_ESP_FACE_DETECT_ENABLED /;"	d	file:
+CONFIG_ESP_FACE_RECOGNITION_ENABLED	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^#define CONFIG_ESP_FACE_RECOGNITION_ENABLED /;"	d	file:
 CONFIG_H	experiments/ESP_AsyncTCP/examples/ClientServer/Client/config.h	/^#define CONFIG_H$/;"	d
 CONFIG_H	experiments/ESP_AsyncTCP/examples/ClientServer/Server/config.h	/^#define CONFIG_H$/;"	d
+CONFIG_LED_ILLUMINATOR_ENABLED	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^    #define CONFIG_LED_ILLUMINATOR_ENABLED /;"	d	file:
+CONFIG_LED_ILLUMINATOR_ENABLED	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^#define CONFIG_LED_ILLUMINATOR_ENABLED /;"	d	file:
+CONFIG_LED_MAX_INTENSITY	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^#define CONFIG_LED_MAX_INTENSITY /;"	d	file:
 CONST	experiments/ESP_AsyncTCP/src/SyncClient.h	/^#define CONST$/;"	d
 CYC_MSEC	experiments/Servo/src/stm32f4/Servo.cpp	/^#define CYC_MSEC /;"	d	file:
 Channel	experiments/Servo/src/avr/Servo.cpp	/^static volatile int8_t Channel[_Nbr_16timers ];             \/\/ counter for the servo being pul/;"	v	typeref:typename:volatile int8_t[]	file:
@@ -551,6 +556,15 @@ Example Usage	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Librar
 Examples	experiments/Servo/docs/readme.md	/^## Examples$/;"	s	chapter:Servo library
 ExcludeList	experiments/ESP_Async_WebServer/src/SPIFFSEditor.cpp	/^} ExcludeList;$/;"	t	typeref:struct:ExcludeListS	file:
 ExcludeListS	experiments/ESP_Async_WebServer/src/SPIFFSEditor.cpp	/^typedef struct ExcludeListS {$/;"	s	file:
+FACE_COLOR_BLACK	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^#define FACE_COLOR_BLACK /;"	d	file:
+FACE_COLOR_BLUE	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^#define FACE_COLOR_BLUE /;"	d	file:
+FACE_COLOR_CYAN	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^#define FACE_COLOR_CYAN /;"	d	file:
+FACE_COLOR_GREEN	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^#define FACE_COLOR_GREEN /;"	d	file:
+FACE_COLOR_PURPLE	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^#define FACE_COLOR_PURPLE /;"	d	file:
+FACE_COLOR_RED	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^#define FACE_COLOR_RED /;"	d	file:
+FACE_COLOR_WHITE	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^#define FACE_COLOR_WHITE /;"	d	file:
+FACE_COLOR_YELLOW	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^#define FACE_COLOR_YELLOW /;"	d	file:
+FACE_ID_SAVE_NUMBER	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^#define FACE_ID_SAVE_NUMBER /;"	d	file:
 FILE Upload handling	experiments/ESP_Async_WebServer/README.md	/^### FILE Upload handling$/;"	S	section:ESPAsyncWebServer""Request Variables
 FILE_IS_REAL	experiments/ESP_Async_WebServer/src/WebHandlers.cpp	/^#define FILE_IS_REAL(/;"	d	file:
 FOV	Hexapod-markwtech/pygame-plot/pygame_plot.py	/^FOV = 1000$/;"	v
@@ -585,6 +599,7 @@ HANDLER_FOR_TIMER5	experiments/Servo/src/sam/Servo.cpp	/^void HANDLER_FOR_TIMER5
 HANDLER_FOR_TIMER5	experiments/Servo/src/sam/ServoTimers.h	/^#define HANDLER_FOR_TIMER5 /;"	d
 HEIGHT	Hexapod-markwtech/pygame-plot/pygame_plot.py	/^WIDTH, HEIGHT = 800, 600$/;"	v
 HEIGHT	Hexapod-markwtech/pygame-plot/pygame_plot2.py	/^WIDTH, HEIGHT = 800, 600$/;"	v
+HREF_GPIO_NUM	Kame-Quadpod/Experimenty/CameraWebServer/camera_pins.h	/^#define HREF_GPIO_NUM /;"	d
 HTTP_ANY	experiments/ESP_Async_WebServer/src/ESPAsyncWebServer.h	/^  HTTP_ANY     = 0b01111111,$/;"	e	enum:__anon185fb8380103
 HTTP_DELETE	experiments/ESP_Async_WebServer/src/ESPAsyncWebServer.h	/^  HTTP_DELETE  = 0b00000100,$/;"	e	enum:__anon185fb8380103
 HTTP_GET	experiments/ESP_Async_WebServer/src/ESPAsyncWebServer.h	/^  HTTP_GET     = 0b00000001,$/;"	e	enum:__anon185fb8380103
@@ -643,6 +658,8 @@ JSON_MIMETYPE	experiments/ESP_Async_WebServer/src/AsyncJson.h	/^constexpr const 
 Kame quadpod	Kame-Quadpod/README.md	/^# Kame quadpod$/;"	c
 Kinematics	Hexapod-markwtech/src/kinematics.py	/^class Kinematics:$/;"	c
 Knob	experiments/Servo/examples/Knob/readme.md	/^# Knob$/;"	c
+LED_GPIO_NUM	Kame-Quadpod/Experimenty/CameraWebServer/camera_pins.h	/^#define LED_GPIO_NUM /;"	d
+LED_LEDC_CHANNEL	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^#define LED_LEDC_CHANNEL /;"	d	file:
 LIBRARIES_ESP32SERVO_SRC_ESP32PWM_H_	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.h	/^#define LIBRARIES_ESP32SERVO_SRC_ESP32PWM_H_$/;"	d
 LIBRARIES_ESPASYNCTCP_SRC_ASYNC_CONFIG_H_	experiments/ESP_AsyncTCP/src/async_config.h	/^#define LIBRARIES_ESPASYNCTCP_SRC_ASYNC_CONFIG_H_$/;"	d
 LWIPR_COMPAT_H	experiments/ESP_AsyncTCP/src/tcp_axtls.h	/^#define LWIPR_COMPAT_H$/;"	d
@@ -728,6 +745,7 @@ PARSE_REQ_FAIL	experiments/ESP_Async_WebServer/src/WebRequest.cpp	/^enum { PARSE
 PARSE_REQ_HEADERS	experiments/ESP_Async_WebServer/src/WebRequest.cpp	/^enum { PARSE_REQ_START, PARSE_REQ_HEADERS, PARSE_REQ_BODY, PARSE_REQ_END, PARSE_REQ_FAIL };$/;"	e	enum:__anon7471535f0103	file:
 PARSE_REQ_START	experiments/ESP_Async_WebServer/src/WebRequest.cpp	/^enum { PARSE_REQ_START, PARSE_REQ_HEADERS, PARSE_REQ_BODY, PARSE_REQ_END, PARSE_REQ_FAIL };$/;"	e	enum:__anon7471535f0103	file:
 PARSING_FINISHED	experiments/ESP_Async_WebServer/src/WebRequest.cpp	/^  PARSING_FINISHED,$/;"	e	enum:__anon7471535f0b03	file:
+PART_BOUNDARY	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^#define PART_BOUNDARY /;"	d	file:
 PASSWORD	experiments/ESP_AsyncTCP/examples/ClientServer/Client/config.h	/^#define PASSWORD /;"	d
 PASSWORD	experiments/ESP_AsyncTCP/examples/ClientServer/Server/config.h	/^#define PASSWORD /;"	d
 PCA9685	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^PCA9685::PCA9685(TwoWire& i2cWire, uint32_t i2cSpeed, byte i2cAddress)$/;"	f	class:PCA9685
@@ -916,7 +934,9 @@ PCA9685_TESTMODE	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafrui
 PCA9685_TESTMODE	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define PCA9685_TESTMODE /;"	d
 PCA9685_USE_SOFTWARE_I2C	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^#define PCA9685_USE_SOFTWARE_I2C$/;"	d
 PCA9685_USE_SOFTWARE_I2C	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.h	/^#define PCA9685_USE_SOFTWARE_I2C$/;"	d
+PCLK_GPIO_NUM	Kame-Quadpod/Experimenty/CameraWebServer/camera_pins.h	/^#define PCLK_GPIO_NUM /;"	d
 PS4 Controller pairing (Actually trying to pair Data Frog controller)	Kame-Quadpod/ps4 controller pairing.md	/^## PS4 Controller pairing (Actually trying to pair Data Frog controller)$/;"	s
+PWDN_GPIO_NUM	Kame-Quadpod/Experimenty/CameraWebServer/camera_pins.h	/^#define PWDN_GPIO_NUM /;"	d
 PWM	Xpider-cute-robot/libraries/SparkFun_TB6612FNG_Motor_Driver_Library/src/SparkFun_TB6612.h	/^	int In1, In2, PWM, Offset,Standby;$/;"	m	class:Motor	typeref:typename:int
 PWMCount	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.cpp	/^int ESP32PWM::PWMCount = -1;              \/\/ the total number of attached servos$/;"	m	class:ESP32PWM	typeref:typename:int
 PWMCount	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.h	/^	static int PWMCount;              \/\/ the total number of attached pwm$/;"	m	class:ESP32PWM	typeref:typename:int
@@ -942,6 +962,7 @@ Principles of operation	experiments/ESP_Async_WebServer/README.md	/^## Principle
 Print to response	experiments/ESP_Async_WebServer/README.md	/^### Print to response$/;"	S	section:ESPAsyncWebServer""Responses
 Products that use this Library	Xpider-cute-robot/libraries/SparkFun_TB6612FNG_Motor_Driver_Library/README.md	/^Products that use this Library $/;"	s	chapter:SparkFun SparkFun Motor Driver - Dual TB6612FNG (1A) Arduino Library
 Projects	README.md	/^### Projects$/;"	S	chapter:Raspberry-Robotics
+QUANT_TYPE	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^#define QUANT_TYPE /;"	d	file:
 RCT_DEFAULT	experiments/ESP_Async_WebServer/src/ESPAsyncWebServer.h	/^typedef enum { RCT_NOT_USED = -1, RCT_DEFAULT = 0, RCT_HTTP, RCT_WS, RCT_EVENT, RCT_MAX } Reques/;"	e	enum:__anon185fb8380203
 RCT_EVENT	experiments/ESP_Async_WebServer/src/ESPAsyncWebServer.h	/^typedef enum { RCT_NOT_USED = -1, RCT_DEFAULT = 0, RCT_HTTP, RCT_WS, RCT_EVENT, RCT_MAX } Reques/;"	e	enum:__anon185fb8380203
 RCT_HTTP	experiments/ESP_Async_WebServer/src/ESPAsyncWebServer.h	/^typedef enum { RCT_NOT_USED = -1, RCT_DEFAULT = 0, RCT_HTTP, RCT_WS, RCT_EVENT, RCT_MAX } Reques/;"	e	enum:__anon185fb8380203
@@ -952,6 +973,7 @@ REFRESH_CPS	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32Servo.h	/^	int REFRE
 REFRESH_INTERVAL	experiments/Servo/src/Servo.h	/^#define REFRESH_INTERVAL /;"	d
 REFRESH_INTERVAL	experiments/Servo/src/megaavr/Servo.cpp	/^#define REFRESH_INTERVAL /;"	d	file:
 REFRESH_USEC	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32Servo.h	/^#define REFRESH_USEC /;"	d
+RESET_GPIO_NUM	Kame-Quadpod/Experimenty/CameraWebServer/camera_pins.h	/^#define RESET_GPIO_NUM /;"	d
 RESPONSE_CONTENT	experiments/ESP_Async_WebServer/src/ESPAsyncWebServer.h	/^  RESPONSE_SETUP, RESPONSE_HEADERS, RESPONSE_CONTENT, RESPONSE_WAIT_ACK, RESPONSE_END, RESPONSE_/;"	e	enum:__anon185fb8380303
 RESPONSE_END	experiments/ESP_Async_WebServer/src/ESPAsyncWebServer.h	/^  RESPONSE_SETUP, RESPONSE_HEADERS, RESPONSE_CONTENT, RESPONSE_WAIT_ACK, RESPONSE_END, RESPONSE_/;"	e	enum:__anon185fb8380303
 RESPONSE_FAILED	experiments/ESP_Async_WebServer/src/ESPAsyncWebServer.h	/^  RESPONSE_SETUP, RESPONSE_HEADERS, RESPONSE_CONTENT, RESPONSE_WAIT_ACK, RESPONSE_END, RESPONSE_/;"	e	enum:__anon185fb8380303
@@ -1028,6 +1050,8 @@ SIGNAL	experiments/Servo/src/avr/Servo.cpp	/^SIGNAL (TIMER1_COMPA_vect)$/;"	f
 SIGNAL	experiments/Servo/src/avr/Servo.cpp	/^SIGNAL (TIMER3_COMPA_vect)$/;"	f
 SIGNAL	experiments/Servo/src/avr/Servo.cpp	/^SIGNAL (TIMER4_COMPA_vect)$/;"	f
 SIGNAL	experiments/Servo/src/avr/Servo.cpp	/^SIGNAL (TIMER5_COMPA_vect)$/;"	f
+SIOC_GPIO_NUM	Kame-Quadpod/Experimenty/CameraWebServer/camera_pins.h	/^#define SIOC_GPIO_NUM /;"	d
+SIOD_GPIO_NUM	Kame-Quadpod/Experimenty/CameraWebServer/camera_pins.h	/^#define SIOD_GPIO_NUM /;"	d
 SPARKFUN_TB6612_h	Xpider-cute-robot/libraries/SparkFun_TB6612FNG_Motor_Driver_Library/src/SparkFun_TB6612.h	/^#define SPARKFUN_TB6612_h$/;"	d
 SPIClass	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^typedef uint8_t SPIClass;$/;"	t	typeref:typename:uint8_t
 SPIClass	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^typedef uint8_t SPIClass;$/;"	t	typeref:typename:uint8_t
@@ -1176,6 +1200,7 @@ TRIM_DURATION	experiments/Servo/src/mbed/Servo.cpp	/^#define TRIM_DURATION /;"	d
 TRIM_DURATION	experiments/Servo/src/megaavr/Servo.cpp	/^#define TRIM_DURATION /;"	d	file:
 TRIM_DURATION	experiments/Servo/src/sam/Servo.cpp	/^#define TRIM_DURATION /;"	d	file:
 TRIM_DURATION	experiments/Servo/src/samd/Servo.cpp	/^#define TRIM_DURATION /;"	d	file:
+TWO_STAGE	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^#define TWO_STAGE /;"	d	file:
 Table of contents	experiments/ESP_Async_WebServer/README.md	/^## Table of contents$/;"	s	chapter:ESPAsyncWebServer
 Template processing	experiments/ESP_Async_WebServer/README.md	/^### Template processing$/;"	S	section:ESPAsyncWebServer""Principles of operation
 Tests	Hexapod-markwtech/src/tests.py	/^class Tests:$/;"	c
@@ -1184,12 +1209,14 @@ Timer1Service	experiments/Servo/src/avr/Servo.cpp	/^void Timer1Service()$/;"	f	t
 Timer3Service	experiments/Servo/src/avr/Servo.cpp	/^void Timer3Service()$/;"	f	typeref:typename:void
 TripodMode	Hexapod-markwtech/src/gate_engine.py	/^class TripodMode(MovementMode):$/;"	c
 USABLE_ESP32_PWM	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.h	/^#define USABLE_ESP32_PWM /;"	d
+USE_BOARD_HEADER	Kame-Quadpod/Experimenty/CameraWebServer/camera_pins.h	/^#define USE_BOARD_HEADER /;"	d
 USE_TIMERB2	experiments/Servo/src/megaavr/ServoTimers.h	/^#define USE_TIMERB2 /;"	d
 US_TO_ANGLE	experiments/Servo/src/stm32f4/Servo.cpp	/^#define US_TO_ANGLE(/;"	d	file:
 US_TO_COMPARE	experiments/Servo/src/stm32f4/Servo.cpp	/^#define US_TO_COMPARE(/;"	d	file:
 Useful Defaults:	Xpider-cute-robot/libraries/ESP32Servo/README.md	/^### Useful Defaults:$/;"	S	section:Documentation by Doxygen""Library Description:
 Using PlatformIO	experiments/ESP_Async_WebServer/README.md	/^### Using PlatformIO$/;"	S	section:ESPAsyncWebServer""Installation
 Using filters	experiments/ESP_Async_WebServer/README.md	/^## Using filters$/;"	s	chapter:ESPAsyncWebServer
+VSYNC_GPIO_NUM	Kame-Quadpod/Experimenty/CameraWebServer/camera_pins.h	/^#define VSYNC_GPIO_NUM /;"	d
 WAIT_FOR_RETURN1	experiments/ESP_Async_WebServer/src/WebRequest.cpp	/^  WAIT_FOR_RETURN1,$/;"	e	enum:__anon7471535f0b03	file:
 WAIT_TC16_REGS_SYNC	experiments/Servo/src/samd/Servo.cpp	/^#define WAIT_TC16_REGS_SYNC(/;"	d	file:
 WEB_AUTHENTICATION_H_	experiments/ESP_Async_WebServer/src/WebAuthentication.h	/^#define WEB_AUTHENTICATION_H_$/;"	d
@@ -1229,7 +1256,16 @@ WebRequestMethodComposite	experiments/ESP_Async_WebServer/src/ESPAsyncWebServer.
 WebResponseState	experiments/ESP_Async_WebServer/src/ESPAsyncWebServer.h	/^} WebResponseState;$/;"	t	typeref:enum:__anon185fb8380303
 WebSocketTester	experiments/ESP_Async_WebServer/examples/ESP_AsyncFSBrowser/data/index.htm	/^    <title>WebSocketTester<\/title>$/;"	j
 Why should you care	experiments/ESP_Async_WebServer/README.md	/^## Why should you care$/;"	s	chapter:ESPAsyncWebServer
+XCLK_GPIO_NUM	Kame-Quadpod/Experimenty/CameraWebServer/camera_pins.h	/^#define XCLK_GPIO_NUM /;"	d
 Xpider Ballsy	Xpider-cute-robot/README.md	/^# Xpider Ballsy$/;"	c
+Y2_GPIO_NUM	Kame-Quadpod/Experimenty/CameraWebServer/camera_pins.h	/^#define Y2_GPIO_NUM /;"	d
+Y3_GPIO_NUM	Kame-Quadpod/Experimenty/CameraWebServer/camera_pins.h	/^#define Y3_GPIO_NUM /;"	d
+Y4_GPIO_NUM	Kame-Quadpod/Experimenty/CameraWebServer/camera_pins.h	/^#define Y4_GPIO_NUM /;"	d
+Y5_GPIO_NUM	Kame-Quadpod/Experimenty/CameraWebServer/camera_pins.h	/^#define Y5_GPIO_NUM /;"	d
+Y6_GPIO_NUM	Kame-Quadpod/Experimenty/CameraWebServer/camera_pins.h	/^#define Y6_GPIO_NUM /;"	d
+Y7_GPIO_NUM	Kame-Quadpod/Experimenty/CameraWebServer/camera_pins.h	/^#define Y7_GPIO_NUM /;"	d
+Y8_GPIO_NUM	Kame-Quadpod/Experimenty/CameraWebServer/camera_pins.h	/^#define Y8_GPIO_NUM /;"	d
+Y9_GPIO_NUM	Kame-Quadpod/Experimenty/CameraWebServer/camera_pins.h	/^#define Y9_GPIO_NUM /;"	d
 _ADAFRUIT_I2C_REGISTER_H_	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_I2CRegister.h	/^#define _ADAFRUIT_I2C_REGISTER_H_$/;"	d
 _ADAFRUIT_I2C_REGISTER_H_	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_I2CRegister.h	/^#define _ADAFRUIT_I2C_REGISTER_H_$/;"	d
 _ADAFRUIT_PWMServoDriver_H	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^#define _ADAFRUIT_PWMServoDriver_H$/;"	d
@@ -1259,6 +1295,9 @@ _RXmode	experiments/ESP_AsyncTCP/src/ESPAsyncTCPbuffer.h	/^        atbRxMode_t _
 _SERVO_H_	experiments/Servo/src/stm32f4/ServoTimers.h	/^#define _SERVO_H_$/;"	d
 _SPI_MODE4	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^enum { SPI_MODE0, SPI_MODE1, SPI_MODE2, _SPI_MODE4 };$/;"	e	enum:__anon01f3beeb0103
 _SPI_MODE4	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h	/^enum { SPI_MODE0, SPI_MODE1, SPI_MODE2, _SPI_MODE4 };$/;"	e	enum:__anon7f56235a0103
+_STREAM_BOUNDARY	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^static const char *_STREAM_BOUNDARY = "\\r\\n--" PART_BOUNDARY "\\r\\n";$/;"	v	typeref:typename:const char *	file:
+_STREAM_CONTENT_TYPE	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^static const char *_STREAM_CONTENT_TYPE = "multipart\/x-mixed-replace;boundary=" PART_BOUNDARY;$/;"	v	typeref:typename:const char *	file:
+_STREAM_PART	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^static const char *_STREAM_PART = "Content-Type: image\/jpeg\\r\\nContent-Length: %u\\r\\nX-Time/;"	v	typeref:typename:const char *	file:
 _TXbufferRead	experiments/ESP_AsyncTCP/src/ESPAsyncTCPbuffer.h	/^        cbuf * _TXbufferRead;$/;"	m	class:AsyncTCPbuffer	typeref:typename:cbuf *
 _TXbufferWrite	experiments/ESP_AsyncTCP/src/ESPAsyncTCPbuffer.h	/^        cbuf * _TXbufferWrite;$/;"	m	class:AsyncTCPbuffer	typeref:typename:cbuf *
 _WSbuffer	experiments/ESP_Async_WebServer/src/AsyncWebSocket.h	/^    AsyncWebSocketMessageBuffer * _WSbuffer; $/;"	m	class:AsyncWebSocketMultiMessage	typeref:typename:AsyncWebSocketMessageBuffer *
@@ -1294,6 +1333,8 @@ __anon6f4991f20302	experiments/ESP_AsyncTCP/src/ESPAsyncTCPbuffer.cpp	/^    _cli
 __anon6f4991f20402	experiments/ESP_AsyncTCP/src/ESPAsyncTCPbuffer.cpp	/^    _client->onData([](void *obj, AsyncClient* c, void *buf, size_t len) {$/;"	f	function:AsyncTCPbuffer::_attachCallbacks	file:
 __anon6f4991f20502	experiments/ESP_AsyncTCP/src/ESPAsyncTCPbuffer.cpp	/^    _client->onTimeout([](void *obj, AsyncClient* c, uint32_t time){$/;"	f	function:AsyncTCPbuffer::_attachCallbacks	file:
 __anon707a2a180102	experiments/ESP_Async_WebServer/src/WebResponses.cpp	/^  , _headers(LinkedList<AsyncWebHeader *>([](AsyncWebHeader *h){ delete h; }))$/;"	f	file:
+__anon731738780108	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^{$/;"	s	file:
+__anon731738780208	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^{$/;"	s	file:
 __anon7471535f0103	experiments/ESP_Async_WebServer/src/WebRequest.cpp	/^enum { PARSE_REQ_START, PARSE_REQ_HEADERS, PARSE_REQ_BODY, PARSE_REQ_END, PARSE_REQ_FAIL };$/;"	g	file:
 __anon7471535f0202	experiments/ESP_Async_WebServer/src/WebRequest.cpp	/^  , _headers(LinkedList<AsyncWebHeader *>([](AsyncWebHeader *h){ delete h; }))$/;"	f	file:
 __anon7471535f0302	experiments/ESP_Async_WebServer/src/WebRequest.cpp	/^  , _params(LinkedList<AsyncWebParameter *>([](AsyncWebParameter *p){ delete p; }))$/;"	f	file:
@@ -2029,6 +2070,7 @@ binaryAll	experiments/ESP_Async_WebServer/src/AsyncWebSocket.cpp	/^void AsyncWeb
 binaryAll	experiments/ESP_Async_WebServer/src/AsyncWebSocket.cpp	/^void AsyncWebSocket::binaryAll(const char * message){$/;"	f	class:AsyncWebSocket	typeref:typename:void
 binaryAll	experiments/ESP_Async_WebServer/src/AsyncWebSocket.cpp	/^void AsyncWebSocket::binaryAll(const char * message, size_t len){$/;"	f	class:AsyncWebSocket	typeref:typename:void
 binaryAll	experiments/ESP_Async_WebServer/src/AsyncWebSocket.cpp	/^void AsyncWebSocket::binaryAll(uint8_t * message, size_t len){$/;"	f	class:AsyncWebSocket	typeref:typename:void
+bmp_handler	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^static esp_err_t bmp_handler(httpd_req_t *req)$/;"	f	typeref:typename:esp_err_t	file:
 body	Hexapod-markwtech/src/static/style.css	/^body{$/;"	s
 body	experiments/ESP_Async_WebServer/examples/ESP_AsyncFSBrowser/data/index.htm	/^  <body id="body" onload="onBodyLoad()">$/;"	I
 brake	Xpider-cute-robot/libraries/SparkFun_TB6612FNG_Motor_Driver_Library/src/SparkFun_TB6612.cpp	/^void Motor::brake()$/;"	f	class:Motor	typeref:typename:void
@@ -2045,6 +2087,7 @@ build_sketches	experiments/ESP_Async_WebServer/.github/scripts/install-arduino-i
 calc_2D_fk	Hexapod-markwtech/src/kinematics.py	/^    def calc_2D_fk(self, P0, coxa_len, femur_len, a0, a1):$/;"	m	class:Kinematics
 calc_2D_ik	Hexapod-markwtech/src/kinematics.py	/^    def calc_2D_ik(self, femur_len, tibia_len, tx, ty):$/;"	m	class:Kinematics
 call	experiments/Servo/src/mbed/Servo.cpp	/^    void call() {$/;"	f	class:ServoImpl	typeref:typename:void	file:
+camera_httpd	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^httpd_handle_t camera_httpd = NULL;$/;"	v	typeref:typename:httpd_handle_t
 canDelete	experiments/ESP_Async_WebServer/src/AsyncWebSocket.h	/^    bool canDelete() { return (!_count && !_lock); } $/;"	f	class:AsyncWebSocketMessageBuffer	typeref:typename:bool
 canHandle	experiments/ESP_Async_WebServer/src/AsyncEventSource.cpp	/^bool AsyncEventSource::canHandle(AsyncWebServerRequest *request){$/;"	f	class:AsyncEventSource	typeref:typename:bool
 canHandle	experiments/ESP_Async_WebServer/src/AsyncJson.h	/^  virtual bool canHandle(AsyncWebServerRequest *request) override final{$/;"	f	class:AsyncCallbackJsonWebHandler	typeref:typename:bool
@@ -2055,6 +2098,7 @@ canHandle	experiments/ESP_Async_WebServer/src/WebHandlerImpl.h	/^    virtual boo
 canHandle	experiments/ESP_Async_WebServer/src/WebHandlers.cpp	/^bool AsyncStaticWebHandler::canHandle(AsyncWebServerRequest *request){$/;"	f	class:AsyncStaticWebHandler	typeref:typename:bool
 canSend	experiments/ESP_AsyncTCP/src/ESPAsyncTCP.cpp	/^bool AsyncClient::canSend(){$/;"	f	class:AsyncClient	typeref:typename:bool
 canSend	experiments/ESP_Async_WebServer/src/AsyncWebSocket.h	/^    bool canSend() { return _messageQueue.length() < WS_MAX_QUEUED_MESSAGES; }$/;"	f	class:AsyncWebSocketClient	typeref:typename:bool
+capture_handler	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^static esp_err_t capture_handler(httpd_req_t *req)$/;"	f	typeref:typename:esp_err_t	file:
 category	InMoove-Arm/libraries/Adafruit_BusIO/library.properties	/^category=Signal Input\/Output$/;"	k
 category	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/library.properties	/^category=Device Control$/;"	k
 category	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.properties	/^category=Device Control$/;"	k
@@ -2095,9 +2139,11 @@ close	experiments/ESP_Async_WebServer/src/AsyncWebSocket.cpp	/^void AsyncWebSock
 closeAll	experiments/ESP_Async_WebServer/src/AsyncWebSocket.cpp	/^void AsyncWebSocket::closeAll(uint16_t code, const char * message){$/;"	f	class:AsyncWebSocket	typeref:typename:void
 closest_results_cnt	Hexapod-markwtech/src/brute-force-fk-offset.py	/^closest_results_cnt = 0$/;"	v
 closest_results_cnt	Hexapod-markwtech/src/brute-force-ik-offset.py	/^closest_results_cnt = 0$/;"	v
+cmd_handler	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^static esp_err_t cmd_handler(httpd_req_t *req)$/;"	f	typeref:typename:esp_err_t	file:
 command	Hexapod-markwtech/src/hexapod.py	/^    def command(self, command):$/;"	m	class:Hexapod
 compare_results	Hexapod-markwtech/src/tests.py	/^    def compare_results(self, input, expected_coords, actual_coords):$/;"	m	class:Tests
 config	Hexapod-markwtech/Makefile	/^config:$/;"	t
+configurations	Kame-Quadpod/Experimenty/CameraWebServer/.theia/launch.json	/^  "configurations": [$/;"	a
 connect	experiments/ESP_AsyncTCP/src/AsyncPrinter.cpp	/^int AsyncPrinter::connect(IPAddress ip, uint16_t port){$/;"	f	class:AsyncPrinter	typeref:typename:int
 connect	experiments/ESP_AsyncTCP/src/AsyncPrinter.cpp	/^int AsyncPrinter::connect(const char *host, uint16_t port){$/;"	f	class:AsyncPrinter	typeref:typename:int
 connect	experiments/ESP_AsyncTCP/src/ESPAsyncTCP.cpp	/^bool AsyncClient::connect(IPAddress ip, uint16_t port, bool secure){$/;"	f	class:AsyncClient	typeref:typename:bool
@@ -2117,6 +2163,7 @@ connecting	experiments/ESP_AsyncTCP/src/ESPAsyncTCP.cpp	/^bool AsyncClient::conn
 containsIgnoreCase	experiments/ESP_Async_WebServer/src/StringArray.h	/^  bool containsIgnoreCase(const String& str){$/;"	f	class:StringArray	typeref:typename:bool
 contentLength	experiments/ESP_Async_WebServer/src/ESPAsyncWebServer.h	/^    size_t contentLength() const { return _contentLength; }$/;"	f	class:AsyncWebServerRequest	typeref:typename:size_t
 contentType	experiments/ESP_Async_WebServer/src/ESPAsyncWebServer.h	/^    const String& contentType() const { return _contentType; }$/;"	f	class:AsyncWebServerRequest	typeref:typename:const String &
+count	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^    size_t count; \/\/value count$/;"	m	struct:__anon731738780208	typeref:typename:size_t	file:
 count	experiments/ESP_Async_WebServer/src/AsyncEventSource.cpp	/^size_t AsyncEventSource::count() const {$/;"	f	class:AsyncEventSource	typeref:typename:size_t
 count	experiments/ESP_Async_WebServer/src/AsyncWebSocket.cpp	/^size_t AsyncWebSocket::count() const {$/;"	f	class:AsyncWebSocket	typeref:typename:size_t
 count	experiments/ESP_Async_WebServer/src/AsyncWebSocket.h	/^    uint32_t count() { return _count; }$/;"	f	class:AsyncWebSocketMessageBuffer	typeref:typename:uint32_t
@@ -2157,6 +2204,7 @@ detach	experiments/Servo/src/stm32f4/Servo.cpp	/^bool Servo::detach() {$/;"	f	cl
 detachPin	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.cpp	/^void ESP32PWM::detachPin(int pin) {$/;"	f	class:ESP32PWM	typeref:typename:void
 detected	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_I2CDevice.cpp	/^bool Adafruit_I2CDevice::detected(void) {$/;"	f	class:Adafruit_I2CDevice	typeref:typename:bool
 detected	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_I2CDevice.cpp	/^bool Adafruit_I2CDevice::detected(void) {$/;"	f	class:Adafruit_I2CDevice	typeref:typename:bool
+detection_enabled	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^static int8_t detection_enabled = 0;$/;"	v	typeref:typename:int8_t	file:
 disableAllCallAddress	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::disableAllCallAddress() {$/;"	f	class:PCA9685	typeref:typename:void
 disableAllCallAddress	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::disableAllCallAddress() {$/;"	f	class:PCA9685	typeref:typename:void
 disableSub1Address	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::disableSub1Address() {$/;"	f	class:PCA9685	typeref:typename:void
@@ -2169,6 +2217,7 @@ disconnected	experiments/ESP_AsyncTCP/src/ESPAsyncTCP.cpp	/^bool AsyncClient::di
 disconnecting	experiments/ESP_AsyncTCP/src/ESPAsyncTCP.cpp	/^bool AsyncClient::disconnecting(){$/;"	f	class:AsyncClient	typeref:typename:bool
 draw_3d_line	Hexapod-markwtech/pygame-plot/pygame_plot.py	/^def draw_3d_line(start, end, color):$/;"	f
 draw_3d_line	Hexapod-markwtech/pygame-plot/pygame_plot2.py	/^def draw_3d_line(start, end, color):$/;"	f
+draw_face_boxes	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^static void draw_face_boxes(fb_data_t *fb, std::list<dl::detect::result_t> *results, int face_id/;"	f	typeref:typename:void	file:
 draw_x_line	Hexapod-markwtech/src/hexapod.py	/^    def draw_x_line(self, start_x, target_x, increment=0.1, speed=0.05):$/;"	m	class:HexapodLeg
 draw_y_line	Hexapod-markwtech/src/hexapod.py	/^    def draw_y_line(self, start_x, target_x, increment=0.1, speed=0.05):$/;"	m	class:HexapodLeg
 draw_z_line	Hexapod-markwtech/src/hexapod.py	/^    def draw_z_line(self, start_x, target_x, increment=0.1, speed=0.05):$/;"	m	class:HexapodLeg
@@ -2199,6 +2248,7 @@ enableSub2Address	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Lib
 enableSub2Address	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::enableSub2Address(byte i2cAddressSub2) {$/;"	f	class:PCA9685	typeref:typename:void
 enableSub3Address	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::enableSub3Address(byte i2cAddressSub3) {$/;"	f	class:PCA9685	typeref:typename:void
 enableSub3Address	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::enableSub3Address(byte i2cAddressSub3) {$/;"	f	class:PCA9685	typeref:typename:void
+enable_led	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^void enable_led(bool en)$/;"	f	typeref:typename:void
 enabled	experiments/ESP_Async_WebServer/src/AsyncWebSocket.h	/^    bool enabled() const { return _enabled; }$/;"	f	class:AsyncWebSocket	typeref:typename:bool
 end	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_I2CDevice.cpp	/^void Adafruit_I2CDevice::end(void) {$/;"	f	class:Adafruit_I2CDevice	typeref:typename:void
 end	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_I2CDevice.cpp	/^void Adafruit_I2CDevice::end(void) {$/;"	f	class:Adafruit_I2CDevice	typeref:typename:void
@@ -2332,6 +2382,7 @@ getTimer	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.h	/^	int getTimer()
 getWireInterfaceNumber	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^int PCA9685::getWireInterfaceNumber() {$/;"	f	class:PCA9685	typeref:typename:int
 getWireInterfaceNumber	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^int PCA9685::getWireInterfaceNumber() {$/;"	f	class:PCA9685	typeref:typename:int
 get_step	Kame-Quadpod/natural-movement.py	/^def get_step(current_angle, starting_angle, ending_angle, steps_list):$/;"	f
+greg_handler	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^static esp_err_t greg_handler(httpd_req_t *req)$/;"	f	typeref:typename:esp_err_t	file:
 group_pins	experiments/Servo/src/nrf52/Servo.cpp	/^uint32_t group_pins[3][NRF_PWM_CHANNEL_COUNT]={{NRF_PWM_PIN_NOT_CONNECTED, NRF_PWM_PIN_NOT_CONNE/;"	v	typeref:typename:uint32_t[3][]
 gyro_data	Hexapod-markwtech/gyro.py	/^    gyro_data = mpu.get_gyro_data()$/;"	v
 h1	Hexapod-markwtech/src/static/style.css	/^h1{$/;"	s
@@ -2386,6 +2437,7 @@ i2c_dev	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServ
 i2c_dev	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h	/^  Adafruit_I2CDevice *i2c_dev = NULL; \/\/\/< Pointer to I2C bus interface$/;"	m	class:Adafruit_PWMServoDriver	typeref:typename:Adafruit_I2CDevice *
 id	experiments/ESP_Async_WebServer/src/AsyncWebSocket.h	/^    uint32_t id(){ return _clientId; }$/;"	f	class:AsyncWebSocketClient	typeref:typename:uint32_t
 idf.pythonInstallPath	.vscode/settings.json	/^    "idf.pythonInstallPath": "C:\\\\Espressif\\\\tools\\\\idf-python\\\\3.11.2\\\\python.exe"$/;"	s
+idf.pythonInstallPath	Kame-Quadpod/.vscode/settings.json	/^    "idf.pythonInstallPath": "C:\\\\Espressif\\\\tools\\\\idf-python\\\\3.11.2\\\\python.exe"$/;"	s
 img	Hexapod-markwtech/src/static/style.css	/^img{$/;"	s
 incEventCount	experiments/ESP_AsyncTCP/src/ESPAsyncTCP.h	/^    int incEventCount(size_t ee) { return ++_event_count[ee];}$/;"	f	class:AsyncServer	typeref:typename:int
 includes	Xpider-cute-robot/libraries/ESP32Servo/library.properties	/^includes=ESP32Servo.h,analogWrite.h,tone.h,ESP32Tone.h,ESP32PWM.h$/;"	k
@@ -2393,7 +2445,15 @@ index	Hexapod-markwtech/app-capture-photo-working.py	/^def index():$/;"	f
 index	Hexapod-markwtech/app-cv2-original.py	/^def index():$/;"	f
 index	Hexapod-markwtech/app-cv2.py	/^def index(): $/;"	f
 index	Hexapod-markwtech/src/app.py	/^def index():$/;"	f
+index	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^    size_t index; \/\/current value index$/;"	m	struct:__anon731738780208	typeref:typename:size_t	file:
 index	experiments/ESP_Async_WebServer/src/AsyncWebSocket.h	/^    uint64_t index;$/;"	m	struct:__anon203386220108	typeref:typename:uint64_t
+index_handler	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^static esp_err_t index_handler(httpd_req_t *req)$/;"	f	typeref:typename:esp_err_t	file:
+index_ov2640_html_gz	Kame-Quadpod/Experimenty/CameraWebServer/camera_index.h	/^const uint8_t index_ov2640_html_gz[] = {$/;"	v	typeref:typename:const uint8_t[]
+index_ov2640_html_gz_len	Kame-Quadpod/Experimenty/CameraWebServer/camera_index.h	/^#define index_ov2640_html_gz_len /;"	d
+index_ov3660_html_gz	Kame-Quadpod/Experimenty/CameraWebServer/camera_index.h	/^const uint8_t index_ov3660_html_gz[] = {$/;"	v	typeref:typename:const uint8_t[]
+index_ov3660_html_gz_len	Kame-Quadpod/Experimenty/CameraWebServer/camera_index.h	/^#define index_ov3660_html_gz_len /;"	d
+index_ov5640_html_gz	Kame-Quadpod/Experimenty/CameraWebServer/camera_index.h	/^const uint8_t index_ov5640_html_gz[] = {$/;"	v	typeref:typename:const uint8_t[]
+index_ov5640_html_gz_len	Kame-Quadpod/Experimenty/CameraWebServer/camera_index.h	/^#define index_ov5640_html_gz_len /;"	d
 init	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::init(PCA9685_OutputDriverMode driverMode,$/;"	f	class:PCA9685	typeref:typename:void
 init	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::init(PCA9685_PhaseBalancer phaseBalancer,$/;"	f	class:PCA9685	typeref:typename:void
 init	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::init(PCA9685_OutputDriverMode driverMode,$/;"	f	class:PCA9685	typeref:typename:void
@@ -2430,12 +2490,16 @@ isRequestHandlerTrivial	experiments/ESP_Async_WebServer/src/AsyncJson.h	/^  virt
 isRequestHandlerTrivial	experiments/ESP_Async_WebServer/src/ESPAsyncWebServer.h	/^    virtual bool isRequestHandlerTrivial(){return true;}$/;"	f	class:AsyncWebHandler	typeref:typename:bool
 isRequestHandlerTrivial	experiments/ESP_Async_WebServer/src/SPIFFSEditor.h	/^    virtual bool isRequestHandlerTrivial() override final {return false;}$/;"	f	class:SPIFFSEditor	typeref:typename:bool
 isRequestHandlerTrivial	experiments/ESP_Async_WebServer/src/WebHandlerImpl.h	/^    virtual bool isRequestHandlerTrivial() override final {return _onRequest ? false : true;}$/;"	f	class:AsyncCallbackWebHandler	typeref:typename:bool
+isStreaming	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^bool isStreaming = false;$/;"	v	typeref:typename:bool
 isTimerActive	experiments/Servo/src/avr/Servo.cpp	/^static boolean isTimerActive(timer16_Sequence_t timer)$/;"	f	typeref:typename:boolean	file:
 isTimerActive	experiments/Servo/src/megaavr/Servo.cpp	/^static boolean isTimerActive(timer16_Sequence_t timer)$/;"	f	typeref:typename:boolean	file:
 isTimerActive	experiments/Servo/src/sam/Servo.cpp	/^static boolean isTimerActive(timer16_Sequence_t timer)$/;"	f	typeref:typename:boolean	file:
 isTimerActive	experiments/Servo/src/samd/Servo.cpp	/^static boolean isTimerActive(timer16_Sequence_t timer)$/;"	f	typeref:typename:boolean	file:
+is_enrolling	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^static int8_t is_enrolling = 0;$/;"	v	typeref:typename:int8_t	file:
 item	experiments/ESP_Async_WebServer/src/SPIFFSEditor.cpp	/^    char *item;$/;"	m	struct:ExcludeListS	typeref:typename:char *	file:
 itemWriteByte	experiments/ESP_Async_WebServer/src/WebRequest.cpp	/^#define itemWriteByte(/;"	d	file:
+jpg_chunking_t	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^} jpg_chunking_t;$/;"	t	typeref:struct:__anon731738780108	file:
+jpg_encode_stream	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^static size_t jpg_encode_stream(void *arg, size_t index, const void *data, size_t len)$/;"	f	typeref:typename:size_t	file:
 keepAlivePeriod	experiments/ESP_Async_WebServer/src/AsyncWebSocket.h	/^    uint16_t keepAlivePeriod(){$/;"	f	class:AsyncWebSocketClient	typeref:typename:uint16_t
 keepAlivePeriod	experiments/ESP_Async_WebServer/src/AsyncWebSocket.h	/^    void keepAlivePeriod(uint16_t seconds){$/;"	f	class:AsyncWebSocketClient	typeref:typename:void
 keywords	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^    "keywords": "PCA9685, pwm, i2c, controller, driver",$/;"	s
@@ -2444,9 +2508,11 @@ keywords	experiments/ESP_AsyncTCP/library.json	/^  "keywords":"async,tcp",$/;"	s
 keywords	experiments/ESP_Async_WebServer/library.json	/^  "keywords":"http,async,websocket,webserver",$/;"	s
 lastId	experiments/ESP_Async_WebServer/src/AsyncEventSource.h	/^    uint32_t lastId() const { return _lastId; }$/;"	f	class:AsyncEventSourceClient	typeref:typename:uint32_t
 last_wr	experiments/ESP_AsyncTCP/src/tcp_axtls.c	/^  int last_wr;$/;"	m	struct:tcp_ssl_pcb	typeref:typename:int	file:
+led_duty	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^int led_duty = 0;$/;"	v	typeref:typename:int
 left	Xpider-cute-robot/libraries/SparkFun_TB6612FNG_Motor_Driver_Library/src/SparkFun_TB6612.cpp	/^void left(Motor left, Motor right, int speed)$/;"	f	typeref:typename:void
 leg_FL	Hexapod-markwtech/src/main.py	/^leg_FL = HexapodLeg(hexapod, 0, Coords(0, 0, 0), shared_legs_params)$/;"	v
 leg_FR	Hexapod-markwtech/src/main.py	/^leg_FR = HexapodLeg(hexapod, 1, Coords(0, 0, 0), shared_legs_params)$/;"	v
+len	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^    size_t len;$/;"	m	struct:__anon731738780108	typeref:typename:size_t	file:
 len	experiments/ESP_Async_WebServer/src/AsyncWebSocket.cpp	/^    uint8_t len(){ return _len + 2; }$/;"	f	class:AsyncWebSocketControl	typeref:typename:uint8_t	file:
 len	experiments/ESP_Async_WebServer/src/AsyncWebSocket.h	/^    uint64_t len;$/;"	m	struct:__anon203386220108	typeref:typename:uint64_t
 length	experiments/ESP_Async_WebServer/src/AsyncWebSocket.h	/^    size_t length() { return _len; }$/;"	f	class:AsyncWebSocketMessageBuffer	typeref:typename:size_t
@@ -2642,6 +2708,8 @@ paragraph	experiments/ESP_Async_WebServer/library.properties	/^paragraph=Async W
 paragraph	experiments/Servo/library.properties	/^paragraph=This library can control a great number of servos.<br \/>It makes careful use of timer/;"	k
 params	experiments/ESP_Async_WebServer/src/ESPAsyncWebServer.h	/^    const String& params(void) const { return _params; }$/;"	f	class:AsyncWebRewrite	typeref:typename:const String &
 params	experiments/ESP_Async_WebServer/src/WebRequest.cpp	/^size_t AsyncWebServerRequest::params() const {$/;"	f	class:AsyncWebServerRequest	typeref:typename:size_t
+parse_get	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^static esp_err_t parse_get(httpd_req_t *req, char **obuf)$/;"	f	typeref:typename:esp_err_t	file:
+parse_get_var	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^static int parse_get_var(char *buf, const char * key, int def)$/;"	f	typeref:typename:int	file:
 pathArg	experiments/ESP_Async_WebServer/src/WebRequest.cpp	/^const String& AsyncWebServerRequest::pathArg(size_t i) const {$/;"	f	class:AsyncWebServerRequest	typeref:typename:const String &
 pb	experiments/ESP_AsyncTCP/src/ESPAsyncTCP.cpp	/^    pbuf *pb;$/;"	m	struct:pending_pcb	typeref:typename:pbuf *	file:
 pbuf_offset	experiments/ESP_AsyncTCP/src/tcp_axtls.c	/^  int pbuf_offset;$/;"	m	struct:tcp_ssl_pcb	typeref:typename:int	file:
@@ -2667,6 +2735,7 @@ platforms	experiments/ESP_Async_WebServer/library.json	/^      "platforms": "esp
 platforms	experiments/ESP_Async_WebServer/library.json	/^      "platforms": "espressif8266"$/;"	s	object:dependencies.0
 platforms	experiments/ESP_Async_WebServer/library.json	/^      "platforms": "espressif8266"$/;"	s	object:dependencies.2
 platforms	experiments/ESP_Async_WebServer/library.json	/^  "platforms": ["espressif8266", "espressif32"],$/;"	a
+pll_handler	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^static esp_err_t pll_handler(httpd_req_t *req)$/;"	f	typeref:typename:esp_err_t	file:
 plot_list	Hexapod-markwtech/src/plot.py	/^    def plot_list(self, points_list):$/;"	m	class:Plotter
 plot_point	Hexapod-markwtech/src/plot.py	/^    def plot_point(self, point):$/;"	m	class:Plotter
 plot_points	Hexapod-markwtech/src/plot.py	/^    def plot_points(self):$/;"	m	class:Plotter
@@ -2679,6 +2748,7 @@ print	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^void Ad
 print	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^void Adafruit_BusIO_Register::print(Stream *s) {$/;"	f	class:Adafruit_BusIO_Register	typeref:typename:void
 printModuleInfo	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::printModuleInfo() {$/;"	f	class:PCA9685	typeref:typename:void
 printModuleInfo	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^void PCA9685::printModuleInfo() {$/;"	f	class:PCA9685	typeref:typename:void
+print_reg	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^static int print_reg(char * p, sensor_t * s, uint16_t reg, uint32_t mask){$/;"	f	typeref:typename:int	file:
 printf	experiments/ESP_Async_WebServer/src/AsyncWebSocket.cpp	/^size_t AsyncWebSocket::printf(uint32_t id, const char *format, ...){$/;"	f	class:AsyncWebSocket	typeref:typename:size_t
 printf	experiments/ESP_Async_WebServer/src/AsyncWebSocket.cpp	/^size_t AsyncWebSocketClient::printf(const char *format, ...) {$/;"	f	class:AsyncWebSocketClient	typeref:typename:size_t
 printfAll	experiments/ESP_Async_WebServer/src/AsyncWebSocket.cpp	/^size_t AsyncWebSocket::printfAll(const char *format, ...) {$/;"	f	class:AsyncWebSocket	typeref:typename:size_t
@@ -2697,6 +2767,10 @@ pwmForAngle	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/
 pwmForSpeed	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^uint16_t PCA9685_ServoEval::pwmForSpeed(float speed) {$/;"	f	class:PCA9685_ServoEval	typeref:typename:uint16_t
 pwmForSpeed	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^uint16_t PCA9685_ServoEval::pwmForSpeed(float speed) {$/;"	f	class:PCA9685_ServoEval	typeref:typename:uint16_t
 queueIsFull	experiments/ESP_Async_WebServer/src/AsyncWebSocket.cpp	/^bool AsyncWebSocketClient::queueIsFull(){$/;"	f	class:AsyncWebSocketClient	typeref:typename:bool
+ra_filter	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^static ra_filter_t ra_filter;$/;"	v	typeref:typename:ra_filter_t	file:
+ra_filter_init	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^static ra_filter_t *ra_filter_init(ra_filter_t *filter, size_t sample_size)$/;"	f	typeref:typename:ra_filter_t *	file:
+ra_filter_run	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^static int ra_filter_run(ra_filter_t *filter, int value)$/;"	f	typeref:typename:int	file:
+ra_filter_t	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^} ra_filter_t;$/;"	t	typeref:struct:__anon731738780208	file:
 ra_servo_t	experiments/Servo/src/renesas/Servo.cpp	/^} ra_servo_t;$/;"	t	typeref:struct:__anon2492671d0108	file:
 ra_servos	experiments/Servo/src/renesas/Servo.cpp	/^static ra_servo_t ra_servos[SERVO_MAX_SERVOS];$/;"	v	typeref:typename:ra_servo_t[]	file:
 read	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^bool Adafruit_BusIO_Register::read(uint16_t *value) {$/;"	f	class:Adafruit_BusIO_Register	typeref:typename:bool
@@ -2744,8 +2818,12 @@ readPrescale	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_P
 readRegister	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^byte PCA9685::readRegister(byte regAddress) {$/;"	f	class:PCA9685	typeref:typename:byte
 readRegister	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/src/PCA9685.cpp	/^byte PCA9685::readRegister(byte regAddress) {$/;"	f	class:PCA9685	typeref:typename:byte
 readStringUntil	experiments/ESP_AsyncTCP/src/ESPAsyncTCPbuffer.cpp	/^void AsyncTCPbuffer::readStringUntil(char terminator, String * str, AsyncTCPbufferDoneCb done) {$/;"	f	class:AsyncTCPbuffer	typeref:typename:void
+recognition_enabled	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^static int8_t recognition_enabled = 0;$/;"	v	typeref:typename:int8_t	file:
+recognizer	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^    FaceRecognition112V1S16 recognizer;$/;"	v	typeref:typename:FaceRecognition112V1S16
+recognizer	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^    FaceRecognition112V1S8 recognizer;$/;"	v	typeref:typename:FaceRecognition112V1S8
 redirect	experiments/ESP_Async_WebServer/src/WebRequest.cpp	/^void AsyncWebServerRequest::redirect(const String& url){$/;"	f	class:AsyncWebServerRequest	typeref:typename:void
 ref	experiments/ESP_AsyncTCP/src/SyncClient.cpp	/^int SyncClient::ref(){$/;"	f	class:SyncClient	typeref:typename:int
+reg_handler	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^static esp_err_t reg_handler(httpd_req_t *req)$/;"	f	typeref:typename:esp_err_t	file:
 remoteIP	experiments/ESP_AsyncTCP/src/ESPAsyncTCP.cpp	/^IPAddress AsyncClient::remoteIP() {$/;"	f	class:AsyncClient	typeref:typename:IPAddress
 remoteIP	experiments/ESP_AsyncTCP/src/ESPAsyncTCPbuffer.cpp	/^IPAddress AsyncTCPbuffer::remoteIP() {$/;"	f	class:AsyncTCPbuffer	typeref:typename:IPAddress
 remoteIP	experiments/ESP_Async_WebServer/src/AsyncWebSocket.cpp	/^IPAddress AsyncWebSocketClient::remoteIP() {$/;"	f	class:AsyncWebSocketClient	typeref:typename:IPAddress
@@ -2760,6 +2838,7 @@ repository	InMoove-Arm/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/li
 repository	Kame-Quadpod/libraries/PCA9685_16-Channel_PWM_Driver_Module_Library/library.json	/^    "repository": {$/;"	o
 repository	experiments/ESP_AsyncTCP/library.json	/^  "repository":$/;"	o
 repository	experiments/ESP_Async_WebServer/library.json	/^  "repository":$/;"	o
+req	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^    httpd_req_t *req;$/;"	m	struct:__anon731738780108	typeref:typename:httpd_req_t *	file:
 requestAuthentication	experiments/ESP_Async_WebServer/src/WebRequest.cpp	/^void AsyncWebServerRequest::requestAuthentication(const char * realm, bool isDigest){$/;"	f	class:AsyncWebServerRequest	typeref:typename:void
 requestDigestAuthentication	experiments/ESP_Async_WebServer/src/WebAuthentication.cpp	/^String requestDigestAuthentication(const char * realm){$/;"	f	typeref:typename:String
 requestedConnType	experiments/ESP_Async_WebServer/src/ESPAsyncWebServer.h	/^    RequestedConnectionType requestedConnType() const { return _reqconntype; }$/;"	f	class:AsyncWebServerRequest	typeref:typename:RequestedConnectionType
@@ -2776,6 +2855,8 @@ resolutionBits	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.h	/^	uint8_t 
 result	Turrets/angle-calc.py	/^result = (pow(v, 2) \/ (g * dx)) - math.sqrt(A - 1)$/;"	v
 rev	Xpider-cute-robot/libraries/SparkFun_TB6612FNG_Motor_Driver_Library/src/SparkFun_TB6612.cpp	/^void Motor::rev(int speed)$/;"	f	class:Motor	typeref:typename:void
 rewrite	experiments/ESP_Async_WebServer/src/WebServer.cpp	/^AsyncWebRewrite& AsyncWebServer::rewrite(const char* from, const char* to){$/;"	f	class:AsyncWebServer	typeref:typename:AsyncWebRewrite &
+rgb_print	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^static void rgb_print(fb_data_t *fb, uint32_t color, const char *str)$/;"	f	typeref:typename:void	file:
+rgb_printf	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^static int rgb_printf(fb_data_t *fb, uint32_t color, const char *format, ...)$/;"	f	typeref:typename:int	file:
 right	Xpider-cute-robot/libraries/SparkFun_TB6612FNG_Motor_Driver_Library/src/SparkFun_TB6612.cpp	/^void right(Motor left, Motor right, int speed)$/;"	f	typeref:typename:void
 rotate_point	Hexapod-markwtech/pygame-plot/pygame_plot.py	/^def rotate_point(x, y, z, angle_x, angle_y, angle_z):$/;"	f
 rotate_point	Hexapod-markwtech/pygame-plot/pygame_plot2.py	/^def rotate_point(x, y, z, angle_x, angle_y, angle_z):$/;"	f
@@ -2783,6 +2864,7 @@ rotate_x	Hexapod-markwtech/matrices.py	/^def rotate_x(point, theta):$/;"	f
 rotate_y	Hexapod-markwtech/matrices.py	/^def rotate_y(point, theta):$/;"	f
 rotate_z	Hexapod-markwtech/matrices.py	/^def rotate_z(point, theta):$/;"	f
 run	Hexapod-markwtech/Makefile	/^run:$/;"	t
+run_face_recognition	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^static int run_face_recognition(fb_data_t *fb, std::list<dl::detect::result_t> *results)$/;"	f	typeref:typename:int	file:
 run_fk_test	Hexapod-markwtech/src/tests.py	/^    def run_fk_test(self, leg: HexapodLeg, test_data: ServoAngles, expected_output: Coords):$/;"	m	class:Tests
 run_ik_test	Hexapod-markwtech/src/tests.py	/^    def run_ik_test(self, leg: HexapodLeg, test_data: Coords, expected_output: ServoAngles):$/;"	m	class:Tests
 run_tests	Hexapod-markwtech/src/tests.py	/^    def run_tests(self, leg: HexapodLeg):$/;"	m	class:Tests
@@ -2905,11 +2987,13 @@ set_angle	Hexapod-markwtech/src/hexapod.py	/^    def set_angle(self, servo_id: i
 set_inversed	Hexapod-markwtech/src/hexapod.py	/^    def set_inversed(self):$/;"	m	class:HexapodLeg
 set_mode	Hexapod-markwtech/src/gate_engine.py	/^    def set_mode(self, mode):$/;"	m	class:GateEngine
 setup	Xpider-cute-robot/libraries/ESP32Servo/src/ESP32PWM.cpp	/^double ESP32PWM::setup(double freq, uint8_t resolution_bits) {$/;"	f	class:ESP32PWM	typeref:typename:double
+setupLedFlash	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^void setupLedFlash(int pin) $/;"	f	typeref:typename:void
 shared_legs_params	Hexapod-markwtech/src/main.py	/^shared_legs_params = SharedLegParameters(5.1, 6.5, 12.1, 130)$/;"	v
 shoulder_angle	Hexapod-markwtech/src/brute-force-ik-offset.py	/^                shoulder_angle = round(shoulder_angle, 1)$/;"	v
 shoulder_angle	Hexapod-markwtech/src/brute-force-ik-offset.py	/^            base_angle, shoulder_angle, elbow_angle = inverse_kinematics(base_offset, shoulder_o/;"	v
 shoulder_angle	Hexapod-markwtech/src/brute-force-ik-offset.py	/^            shoulder_angle = round(shoulder_angle, 3)$/;"	v
 shoulder_offset	Hexapod-markwtech/src/brute-force-ik-offset.py	/^    shoulder_offset = -300$/;"	v
+size	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^    size_t size;  \/\/number of values used for filtering$/;"	m	struct:__anon731738780208	typeref:typename:size_t	file:
 size	experiments/ESP_Async_WebServer/src/ESPAsyncWebServer.h	/^    size_t size() const { return _size; }$/;"	f	class:AsyncWebParameter	typeref:typename:size_t
 sleep	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.cpp	/^void Adafruit_PWMServoDriver::sleep() {$/;"	f	class:Adafruit_PWMServoDriver	typeref:typename:void
 sleep	Kame-Quadpod/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.cpp	/^void Adafruit_PWMServoDriver::sleep() {$/;"	f	class:Adafruit_PWMServoDriver	typeref:typename:void
@@ -2920,6 +3004,7 @@ ssl_ctx	experiments/ESP_AsyncTCP/src/tcp_axtls.c	/^  SSL_CTX* ssl_ctx;$/;"	m	str
 stance_from_point_to_point	Hexapod-markwtech/src/hexapod.py	/^    def stance_from_point_to_point(self, start_point: Coords, target_point: Coords, num_of_point/;"	m	class:HexapodLeg
 standby	Xpider-cute-robot/libraries/SparkFun_TB6612FNG_Motor_Driver_Library/src/SparkFun_TB6612.cpp	/^void Motor::standby()$/;"	f	class:Motor	typeref:typename:void
 start	experiments/Servo/src/mbed/Servo.cpp	/^    void start(uint32_t duration_us) {$/;"	f	class:ServoImpl	typeref:typename:void	file:
+startCameraServer	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^void startCameraServer()$/;"	f	typeref:typename:void
 start_coord	Hexapod-markwtech/src/main.py	/^start_coord = Coords(6, 17, -5)$/;"	v
 starting_angle	Kame-Quadpod/natural-movement.py	/^starting_angle = 58$/;"	v
 state	experiments/ESP_AsyncTCP/src/ESPAsyncTCP.cpp	/^uint8_t AsyncClient::state() {$/;"	f	class:AsyncClient	typeref:typename:uint8_t
@@ -2927,13 +3012,17 @@ stateToString	experiments/ESP_AsyncTCP/src/ESPAsyncTCP.cpp	/^const char * AsyncC
 status	experiments/ESP_AsyncTCP/src/ESPAsyncTCP.cpp	/^uint8_t AsyncServer::status(){$/;"	f	class:AsyncServer	typeref:typename:uint8_t
 status	experiments/ESP_AsyncTCP/src/SyncClient.cpp	/^uint8_t SyncClient::status(){$/;"	f	class:SyncClient	typeref:typename:uint8_t
 status	experiments/ESP_Async_WebServer/src/AsyncWebSocket.h	/^    AwsClientStatus status(){ return _status; }$/;"	f	class:AsyncWebSocketClient	typeref:typename:AwsClientStatus
+status_handler	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^static esp_err_t status_handler(httpd_req_t *req)$/;"	f	typeref:typename:esp_err_t	file:
 steps	Kame-Quadpod/natural-movement.py	/^steps = [2, 4, 8, 10, 10, 10, 10, 10, 8, 4, 2]$/;"	v
 stop	experiments/ESP_AsyncTCP/src/ESPAsyncTCP.cpp	/^void AsyncClient::stop() {$/;"	f	class:AsyncClient	typeref:typename:void
 stop	experiments/ESP_AsyncTCP/src/ESPAsyncTCPbuffer.cpp	/^void AsyncTCPbuffer::stop() {$/;"	f	class:AsyncTCPbuffer	typeref:typename:void
 stop	experiments/ESP_AsyncTCP/src/SyncClient.cpp	/^bool SyncClient::stop(unsigned int maxWaitMs){$/;"	f	class:SyncClient	typeref:typename:bool
 stop	experiments/ESP_AsyncTCP/src/SyncClient.h	/^    void stop() { (void)stop(0);}$/;"	f	class:SyncClient	typeref:typename:void
 strContains	experiments/ESP_Async_WebServer/src/WebRequest.cpp	/^bool strContains(String src, String find, bool mindcase = true) {$/;"	f	typeref:typename:bool
+stream_handler	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^static esp_err_t stream_handler(httpd_req_t *req)$/;"	f	typeref:typename:esp_err_t	file:
+stream_httpd	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^httpd_handle_t stream_httpd = NULL;$/;"	v	typeref:typename:httpd_handle_t
 stringMD5	experiments/ESP_Async_WebServer/src/WebAuthentication.cpp	/^static String stringMD5(const String& in){$/;"	f	typeref:typename:String	file:
+sum	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^    int sum;$/;"	m	struct:__anon731738780208	typeref:typename:int	file:
 swing_from_point_to_point	Hexapod-markwtech/src/hexapod.py	/^    def swing_from_point_to_point(self, start_point: Coords, target_point: Coords, num_of_points/;"	m	class:HexapodLeg
 sync	Hexapod-markwtech/Makefile	/^sync:$/;"	t
 target_coord	Hexapod-markwtech/src/main.py	/^target_coord = Coords(17, 10, -5)$/;"	v
@@ -3073,6 +3162,7 @@ value	experiments/ESP_Async_WebServer/src/ESPAsyncWebServer.h	/^    const String
 value	experiments/ESP_Async_WebServer/src/ESPAsyncWebServer.h	/^    const String& value() const { return _value; }$/;"	f	class:AsyncWebParameter	typeref:typename:const String &
 value	experiments/ESP_Async_WebServer/src/StringArray.h	/^    T& value(){ return _value; }$/;"	f	class:LinkedListNode	typeref:typename:T &
 value	experiments/ESP_Async_WebServer/src/StringArray.h	/^    const T& value() const { return _value; };$/;"	f	class:LinkedListNode	typeref:typename:const T &
+values	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^    int *values; \/\/array to be filled with values$/;"	m	struct:__anon731738780208	typeref:typename:int *	file:
 vc	Hexapod-markwtech/app-cv2.py	/^vc = cv2.VideoCapture(0) $/;"	v
 version	InMoove-Arm/libraries/Adafruit_BusIO/library.properties	/^version=1.14.4$/;"	k
 version	InMoove-Arm/libraries/Adafruit_PWM_Servo_Driver_Library/library.properties	/^version=3.0.1$/;"	k
@@ -3110,6 +3200,7 @@ webSocketSendFrameWindow	experiments/ESP_Async_WebServer/src/AsyncWebSocket.cpp	
 whole	experiments/ESP_AsyncTCP/src/DebugPrintMacros.h	/^  unsigned whole;$/;"	m	struct:_DEBUG_TIME_STAMP	typeref:typename:unsigned
 width	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^uint8_t Adafruit_BusIO_Register::width(void) { return _width; }$/;"	f	class:Adafruit_BusIO_Register	typeref:typename:uint8_t
 width	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^uint8_t Adafruit_BusIO_Register::width(void) { return _width; }$/;"	f	class:Adafruit_BusIO_Register	typeref:typename:uint8_t
+win_handler	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^static esp_err_t win_handler(httpd_req_t *req)$/;"	f	typeref:typename:esp_err_t	file:
 write	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^bool Adafruit_BusIO_Register::write(uint32_t value, uint8_t numbytes) {$/;"	f	class:Adafruit_BusIO_Register	typeref:typename:bool
 write	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^bool Adafruit_BusIO_Register::write(uint8_t *buffer, uint8_t len) {$/;"	f	class:Adafruit_BusIO_Register	typeref:typename:bool
 write	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp	/^bool Adafruit_BusIO_RegisterBits::write(uint32_t data) {$/;"	f	class:Adafruit_BusIO_RegisterBits	typeref:typename:bool
@@ -3174,6 +3265,7 @@ write_then_read	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_I2CDevice.cpp	/^bo
 write_then_read	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp	/^bool Adafruit_SPIDevice::write_then_read(const uint8_t *write_buffer,$/;"	f	class:Adafruit_SPIDevice	typeref:typename:bool
 write_then_read	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_I2CDevice.cpp	/^bool Adafruit_I2CDevice::write_then_read(const uint8_t *write_buffer,$/;"	f	class:Adafruit_I2CDevice	typeref:typename:bool
 write_then_read	Kame-Quadpod/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp	/^bool Adafruit_SPIDevice::write_then_read(const uint8_t *write_buffer,$/;"	f	class:Adafruit_SPIDevice	typeref:typename:bool
+xclk_handler	Kame-Quadpod/Experimenty/CameraWebServer/app_httpd.cpp	/^static esp_err_t xclk_handler(httpd_req_t *req)$/;"	f	typeref:typename:esp_err_t	file:
 {repository-name} Library for Arduino	experiments/Servo/README.adoc	/^= {repository-name} Library for Arduino =$/;"	c
 ~ACErrorTracker	experiments/ESP_AsyncTCP/src/ESPAsyncTCP.h	/^    ~ACErrorTracker() {}$/;"	f	class:ACErrorTracker
 ~Adafruit_SPIDevice	InMoove-Arm/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp	/^Adafruit_SPIDevice::~Adafruit_SPIDevice() {$/;"	f	class:Adafruit_SPIDevice

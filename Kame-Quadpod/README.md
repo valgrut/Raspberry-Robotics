@@ -23,17 +23,19 @@
 
 - **Dir**: Hobby/Robotika/Kame/
 - **Dir**: git:Robotics/Kame
-- []()
+
 
 ### 1.2. Original project
 
 - Thingiverse: [Kame: 8DOF small quadruped robot](https://www.thingiverse.com/thing:1265766)
 - [Project page: Kame quarduped robot](https://hackaday.io/project/9334-kame-esp8266-based-quadruped)
 
+
 ### 1.3. Kame resources and remakes
 
 - https://javierih.com/robots/kame32/
 - https://github.com/JavierIH/kame32/blob/main/code/src/main.cpp
+
 
 ### 1.4. Motivace
 
@@ -43,6 +45,7 @@
 - Communication with the other robot(s) via IR?
 - R2D2 sounds
 - Close all related tabs in browser.
+
 
 ---------------------------------------------------------------------------------------------
 
