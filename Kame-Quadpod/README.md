@@ -186,6 +186,10 @@ ffmpeg -i file.mp4 -vf fps=1/600 out%d.png   # 1 frames / 60 second
 
 Od nejnovejsiho.
 
+- 2026-03-15
+    - Dokopal jsem se konecne zkusit po dlouhem odkladani na zkousku zapojit obvod s SBEC.
+    - ... pokracovani dnes a verdikt
+
 - 2025-10-20
     - Novinka: Brownout, kdyz zapojeno ESP i ESP-cam.
     - Pripominka, ze PCA's V+ terminal ma max 6V !!! Nutny dalsi Buck, nelze tam rvat 8V z baterie!!!
