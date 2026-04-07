@@ -86,7 +86,7 @@
 - [ ] Laser into the top mount head
 
 
-### 2.3. Rozsireni (Extensions)
+### 2.3. Rozsireni (Extensions - Optional)
 
 - [ ] Battery indicator (2S)
 - [ ] HC-SR04 - Ultrasonic distance sensor
@@ -187,6 +187,11 @@ ffmpeg -i file.mp4 -vf fps=1/600 out%d.png   # 1 frames / 60 second
 ### 3.5. Build diary timeline
 
 Od nejnovejsiho.
+
+- 2026-04-07
+    - Po celem vikendu jsem doskladal module stack, vlozil do domodelovaneho tela a konecne primontoval nohy.
+    - Chuze po pokoji, konecne. Vse funguje.
+    - Zbyva jen domodelovat hlavu a pridelat k telu!
 
 - 2026-03-15
     - Dokopal jsem se konecne zkusit po dlouhem odkladani na zkousku zapojit obvod s SBEC.
