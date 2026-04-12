@@ -188,6 +188,10 @@ ffmpeg -i file.mp4 -vf fps=1/600 out%d.png   # 1 frames / 60 second
 
 Od nejnovejsiho.
 
+- 2026-04-12
+    - Kompletne domodelovany a sestaveny !!!
+    - Uz jen doprogramovat (ale funguje BT controll, Webcam, walking gaits, Laser)
+
 - 2026-04-07
     - Po celem vikendu jsem doskladal module stack, vlozil do domodelovaneho tela a konecne primontoval nohy.
     - Chuze po pokoji, konecne. Vse funguje.
@@ -247,7 +251,7 @@ Od nejnovejsiho.
     - Fusion360: Design a prototypovani noveho tela pro Kame (misto pro PCA a pro ESP-8266)
 
 - 2023-10-21
-    - Funkcni Walking Gait (Video, jak spadl malem ze stolu)
+    - Semi-Funkcni Walking Gait (Video, jak spadl malem ze stolu)
     - PCA9685 je jeste venku z Kame.
     - Puvodni telo (OG projekt)
     - Jeste skrz Arduino Uno
