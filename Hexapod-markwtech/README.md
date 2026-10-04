@@ -21,10 +21,13 @@
 - 1x Raspberry Pi 4B
 - 2x PCA9685 Servo Driver
 - 18x MG996R (Power Pro)
+    - Robot Probably will be slow!!! (motors are too weak)
+    - TODO: Upgrade to DS3235 (25KG vs 7KG)
 - 72x  M2x6
 - 18x  M3x8
 - ?x M2.5x8
 - ?x M2.5x10
+
 
 ## STL parts (Nektere nahradit upravenymi, mnou vyrobenymi a pod.)
 
@@ -47,6 +50,7 @@
 - 6x Upevneni nohy k telu
 - 6x Placata vec na upevneni spicky konce nohy
 - 18x Lozisko placeholder
+
 
 ### Stojanek
 
