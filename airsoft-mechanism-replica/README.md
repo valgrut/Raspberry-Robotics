@@ -1,16 +1,33 @@
 # README
 
-- AEG = Airsoft Electric Guns
-- ETU = Electronic trigger unit
 
+========== DROPPED ==========
+
+
+## Poznamky
+
+- Nefunguje mi ten ridici obvod, neco se tam zkratuje..... Nemuzu prijit na to, co a kde.
+
+Improvements:
+- [ ] Fix short circuit
+- [ ] Mozna vymodelovat i blowback, aby se pri vystrelu neco hybalo vizualne
+- [ ] Vykaslat se na muj obvod a proste koupit komplet GearBox, ktery uz ma ETU.
+
+
+
+---------------------------------------------------------------------------------
 
 ## Gearbox resources, links
 
 - https://www.airsoftmegastore.com/index.php?route=product/product&product_id=37859&iid=41067&search=high+speed+steel+gear
 - https://www.lancertactical.com/product-page/lancer-tactical-complete-m4-proline-gearbox-set
 - https://airsoftpro.cz/cz/dily-zbrani-upgrade/pro-elektricke-zbrane-vnitrni/kabelaze-mosfety-konektory/procesorove-jednotky/upgrade-kit-etu-pro-gg-detail
-- 
 
+- AEG = Airsoft Electric Guns
+- ETU = Electronic trigger unit
+
+
+---------------------------------------------------------------------------------
 
 ## Projekt 1 - Gearbox replica
 
@@ -22,13 +39,15 @@
 - Problem 2: **Overspin**: Jak udelat, aby motor udelal pouze 1 rotaci ciste softwarove??? (origo mel mechanicky switch a vypinal power do motoru, a asi to docela pekne vychazelo. Ale ne vzdy. Obcas to nevystrelilo).
 
 
+---------------------------------------------------------------------------------
+
+## Teorie - gearbox, ovladani
 
 ### Overspin
 
 Your gearbox cycles twice because of the excess in power, and your mosfet can’t do much about it; you’ll need an ETU, such as an Aster or a Perun, or something with Active brake, such as Gate’s Nano AAB.
 
 Check if your replica’s mosfet has active break, and if so, how to activate it.
-
 
 
 ### Jak se resi overspin? Jak obecne kontrolovat gearbox?
